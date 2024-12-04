@@ -58,9 +58,20 @@ class ProductMaterial(models.Model):
 class WorkOrder(models.Model):
     WORK_ORDER_STATUS_CHOICES = [
         ('PENDING', 'Pending'),
+        ('QUEUED', 'Queued'),
+        ('READY', 'Ready to Start'),
         ('IN_PROGRESS', 'In Progress'),
+        ('PAUSED', 'Paused'),
         ('COMPLETED', 'Completed'),
-        ('CANCELLED', 'Cancelled')
+        ('CANCELLED', 'Cancelled'),
+        ('BLOCKED', 'Blocked')
+    ]
+
+    PRIORITY_CHOICES = [
+        ('LOW', 'Low Priority'),
+        ('MEDIUM', 'Medium Priority'),
+        ('HIGH', 'High Priority'),
+        ('CRITICAL', 'Critical Priority')
     ]
 
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='work_orders')
@@ -71,6 +82,11 @@ class WorkOrder(models.Model):
         max_length=20, 
         choices=WORK_ORDER_STATUS_CHOICES, 
         default='PENDING'
+    )
+    priority = models.CharField(
+        max_length=20,
+        choices=PRIORITY_CHOICES,
+        default='MEDIUM'
     )
     
     # Tracking fields
@@ -92,6 +108,10 @@ class WorkOrder(models.Model):
     # Reference to the assigned user if applicable
     assigned_to = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     
+    # Workflow tracking
+    dependencies = models.ManyToManyField('self', symmetrical=False, blank=True, related_name='dependent_orders')
+    blocking_reason = models.TextField(null=True, blank=True)
+    
     def __str__(self):
         return f"Work Order for {self.product.name} - {self.status}"
     
@@ -109,13 +129,29 @@ class WorkOrder(models.Model):
         Check if the work order is overdue
         """
         return (
-            self.status != 'COMPLETED' and 
+            self.status not in ['COMPLETED', 'CANCELLED'] and 
             self.end_date and 
             timezone.now() > self.end_date
         )
     
+    def can_start(self):
+        """
+        Check if all dependencies are completed
+        """
+        return all(dep.status == 'COMPLETED' for dep in self.dependencies.all())
+    
+    def update_status(self, new_status):
+        """
+        Update work order status with validation
+        """
+        if new_status not in dict(self.WORK_ORDER_STATUS_CHOICES):
+            raise ValueError("Invalid status")
+        
+        self.status = new_status
+        self.save()
+    
     class Meta:
-        ordering = ['-created_at']
+        ordering = ['-priority', '-created_at']
         verbose_name = 'Work Order'
         verbose_name_plural = 'Work Orders'
 

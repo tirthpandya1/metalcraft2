@@ -143,12 +143,14 @@ class WorkOrderViewSet(viewsets.ModelViewSet):
         actual_quantity = request.data.get('actual_quantity', work_order.quantity)
         
         # Create production log
+        # Use the first available workstation or None
+        first_workstation = WorkStation.objects.first()
+        
         ProductionLog.objects.create(
             work_order=work_order,
+            workstation=first_workstation,
             quantity_produced=actual_quantity,
-            start_time=work_order.start_date,
-            end_time=timezone.now(),
-            status='COMPLETED'
+            notes=f"Completed work order {work_order.id}"
         )
         
         # Update work order
@@ -199,31 +201,36 @@ class WorkOrderViewSet(viewsets.ModelViewSet):
         today = timezone.now().date()
         
         stats = {
-            'total_orders': {
-                'count': WorkOrder.objects.count(),
-                'by_status': WorkOrder.objects.values('status').annotate(count=Count('id'))
+            'total_work_orders': WorkOrder.objects.count(),
+            'status_breakdown': {
+                status: WorkOrder.objects.filter(status=status).count()
+                for status, _ in WorkOrder.WORK_ORDER_STATUS_CHOICES
             },
-            'today_orders': {
+            'priority_breakdown': {
+                priority: WorkOrder.objects.filter(priority=priority).count()
+                for priority, _ in WorkOrder.PRIORITY_CHOICES
+            },
+            'today_work_orders': {
                 'total': WorkOrder.objects.filter(start_date__date=today).count(),
                 'completed': WorkOrder.objects.filter(
-                    status='COMPLETED', 
-                    end_date__date=today
+                    start_date__date=today, 
+                    status='COMPLETED'
                 ).count(),
                 'in_progress': WorkOrder.objects.filter(
-                    status='IN_PROGRESS', 
-                    start_date__date=today
+                    start_date__date=today, 
+                    status='IN_PROGRESS'
                 ).count()
             },
-            'production_summary': {
-                'total_quantity_planned': WorkOrder.objects.aggregate(
-                    total_quantity=Sum('quantity')
-                )['total_quantity'] or 0,
-                'total_quantity_completed': WorkOrder.objects.filter(
-                    status='COMPLETED'
-                ).aggregate(
-                    total_quantity=Sum('quantity')
-                )['total_quantity'] or 0
-            }
+            'overdue_work_orders': WorkOrder.objects.filter(
+                end_date__lt=today, 
+                status__in=['PENDING', 'IN_PROGRESS']
+            ).count(),
+            'blocked_work_orders': WorkOrder.objects.filter(
+                status='BLOCKED'
+            ).count(),
+            'upcoming_dependencies': WorkOrder.objects.filter(
+                dependencies__status='PENDING'
+            ).values('id', 'product__name', 'status').distinct()
         }
         
         return Response(stats)

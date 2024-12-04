@@ -103,6 +103,16 @@ class WorkOrderSerializer(serializers.ModelSerializer):
     workstation_name = serializers.CharField(source='workstation.name', read_only=True, allow_null=True)
     assigned_to_username = serializers.CharField(source='assigned_to.username', read_only=True, allow_null=True)
     
+    # New fields for workflow management
+    dependencies = serializers.PrimaryKeyRelatedField(
+        queryset=WorkOrder.objects.all(), 
+        many=True, 
+        required=False, 
+        allow_null=True
+    )
+    can_start = serializers.SerializerMethodField(read_only=True)
+    is_overdue = serializers.SerializerMethodField(read_only=True)
+    
     class Meta:
         model = WorkOrder
         fields = [
@@ -113,17 +123,31 @@ class WorkOrderSerializer(serializers.ModelSerializer):
             'start_date', 
             'end_date', 
             'status', 
+            'priority',
             'notes',
             'workstation', 
             'workstation_name',
             'assigned_to',
             'assigned_to_username',
+            'dependencies',
+            'blocking_reason',
+            'can_start',
+            'is_overdue',
             'created_at', 
             'updated_at'
         ]
-        read_only_fields = ['id', 'created_at', 'updated_at']
+        read_only_fields = ['id', 'created_at', 'updated_at', 'can_start', 'is_overdue']
+
+    def get_can_start(self, obj):
+        return obj.can_start()
+
+    def get_is_overdue(self, obj):
+        return obj.is_overdue()
 
     def create(self, validated_data):
+        # Extract dependencies if provided
+        dependencies_data = validated_data.pop('dependencies', [])
+        
         # Additional validation
         if validated_data.get('quantity', 0) <= 0:
             raise serializers.ValidationError("Quantity must be greater than zero")
@@ -133,7 +157,6 @@ class WorkOrderSerializer(serializers.ModelSerializer):
         quantity = validated_data.get('quantity')
         
         # Validate if there are enough materials to create the work order
-        # This is a basic check and can be expanded
         for product_material in product.productmaterial_set.all():
             material = product_material.material
             required_quantity = product_material.quantity * quantity
@@ -144,9 +167,19 @@ class WorkOrderSerializer(serializers.ModelSerializer):
                     f"Required: {required_quantity}, Available: {material.quantity}"
                 )
         
-        return super().create(validated_data)
+        # Create work order
+        work_order = super().create(validated_data)
+        
+        # Add dependencies
+        if dependencies_data:
+            work_order.dependencies.set(dependencies_data)
+        
+        return work_order
 
     def update(self, instance, validated_data):
+        # Extract dependencies if provided
+        dependencies_data = validated_data.pop('dependencies', None)
+        
         # Update status logic
         new_status = validated_data.get('status', instance.status)
         
@@ -154,7 +187,14 @@ class WorkOrderSerializer(serializers.ModelSerializer):
         if new_status == 'COMPLETED' and instance.status != 'COMPLETED':
             validated_data['end_date'] = timezone.now()
         
-        return super().update(instance, validated_data)
+        # Update work order
+        work_order = super().update(instance, validated_data)
+        
+        # Update dependencies if provided
+        if dependencies_data is not None:
+            work_order.dependencies.set(dependencies_data)
+        
+        return work_order
 
 class ProductionLogSerializer(serializers.ModelSerializer):
     class Meta:
