@@ -27,6 +27,44 @@ class WorkStationViewSet(viewsets.ModelViewSet):
             return Response({'status': 'status updated'})
         return Response({'error': 'Invalid status'}, status=400)
 
+    @action(detail=False, methods=['get'])
+    def real_time_status(self, request):
+        """
+        Provide real-time status of all workstations
+        """
+        workstations = WorkStation.objects.all()
+        status_data = []
+        
+        for workstation in workstations:
+            # Get the most recent work order for this workstation
+            current_work_order = WorkOrder.objects.filter(
+                workstation=workstation, 
+                status='IN_PROGRESS'
+            ).first()
+            
+            # Get the most recent production log
+            latest_log = ProductionLog.objects.filter(
+                workstation=workstation
+            ).order_by('-created_at').first()
+            
+            status_data.append({
+                'id': workstation.id,
+                'name': workstation.name,
+                'status': workstation.status,
+                'current_work_order': {
+                    'id': current_work_order.id if current_work_order else None,
+                    'product_name': current_work_order.product.name if current_work_order else None,
+                    'quantity': current_work_order.quantity if current_work_order else None,
+                },
+                'latest_production': {
+                    'quantity_produced': latest_log.quantity_produced if latest_log else 0,
+                    'created_at': latest_log.created_at if latest_log else None,
+                },
+                'utilization_rate': workstation.calculate_utilization_rate() if hasattr(workstation, 'calculate_utilization_rate') else None
+            })
+        
+        return Response(status_data)
+
 class MaterialViewSet(viewsets.ModelViewSet):
     queryset = Material.objects.all()
     serializer_class = MaterialSerializer

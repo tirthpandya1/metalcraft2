@@ -8,9 +8,9 @@ class WorkStation(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True)
     status = models.CharField(max_length=20, choices=[
-        ('active', 'Active'),
-        ('inactive', 'Inactive'),
-        ('maintenance', 'Maintenance')
+        ('ACTIVE', 'Active'),
+        ('INACTIVE', 'Inactive'),
+        ('MAINTENANCE', 'Maintenance')
     ])
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

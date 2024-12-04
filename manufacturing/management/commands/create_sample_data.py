@@ -23,7 +23,7 @@ class Command(BaseCommand):
             WorkStation.objects.create(
                 name=f"Workstation {i}", 
                 description=f"Manufacturing station {i} for production", 
-                status=random.choice(['IDLE', 'ACTIVE', 'MAINTENANCE'])
+                status=random.choice(['ACTIVE', 'INACTIVE', 'MAINTENANCE'])
             ) for i in range(1, 6)
         ]
         self.stdout.write(self.style.SUCCESS('Created WorkStations'))
