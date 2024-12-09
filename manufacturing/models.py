@@ -8,6 +8,11 @@ from django.utils import timezone
 User = get_user_model()
 
 class WorkStation(models.Model):
+    PROCESS_TYPE_CHOICES = [
+        ('AUTOMATIC', 'Automatic'),
+        ('MANUAL', 'Manual'),
+    ]
+
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
     
@@ -21,6 +26,12 @@ class WorkStation(models.Model):
         max_length=20, 
         choices=status_choices, 
         default='ACTIVE'
+    )
+    
+    process_type = models.CharField(
+        max_length=20, 
+        choices=PROCESS_TYPE_CHOICES, 
+        default='MANUAL'
     )
     
     # New field to track last maintenance
@@ -646,6 +657,10 @@ class ProductWorkstationSequence(models.Model):
     """
     Defines the sequence of workstations for a specific product's manufacturing process
     """
+    PROCESS_TYPE_CHOICES = [
+        ('AUTOMATIC', 'Automatic'),
+        ('MANUAL', 'Manual'),
+    ]
     product = models.ForeignKey(
         Product, 
         on_delete=models.CASCADE, 
@@ -654,6 +669,11 @@ class ProductWorkstationSequence(models.Model):
     workstation = models.ForeignKey(
         'WorkStation', 
         on_delete=models.CASCADE
+    )
+    process_type = models.CharField(
+        max_length=20, 
+        choices=PROCESS_TYPE_CHOICES, 
+        default='MANUAL'
     )
     sequence_order = models.PositiveIntegerField(
         help_text='Order of this workstation in the product manufacturing process'

@@ -20748,3 +20748,1553 @@ INFO 2024-12-09 20:54:58,638 views 30683 6244102144 Serialized product data: [Or
 INFO 2024-12-09 20:54:58,638 basehttp 30683 6227275776 "GET /api/products/ HTTP/1.1" 200 562
 INFO 2024-12-09 20:54:58,639 basehttp 30683 6244102144 "GET /api/products/ HTTP/1.1" 200 562
 INFO 2024-12-09 20:54:58,639 basehttp 30683 6244102144 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:53:14,884 autoreload 36107 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 21:53:14,884 autoreload 36107 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 21:53:36,240 views 36107 6169473024 Product list request received
+INFO 2024-12-09 21:53:36,240 views 36107 6186299392 Product list request received
+INFO 2024-12-09 21:53:36,240 views 36107 6169473024 Product list request received
+INFO 2024-12-09 21:53:36,240 views 36107 6186299392 Product list request received
+INFO 2024-12-09 21:53:36,241 views 36107 6169473024 Total number of products: 1
+INFO 2024-12-09 21:53:36,241 views 36107 6186299392 Total number of products: 1
+INFO 2024-12-09 21:53:36,241 views 36107 6169473024 Total number of products: 1
+INFO 2024-12-09 21:53:36,241 views 36107 6186299392 Total number of products: 1
+INFO 2024-12-09 21:53:36,249 views 36107 6169473024 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:53:36,249 views 36107 6186299392 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:53:36,249 views 36107 6169473024 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:53:36,249 views 36107 6186299392 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:53:36,250 basehttp 36107 6186299392 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:53:36,250 basehttp 36107 6169473024 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:53:36,250 basehttp 36107 6186299392 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:53:36,250 basehttp 36107 6169473024 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:53:37,430 views 36107 6169473024 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:53:37,430 views 36107 6169473024 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:53:37,431 views 36107 6169473024 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:53:37,431 views 36107 6169473024 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:53:37,431 views 36107 6169473024 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:53:37,431 views 36107 6169473024 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:53:37,431 basehttp 36107 6169473024 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:53:37,432 views 36107 6186299392 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:53:37,431 basehttp 36107 6169473024 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:53:37,432 views 36107 6186299392 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:53:37,433 views 36107 6186299392 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:53:37,433 views 36107 6186299392 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:53:37,433 views 36107 6186299392 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:53:37,433 views 36107 6186299392 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:53:37,434 views 36107 6203125760 Found 2 workstation sequences for product 3
+INFO 2024-12-09 21:53:37,435 views 36107 6219952128 Found 2 workstation sequences for product 3
+INFO 2024-12-09 21:53:37,434 views 36107 6203125760 Found 2 workstation sequences for product 3
+INFO 2024-12-09 21:53:37,435 views 36107 6219952128 Found 2 workstation sequences for product 3
+INFO 2024-12-09 21:53:37,435 basehttp 36107 6186299392 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:53:37,435 basehttp 36107 6186299392 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:53:37,440 basehttp 36107 6203125760 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 21:53:37,440 basehttp 36107 6203125760 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 21:53:37,441 basehttp 36107 6219952128 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 21:53:37,441 basehttp 36107 6219952128 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 21:53:40,797 views 36107 6203125760 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:53:40,797 views 36107 6203125760 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:53:40,799 views 36107 6203125760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:53:40,799 views 36107 6203125760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:53:40,802 views 36107 6236778496 Product list request received
+INFO 2024-12-09 21:53:40,802 views 36107 6203125760 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:53:40,802 views 36107 6236778496 Product list request received
+INFO 2024-12-09 21:53:40,803 views 36107 6253604864 Product list request received
+INFO 2024-12-09 21:53:40,802 views 36107 6203125760 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:53:40,811 views 36107 6219952128 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:53:40,803 views 36107 6253604864 Product list request received
+INFO 2024-12-09 21:53:40,811 views 36107 6219952128 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:53:40,815 basehttp 36107 6203125760 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:53:40,815 basehttp 36107 6203125760 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:53:40,816 views 36107 6236778496 Total number of products: 1
+INFO 2024-12-09 21:53:40,816 views 36107 6236778496 Total number of products: 1
+INFO 2024-12-09 21:53:40,817 views 36107 6219952128 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:53:40,817 views 36107 6253604864 Total number of products: 1
+INFO 2024-12-09 21:53:40,817 views 36107 6219952128 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:53:40,817 views 36107 6253604864 Total number of products: 1
+INFO 2024-12-09 21:53:40,819 views 36107 6219952128 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:53:40,819 views 36107 6219952128 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:53:40,824 basehttp 36107 6219952128 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:53:40,824 basehttp 36107 6219952128 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:53:40,829 views 36107 6236778496 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:53:40,829 views 36107 6253604864 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:53:40,829 views 36107 6236778496 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:53:40,829 views 36107 6253604864 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:53:40,830 basehttp 36107 6236778496 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:53:40,830 basehttp 36107 6236778496 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:53:40,831 basehttp 36107 6253604864 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:53:40,831 basehttp 36107 6253604864 "GET /api/products/ HTTP/1.1" 200 562
+ERROR 2024-12-09 21:53:40,872 log 36107 6186299392 Internal Server Error: /api/workstation-processes/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: manufacturing_workstationprocess
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/pagination.py", line 204, in paginate_queryset
+    self.page = paginator.page(page_number)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 72, in page
+    number = self.validate_number(number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+                ^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 99, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+       ^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 93, in count
+    return c()
+           ^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: manufacturing_workstationprocess
+ERROR 2024-12-09 21:53:40,877 log 36107 6169473024 Internal Server Error: /api/workstation-processes/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: manufacturing_workstationprocess
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/pagination.py", line 204, in paginate_queryset
+    self.page = paginator.page(page_number)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 72, in page
+    number = self.validate_number(number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+                ^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 99, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+       ^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 93, in count
+    return c()
+           ^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: manufacturing_workstationprocess
+ERROR 2024-12-09 21:53:40,872 log 36107 6186299392 Internal Server Error: /api/workstation-processes/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: manufacturing_workstationprocess
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/pagination.py", line 204, in paginate_queryset
+    self.page = paginator.page(page_number)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 72, in page
+    number = self.validate_number(number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+                ^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 99, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+       ^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 93, in count
+    return c()
+           ^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: manufacturing_workstationprocess
+ERROR 2024-12-09 21:53:40,877 log 36107 6169473024 Internal Server Error: /api/workstation-processes/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: manufacturing_workstationprocess
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/pagination.py", line 204, in paginate_queryset
+    self.page = paginator.page(page_number)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 72, in page
+    number = self.validate_number(number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+                ^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 99, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+       ^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 93, in count
+    return c()
+           ^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: manufacturing_workstationprocess
+ERROR 2024-12-09 21:53:40,883 basehttp 36107 6186299392 "GET /api/workstation-processes/ HTTP/1.1" 500 189966
+ERROR 2024-12-09 21:53:40,883 basehttp 36107 6186299392 "GET /api/workstation-processes/ HTTP/1.1" 500 189966
+ERROR 2024-12-09 21:53:40,883 basehttp 36107 6169473024 "GET /api/workstation-processes/ HTTP/1.1" 500 189966
+ERROR 2024-12-09 21:53:40,883 basehttp 36107 6169473024 "GET /api/workstation-processes/ HTTP/1.1" 500 189966
+INFO 2024-12-09 21:53:46,895 views 36107 6169473024 Product list request received
+INFO 2024-12-09 21:53:46,895 views 36107 6169473024 Product list request received
+INFO 2024-12-09 21:53:46,896 views 36107 6186299392 Product list request received
+INFO 2024-12-09 21:53:46,896 views 36107 6186299392 Product list request received
+INFO 2024-12-09 21:53:46,896 views 36107 6169473024 Total number of products: 1
+INFO 2024-12-09 21:53:46,896 views 36107 6169473024 Total number of products: 1
+INFO 2024-12-09 21:53:46,897 views 36107 6186299392 Total number of products: 1
+INFO 2024-12-09 21:53:46,897 views 36107 6186299392 Total number of products: 1
+INFO 2024-12-09 21:53:46,903 views 36107 6186299392 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:53:46,904 views 36107 6169473024 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:53:46,903 views 36107 6186299392 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:53:46,904 views 36107 6169473024 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:53:46,905 basehttp 36107 6169473024 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:53:46,905 basehttp 36107 6169473024 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:53:46,905 basehttp 36107 6186299392 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:53:46,905 basehttp 36107 6186299392 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:55:33,741 views 36107 6203125760 Product list request received
+INFO 2024-12-09 21:55:33,741 views 36107 6203125760 Product list request received
+INFO 2024-12-09 21:55:33,742 views 36107 6219952128 Product list request received
+INFO 2024-12-09 21:55:33,742 views 36107 6219952128 Product list request received
+INFO 2024-12-09 21:55:33,753 views 36107 6236778496 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:55:33,754 views 36107 6203125760 Total number of products: 1
+INFO 2024-12-09 21:55:33,754 views 36107 6219952128 Total number of products: 1
+INFO 2024-12-09 21:55:33,753 views 36107 6236778496 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:55:33,754 views 36107 6253604864 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:55:33,754 views 36107 6203125760 Total number of products: 1
+INFO 2024-12-09 21:55:33,754 views 36107 6219952128 Total number of products: 1
+INFO 2024-12-09 21:55:33,754 views 36107 6253604864 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:55:33,755 views 36107 6236778496 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:55:33,755 views 36107 6236778496 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:55:33,757 views 36107 6253604864 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:55:33,757 views 36107 6236778496 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:55:33,757 views 36107 6253604864 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:55:33,757 views 36107 6236778496 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:55:33,760 views 36107 6253604864 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:55:33,760 views 36107 6253604864 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:55:33,762 basehttp 36107 6236778496 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:55:33,762 basehttp 36107 6236778496 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:55:33,765 basehttp 36107 6253604864 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:55:33,765 basehttp 36107 6253604864 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:55:33,767 views 36107 6219952128 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:55:33,767 views 36107 6219952128 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:55:33,770 views 36107 6203125760 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:55:33,770 views 36107 6203125760 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:55:33,770 basehttp 36107 6219952128 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:55:33,770 basehttp 36107 6219952128 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:55:33,771 basehttp 36107 6203125760 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:55:33,771 basehttp 36107 6203125760 "GET /api/products/ HTTP/1.1" 200 562
+ERROR 2024-12-09 21:55:33,794 log 36107 6186299392 Internal Server Error: /api/workstation-processes/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: manufacturing_workstationprocess
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/pagination.py", line 204, in paginate_queryset
+    self.page = paginator.page(page_number)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 72, in page
+    number = self.validate_number(number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+                ^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 99, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+       ^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 93, in count
+    return c()
+           ^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: manufacturing_workstationprocess
+ERROR 2024-12-09 21:55:33,806 log 36107 6169473024 Internal Server Error: /api/workstation-processes/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: manufacturing_workstationprocess
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/pagination.py", line 204, in paginate_queryset
+    self.page = paginator.page(page_number)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 72, in page
+    number = self.validate_number(number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+                ^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 99, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+       ^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 93, in count
+    return c()
+           ^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: manufacturing_workstationprocess
+ERROR 2024-12-09 21:55:33,794 log 36107 6186299392 Internal Server Error: /api/workstation-processes/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: manufacturing_workstationprocess
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/pagination.py", line 204, in paginate_queryset
+    self.page = paginator.page(page_number)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 72, in page
+    number = self.validate_number(number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+                ^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 99, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+       ^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 93, in count
+    return c()
+           ^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: manufacturing_workstationprocess
+ERROR 2024-12-09 21:55:33,806 log 36107 6169473024 Internal Server Error: /api/workstation-processes/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: manufacturing_workstationprocess
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/pagination.py", line 204, in paginate_queryset
+    self.page = paginator.page(page_number)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 72, in page
+    number = self.validate_number(number)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+                ^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 99, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+       ^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/paginator.py", line 93, in count
+    return c()
+           ^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 608, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 568, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 554, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: manufacturing_workstationprocess
+ERROR 2024-12-09 21:55:33,809 basehttp 36107 6186299392 "GET /api/workstation-processes/ HTTP/1.1" 500 189966
+ERROR 2024-12-09 21:55:33,809 basehttp 36107 6169473024 "GET /api/workstation-processes/ HTTP/1.1" 500 189966
+ERROR 2024-12-09 21:55:33,809 basehttp 36107 6186299392 "GET /api/workstation-processes/ HTTP/1.1" 500 189966
+ERROR 2024-12-09 21:55:33,809 basehttp 36107 6169473024 "GET /api/workstation-processes/ HTTP/1.1" 500 189966
+INFO 2024-12-09 21:56:35,903 basehttp 36107 6186299392 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 21:56:35,903 basehttp 36107 6186299392 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 21:56:35,911 basehttp 36107 6169473024 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 21:56:35,911 basehttp 36107 6169473024 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 21:56:35,916 basehttp 36107 6203125760 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 21:56:35,916 basehttp 36107 6203125760 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 21:56:35,931 basehttp 36107 6186299392 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 21:56:35,931 basehttp 36107 6186299392 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 21:56:35,938 basehttp 36107 6169473024 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 21:56:35,938 basehttp 36107 6169473024 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 21:56:35,952 basehttp 36107 6203125760 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 21:56:35,952 basehttp 36107 6203125760 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 21:56:35,968 basehttp 36107 6169473024 "GET /api/analytics/dashboard/ HTTP/1.1" 200 552
+INFO 2024-12-09 21:56:35,968 basehttp 36107 6169473024 "GET /api/analytics/dashboard/ HTTP/1.1" 200 552
+INFO 2024-12-09 21:56:35,975 basehttp 36107 6169473024 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:56:35,975 basehttp 36107 6169473024 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:56:35,981 basehttp 36107 6203125760 "GET /api/analytics/cost/ HTTP/1.1" 200 274
+INFO 2024-12-09 21:56:35,981 basehttp 36107 6203125760 "GET /api/analytics/cost/ HTTP/1.1" 200 274
+INFO 2024-12-09 21:56:35,996 basehttp 36107 6169473024 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:56:35,997 basehttp 36107 6219952128 "GET /api/analytics/cost/ HTTP/1.1" 200 274
+INFO 2024-12-09 21:56:35,996 basehttp 36107 6169473024 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:56:35,997 basehttp 36107 6219952128 "GET /api/analytics/cost/ HTTP/1.1" 200 274
+INFO 2024-12-09 21:56:35,998 basehttp 36107 6186299392 "GET /api/analytics/dashboard/ HTTP/1.1" 200 552
+INFO 2024-12-09 21:56:35,998 basehttp 36107 6186299392 "GET /api/analytics/dashboard/ HTTP/1.1" 200 552
+INFO 2024-12-09 21:57:05,371 basehttp 36107 6219952128 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:05,371 basehttp 36107 6219952128 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:05,374 basehttp 36107 6169473024 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:05,374 basehttp 36107 6169473024 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:05,379 basehttp 36107 6236778496 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:05,381 basehttp 36107 6186299392 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:05,381 basehttp 36107 6203125760 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:05,381 basehttp 36107 6203125760 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:05,384 basehttp 36107 6253604864 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:05,384 basehttp 36107 6253604864 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:05,381 basehttp 36107 6186299392 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:05,379 basehttp 36107 6236778496 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:05,395 basehttp 36107 6219952128 "GET /api/analytics/cost/ HTTP/1.1" 200 274
+INFO 2024-12-09 21:57:05,395 basehttp 36107 6219952128 "GET /api/analytics/cost/ HTTP/1.1" 200 274
+INFO 2024-12-09 21:57:05,399 basehttp 36107 6169473024 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:57:05,399 basehttp 36107 6169473024 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:57:05,407 basehttp 36107 6236778496 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:57:05,407 basehttp 36107 6236778496 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:57:05,411 basehttp 36107 6203125760 "GET /api/analytics/cost/ HTTP/1.1" 200 274
+INFO 2024-12-09 21:57:05,411 basehttp 36107 6203125760 "GET /api/analytics/cost/ HTTP/1.1" 200 274
+INFO 2024-12-09 21:57:05,413 basehttp 36107 6186299392 "GET /api/analytics/dashboard/ HTTP/1.1" 200 552
+INFO 2024-12-09 21:57:05,413 basehttp 36107 6186299392 "GET /api/analytics/dashboard/ HTTP/1.1" 200 552
+INFO 2024-12-09 21:57:05,414 basehttp 36107 6253604864 "GET /api/analytics/dashboard/ HTTP/1.1" 200 552
+INFO 2024-12-09 21:57:05,414 basehttp 36107 6253604864 "GET /api/analytics/dashboard/ HTTP/1.1" 200 552
+INFO 2024-12-09 21:57:06,861 basehttp 36107 6169473024 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:06,861 basehttp 36107 6169473024 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:06,875 basehttp 36107 6186299392 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:06,875 basehttp 36107 6186299392 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:06,880 basehttp 36107 6236778496 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:06,880 basehttp 36107 6203125760 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:06,880 basehttp 36107 6219952128 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:06,880 basehttp 36107 6236778496 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:06,880 basehttp 36107 6203125760 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:06,880 basehttp 36107 6219952128 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:06,883 basehttp 36107 6253604864 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:06,883 basehttp 36107 6253604864 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 21:57:06,905 basehttp 36107 6203125760 "GET /api/analytics/cost/ HTTP/1.1" 200 274
+INFO 2024-12-09 21:57:06,905 basehttp 36107 6219952128 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:57:06,905 basehttp 36107 6203125760 "GET /api/analytics/cost/ HTTP/1.1" 200 274
+INFO 2024-12-09 21:57:06,905 basehttp 36107 6219952128 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:57:06,907 basehttp 36107 6236778496 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:57:06,907 basehttp 36107 6236778496 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:57:06,907 basehttp 36107 6169473024 "GET /api/analytics/dashboard/ HTTP/1.1" 200 552
+INFO 2024-12-09 21:57:06,907 basehttp 36107 6253604864 "GET /api/analytics/cost/ HTTP/1.1" 200 274
+INFO 2024-12-09 21:57:06,907 basehttp 36107 6169473024 "GET /api/analytics/dashboard/ HTTP/1.1" 200 552
+INFO 2024-12-09 21:57:06,907 basehttp 36107 6253604864 "GET /api/analytics/cost/ HTTP/1.1" 200 274
+INFO 2024-12-09 21:57:06,910 basehttp 36107 6186299392 "GET /api/analytics/dashboard/ HTTP/1.1" 200 552
+INFO 2024-12-09 21:57:06,910 basehttp 36107 6186299392 "GET /api/analytics/dashboard/ HTTP/1.1" 200 552
+INFO 2024-12-09 21:58:20,845 views 36107 6169473024 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:58:20,846 views 36107 6186299392 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:58:20,845 views 36107 6169473024 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:58:20,846 views 36107 6186299392 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:58:20,846 views 36107 6186299392 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:58:20,846 views 36107 6169473024 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:58:20,846 views 36107 6186299392 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:58:20,846 views 36107 6169473024 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:58:20,847 views 36107 6186299392 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:58:20,847 views 36107 6169473024 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:58:20,847 views 36107 6186299392 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:58:20,847 views 36107 6169473024 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:58:20,848 basehttp 36107 6186299392 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:58:20,849 basehttp 36107 6169473024 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:58:20,848 basehttp 36107 6186299392 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:58:20,849 basehttp 36107 6169473024 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:58:34,616 views 36107 6169473024 Product list request received
+INFO 2024-12-09 21:58:34,616 views 36107 6169473024 Product list request received
+INFO 2024-12-09 21:58:34,620 views 36107 6169473024 Total number of products: 1
+INFO 2024-12-09 21:58:34,620 views 36107 6169473024 Total number of products: 1
+INFO 2024-12-09 21:58:34,621 basehttp 36107 6186299392 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 21:58:34,621 basehttp 36107 6186299392 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 21:58:34,627 views 36107 6169473024 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:34,627 views 36107 6169473024 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:34,628 basehttp 36107 6186299392 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 21:58:34,628 basehttp 36107 6186299392 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 21:58:34,629 basehttp 36107 6169473024 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:34,629 basehttp 36107 6169473024 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:34,630 views 36107 6186299392 Product list request received
+INFO 2024-12-09 21:58:34,630 views 36107 6186299392 Product list request received
+INFO 2024-12-09 21:58:34,631 views 36107 6186299392 Total number of products: 1
+INFO 2024-12-09 21:58:34,631 views 36107 6186299392 Total number of products: 1
+INFO 2024-12-09 21:58:34,635 views 36107 6186299392 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:34,635 views 36107 6186299392 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:34,635 basehttp 36107 6186299392 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:34,635 basehttp 36107 6186299392 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:37,820 views 36107 6203125760 Product list request received
+INFO 2024-12-09 21:58:37,820 views 36107 6203125760 Product list request received
+INFO 2024-12-09 21:58:37,821 views 36107 6203125760 Total number of products: 1
+INFO 2024-12-09 21:58:37,821 views 36107 6203125760 Total number of products: 1
+INFO 2024-12-09 21:58:37,825 views 36107 6203125760 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:37,825 views 36107 6203125760 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:37,825 basehttp 36107 6203125760 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:37,825 basehttp 36107 6203125760 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:37,830 views 36107 6203125760 Product list request received
+INFO 2024-12-09 21:58:37,830 views 36107 6203125760 Product list request received
+INFO 2024-12-09 21:58:37,831 views 36107 6203125760 Total number of products: 1
+INFO 2024-12-09 21:58:37,831 views 36107 6203125760 Total number of products: 1
+INFO 2024-12-09 21:58:37,835 views 36107 6203125760 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:37,835 views 36107 6203125760 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:37,835 basehttp 36107 6203125760 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:37,835 basehttp 36107 6203125760 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:38,655 views 36107 6186299392 Product list request received
+INFO 2024-12-09 21:58:38,655 views 36107 6186299392 Product list request received
+INFO 2024-12-09 21:58:38,660 views 36107 6186299392 Total number of products: 1
+INFO 2024-12-09 21:58:38,660 views 36107 6186299392 Total number of products: 1
+INFO 2024-12-09 21:58:38,660 basehttp 36107 6169473024 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 21:58:38,660 basehttp 36107 6169473024 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 21:58:38,667 views 36107 6186299392 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:38,668 basehttp 36107 6169473024 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 21:58:38,668 basehttp 36107 6169473024 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 21:58:38,667 views 36107 6186299392 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:38,668 basehttp 36107 6186299392 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:38,668 basehttp 36107 6186299392 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:38,669 views 36107 6186299392 Product list request received
+INFO 2024-12-09 21:58:38,669 views 36107 6186299392 Product list request received
+INFO 2024-12-09 21:58:38,670 views 36107 6186299392 Total number of products: 1
+INFO 2024-12-09 21:58:38,670 views 36107 6186299392 Total number of products: 1
+INFO 2024-12-09 21:58:38,673 views 36107 6186299392 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:38,673 views 36107 6186299392 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:38,674 basehttp 36107 6186299392 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:38,674 basehttp 36107 6186299392 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:40,869 views 36107 6203125760 Product list request received
+INFO 2024-12-09 21:58:40,869 views 36107 6203125760 Product list request received
+INFO 2024-12-09 21:58:40,870 views 36107 6203125760 Total number of products: 1
+INFO 2024-12-09 21:58:40,870 views 36107 6203125760 Total number of products: 1
+INFO 2024-12-09 21:58:40,872 views 36107 6203125760 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:40,872 views 36107 6203125760 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:40,873 basehttp 36107 6203125760 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:40,873 basehttp 36107 6203125760 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:40,877 views 36107 6203125760 Product list request received
+INFO 2024-12-09 21:58:40,877 views 36107 6203125760 Product list request received
+INFO 2024-12-09 21:58:40,878 views 36107 6203125760 Total number of products: 1
+INFO 2024-12-09 21:58:40,878 views 36107 6203125760 Total number of products: 1
+INFO 2024-12-09 21:58:40,881 views 36107 6203125760 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:40,881 views 36107 6203125760 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 21:58:40,881 basehttp 36107 6203125760 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:40,881 basehttp 36107 6203125760 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 21:58:42,258 views 36107 6203125760 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:58:42,258 views 36107 6219952128 Found 2 workstation sequences for product 3
+INFO 2024-12-09 21:58:42,258 views 36107 6203125760 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:58:42,258 views 36107 6219952128 Found 2 workstation sequences for product 3
+INFO 2024-12-09 21:58:42,259 views 36107 6203125760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:58:42,259 views 36107 6203125760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:58:42,260 views 36107 6203125760 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:58:42,260 views 36107 6203125760 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:58:42,261 basehttp 36107 6203125760 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:58:42,261 basehttp 36107 6203125760 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:58:42,264 basehttp 36107 6219952128 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 21:58:42,264 basehttp 36107 6219952128 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 21:58:42,268 views 36107 6203125760 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:58:42,268 views 36107 6203125760 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:58:42,269 views 36107 6203125760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:58:42,269 views 36107 6219952128 Found 2 workstation sequences for product 3
+INFO 2024-12-09 21:58:42,269 views 36107 6203125760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:58:42,269 views 36107 6219952128 Found 2 workstation sequences for product 3
+INFO 2024-12-09 21:58:42,270 views 36107 6203125760 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:58:42,270 views 36107 6203125760 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:58:42,271 basehttp 36107 6203125760 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:58:42,271 basehttp 36107 6203125760 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:58:42,273 basehttp 36107 6219952128 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 21:58:42,273 basehttp 36107 6219952128 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 21:58:44,727 views 36107 6203125760 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:58:44,727 views 36107 6203125760 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:58:44,728 views 36107 6203125760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:58:44,728 views 36107 6203125760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:58:44,728 views 36107 6203125760 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:58:44,728 views 36107 6203125760 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:58:44,729 basehttp 36107 6203125760 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:58:44,729 views 36107 6219952128 Found 2 workstation sequences for product 3
+INFO 2024-12-09 21:58:44,729 views 36107 6219952128 Found 2 workstation sequences for product 3
+INFO 2024-12-09 21:58:44,729 basehttp 36107 6203125760 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:58:44,733 basehttp 36107 6219952128 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 21:58:44,733 basehttp 36107 6219952128 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 21:58:44,734 views 36107 6203125760 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:58:44,734 views 36107 6203125760 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:58:44,735 views 36107 6203125760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:58:44,735 views 36107 6203125760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:58:44,735 views 36107 6203125760 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:58:44,735 views 36107 6203125760 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:58:44,736 basehttp 36107 6203125760 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:58:44,736 basehttp 36107 6203125760 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:58:44,737 views 36107 6219952128 Found 2 workstation sequences for product 3
+INFO 2024-12-09 21:58:44,737 views 36107 6219952128 Found 2 workstation sequences for product 3
+INFO 2024-12-09 21:58:44,738 basehttp 36107 6219952128 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 21:58:44,738 basehttp 36107 6219952128 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 21:59:22,263 basehttp 36107 6203125760 "POST /api/products/ HTTP/1.1" 201 263
+INFO 2024-12-09 21:59:22,263 basehttp 36107 6203125760 "POST /api/products/ HTTP/1.1" 201 263
+INFO 2024-12-09 21:59:22,271 views 36107 6203125760 Product list request received
+INFO 2024-12-09 21:59:22,271 views 36107 6203125760 Product list request received
+INFO 2024-12-09 21:59:22,272 views 36107 6203125760 Total number of products: 2
+INFO 2024-12-09 21:59:22,272 views 36107 6203125760 Total number of products: 2
+INFO 2024-12-09 21:59:22,276 views 36107 6203125760 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': '', 'materials': [], 'current_quantity': 10, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'stock_status_display': 'Low Stock', 'workstation_sequences': [], 'created_at': '2024-12-09T21:59:22.258542Z'})]
+INFO 2024-12-09 21:59:22,276 views 36107 6203125760 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': '', 'materials': [], 'current_quantity': 10, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'stock_status_display': 'Low Stock', 'workstation_sequences': [], 'created_at': '2024-12-09T21:59:22.258542Z'})]
+INFO 2024-12-09 21:59:22,277 basehttp 36107 6203125760 "GET /api/products/ HTTP/1.1" 200 826
+INFO 2024-12-09 21:59:22,277 basehttp 36107 6203125760 "GET /api/products/ HTTP/1.1" 200 826
+INFO 2024-12-09 21:59:24,427 views 36107 6203125760 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:59:24,427 views 36107 6203125760 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:59:24,431 views 36107 6203125760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:59:24,431 views 36107 6203125760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:59:24,431 views 36107 6203125760 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:59:24,431 views 36107 6203125760 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:59:24,436 views 36107 6219952128 Found 0 workstation sequences for product 4
+INFO 2024-12-09 21:59:24,436 views 36107 6219952128 Found 0 workstation sequences for product 4
+INFO 2024-12-09 21:59:24,437 basehttp 36107 6203125760 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:59:24,437 basehttp 36107 6203125760 "GET /api/workstations/ HTTP/1.1" 200 501
+DEBUG 2024-12-09 21:59:24,437 views 36107 6219952128 No workstation sequences found for product 4
+DEBUG 2024-12-09 21:59:24,437 views 36107 6219952128 No workstation sequences found for product 4
+INFO 2024-12-09 21:59:24,438 basehttp 36107 6219952128 "GET /api/products/4/workstation_sequence/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:59:24,438 basehttp 36107 6219952128 "GET /api/products/4/workstation_sequence/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:59:24,444 views 36107 6203125760 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:59:24,444 views 36107 6203125760 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 21:59:24,445 views 36107 6219952128 Found 0 workstation sequences for product 4
+INFO 2024-12-09 21:59:24,445 views 36107 6219952128 Found 0 workstation sequences for product 4
+INFO 2024-12-09 21:59:24,445 views 36107 6203125760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 21:59:24,445 views 36107 6203125760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+DEBUG 2024-12-09 21:59:24,445 views 36107 6219952128 No workstation sequences found for product 4
+INFO 2024-12-09 21:59:24,445 views 36107 6203125760 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+DEBUG 2024-12-09 21:59:24,445 views 36107 6219952128 No workstation sequences found for product 4
+INFO 2024-12-09 21:59:24,445 views 36107 6203125760 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 21:59:24,446 basehttp 36107 6203125760 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:59:24,447 basehttp 36107 6219952128 "GET /api/products/4/workstation_sequence/ HTTP/1.1" 200 2
+INFO 2024-12-09 21:59:24,446 basehttp 36107 6203125760 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 21:59:24,447 basehttp 36107 6219952128 "GET /api/products/4/workstation_sequence/ HTTP/1.1" 200 2
+ERROR 2024-12-09 21:59:38,553 log 36107 6203125760 Internal Server Error: /api/products/4/update_workstation_sequence/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: manufacturing_productworkstationsequence.process_type
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 226, in update_workstation_sequence
+    ProductWorkstationSequence.objects.bulk_create(sequences_to_create)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 803, in bulk_create
+    returned_columns = self._batched_insert(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1831, in _batched_insert
+    self._insert(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: manufacturing_productworkstationsequence.process_type
+ERROR 2024-12-09 21:59:38,553 log 36107 6203125760 Internal Server Error: /api/products/4/update_workstation_sequence/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: manufacturing_productworkstationsequence.process_type
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 226, in update_workstation_sequence
+    ProductWorkstationSequence.objects.bulk_create(sequences_to_create)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 803, in bulk_create
+    returned_columns = self._batched_insert(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1831, in _batched_insert
+    self._insert(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: manufacturing_productworkstationsequence.process_type
+ERROR 2024-12-09 21:59:38,555 basehttp 36107 6203125760 "POST /api/products/4/update_workstation_sequence/ HTTP/1.1" 500 173678
+ERROR 2024-12-09 21:59:38,555 basehttp 36107 6203125760 "POST /api/products/4/update_workstation_sequence/ HTTP/1.1" 500 173678
+ERROR 2024-12-09 21:59:50,718 log 36107 6203125760 Internal Server Error: /api/products/4/update_workstation_sequence/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: manufacturing_productworkstationsequence.process_type
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 226, in update_workstation_sequence
+    ProductWorkstationSequence.objects.bulk_create(sequences_to_create)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 803, in bulk_create
+    returned_columns = self._batched_insert(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1831, in _batched_insert
+    self._insert(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: manufacturing_productworkstationsequence.process_type
+ERROR 2024-12-09 21:59:50,718 log 36107 6203125760 Internal Server Error: /api/products/4/update_workstation_sequence/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: manufacturing_productworkstationsequence.process_type
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 226, in update_workstation_sequence
+    ProductWorkstationSequence.objects.bulk_create(sequences_to_create)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 803, in bulk_create
+    returned_columns = self._batched_insert(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1831, in _batched_insert
+    self._insert(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: manufacturing_productworkstationsequence.process_type
+ERROR 2024-12-09 21:59:50,720 basehttp 36107 6203125760 "POST /api/products/4/update_workstation_sequence/ HTTP/1.1" 500 173678
+ERROR 2024-12-09 21:59:50,720 basehttp 36107 6203125760 "POST /api/products/4/update_workstation_sequence/ HTTP/1.1" 500 173678
+INFO 2024-12-09 22:00:36,353 autoreload 36107 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py changed, reloading.
+INFO 2024-12-09 22:00:36,353 autoreload 36107 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py changed, reloading.
+INFO 2024-12-09 22:00:36,735 autoreload 36591 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 22:00:36,735 autoreload 36591 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 22:01:21,625 basehttp 36591 6197506048 "POST /api/products/4/update_workstation_sequence/ HTTP/1.1" 201 277
+INFO 2024-12-09 22:01:21,625 basehttp 36591 6197506048 "POST /api/products/4/update_workstation_sequence/ HTTP/1.1" 201 277
+INFO 2024-12-09 22:01:25,517 views 36591 6197506048 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:01:25,517 views 36591 6197506048 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:01:25,517 views 36591 6197506048 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:01:25,517 views 36591 6197506048 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:01:25,517 views 36591 6197506048 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:01:25,517 views 36591 6197506048 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:01:25,518 basehttp 36591 6197506048 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 22:01:25,518 basehttp 36591 6197506048 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 22:01:25,523 views 36591 6197506048 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:01:25,523 views 36591 6197506048 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:01:25,523 views 36591 6197506048 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:01:25,523 views 36591 6197506048 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:01:25,523 views 36591 6197506048 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:01:25,523 views 36591 6197506048 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:01:25,524 basehttp 36591 6197506048 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 22:01:25,524 basehttp 36591 6197506048 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 22:02:28,847 autoreload 36591 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py changed, reloading.
+INFO 2024-12-09 22:02:28,847 autoreload 36591 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py changed, reloading.
+INFO 2024-12-09 22:02:29,165 autoreload 36701 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 22:02:29,165 autoreload 36701 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 22:02:39,600 autoreload 36701 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-09 22:02:39,600 autoreload 36701 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-09 22:02:39,858 autoreload 36719 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 22:02:39,858 autoreload 36719 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 22:03:19,945 views 36719 6160805888 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:03:19,945 views 36719 6160805888 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:03:19,946 views 36719 6160805888 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:03:19,946 views 36719 6160805888 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:03:19,946 views 36719 6160805888 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:03:19,946 views 36719 6160805888 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:03:19,947 basehttp 36719 6160805888 "GET /api/workstations/ HTTP/1.1" 200 549
+INFO 2024-12-09 22:03:19,947 basehttp 36719 6160805888 "GET /api/workstations/ HTTP/1.1" 200 549
+INFO 2024-12-09 22:03:24,153 basehttp 36719 6160805888 "PUT /api/workstations/4/ HTTP/1.1" 200 269
+INFO 2024-12-09 22:03:24,153 basehttp 36719 6160805888 "PUT /api/workstations/4/ HTTP/1.1" 200 269
+INFO 2024-12-09 22:03:24,158 views 36719 6160805888 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:03:24,158 views 36719 6160805888 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:03:24,158 views 36719 6160805888 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:03:24,158 views 36719 6160805888 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:03:24,158 views 36719 6160805888 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:03:24,158 views 36719 6160805888 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:03:24,159 basehttp 36719 6160805888 "GET /api/workstations/ HTTP/1.1" 200 552
+INFO 2024-12-09 22:03:24,159 basehttp 36719 6160805888 "GET /api/workstations/ HTTP/1.1" 200 552
+INFO 2024-12-09 22:03:29,347 basehttp 36719 6160805888 "PUT /api/workstations/6/ HTTP/1.1" 200 283
+INFO 2024-12-09 22:03:29,347 basehttp 36719 6160805888 "PUT /api/workstations/6/ HTTP/1.1" 200 283
+INFO 2024-12-09 22:03:29,352 views 36719 6160805888 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:03:29,352 views 36719 6160805888 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:03:29,352 views 36719 6160805888 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:03:29,352 views 36719 6160805888 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:03:29,352 views 36719 6160805888 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:03:29,352 views 36719 6160805888 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:03:29,353 basehttp 36719 6160805888 "GET /api/workstations/ HTTP/1.1" 200 555
+INFO 2024-12-09 22:03:29,353 basehttp 36719 6160805888 "GET /api/workstations/ HTTP/1.1" 200 555
+INFO 2024-12-09 22:03:29,588 views 36719 6160805888 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:03:29,588 views 36719 6160805888 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:03:29,589 views 36719 6160805888 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:03:29,589 views 36719 6160805888 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:03:29,589 views 36719 6160805888 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:03:29,589 views 36719 6160805888 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:03:29,590 basehttp 36719 6160805888 "GET /api/workstations/ HTTP/1.1" 200 555
+INFO 2024-12-09 22:03:29,590 basehttp 36719 6160805888 "GET /api/workstations/ HTTP/1.1" 200 555
+INFO 2024-12-09 22:03:40,104 basehttp 36719 6160805888 "PUT /api/workstations/6/ HTTP/1.1" 200 280
+INFO 2024-12-09 22:03:40,104 basehttp 36719 6160805888 "PUT /api/workstations/6/ HTTP/1.1" 200 280
+INFO 2024-12-09 22:03:40,108 views 36719 6160805888 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:03:40,108 views 36719 6160805888 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:03:40,109 views 36719 6160805888 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:03:40,109 views 36719 6160805888 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:03:40,109 views 36719 6160805888 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:03:40,109 views 36719 6160805888 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:03:40,109 basehttp 36719 6160805888 "GET /api/workstations/ HTTP/1.1" 200 552
+INFO 2024-12-09 22:03:40,109 basehttp 36719 6160805888 "GET /api/workstations/ HTTP/1.1" 200 552
+INFO 2024-12-09 22:04:21,487 views 36719 6160805888 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:04:21,487 views 36719 6160805888 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:04:21,488 views 36719 6160805888 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:04:21,488 views 36719 6160805888 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:04:21,488 views 36719 6160805888 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:04:21,488 views 36719 6160805888 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:04:21,488 basehttp 36719 6160805888 "GET /api/workstations/ HTTP/1.1" 200 552
+INFO 2024-12-09 22:04:21,488 basehttp 36719 6160805888 "GET /api/workstations/ HTTP/1.1" 200 552
+INFO 2024-12-09 22:04:28,309 basehttp 36719 6160805888 "PUT /api/workstations/6/ HTTP/1.1" 200 283
+INFO 2024-12-09 22:04:28,309 basehttp 36719 6160805888 "PUT /api/workstations/6/ HTTP/1.1" 200 283
+INFO 2024-12-09 22:04:28,317 views 36719 6160805888 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:04:28,317 views 36719 6160805888 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:04:28,318 views 36719 6160805888 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:04:28,318 views 36719 6160805888 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:04:28,318 views 36719 6160805888 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:04:28,318 views 36719 6160805888 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:04:28,319 basehttp 36719 6160805888 "GET /api/workstations/ HTTP/1.1" 200 555
+INFO 2024-12-09 22:04:28,319 basehttp 36719 6160805888 "GET /api/workstations/ HTTP/1.1" 200 555
+INFO 2024-12-09 22:04:49,663 views 36719 6160805888 Product list request received
+INFO 2024-12-09 22:04:49,663 views 36719 6160805888 Product list request received
+INFO 2024-12-09 22:04:49,664 views 36719 6160805888 Total number of products: 2
+INFO 2024-12-09 22:04:49,664 views 36719 6160805888 Total number of products: 2
+INFO 2024-12-09 22:04:49,669 views 36719 6160805888 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': '', 'materials': [], 'current_quantity': 10, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'stock_status_display': 'Low Stock', 'workstation_sequences': [OrderedDict({'id': 8, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '02:00:00', 'instruction_set': {}}), OrderedDict({'id': 9, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T21:59:22.258542Z'})]
+INFO 2024-12-09 22:04:49,669 views 36719 6160805888 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': '', 'materials': [], 'current_quantity': 10, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'stock_status_display': 'Low Stock', 'workstation_sequences': [OrderedDict({'id': 8, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '02:00:00', 'instruction_set': {}}), OrderedDict({'id': 9, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T21:59:22.258542Z'})]
+INFO 2024-12-09 22:04:49,670 basehttp 36719 6160805888 "GET /api/products/ HTTP/1.1" 200 1101
+INFO 2024-12-09 22:04:49,670 basehttp 36719 6160805888 "GET /api/products/ HTTP/1.1" 200 1101
+INFO 2024-12-09 22:04:49,674 views 36719 6160805888 Product list request received
+INFO 2024-12-09 22:04:49,674 views 36719 6160805888 Product list request received
+INFO 2024-12-09 22:04:49,675 views 36719 6160805888 Total number of products: 2
+INFO 2024-12-09 22:04:49,675 views 36719 6160805888 Total number of products: 2
+INFO 2024-12-09 22:04:49,679 views 36719 6160805888 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': '', 'materials': [], 'current_quantity': 10, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'stock_status_display': 'Low Stock', 'workstation_sequences': [OrderedDict({'id': 8, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '02:00:00', 'instruction_set': {}}), OrderedDict({'id': 9, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T21:59:22.258542Z'})]
+INFO 2024-12-09 22:04:49,679 views 36719 6160805888 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': '', 'materials': [], 'current_quantity': 10, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'stock_status_display': 'Low Stock', 'workstation_sequences': [OrderedDict({'id': 8, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '02:00:00', 'instruction_set': {}}), OrderedDict({'id': 9, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T21:59:22.258542Z'})]
+INFO 2024-12-09 22:04:49,680 basehttp 36719 6160805888 "GET /api/products/ HTTP/1.1" 200 1101
+INFO 2024-12-09 22:04:49,680 basehttp 36719 6160805888 "GET /api/products/ HTTP/1.1" 200 1101
+INFO 2024-12-09 22:04:50,697 views 36719 6177632256 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:04:50,697 views 36719 6160805888 Found 2 workstation sequences for product 3
+INFO 2024-12-09 22:04:50,697 views 36719 6177632256 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:04:50,697 views 36719 6160805888 Found 2 workstation sequences for product 3
+INFO 2024-12-09 22:04:50,698 views 36719 6177632256 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:04:50,698 views 36719 6177632256 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:04:50,698 views 36719 6177632256 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:04:50,698 views 36719 6177632256 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:04:50,700 basehttp 36719 6177632256 "GET /api/workstations/ HTTP/1.1" 200 555
+INFO 2024-12-09 22:04:50,700 basehttp 36719 6177632256 "GET /api/workstations/ HTTP/1.1" 200 555
+INFO 2024-12-09 22:04:50,703 basehttp 36719 6160805888 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 22:04:50,703 basehttp 36719 6160805888 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 22:04:50,706 views 36719 6177632256 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:04:50,706 views 36719 6177632256 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 22:04:50,707 views 36719 6177632256 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:04:50,707 views 36719 6177632256 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 22:04:50,707 views 36719 6177632256 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:04:50,707 views 36719 6177632256 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 22:04:50,708 views 36719 6160805888 Found 2 workstation sequences for product 3
+INFO 2024-12-09 22:04:50,708 views 36719 6160805888 Found 2 workstation sequences for product 3
+INFO 2024-12-09 22:04:50,709 basehttp 36719 6177632256 "GET /api/workstations/ HTTP/1.1" 200 555
+INFO 2024-12-09 22:04:50,709 basehttp 36719 6177632256 "GET /api/workstations/ HTTP/1.1" 200 555
+INFO 2024-12-09 22:04:50,711 basehttp 36719 6160805888 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277
+INFO 2024-12-09 22:04:50,711 basehttp 36719 6160805888 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 277

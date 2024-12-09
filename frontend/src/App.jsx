@@ -22,7 +22,7 @@ import Products from './pages/Products';
 import Workstations from './pages/Workstations';
 
 // Import new Production Line Management pages
-import WorkstationProcesses from './pages/WorkstationProcesses';
+// import WorkstationProcesses from './pages/WorkstationProcesses';
 import WorkstationEfficiency from './pages/WorkstationEfficiency';
 import ProductionDesigns from './pages/ProductionDesigns';
 import ProductionEvents from './pages/ProductionEvents';
@@ -139,14 +139,15 @@ function App() {
         />
 
         {/* New Production Line Management Routes */}
-        <Route 
+        {/* Remove Workstation Processes Route */}
+        {/* <Route 
           path="/workstation-processes" 
           element={
             <ProtectedRoute>
               <WorkstationProcesses />
             </ProtectedRoute>
           } 
-        />
+        /> */}
         <Route 
           path="/workstation-efficiency" 
           element={

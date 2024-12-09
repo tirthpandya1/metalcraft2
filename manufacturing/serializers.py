@@ -18,7 +18,7 @@ class WorkStationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = WorkStation
-        fields = ['id', 'name', 'description', 'status', 'created_at', 'updated_at', 
+        fields = ['id', 'name', 'description', 'status', 'process_type', 'created_at', 'updated_at', 
                   'last_maintenance', 'last_maintenance_display']
         read_only_fields = ['id', 'created_at', 'updated_at', 'last_maintenance']
 

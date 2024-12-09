@@ -76,6 +76,13 @@ const WorkstationCard = ({ workstation, onEdit, onDelete }) => {
             label={workstation.status} 
             color={getStatusColor(workstation.status)} 
             size="small" 
+            sx={{ mr: 1 }}
+          />
+          <Chip 
+            label={workstation.process_type || 'MANUAL'} 
+            variant="outlined"
+            color={workstation.process_type === 'AUTOMATIC' ? 'primary' : 'secondary'}
+            size="small" 
           />
         </Box>
         <Box sx={{ mt: 2 }}>
@@ -185,7 +192,7 @@ export default function WorkStations() {
           variant="contained" 
           startIcon={<BuildIcon />}
           onClick={() => {
-            setSelectedWorkstation({ name: '', description: '', status: 'INACTIVE' });
+            setSelectedWorkstation({ name: '', description: '', status: 'INACTIVE', process_type: 'MANUAL' });
             setIsDialogOpen(true);
           }}
         >
@@ -201,39 +208,7 @@ export default function WorkStations() {
         <Grid container spacing={3}>
           {workstations.map((workstation) => (
             <Grid item xs={12} sm={6} md={4} key={workstation.id}>
-              <Card>
-                <CardContent>
-                  <Typography variant="h6">{workstation.name}</Typography>
-                  <Typography variant="body2" color="textSecondary">
-                    {workstation.description || 'No description'}
-                  </Typography>
-                  <Chip 
-                    label={workstation.status} 
-                    color={
-                      workstation.status === 'ACTIVE' ? 'success' :
-                      workstation.status === 'MAINTENANCE' ? 'warning' :
-                      'default'
-                    }
-                    size="small"
-                    sx={{ mt: 1 }}
-                  />
-                  <Typography variant="body2" sx={{ mt: 1 }}>
-                    <strong>Last Maintenance:</strong> {workstation.last_maintenance_display || 'No maintenance records'}
-                  </Typography>
-                </CardContent>
-                <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
-                  <Tooltip title="Edit Workstation">
-                    <IconButton onClick={() => handleEdit(workstation)}>
-                      <EditIcon />
-                    </IconButton>
-                  </Tooltip>
-                  <Tooltip title="Delete Workstation">
-                    <IconButton color="error" onClick={() => handleDelete(workstation.id)}>
-                      <DeleteIcon />
-                    </IconButton>
-                  </Tooltip>
-                </Box>
-              </Card>
+              <WorkstationCard workstation={workstation} onEdit={handleEdit} onDelete={handleDelete} />
             </Grid>
           ))}
         </Grid>
@@ -279,6 +254,20 @@ export default function WorkStations() {
               <option value="ACTIVE">Active</option>
               <option value="INACTIVE">Inactive</option>
               <option value="MAINTENANCE">Maintenance</option>
+            </TextField>
+            <TextField
+              select
+              label="Process Type"
+              value={selectedWorkstation?.process_type || 'MANUAL'}
+              onChange={(e) => setSelectedWorkstation(prev => ({
+                ...prev,
+                process_type: e.target.value
+              }))}
+              fullWidth
+              SelectProps={{ native: true }}
+            >
+              <option value="MANUAL">Manual</option>
+              <option value="AUTOMATIC">Automatic</option>
             </TextField>
           </Box>
         </DialogContent>

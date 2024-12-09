@@ -43,7 +43,6 @@ function Sidebar() {
   const [openProduction, setOpenProduction] = useState(
     [
       '/workstations', 
-      '/workstation-processes', 
       '/production-designs', 
       '/production-events'
     ].includes(location.pathname)
@@ -111,11 +110,11 @@ function Sidebar() {
           icon: <WorkstationIcon />, 
           path: '/workstations' 
         },
-        { 
-          text: 'Workstation Processes', 
-          icon: <ProcessIcon />, 
-          path: '/workstation-processes' 
-        },
+        // { 
+        //   text: 'Workstation Processes', 
+        //   icon: <ProcessIcon />, 
+        //   path: '/workstation-processes' 
+        // },
         { 
           text: 'Production Designs', 
           icon: <DesignIcon />, 
