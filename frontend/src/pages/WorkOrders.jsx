@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Chip, MenuItem, TextField } from '@mui/material';
-import { workOrderService } from '../services/api';
+import { workOrderService, productService } from '../services/api';
 import { withCrudList } from '../components/CrudListPage';
 
 // Work Order Form Component
-function WorkOrderForm({ item, onItemChange }) {
+function WorkOrderForm({ item, onItemChange, products }) {
   return (
     <>
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Product"
+        select
+        value={item.product?.id || ''}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          product: products.find(p => p.id === e.target.value)
+        }))}
+        required
+      >
+        {products.map((product) => (
+          <MenuItem key={product.id} value={product.id}>
+            {product.name}
+          </MenuItem>
+        ))}
+      </TextField>
       <TextField
         fullWidth
         margin="normal"
@@ -17,6 +35,7 @@ function WorkOrderForm({ item, onItemChange }) {
           ...prev,
           quantity: e.target.value
         }))}
+        required
       />
       <TextField
         fullWidth
@@ -88,13 +107,25 @@ const workOrderConfig = {
   pageTitle: 'Work Orders',
   defaultSortKey: 'created_at',
   defaultItem: {
+    product: null,
     quantity: 1,
     status: 'PENDING',
     priority: 'MEDIUM',
     notes: ''
   },
-  searchFields: ['notes', 'status', 'priority'],
+  searchFields: [
+    'product_name',  // Explicitly search product name
+    'notes',         // Search notes
+    'status',        // Search by status
+    'priority'       // Search by priority
+  ],
   dialogFields: [
+    { 
+      key: 'product', 
+      label: 'Product',
+      type: 'select',
+      options: [] // This will be populated dynamically
+    },
     { 
       key: 'quantity', 
       label: 'Quantity',
@@ -125,13 +156,19 @@ const workOrderConfig = {
         { value: 'HIGH', label: 'High Priority' },
         { value: 'CRITICAL', label: 'Critical Priority' }
       ]
+    },
+    {
+      key: 'notes',
+      label: 'Notes',
+      type: 'text',
+      multiline: true
     }
   ],
   columns: [
     { 
-      key: 'product', 
+      key: 'product_name', 
       label: 'Product',
-      render: (item) => item.product?.name || 'No Product'
+      render: (item) => item.product_name || 'No Product'
     },
     { 
       key: 'quantity', 

@@ -8,39 +8,20 @@ import {
 import { 
   Edit as EditIcon, 
   Delete as DeleteIcon,
-  Build as BuildIcon 
+  Build as BuildIcon
 } from '@mui/icons-material';
 import { withCrudList } from '../components/CrudListPage';
 import { materialService } from '../services/api';
 
 // Row component for Materials
 function MaterialRow({ item, onEdit, onDelete }) {
-  const getStatusColor = (status) => {
-    switch (status.toLowerCase()) {
-      case 'available':
-        return 'success';
-      case 'low stock':
-        return 'warning';
-      case 'out of stock':
-        return 'error';
-      default:
-        return 'default';
-    }
-  };
-
   return (
     <TableRow>
       <TableCell>{item.name}</TableCell>
-      <TableCell>
-        <Chip
-          label={item.status}
-          color={getStatusColor(item.status)}
-          size="small"
-        />
-      </TableCell>
-      <TableCell>{item.category}</TableCell>
-      <TableCell>{item.quantity}</TableCell>
       <TableCell>{item.unit}</TableCell>
+      <TableCell>{item.quantity}</TableCell>
+      <TableCell>{item.reorder_level}</TableCell>
+      <TableCell>{item.cost_per_unit || 'N/A'}</TableCell>
       <TableCell>
         <IconButton size="small" onClick={onEdit}>
           <EditIcon />
@@ -59,20 +40,72 @@ const materialsConfig = {
   pageTitle: 'Materials',
   defaultSortKey: 'name',
   addButtonIcon: <BuildIcon />,
-  searchFields: ['name', 'category', 'status'],
+  searchFields: ['name', 'unit'],
+  dialogFields: [
+    { 
+      key: 'name', 
+      label: 'Name',
+      type: 'text',
+      required: true
+    },
+    { 
+      key: 'unit', 
+      label: 'Unit',
+      type: 'select',
+      required: true,
+      options: [
+        { value: 'kg', label: 'Kilograms (kg)' },
+        { value: 'g', label: 'Grams (g)' },
+        { value: 'lb', label: 'Pounds (lb)' },
+        { value: 'oz', label: 'Ounces (oz)' },
+        { value: 'm', label: 'Meters (m)' },
+        { value: 'cm', label: 'Centimeters (cm)' },
+        { value: 'mm', label: 'Millimeters (mm)' },
+        { value: 'pcs', label: 'Pieces (pcs)' }
+      ]
+    },
+    { 
+      key: 'quantity', 
+      label: 'Quantity',
+      type: 'number',
+      required: true,
+      step: '0.01'
+    },
+    { 
+      key: 'reorder_level', 
+      label: 'Reorder Level',
+      type: 'number',
+      required: true,
+      step: '0.01'
+    },
+    { 
+      key: 'cost_per_unit', 
+      label: 'Cost per Unit',
+      type: 'number',
+      required: false,
+      step: '0.01'
+    },
+    { 
+      key: 'description', 
+      label: 'Description',
+      type: 'text',
+      required: false
+    }
+  ],
   columns: [
     { key: 'name', label: 'Name' },
-    { key: 'status', label: 'Status' },
-    { key: 'category', label: 'Category' },
-    { key: 'quantity', label: 'Quantity' },
     { key: 'unit', label: 'Unit' },
+    { key: 'quantity', label: 'Quantity' },
+    { key: 'reorder_level', label: 'Reorder Level' },
+    { key: 'cost_per_unit', label: 'Cost per Unit' },
   ],
   defaultItem: {
     name: '',
-    status: 'Available',
-    category: '',
+    unit: '',
     quantity: '',
-    unit: ''
+    reorder_level: '',
+    cost_per_unit: '',
+    description: ''
   }
 };
 

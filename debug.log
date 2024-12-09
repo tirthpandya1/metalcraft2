@@ -224,3 +224,1167 @@ INFO 2024-12-09 13:50:16,758 basehttp 19896 6187184128 "GET /api/work-orders/ HT
 INFO 2024-12-09 13:50:16,758 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
 INFO 2024-12-09 13:50:16,760 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
 INFO 2024-12-09 13:50:16,760 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:52:52,143 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:52:52,143 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:52:52,151 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:52:52,151 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:54:57,099 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:54:57,099 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:54:57,109 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:54:57,109 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:55:13,222 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:55:13,222 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:55:13,230 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:55:13,230 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:57:15,950 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:57:15,950 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:57:15,951 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:57:15,951 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:57:15,958 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:57:15,958 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:57:15,958 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:57:15,958 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:58:15,041 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:15,041 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:15,043 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:15,043 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:15,049 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:58:15,050 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:58:15,049 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:58:15,050 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:58:40,142 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:40,142 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:40,143 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:40,143 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:40,162 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:58:40,162 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:58:40,162 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:58:40,162 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:58:49,305 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:49,305 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:49,308 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:49,308 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:49,348 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:58:49,348 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:58:49,348 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:58:49,348 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:58:50,380 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:50,380 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:50,381 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:50,381 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:58:50,388 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:58:50,388 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:58:50,389 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:58:50,389 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:59:28,316 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:59:28,316 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:59:28,316 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:59:28,316 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:59:28,335 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:59:28,335 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:59:28,335 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:59:28,335 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:59:32,011 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:59:32,011 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:59:32,015 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:59:32,015 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:59:32,054 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:59:32,054 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:59:32,059 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:59:32,059 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:00:11,188 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:11,188 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:11,193 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:11,193 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:11,203 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:00:11,203 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:00:11,210 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:00:11,210 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:00:30,459 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:30,459 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:30,459 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:30,459 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:30,484 basehttp 19896 6204010496 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:30,484 basehttp 19896 6220836864 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:30,484 basehttp 19896 6204010496 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:30,484 basehttp 19896 6220836864 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:30,493 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:00:30,493 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:00:30,500 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:00:30,500 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:00:30,506 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:00:30,506 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:00:30,507 basehttp 19896 6204010496 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:00:30,507 basehttp 19896 6204010496 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:00:57,123 basehttp 19896 6204010496 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:57,123 basehttp 19896 6204010496 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:57,127 basehttp 19896 6204010496 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:00:57,127 basehttp 19896 6204010496 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:00:57,129 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:57,129 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:00:57,137 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:00:57,137 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:01:16,646 basehttp 19896 6220836864 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:01:16,646 basehttp 19896 6220836864 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:01:16,647 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:01:16,648 basehttp 19896 6204010496 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:01:16,664 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:01:16,647 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:01:16,648 basehttp 19896 6204010496 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:01:16,664 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:01:16,683 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:01:16,683 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:01:16,685 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:01:16,685 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:01:16,695 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:01:16,695 basehttp 19896 6204010496 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:01:16,695 basehttp 19896 6204010496 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:01:16,695 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:02:12,141 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:02:12,141 basehttp 19896 6204010496 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:02:12,141 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:02:12,141 basehttp 19896 6204010496 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:02:12,148 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:02:12,148 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:02:12,154 basehttp 19896 6204010496 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:02:12,154 basehttp 19896 6204010496 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:02:32,204 basehttp 19896 6204010496 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:02:32,204 basehttp 19896 6204010496 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:02:32,209 basehttp 19896 6204010496 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:02:32,209 basehttp 19896 6204010496 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:02:32,211 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:02:32,211 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:02:32,218 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:02:32,218 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:02:55,113 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:02:55,113 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:02:55,114 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:02:55,114 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:02:55,121 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:02:55,121 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:02:55,124 basehttp 19896 6204010496 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:02:55,124 basehttp 19896 6204010496 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:03:15,007 basehttp 19896 6204010496 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:03:15,007 basehttp 19896 6204010496 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:03:15,009 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:03:15,009 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:03:15,010 basehttp 19896 6220836864 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:03:15,010 basehttp 19896 6220836864 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:03:15,035 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:03:15,035 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:03:15,041 basehttp 19896 6204010496 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:03:15,041 basehttp 19896 6204010496 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:03:15,049 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:03:15,049 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:03:15,056 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:03:15,056 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:03:15,057 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:03:15,057 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:04:38,072 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:38,072 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:38,072 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:38,072 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:38,083 basehttp 19896 6220836864 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:38,083 basehttp 19896 6220836864 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:38,088 basehttp 19896 6204010496 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:38,088 basehttp 19896 6204010496 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:38,093 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:04:38,093 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:04:38,106 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:04:38,106 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:04:38,108 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:04:38,108 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:04:38,111 basehttp 19896 6204010496 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:04:38,111 basehttp 19896 6204010496 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:04:50,928 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:50,928 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:50,932 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:50,932 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:50,936 basehttp 19896 6220836864 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:50,936 basehttp 19896 6220836864 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:50,938 basehttp 19896 6204010496 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:50,938 basehttp 19896 6204010496 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:04:50,969 basehttp 19896 6204010496 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:04:50,969 basehttp 19896 6204010496 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:04:50,972 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:04:50,972 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:04:50,976 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:04:50,976 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:04:50,978 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:04:50,978 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:05:02,760 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:02,761 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:02,760 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:02,761 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:02,770 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:05:02,770 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:05:02,774 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:05:02,774 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:05:15,749 basehttp 19896 6220836864 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:15,749 basehttp 19896 6220836864 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:15,750 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:15,750 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:15,756 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:15,756 basehttp 19896 6204010496 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:15,756 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:15,756 basehttp 19896 6204010496 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:15,778 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:05:15,778 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:05:15,794 basehttp 19896 6204010496 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:05:15,794 basehttp 19896 6204010496 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:05:15,803 basehttp 19896 6220836864 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:05:15,803 basehttp 19896 6220836864 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:05:15,804 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:05:15,804 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:05:30,117 basehttp 19896 6220836864 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:30,117 basehttp 19896 6220836864 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:30,117 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:30,117 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:05:30,126 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:05:30,126 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:05:30,128 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:05:30,128 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:06:22,099 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:06:22,099 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:06:22,101 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:06:22,101 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:06:22,106 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:06:22,106 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:06:22,137 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:06:22,137 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:07:04,619 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:07:04,619 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:07:04,623 basehttp 19896 6220836864 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:07:04,623 basehttp 19896 6220836864 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:07:04,629 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:07:04,629 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:07:04,635 basehttp 19896 6220836864 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:07:04,635 basehttp 19896 6220836864 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:07:21,181 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:07:21,181 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:07:21,203 basehttp 19896 6204010496 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:07:21,204 basehttp 19896 6220836864 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:07:21,203 basehttp 19896 6204010496 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:07:21,206 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:07:21,204 basehttp 19896 6220836864 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:07:21,206 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:07:21,219 basehttp 19896 6204010496 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:07:21,219 basehttp 19896 6204010496 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:07:21,223 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:07:21,223 basehttp 19896 6220836864 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:07:21,233 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:07:21,233 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:07:21,233 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:07:21,233 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:09:10,147 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:09:10,147 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:09:10,147 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:09:10,147 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:09:10,155 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:09:10,155 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 14:09:10,158 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:09:10,158 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:09:31,406 autoreload 19896 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py changed, reloading.
+INFO 2024-12-09 14:09:31,406 autoreload 19896 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py changed, reloading.
+INFO 2024-12-09 14:09:31,796 autoreload 20826 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 14:09:31,796 autoreload 20826 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 14:10:10,821 autoreload 20826 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py changed, reloading.
+INFO 2024-12-09 14:10:10,821 autoreload 20826 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py changed, reloading.
+INFO 2024-12-09 14:10:11,153 autoreload 20861 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 14:10:11,153 autoreload 20861 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 14:10:27,646 autoreload 20861 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-09 14:10:27,646 autoreload 20861 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-09 14:10:27,951 autoreload 20879 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 14:10:27,951 autoreload 20879 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 14:10:47,554 basehttp 20879 6204436480 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:10:47,554 basehttp 20879 6204436480 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:10:47,563 basehttp 20879 6221262848 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:10:47,563 basehttp 20879 6221262848 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:10:47,566 basehttp 20879 6238089216 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:10:47,566 basehttp 20879 6238089216 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:10:47,567 basehttp 20879 6254915584 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:10:47,567 basehttp 20879 6254915584 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:10:47,569 views 20879 6204436480 Product list request received
+INFO 2024-12-09 14:10:47,569 views 20879 6204436480 Product list request received
+INFO 2024-12-09 14:10:47,570 views 20879 6254915584 Product list request received
+INFO 2024-12-09 14:10:47,570 views 20879 6254915584 Product list request received
+INFO 2024-12-09 14:10:47,573 views 20879 6204436480 Total number of products: 2
+INFO 2024-12-09 14:10:47,573 views 20879 6204436480 Total number of products: 2
+INFO 2024-12-09 14:10:47,575 views 20879 6254915584 Total number of products: 2
+INFO 2024-12-09 14:10:47,575 views 20879 6254915584 Total number of products: 2
+INFO 2024-12-09 14:10:47,585 views 20879 6204436480 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:10:47,586 views 20879 6254915584 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:10:47,585 views 20879 6204436480 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:10:47,586 views 20879 6254915584 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:10:47,591 basehttp 20879 6254915584 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:10:47,591 basehttp 20879 6204436480 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:10:47,591 basehttp 20879 6254915584 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:10:47,591 basehttp 20879 6204436480 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:10:47,593 basehttp 20879 6238089216 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:10:47,593 basehttp 20879 6238089216 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:10:47,597 basehttp 20879 6221262848 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:10:47,597 basehttp 20879 6221262848 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 14:11:06,945 basehttp 20879 6221262848 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:06,945 basehttp 20879 6221262848 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:06,954 basehttp 20879 6221262848 "POST /api/work-orders/ HTTP/1.1" 201 410
+INFO 2024-12-09 14:11:06,954 basehttp 20879 6221262848 "POST /api/work-orders/ HTTP/1.1" 201 410
+INFO 2024-12-09 14:11:06,957 basehttp 20879 6221262848 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:06,957 basehttp 20879 6221262848 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:06,965 basehttp 20879 6221262848 "GET /api/work-orders/ HTTP/1.1" 200 1920
+INFO 2024-12-09 14:11:06,965 basehttp 20879 6221262848 "GET /api/work-orders/ HTTP/1.1" 200 1920
+INFO 2024-12-09 14:11:16,073 basehttp 20879 6238089216 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:16,073 basehttp 20879 6238089216 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:16,075 basehttp 20879 6221262848 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:16,075 basehttp 20879 6254915584 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:16,075 basehttp 20879 6204436480 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:16,075 basehttp 20879 6221262848 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:16,075 basehttp 20879 6254915584 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:16,075 basehttp 20879 6204436480 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:16,078 views 20879 6221262848 Product list request received
+INFO 2024-12-09 14:11:16,078 views 20879 6254915584 Product list request received
+INFO 2024-12-09 14:11:16,078 views 20879 6221262848 Product list request received
+INFO 2024-12-09 14:11:16,078 views 20879 6254915584 Product list request received
+INFO 2024-12-09 14:11:16,082 views 20879 6254915584 Total number of products: 2
+INFO 2024-12-09 14:11:16,083 views 20879 6221262848 Total number of products: 2
+INFO 2024-12-09 14:11:16,082 views 20879 6254915584 Total number of products: 2
+INFO 2024-12-09 14:11:16,083 views 20879 6221262848 Total number of products: 2
+INFO 2024-12-09 14:11:16,092 views 20879 6254915584 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:11:16,092 views 20879 6254915584 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:11:16,094 views 20879 6221262848 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:11:16,094 views 20879 6221262848 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:11:16,098 basehttp 20879 6221262848 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:11:16,098 basehttp 20879 6254915584 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:11:16,098 basehttp 20879 6221262848 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:11:16,098 basehttp 20879 6254915584 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:11:16,101 basehttp 20879 6238089216 "GET /api/work-orders/ HTTP/1.1" 200 1920
+INFO 2024-12-09 14:11:16,101 basehttp 20879 6238089216 "GET /api/work-orders/ HTTP/1.1" 200 1920
+INFO 2024-12-09 14:11:16,103 basehttp 20879 6204436480 "GET /api/work-orders/ HTTP/1.1" 200 1920
+INFO 2024-12-09 14:11:16,103 basehttp 20879 6204436480 "GET /api/work-orders/ HTTP/1.1" 200 1920
+INFO 2024-12-09 14:11:21,600 basehttp 20879 6204436480 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:21,600 basehttp 20879 6204436480 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:21,609 basehttp 20879 6204436480 "POST /api/work-orders/ HTTP/1.1" 201 417
+INFO 2024-12-09 14:11:21,609 basehttp 20879 6204436480 "POST /api/work-orders/ HTTP/1.1" 201 417
+INFO 2024-12-09 14:11:21,613 basehttp 20879 6204436480 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:21,613 basehttp 20879 6204436480 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:21,625 basehttp 20879 6204436480 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:11:21,625 basehttp 20879 6204436480 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:11:23,254 basehttp 20879 6221262848 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:23,254 basehttp 20879 6221262848 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:23,259 basehttp 20879 6204436480 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:23,259 basehttp 20879 6204436480 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:23,277 views 20879 6204436480 Product list request received
+INFO 2024-12-09 14:11:23,278 views 20879 6221262848 Product list request received
+INFO 2024-12-09 14:11:23,278 basehttp 20879 6254915584 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:23,278 views 20879 6221262848 Product list request received
+INFO 2024-12-09 14:11:23,277 views 20879 6204436480 Product list request received
+INFO 2024-12-09 14:11:23,278 basehttp 20879 6238089216 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:23,278 basehttp 20879 6254915584 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:23,278 basehttp 20879 6238089216 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:11:23,286 views 20879 6221262848 Total number of products: 2
+INFO 2024-12-09 14:11:23,286 views 20879 6204436480 Total number of products: 2
+INFO 2024-12-09 14:11:23,286 views 20879 6221262848 Total number of products: 2
+INFO 2024-12-09 14:11:23,286 views 20879 6204436480 Total number of products: 2
+INFO 2024-12-09 14:11:23,292 views 20879 6204436480 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:11:23,292 views 20879 6204436480 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:11:23,294 basehttp 20879 6204436480 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:11:23,294 basehttp 20879 6204436480 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:11:23,298 views 20879 6221262848 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:11:23,298 views 20879 6221262848 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:11:23,301 basehttp 20879 6221262848 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:11:23,301 basehttp 20879 6221262848 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:11:23,309 basehttp 20879 6254915584 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:11:23,309 basehttp 20879 6254915584 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:11:23,310 basehttp 20879 6238089216 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:11:23,310 basehttp 20879 6238089216 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:12:37,156 autoreload 20879 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-09 14:12:37,156 autoreload 20879 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-09 14:12:37,454 autoreload 20969 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 14:12:37,454 autoreload 20969 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 14:12:58,162 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:12:58,162 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:12:58,164 basehttp 20969 6190624768 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:12:58,164 basehttp 20969 6190624768 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:12:58,166 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:12:58,166 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:12:58,168 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:12:58,168 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:12:58,175 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:12:58,175 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:12:58,176 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:12:58,176 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:12:58,180 basehttp 20969 6190624768 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:12:58,180 basehttp 20969 6190624768 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:14:39,032 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:39,032 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:39,034 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:14:39,034 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:14:39,034 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:14:39,034 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:14:39,036 basehttp 20969 6207451136 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:39,036 basehttp 20969 6207451136 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:39,037 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:14:39,037 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:14:39,038 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:39,038 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:39,040 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:14:39,040 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:14:39,042 basehttp 20969 6241103872 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:39,042 basehttp 20969 6241103872 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:39,045 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:14:39,046 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:14:39,045 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:14:39,046 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:14:39,054 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:14:39,054 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:14:39,056 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:14:39,056 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:14:39,061 basehttp 20969 6224277504 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:14:39,061 basehttp 20969 6224277504 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:14:39,064 basehttp 20969 6241103872 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:14:39,064 basehttp 20969 6241103872 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:14:46,782 basehttp 20969 6190624768 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:46,782 basehttp 20969 6190624768 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:46,791 basehttp 20969 6224277504 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:46,791 basehttp 20969 6224277504 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:46,802 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:14:46,803 basehttp 20969 6241103872 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:46,804 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:46,802 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:14:46,803 basehttp 20969 6241103872 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:46,804 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:14:46,809 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:14:46,809 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:14:46,814 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:14:46,814 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:14:46,819 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:14:46,819 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:14:46,824 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:14:46,824 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:14:46,826 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:14:46,826 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:14:46,829 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:14:46,829 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:14:46,829 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:14:46,829 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:14:46,836 basehttp 20969 6224277504 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:14:46,836 basehttp 20969 6224277504 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:14:46,839 basehttp 20969 6241103872 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:14:46,839 basehttp 20969 6241103872 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:16:44,095 basehttp 20969 6241103872 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:16:44,095 basehttp 20969 6241103872 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:16:44,104 views 20969 6241103872 Product list request received
+INFO 2024-12-09 14:16:44,109 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:16:44,109 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:16:44,111 basehttp 20969 6224277504 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:16:44,111 basehttp 20969 6207451136 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:16:44,111 basehttp 20969 6207451136 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:16:44,112 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:16:44,104 views 20969 6241103872 Product list request received
+INFO 2024-12-09 14:16:44,112 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:16:44,111 basehttp 20969 6224277504 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:16:44,116 views 20969 6241103872 Total number of products: 2
+INFO 2024-12-09 14:16:44,116 views 20969 6241103872 Total number of products: 2
+INFO 2024-12-09 14:16:44,117 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:16:44,117 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:16:44,124 views 20969 6241103872 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:16:44,124 views 20969 6241103872 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:16:44,126 basehttp 20969 6241103872 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:16:44,126 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:16:44,126 basehttp 20969 6241103872 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:16:44,126 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:16:44,137 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:16:44,137 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:16:44,144 basehttp 20969 6207451136 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:16:44,144 basehttp 20969 6207451136 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:16:44,146 basehttp 20969 6224277504 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:16:44,146 basehttp 20969 6224277504 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:18:03,115 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:18:03,115 basehttp 20969 6207451136 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:18:03,115 basehttp 20969 6207451136 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:18:03,115 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:18:03,119 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:18:03,119 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:18:03,123 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:18:03,123 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:18:03,130 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:18:03,130 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:18:03,132 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:18:03,132 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:18:03,139 basehttp 20969 6224277504 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:18:03,139 basehttp 20969 6224277504 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:18:34,095 basehttp 20969 6207451136 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:18:34,095 basehttp 20969 6207451136 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:18:34,097 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:18:34,097 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:18:34,099 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:18:34,099 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:18:34,099 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:18:34,100 basehttp 20969 6241103872 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:18:34,099 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:18:34,100 basehttp 20969 6241103872 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:18:34,101 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:18:34,101 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:18:34,103 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:18:34,103 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:18:34,104 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:18:34,104 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:18:34,106 basehttp 20969 6241103872 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:18:34,106 basehttp 20969 6241103872 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:18:34,108 basehttp 20969 6207451136 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:18:34,108 basehttp 20969 6207451136 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:18:34,110 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:18:34,110 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:18:34,110 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:18:34,111 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:18:34,110 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:18:34,111 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:18:34,113 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:18:34,113 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:19:05,678 views 20969 6257930240 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:19:05,679 views 20969 6274756608 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:19:05,678 views 20969 6257930240 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:19:05,679 views 20969 6274756608 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:19:05,679 views 20969 6257930240 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:19:05,680 views 20969 6274756608 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:19:05,679 views 20969 6257930240 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:19:05,680 views 20969 6274756608 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:19:05,680 views 20969 6257930240 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:19:05,680 views 20969 6274756608 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:19:05,680 views 20969 6257930240 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:19:05,680 views 20969 6274756608 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:19:05,680 views 20969 6257930240 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:19:05,680 views 20969 6274756608 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:19:05,680 views 20969 6257930240 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:19:05,680 views 20969 6274756608 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:19:05,680 views 20969 6257930240 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:19:05,680 views 20969 6274756608 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:19:05,680 views 20969 6257930240 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:19:05,680 views 20969 6274756608 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:19:05,680 views 20969 6257930240 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:19:05,680 views 20969 6274756608 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:19:05,680 views 20969 6257930240 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:19:05,680 views 20969 6274756608 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:19:05,682 basehttp 20969 6257930240 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:19:05,682 basehttp 20969 6257930240 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:19:05,682 basehttp 20969 6274756608 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:19:05,682 basehttp 20969 6274756608 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:19:41,890 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:19:41,890 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:19:41,899 basehttp 20969 6224277504 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:19:41,899 basehttp 20969 6224277504 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:19:41,900 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:19:41,900 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:19:41,901 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:19:41,904 basehttp 20969 6241103872 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:19:41,901 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:19:41,904 basehttp 20969 6241103872 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:19:41,906 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:19:41,906 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:19:41,908 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:19:41,908 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:19:41,909 basehttp 20969 6224277504 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:19:41,909 basehttp 20969 6224277504 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:19:41,910 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:19:41,910 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:19:41,914 basehttp 20969 6241103872 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:19:41,914 basehttp 20969 6241103872 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:19:41,915 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:19:41,915 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:19:41,916 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:19:41,916 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:19:41,916 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:19:41,916 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:19:41,917 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:19:41,917 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:24,582 basehttp 20969 6241103872 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:24,582 basehttp 20969 6241103872 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:24,600 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:24,600 views 20969 6241103872 Product list request received
+INFO 2024-12-09 14:20:24,600 views 20969 6241103872 Product list request received
+INFO 2024-12-09 14:20:24,602 basehttp 20969 6207451136 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:24,602 basehttp 20969 6224277504 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:24,600 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:24,602 basehttp 20969 6207451136 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:24,602 basehttp 20969 6224277504 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:24,607 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:20:24,607 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:20:24,609 views 20969 6241103872 Total number of products: 2
+INFO 2024-12-09 14:20:24,610 basehttp 20969 6207451136 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:20:24,609 views 20969 6241103872 Total number of products: 2
+INFO 2024-12-09 14:20:24,612 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:20:24,610 basehttp 20969 6207451136 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:20:24,612 basehttp 20969 6224277504 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:20:24,612 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:20:24,612 basehttp 20969 6224277504 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:20:24,616 views 20969 6241103872 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:24,616 views 20969 6241103872 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:24,616 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:24,616 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:24,617 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:24,617 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:24,618 basehttp 20969 6241103872 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:24,618 basehttp 20969 6241103872 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:30,638 basehttp 20969 6241103872 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:30,638 basehttp 20969 6241103872 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:30,639 basehttp 20969 6207451136 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:30,639 basehttp 20969 6207451136 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:30,641 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:30,641 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:30,663 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:20:30,663 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:30,663 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:20:30,663 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:30,666 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:20:30,670 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:20:30,666 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:20:30,670 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:20:30,678 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:20:30,678 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:20:30,682 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:30,682 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:30,686 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:30,686 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:30,690 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:30,690 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:30,691 basehttp 20969 6207451136 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:20:30,691 basehttp 20969 6241103872 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:20:30,691 basehttp 20969 6207451136 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:20:30,692 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:30,691 basehttp 20969 6241103872 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:20:30,692 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:31,485 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:31,486 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:31,485 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:31,487 basehttp 20969 6241103872 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:31,486 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:31,487 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:31,488 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:20:31,487 basehttp 20969 6241103872 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:31,488 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:20:31,487 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:31,488 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:20:31,488 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:20:31,489 views 20969 6241103872 Product list request received
+INFO 2024-12-09 14:20:31,489 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:20:31,489 views 20969 6241103872 Product list request received
+INFO 2024-12-09 14:20:31,489 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:20:31,493 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:20:31,494 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:20:31,494 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:20:31,494 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:20:31,493 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:20:31,494 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:20:31,494 views 20969 6241103872 Total number of products: 2
+INFO 2024-12-09 14:20:31,494 views 20969 6241103872 Total number of products: 2
+INFO 2024-12-09 14:20:31,499 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:31,499 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:31,501 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:31,501 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:31,501 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:31,501 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:31,503 views 20969 6241103872 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:31,504 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:31,503 views 20969 6241103872 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:31,504 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:31,504 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:31,504 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:31,505 basehttp 20969 6241103872 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:31,505 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:31,505 basehttp 20969 6241103872 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:31,505 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:42,020 basehttp 20969 6241103872 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:42,020 basehttp 20969 6241103872 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:42,021 basehttp 20969 6224277504 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:42,021 basehttp 20969 6224277504 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:42,022 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:42,022 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:42,022 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:42,022 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:20:42,025 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:20:42,025 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:20:42,026 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:20:42,026 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:20:42,028 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:20:42,028 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:20:42,029 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:20:42,029 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:20:42,032 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:42,032 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:42,034 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:42,034 basehttp 20969 6224277504 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:20:42,034 basehttp 20969 6224277504 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:20:42,034 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:42,037 basehttp 20969 6241103872 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:20:42,038 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:42,037 basehttp 20969 6241103872 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:20:42,038 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:20:42,039 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:20:42,039 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:23:28,087 views 20969 6190624768 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:23:28,087 views 20969 6190624768 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:23:28,088 views 20969 6190624768 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:23:28,088 views 20969 6190624768 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:23:28,088 views 20969 6190624768 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:23:28,088 views 20969 6190624768 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:23:28,088 views 20969 6190624768 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:23:28,088 views 20969 6190624768 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:23:28,088 views 20969 6190624768 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:23:28,088 views 20969 6190624768 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:23:28,088 views 20969 6190624768 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:23:28,088 views 20969 6190624768 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:23:28,088 basehttp 20969 6190624768 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:23:28,088 basehttp 20969 6190624768 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:23:28,093 views 20969 6190624768 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:23:28,093 views 20969 6190624768 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:23:28,093 views 20969 6190624768 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:23:28,093 views 20969 6190624768 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:23:28,093 views 20969 6190624768 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:23:28,093 views 20969 6190624768 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:23:28,093 views 20969 6190624768 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:23:28,093 views 20969 6190624768 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:23:28,093 views 20969 6190624768 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:23:28,093 views 20969 6190624768 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:23:28,093 views 20969 6190624768 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:23:28,093 views 20969 6190624768 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:23:28,094 basehttp 20969 6190624768 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:23:28,094 basehttp 20969 6190624768 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:23:48,674 views 20969 6207451136 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:23:48,675 views 20969 6190624768 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:23:48,674 views 20969 6207451136 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:23:48,675 views 20969 6190624768 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:23:48,676 views 20969 6207451136 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:23:48,676 views 20969 6207451136 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:23:48,676 views 20969 6190624768 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:23:48,677 views 20969 6207451136 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:23:48,676 views 20969 6190624768 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:23:48,677 views 20969 6207451136 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:23:48,677 views 20969 6190624768 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:23:48,677 views 20969 6207451136 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:23:48,677 views 20969 6207451136 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:23:48,677 views 20969 6190624768 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:23:48,677 views 20969 6207451136 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:23:48,677 views 20969 6190624768 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:23:48,677 views 20969 6207451136 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:23:48,677 views 20969 6190624768 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:23:48,677 views 20969 6207451136 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:23:48,678 views 20969 6190624768 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:23:48,677 views 20969 6207451136 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:23:48,678 views 20969 6190624768 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:23:48,680 views 20969 6190624768 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:23:48,680 views 20969 6190624768 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:23:48,681 basehttp 20969 6207451136 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:23:48,681 basehttp 20969 6190624768 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:23:48,681 basehttp 20969 6207451136 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:23:48,681 basehttp 20969 6190624768 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:27:08,455 views 20969 6190624768 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:27:08,455 views 20969 6190624768 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:27:08,456 views 20969 6207451136 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:27:08,456 views 20969 6207451136 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:27:08,456 views 20969 6207451136 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:27:08,457 views 20969 6190624768 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:27:08,457 views 20969 6190624768 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:27:08,457 views 20969 6190624768 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:27:08,456 views 20969 6207451136 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:27:08,457 views 20969 6190624768 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:27:08,457 views 20969 6207451136 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:27:08,457 views 20969 6190624768 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:27:08,457 views 20969 6207451136 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:27:08,457 views 20969 6190624768 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:27:08,457 views 20969 6207451136 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:27:08,457 views 20969 6190624768 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:27:08,457 views 20969 6207451136 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:27:08,457 views 20969 6190624768 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:27:08,457 views 20969 6207451136 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:27:08,457 views 20969 6207451136 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:27:08,457 views 20969 6207451136 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:27:08,457 views 20969 6207451136 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:27:08,457 views 20969 6190624768 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:27:08,457 views 20969 6190624768 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:27:08,459 basehttp 20969 6190624768 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:27:08,459 basehttp 20969 6190624768 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:27:08,460 basehttp 20969 6207451136 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:27:08,460 basehttp 20969 6207451136 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:27:11,246 views 20969 6190624768 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:27:11,246 views 20969 6190624768 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:27:11,247 views 20969 6190624768 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:27:11,247 views 20969 6190624768 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:27:11,247 views 20969 6190624768 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:27:11,247 views 20969 6190624768 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:27:11,247 views 20969 6190624768 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:27:11,247 views 20969 6190624768 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:27:11,247 views 20969 6190624768 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:27:11,247 views 20969 6190624768 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:27:11,247 views 20969 6190624768 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:27:11,247 views 20969 6190624768 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:27:11,248 basehttp 20969 6190624768 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:27:11,248 basehttp 20969 6190624768 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:27:14,731 basehttp 20969 6207451136 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:14,731 basehttp 20969 6207451136 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:14,733 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:14,733 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:14,733 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:14,737 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:27:14,737 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:27:14,733 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:14,738 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:27:14,737 basehttp 20969 6241103872 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:14,738 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:27:14,737 basehttp 20969 6241103872 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:14,740 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:27:14,740 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:27:14,740 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:27:14,740 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:27:14,744 basehttp 20969 6224277504 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:27:14,744 basehttp 20969 6224277504 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:27:14,747 basehttp 20969 6241103872 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:27:14,747 basehttp 20969 6241103872 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:27:14,748 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:14,748 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:14,749 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:14,749 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:14,749 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:14,749 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:14,749 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:14,749 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:15,198 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,198 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,199 basehttp 20969 6241103872 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,199 basehttp 20969 6241103872 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,200 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:27:15,200 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:27:15,203 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,203 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,202 views 20969 6241103872 Product list request received
+INFO 2024-12-09 14:27:15,202 views 20969 6241103872 Product list request received
+INFO 2024-12-09 14:27:15,205 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:27:15,205 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:27:15,206 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,206 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,207 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:27:15,207 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:27:15,207 views 20969 6241103872 Total number of products: 2
+INFO 2024-12-09 14:27:15,207 views 20969 6241103872 Total number of products: 2
+INFO 2024-12-09 14:27:15,207 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:27:15,207 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:27:15,209 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:27:15,209 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:27:15,211 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:15,211 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:15,212 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:27:15,212 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:27:15,213 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:15,213 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:15,216 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:15,216 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:15,217 views 20969 6241103872 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:15,217 views 20969 6241103872 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:15,217 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:15,217 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:15,218 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:15,218 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:15,218 basehttp 20969 6241103872 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:15,218 basehttp 20969 6241103872 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:15,219 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:15,219 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:15,936 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,936 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,936 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,936 basehttp 20969 6207451136 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,936 basehttp 20969 6207451136 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,936 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,937 basehttp 20969 6241103872 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,937 basehttp 20969 6241103872 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:15,938 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:27:15,937 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:27:15,938 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:27:15,937 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:27:15,944 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:27:15,944 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:27:15,944 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:27:15,944 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:27:15,954 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:15,955 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:15,954 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:15,955 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:15,959 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:15,959 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:15,959 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:15,959 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:15,965 basehttp 20969 6207451136 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:27:15,965 basehttp 20969 6207451136 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:27:15,968 basehttp 20969 6241103872 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:27:15,968 basehttp 20969 6241103872 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:27:16,420 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:16,420 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:16,421 basehttp 20969 6207451136 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:16,421 basehttp 20969 6207451136 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:16,422 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:27:16,422 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:27:16,420 basehttp 20969 6224277504 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:16,420 basehttp 20969 6241103872 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:16,420 basehttp 20969 6224277504 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:16,420 basehttp 20969 6241103872 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:27:16,427 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:27:16,427 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:27:16,428 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:27:16,428 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:27:16,429 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:27:16,429 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:27:16,433 basehttp 20969 6190624768 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:27:16,435 basehttp 20969 6241103872 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:27:16,433 basehttp 20969 6190624768 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:27:16,436 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:16,435 basehttp 20969 6241103872 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:27:16,436 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:16,437 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:16,438 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:16,437 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:16,438 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:27:16,438 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:16,438 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:27:24,824 views 20969 6257930240 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:27:24,824 views 20969 6257930240 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:27:24,825 views 20969 6274756608 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:27:24,826 views 20969 6257930240 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:27:24,826 views 20969 6257930240 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:27:24,825 views 20969 6274756608 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:27:24,826 views 20969 6257930240 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:27:24,826 views 20969 6257930240 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:27:24,826 views 20969 6257930240 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:27:24,826 views 20969 6257930240 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:27:24,827 views 20969 6274756608 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:27:24,827 views 20969 6257930240 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:27:24,827 views 20969 6274756608 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:27:24,827 views 20969 6257930240 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:27:24,827 views 20969 6274756608 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:27:24,827 views 20969 6257930240 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:27:24,827 views 20969 6274756608 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:27:24,827 views 20969 6257930240 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:27:24,827 views 20969 6274756608 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:27:24,827 views 20969 6274756608 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:27:24,828 views 20969 6274756608 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:27:24,828 views 20969 6274756608 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:27:24,828 views 20969 6274756608 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:27:24,828 views 20969 6274756608 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:27:24,829 basehttp 20969 6257930240 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:27:24,829 basehttp 20969 6257930240 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:27:24,830 basehttp 20969 6274756608 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:27:24,830 basehttp 20969 6274756608 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:27:26,002 views 20969 6274756608 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:27:26,002 views 20969 6274756608 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:27:26,003 views 20969 6257930240 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:27:26,003 views 20969 6257930240 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 14:27:26,005 views 20969 6257930240 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:27:26,005 views 20969 6257930240 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:27:26,005 views 20969 6257930240 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:27:26,005 views 20969 6257930240 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:27:26,005 views 20969 6257930240 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:27:26,003 views 20969 6274756608 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:27:26,003 views 20969 6274756608 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 14:27:26,006 views 20969 6274756608 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:27:26,006 views 20969 6274756608 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 14:27:26,006 views 20969 6274756608 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:27:26,006 views 20969 6274756608 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:27:26,006 views 20969 6274756608 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:27:26,005 views 20969 6257930240 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 14:27:26,006 views 20969 6257930240 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:27:26,006 views 20969 6274756608 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:27:26,006 views 20969 6257930240 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 14:27:26,006 views 20969 6274756608 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:27:26,006 views 20969 6274756608 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:27:26,006 views 20969 6257930240 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:27:26,006 views 20969 6257930240 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 14:27:26,008 basehttp 20969 6274756608 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:27:26,008 basehttp 20969 6257930240 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:27:26,008 basehttp 20969 6257930240 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:27:26,008 basehttp 20969 6274756608 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 14:29:25,476 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:29:25,476 basehttp 20969 6207451136 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:29:25,476 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:29:25,477 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:29:25,477 basehttp 20969 6241103872 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:29:25,476 basehttp 20969 6207451136 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:29:25,477 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:29:25,477 basehttp 20969 6241103872 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:29:25,479 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:29:25,479 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:29:25,479 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:29:25,479 views 20969 6190624768 Product list request received
+INFO 2024-12-09 14:29:25,485 basehttp 20969 6224277504 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:29:25,485 basehttp 20969 6224277504 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:29:25,485 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:29:25,485 views 20969 6190624768 Total number of products: 2
+INFO 2024-12-09 14:29:25,486 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:29:25,486 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:29:25,490 basehttp 20969 6241103872 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:29:25,490 basehttp 20969 6241103872 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:29:25,492 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:29:25,492 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:29:25,492 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:29:25,492 views 20969 6190624768 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:29:25,492 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:29:25,492 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:29:25,493 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:29:25,493 basehttp 20969 6190624768 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:29:49,884 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:29:49,884 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+WARNING 2024-12-09 14:29:49,887 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:29:49,887 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:29:49,888 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+WARNING 2024-12-09 14:29:49,888 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+INFO 2024-12-09 14:30:48,335 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:30:48,335 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+WARNING 2024-12-09 14:30:48,338 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:30:48,338 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:30:48,338 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+WARNING 2024-12-09 14:30:48,338 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+INFO 2024-12-09 14:30:54,155 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:30:54,155 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+WARNING 2024-12-09 14:30:54,159 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:30:54,159 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:30:54,160 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+WARNING 2024-12-09 14:30:54,160 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+INFO 2024-12-09 14:31:44,682 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:31:44,682 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+WARNING 2024-12-09 14:31:44,683 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:31:44,683 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:31:44,684 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+WARNING 2024-12-09 14:31:44,684 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+INFO 2024-12-09 14:33:16,496 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:33:16,496 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+WARNING 2024-12-09 14:33:16,500 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:33:16,500 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:33:16,501 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+WARNING 2024-12-09 14:33:16,501 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+INFO 2024-12-09 14:33:20,704 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:33:20,704 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+WARNING 2024-12-09 14:33:20,707 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:33:20,707 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:33:20,707 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+WARNING 2024-12-09 14:33:20,707 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+INFO 2024-12-09 14:33:59,307 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:33:59,307 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+WARNING 2024-12-09 14:33:59,311 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:33:59,311 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:33:59,311 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+WARNING 2024-12-09 14:33:59,311 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+INFO 2024-12-09 14:34:15,942 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:34:15,942 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+WARNING 2024-12-09 14:34:15,944 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:34:15,944 log 20969 6190624768 Bad Request: /api/materials/
+WARNING 2024-12-09 14:34:15,945 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+WARNING 2024-12-09 14:34:15,945 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 400 45
+INFO 2024-12-09 14:36:59,142 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:36:59,142 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:36:59,147 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:36:59,147 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:36:59,147 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:36:59,147 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:36:59,150 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:36:59,150 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:36:59,154 basehttp 20969 6190624768 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:36:59,154 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:36:59,154 basehttp 20969 6190624768 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:36:59,154 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:36:59,155 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:36:59,155 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:37:11,142 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:37:11,142 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:37:11,144 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:37:11,144 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:37:11,145 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:37:11,145 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:37:11,146 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:37:11,146 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:37:11,147 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:37:11,147 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:37:11,147 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:37:11,147 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:37:11,150 basehttp 20969 6190624768 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:37:11,150 basehttp 20969 6190624768 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 14:38:05,860 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:38:05,860 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:38:05,867 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 201 169
+INFO 2024-12-09 14:38:05,867 basehttp 20969 6190624768 "POST /api/materials/ HTTP/1.1" 201 169
+INFO 2024-12-09 14:38:05,869 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:38:05,869 basehttp 20969 6190624768 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:38:05,872 basehttp 20969 6190624768 "GET /api/materials/ HTTP/1.1" 200 854
+INFO 2024-12-09 14:38:05,872 basehttp 20969 6190624768 "GET /api/materials/ HTTP/1.1" 200 854
+INFO 2024-12-09 14:38:34,095 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:38:34,095 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:38:34,096 basehttp 20969 6207451136 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:38:34,096 basehttp 20969 6207451136 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:38:34,098 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:38:34,098 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:38:34,099 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:38:34,099 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:38:34,103 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:38:34,103 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:38:34,104 basehttp 20969 6190624768 "GET /api/materials/ HTTP/1.1" 200 854
+INFO 2024-12-09 14:38:34,104 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:38:34,104 basehttp 20969 6190624768 "GET /api/materials/ HTTP/1.1" 200 854
+INFO 2024-12-09 14:38:34,104 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:39:07,327 basehttp 20969 6207451136 "OPTIONS /api/materials/4/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:07,327 basehttp 20969 6207451136 "OPTIONS /api/materials/4/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:07,336 basehttp 20969 6207451136 "PUT /api/materials/4/ HTTP/1.1" 200 170
+INFO 2024-12-09 14:39:07,336 basehttp 20969 6207451136 "PUT /api/materials/4/ HTTP/1.1" 200 170
+INFO 2024-12-09 14:39:07,339 basehttp 20969 6207451136 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:07,339 basehttp 20969 6207451136 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:07,343 basehttp 20969 6207451136 "GET /api/materials/ HTTP/1.1" 200 855
+INFO 2024-12-09 14:39:07,343 basehttp 20969 6207451136 "GET /api/materials/ HTTP/1.1" 200 855
+INFO 2024-12-09 14:39:09,646 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:09,646 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:09,648 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:09,648 basehttp 20969 6224277504 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:09,651 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:39:09,651 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:39:09,658 basehttp 20969 6241103872 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:09,658 basehttp 20969 6241103872 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:09,664 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:39:09,664 views 20969 6207451136 Product list request received
+INFO 2024-12-09 14:39:09,664 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:39:09,664 basehttp 20969 6190624768 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:09,664 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:39:09,664 basehttp 20969 6190624768 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:09,671 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:39:09,671 views 20969 6207451136 Total number of products: 2
+INFO 2024-12-09 14:39:09,673 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:39:09,673 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:39:09,677 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:39:09,679 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:39:09,677 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:39:09,679 views 20969 6207451136 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:39:09,683 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:39:09,683 basehttp 20969 6207451136 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:39:09,692 basehttp 20969 6241103872 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:39:09,692 basehttp 20969 6190624768 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:39:09,692 basehttp 20969 6241103872 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:39:09,692 basehttp 20969 6190624768 "GET /api/work-orders/ HTTP/1.1" 200 2338
+INFO 2024-12-09 14:39:12,522 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:12,522 basehttp 20969 6207451136 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:12,522 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:12,522 basehttp 20969 6190624768 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:12,522 basehttp 20969 6241103872 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:12,522 basehttp 20969 6241103872 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:12,526 views 20969 6241103872 Product list request received
+INFO 2024-12-09 14:39:12,526 views 20969 6241103872 Product list request received
+INFO 2024-12-09 14:39:12,523 basehttp 20969 6224277504 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:12,523 basehttp 20969 6224277504 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 14:39:12,531 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:39:12,531 basehttp 20969 6207451136 "GET /api/materials/ HTTP/1.1" 200 855
+INFO 2024-12-09 14:39:12,531 views 20969 6224277504 Product list request received
+INFO 2024-12-09 14:39:12,531 basehttp 20969 6207451136 "GET /api/materials/ HTTP/1.1" 200 855
+INFO 2024-12-09 14:39:12,532 views 20969 6241103872 Total number of products: 2
+INFO 2024-12-09 14:39:12,532 views 20969 6241103872 Total number of products: 2
+INFO 2024-12-09 14:39:12,551 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:39:12,551 views 20969 6224277504 Total number of products: 2
+INFO 2024-12-09 14:39:12,557 basehttp 20969 6190624768 "GET /api/materials/ HTTP/1.1" 200 855
+INFO 2024-12-09 14:39:12,557 basehttp 20969 6190624768 "GET /api/materials/ HTTP/1.1" 200 855
+INFO 2024-12-09 14:39:12,558 views 20969 6241103872 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:39:12,559 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:39:12,558 views 20969 6241103872 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:39:12,559 views 20969 6224277504 Serialized product data: [OrderedDict({'id': 1, 'name': 'Industrial Robot Arm', 'description': 'Advanced robotic arm for manufacturing', 'materials': [], 'created_at': '2024-12-09T12:49:53.505541Z'}), OrderedDict({'id': 2, 'name': 'Precision Cutting Machine', 'description': 'CNC machine for precision metal cutting', 'materials': [], 'created_at': '2024-12-09T12:49:53.505554Z'})]
+INFO 2024-12-09 14:39:12,560 basehttp 20969 6241103872 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:39:12,560 basehttp 20969 6241103872 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:39:12,560 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311
+INFO 2024-12-09 14:39:12,560 basehttp 20969 6224277504 "GET /api/products/ HTTP/1.1" 200 311

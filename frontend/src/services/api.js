@@ -145,10 +145,17 @@ const apiService = {
   // CREATE new item
   async create(endpoint, data) {
     try {
+      console.log(`Attempting to create ${endpoint} with data:`, data);
       const response = await api.post(`/${endpoint}/`, data);
       return response.data;
     } catch (error) {
       console.error(`Error creating ${endpoint}:`, error);
+      console.error('Full error details:', {
+        message: error.message,
+        response: error.response?.data,
+        status: error.response?.status,
+        headers: error.response?.headers
+      });
       throw error;
     }
   },
@@ -202,7 +209,44 @@ export const materialService = {
 };
 
 export const productService = {
-  getAll: () => apiService.getAll('products'),
+  async getAll() {
+    try {
+      console.log('Attempting to fetch products via productService');
+      
+      // Fetch products
+      const response = await api.get('/products/');
+      
+      console.log('Raw products response:', response);
+      console.log('Response data:', response.data);
+      
+      // Validate the response
+      if (!response || !response.data) {
+        console.error('Invalid response structure');
+        return [];
+      }
+      
+      // Ensure we return an array
+      const products = Array.isArray(response.data) ? response.data : [response.data];
+      
+      console.log('Processed products:', products);
+      
+      return products;
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      
+      // Log more details about the error
+      if (error.response) {
+        console.error('Response error details:', {
+          status: error.response.status,
+          data: error.response.data,
+          headers: error.response.headers
+        });
+      }
+      
+      // Return an empty array to prevent breaking the application
+      return [];
+    }
+  },
   getById: (id) => apiService.getById('products', id),
   create: (data) => apiService.create('products', data),
   update: (id, data) => apiService.update('products', id, data),

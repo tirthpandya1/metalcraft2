@@ -102,6 +102,25 @@ class ProductViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
     permission_classes = [permissions.AllowAny]  # Change to AllowAny for development
 
+    def list(self, request):
+        # Log the incoming request
+        logger.info("Product list request received")
+        
+        # Get all products with related materials
+        queryset = Product.objects.prefetch_related('materials').all()
+        
+        # Log the number of products
+        logger.info(f"Total number of products: {queryset.count()}")
+        
+        # Serialize the products
+        serializer = self.get_serializer(queryset, many=True)
+        
+        # Log the serialized data
+        logger.info("Serialized product data: %s", serializer.data)
+        
+        # Return the response
+        return Response(serializer.data)
+
     @action(detail=True, methods=['get'])
     def material_requirements(self, request, pk=None):
         product = self.get_object()

@@ -158,18 +158,80 @@ export const withCrudList = (
     // Handle add/edit item
     const handleSaveItem = async () => {
       try {
+        // Validate required and custom fields
+        const validationErrors = fullConfig.dialogFields
+          .filter(field => field.required || field.validate)
+          .reduce((errors, field) => {
+            const value = currentItem[field.key];
+            
+            // Check required fields
+            if (field.required && (value === undefined || value === null || value === '')) {
+              errors.push(`${field.label} is required`);
+            }
+            
+            // Run custom validation if exists
+            if (field.validate) {
+              const validationResult = field.validate(value);
+              if (validationResult) {
+                errors.push(validationResult);
+              }
+            }
+            
+            return errors;
+          }, []);
+
+        if (validationErrors.length > 0) {
+          setError(validationErrors.join(', '));
+          return;
+        }
+
+        // Prepare data by converting to appropriate types and removing undefined/null values
+        const cleanData = fullConfig.dialogFields.reduce((data, field) => {
+          const value = currentItem[field.key];
+          
+          // Skip undefined or null values for optional fields
+          if (value === undefined || value === null) {
+            if (!field.required) return data;
+            return data;
+          }
+
+          // Convert to appropriate type
+          switch (field.type) {
+            case 'number':
+              const numValue = parseFloat(value);
+              if (!isNaN(numValue)) {
+                data[field.key] = numValue;
+              }
+              break;
+            case 'text':
+            default:
+              data[field.key] = value;
+          }
+          
+          return data;
+        }, {});
+
         if (currentItem.id) {
           // Update existing item
-          await service.update(currentItem.id, currentItem);
+          await service.update(currentItem.id, cleanData);
         } else {
           // Create new item
-          await service.create(currentItem);
+          await service.create(cleanData);
         }
         fetchItems();
         setOpenDialog(false);
         setCurrentItem(null);
+        setError(null);
       } catch (error) {
         console.error(`Failed to save ${fullConfig.entityName}`, error);
+        
+        // Extract error message from backend response
+        const errorMessage = error.response?.data?.detail || 
+                             error.response?.data?.error || 
+                             error.message || 
+                             `Failed to save ${fullConfig.entityName}`;
+        
+        setError(errorMessage);
       }
     };
 
