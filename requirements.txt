@@ -21,3 +21,7 @@ django-environ==0.10.0
 ipython==8.17.2
 django-extensions==3.2.3
 werkzeug==3.0.1
+
+# Commit message generation
+openai==1.3.7
+tiktoken==0.5.1

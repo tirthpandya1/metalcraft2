@@ -20558,3 +20558,193 @@ INFO 2024-12-09 20:30:29,986 basehttp 30683 6176796672 "GET /api/workstations/ H
 INFO 2024-12-09 20:30:29,986 basehttp 30683 6176796672 "GET /api/workstations/ HTTP/1.1" 200 501
 INFO 2024-12-09 20:30:29,988 basehttp 30683 6210449408 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 135
 INFO 2024-12-09 20:30:29,988 basehttp 30683 6210449408 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 135
+INFO 2024-12-09 20:49:14,649 views 30683 6176796672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:49:14,649 views 30683 6176796672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:49:14,650 views 30683 6159970304 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:49:14,650 views 30683 6193623040 Found 1 workstation sequences for product 3
+INFO 2024-12-09 20:49:14,651 views 30683 6176796672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:49:14,650 views 30683 6159970304 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:49:14,650 views 30683 6193623040 Found 1 workstation sequences for product 3
+INFO 2024-12-09 20:49:14,651 views 30683 6176796672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:49:14,652 views 30683 6210449408 Found 1 workstation sequences for product 3
+INFO 2024-12-09 20:49:14,652 views 30683 6176796672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:49:14,652 views 30683 6176796672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:49:14,652 views 30683 6210449408 Found 1 workstation sequences for product 3
+INFO 2024-12-09 20:49:14,652 views 30683 6159970304 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:49:14,652 views 30683 6159970304 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:49:14,657 basehttp 30683 6176796672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:49:14,657 views 30683 6159970304 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:49:14,657 basehttp 30683 6176796672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:49:14,658 basehttp 30683 6193623040 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 135
+INFO 2024-12-09 20:49:14,657 views 30683 6159970304 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:49:14,658 basehttp 30683 6193623040 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 135
+INFO 2024-12-09 20:49:14,661 basehttp 30683 6159970304 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:49:14,661 basehttp 30683 6159970304 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:49:14,665 basehttp 30683 6210449408 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 135
+INFO 2024-12-09 20:49:14,665 basehttp 30683 6210449408 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 135
+INFO 2024-12-09 20:49:16,238 views 30683 6159970304 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:49:16,238 views 30683 6159970304 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:49:16,240 views 30683 6159970304 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:49:16,240 views 30683 6159970304 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:49:16,240 views 30683 6159970304 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:49:16,240 views 30683 6193623040 Found 1 workstation sequences for product 3
+INFO 2024-12-09 20:49:16,240 views 30683 6176796672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:49:16,240 views 30683 6176796672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:49:16,240 views 30683 6193623040 Found 1 workstation sequences for product 3
+INFO 2024-12-09 20:49:16,240 views 30683 6159970304 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:49:16,241 views 30683 6176796672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:49:16,241 views 30683 6210449408 Found 1 workstation sequences for product 3
+INFO 2024-12-09 20:49:16,241 views 30683 6176796672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:49:16,242 basehttp 30683 6159970304 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:49:16,242 basehttp 30683 6159970304 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:49:16,241 views 30683 6210449408 Found 1 workstation sequences for product 3
+INFO 2024-12-09 20:49:16,245 basehttp 30683 6193623040 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 135
+INFO 2024-12-09 20:49:16,243 views 30683 6176796672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:49:16,245 basehttp 30683 6193623040 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 135
+INFO 2024-12-09 20:49:16,243 views 30683 6176796672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:49:16,249 basehttp 30683 6176796672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:49:16,249 basehttp 30683 6176796672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:49:16,251 basehttp 30683 6210449408 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 135
+INFO 2024-12-09 20:49:16,251 basehttp 30683 6210449408 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 135
+INFO 2024-12-09 20:49:27,118 views 30683 6176796672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:49:27,118 views 30683 6176796672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:49:27,118 views 30683 6159970304 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:49:27,119 views 30683 6210449408 Found 1 workstation sequences for product 3
+INFO 2024-12-09 20:49:27,118 views 30683 6159970304 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:49:27,119 views 30683 6193623040 Found 1 workstation sequences for product 3
+INFO 2024-12-09 20:49:27,119 views 30683 6210449408 Found 1 workstation sequences for product 3
+INFO 2024-12-09 20:49:27,119 views 30683 6193623040 Found 1 workstation sequences for product 3
+INFO 2024-12-09 20:49:27,120 views 30683 6159970304 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:49:27,120 views 30683 6159970304 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:49:27,122 views 30683 6159970304 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:49:27,122 views 30683 6159970304 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:49:27,120 views 30683 6176796672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:49:27,120 views 30683 6176796672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:49:27,124 views 30683 6176796672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:49:27,124 basehttp 30683 6159970304 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:49:27,124 views 30683 6176796672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:49:27,124 basehttp 30683 6159970304 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:49:27,126 basehttp 30683 6176796672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:49:27,126 basehttp 30683 6210449408 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 135
+INFO 2024-12-09 20:49:27,126 basehttp 30683 6210449408 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 135
+INFO 2024-12-09 20:49:27,126 basehttp 30683 6176796672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:49:27,126 basehttp 30683 6193623040 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 135
+INFO 2024-12-09 20:49:27,126 basehttp 30683 6193623040 "GET /api/products/3/workstation_sequence/ HTTP/1.1" 200 135
+INFO 2024-12-09 20:50:57,628 basehttp 30683 6159970304 "POST /api/products/3/update_workstation_sequence/ HTTP/1.1" 201 277
+INFO 2024-12-09 20:50:57,628 basehttp 30683 6159970304 "POST /api/products/3/update_workstation_sequence/ HTTP/1.1" 201 277
+INFO 2024-12-09 20:53:33,255 views 30683 6227275776 Product list request received
+INFO 2024-12-09 20:53:33,255 views 30683 6159970304 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:53:33,255 views 30683 6227275776 Product list request received
+INFO 2024-12-09 20:53:33,255 views 30683 6159970304 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:53:33,255 views 30683 6176796672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:53:33,256 views 30683 6244102144 Product list request received
+INFO 2024-12-09 20:53:33,261 basehttp 30683 6193623040 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 20:53:33,255 views 30683 6176796672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:53:33,261 views 30683 6159970304 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:53:33,256 views 30683 6244102144 Product list request received
+INFO 2024-12-09 20:53:33,262 basehttp 30683 6210449408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 20:53:33,261 basehttp 30683 6193623040 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 20:53:33,261 views 30683 6159970304 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:53:33,263 views 30683 6176796672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:53:33,263 views 30683 6227275776 Total number of products: 1
+INFO 2024-12-09 20:53:33,262 basehttp 30683 6210449408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 20:53:33,263 views 30683 6159970304 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:53:33,263 views 30683 6176796672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:53:33,263 views 30683 6227275776 Total number of products: 1
+INFO 2024-12-09 20:53:33,263 views 30683 6159970304 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:53:33,264 views 30683 6176796672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:53:33,264 views 30683 6176796672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:53:33,265 views 30683 6244102144 Total number of products: 1
+INFO 2024-12-09 20:53:33,266 basehttp 30683 6176796672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:53:33,265 views 30683 6244102144 Total number of products: 1
+INFO 2024-12-09 20:53:33,266 basehttp 30683 6176796672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:53:33,269 basehttp 30683 6159970304 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:53:33,269 basehttp 30683 6159970304 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:53:33,274 views 30683 6227275776 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:53:33,274 views 30683 6227275776 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:53:33,276 basehttp 30683 6227275776 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:53:33,276 views 30683 6244102144 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:53:33,276 basehttp 30683 6227275776 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:53:33,276 views 30683 6244102144 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:53:33,277 basehttp 30683 6244102144 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:53:33,277 basehttp 30683 6244102144 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:53:35,682 views 30683 6176796672 Product list request received
+INFO 2024-12-09 20:53:35,682 views 30683 6176796672 Product list request received
+INFO 2024-12-09 20:53:35,685 basehttp 30683 6159970304 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 20:53:35,685 basehttp 30683 6159970304 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 20:53:35,687 views 30683 6227275776 Product list request received
+INFO 2024-12-09 20:53:35,687 views 30683 6227275776 Product list request received
+INFO 2024-12-09 20:53:35,688 views 30683 6176796672 Total number of products: 1
+INFO 2024-12-09 20:53:35,688 views 30683 6176796672 Total number of products: 1
+INFO 2024-12-09 20:53:35,689 basehttp 30683 6210449408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 20:53:35,689 basehttp 30683 6210449408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 20:53:35,690 views 30683 6193623040 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:53:35,690 views 30683 6193623040 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:53:35,691 views 30683 6244102144 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:53:35,691 views 30683 6244102144 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 20:53:35,692 views 30683 6193623040 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:53:35,692 views 30683 6244102144 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:53:35,692 views 30683 6244102144 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:53:35,692 views 30683 6193623040 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 20:53:35,694 views 30683 6227275776 Total number of products: 1
+INFO 2024-12-09 20:53:35,694 views 30683 6227275776 Total number of products: 1
+INFO 2024-12-09 20:53:35,694 views 30683 6244102144 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:53:35,694 views 30683 6193623040 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:53:35,694 views 30683 6244102144 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:53:35,694 views 30683 6193623040 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 20:53:35,698 basehttp 30683 6244102144 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:53:35,698 basehttp 30683 6193623040 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:53:35,699 views 30683 6176796672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:53:35,698 basehttp 30683 6244102144 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:53:35,698 basehttp 30683 6193623040 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 20:53:35,699 views 30683 6176796672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:53:35,701 views 30683 6227275776 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:53:35,701 views 30683 6227275776 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:53:35,702 basehttp 30683 6176796672 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:53:35,702 basehttp 30683 6176796672 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:53:35,702 basehttp 30683 6227275776 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:53:35,702 basehttp 30683 6227275776 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:54:54,230 basehttp 30683 6159970304 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 20:54:54,230 basehttp 30683 6159970304 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 20:54:54,232 basehttp 30683 6176796672 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 20:54:54,232 basehttp 30683 6193623040 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 20:54:54,235 basehttp 30683 6210449408 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 20:54:54,232 basehttp 30683 6176796672 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 20:54:54,232 basehttp 30683 6193623040 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 20:54:54,235 basehttp 30683 6210449408 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 20:54:54,237 views 30683 6176796672 Product list request received
+INFO 2024-12-09 20:54:54,238 views 30683 6193623040 Product list request received
+INFO 2024-12-09 20:54:54,237 views 30683 6176796672 Product list request received
+INFO 2024-12-09 20:54:54,238 views 30683 6193623040 Product list request received
+INFO 2024-12-09 20:54:54,244 views 30683 6193623040 Total number of products: 1
+INFO 2024-12-09 20:54:54,244 views 30683 6176796672 Total number of products: 1
+INFO 2024-12-09 20:54:54,244 views 30683 6193623040 Total number of products: 1
+INFO 2024-12-09 20:54:54,244 views 30683 6176796672 Total number of products: 1
+INFO 2024-12-09 20:54:54,250 basehttp 30683 6159970304 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 20:54:54,251 basehttp 30683 6210449408 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 20:54:54,250 basehttp 30683 6159970304 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 20:54:54,251 basehttp 30683 6210449408 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 20:54:54,257 views 30683 6193623040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:54:54,257 views 30683 6176796672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:54:54,257 views 30683 6193623040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:54:54,257 views 30683 6176796672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:54:54,258 basehttp 30683 6193623040 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:54:54,260 basehttp 30683 6176796672 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:54:54,258 basehttp 30683 6193623040 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:54:54,260 basehttp 30683 6176796672 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:54:58,631 views 30683 6227275776 Product list request received
+INFO 2024-12-09 20:54:58,631 views 30683 6227275776 Product list request received
+INFO 2024-12-09 20:54:58,631 views 30683 6244102144 Product list request received
+INFO 2024-12-09 20:54:58,631 views 30683 6244102144 Product list request received
+INFO 2024-12-09 20:54:58,631 views 30683 6227275776 Total number of products: 1
+INFO 2024-12-09 20:54:58,631 views 30683 6227275776 Total number of products: 1
+INFO 2024-12-09 20:54:58,632 views 30683 6244102144 Total number of products: 1
+INFO 2024-12-09 20:54:58,632 views 30683 6244102144 Total number of products: 1
+INFO 2024-12-09 20:54:58,638 views 30683 6227275776 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:54:58,638 views 30683 6227275776 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:54:58,638 views 30683 6244102144 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:54:58,638 basehttp 30683 6227275776 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:54:58,638 views 30683 6244102144 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'workstation_sequences': [OrderedDict({'id': 6, 'workstation': 4, 'workstation_name': 'AMADA Laser Cutting Station', 'sequence_order': 1, 'estimated_time': '01:30:00', 'instruction_set': {}}), OrderedDict({'id': 7, 'workstation': 6, 'workstation_name': 'AMADA Metal Forming', 'sequence_order': 2, 'estimated_time': '01:00:00', 'instruction_set': {}})], 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 20:54:58,638 basehttp 30683 6227275776 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:54:58,639 basehttp 30683 6244102144 "GET /api/products/ HTTP/1.1" 200 562
+INFO 2024-12-09 20:54:58,639 basehttp 30683 6244102144 "GET /api/products/ HTTP/1.1" 200 562

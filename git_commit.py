@@ -107,9 +107,9 @@ def generate_commit_message(changes: Dict[str, List[Tuple[str, List[str]]]]) -> 
     if frontend_changes and backend_changes:
         message_parts.append("Full Stack Update:")
     elif frontend_changes:
-        message_parts.append("🖥️ Frontend Enhancement:")
+        message_parts.append(" Frontend Enhancement:")
     elif backend_changes:
-        message_parts.append("🔧 Backend Improvement:")
+        message_parts.append(" Backend Improvement:")
     else:
         message_parts.append("Project Update:")
     
@@ -123,7 +123,7 @@ def generate_commit_message(changes: Dict[str, List[Tuple[str, List[str]]]]) -> 
     
     # Detailed change tracking
     if frontend_changes:
-        message_parts.append("\n🖥️ Frontend:")
+        message_parts.append("\n Frontend:")
         for file, file_changes in frontend_changes[:3]:  # Limit to first 3 files
             # Clean and truncate changes
             clean_changes = [
@@ -135,7 +135,7 @@ def generate_commit_message(changes: Dict[str, List[Tuple[str, List[str]]]]) -> 
             message_parts.append(f"- {short_file_name}: {', '.join(clean_changes)}")
     
     if backend_changes:
-        message_parts.append("\n🔧 Backend:")
+        message_parts.append("\n Backend:")
         for file, file_changes in backend_changes[:3]:  # Limit to first 3 files
             # Clean and truncate changes
             clean_changes = [
@@ -147,6 +147,71 @@ def generate_commit_message(changes: Dict[str, List[Tuple[str, List[str]]]]) -> 
             message_parts.append(f"- {short_file_name}: {', '.join(clean_changes)}")
     
     return ''.join(message_parts)
+
+def generate_smart_commit_message(changes):
+    """
+    Generate a smart, descriptive commit message based on detected changes
+    
+    Args:
+        changes (Dict): Dictionary of changes detected in the repository
+    
+    Returns:
+        str: A concise, informative commit message
+    """
+    # Categorize changes
+    frontend_changes = changes.get('frontend', [])
+    backend_changes = changes.get('backend', [])
+    
+    # Initialize message parts
+    message_parts = []
+    
+    # Determine overall change type
+    if frontend_changes and backend_changes:
+        message_parts.append("Full Stack Update:")
+    elif frontend_changes:
+        message_parts.append("Frontend Enhancement:")
+    elif backend_changes:
+        message_parts.append("Backend Improvement:")
+    else:
+        message_parts.append("Project Update:")
+    
+    # Add context about specific changes
+    if frontend_changes:
+        message_parts.append("\n Frontend Changes:")
+        for file, file_changes in frontend_changes[:3]:  # Limit to first 3 files
+            # Clean and truncate changes
+            clean_changes = [
+                change.strip() 
+                for change in file_changes 
+                if change.strip() and len(change) < 50
+            ][:2]  # Limit to 2 changes per file
+            
+            # Get short file name
+            short_file_name = os.path.basename(file)
+            message_parts.append(f"- {short_file_name}: {', '.join(clean_changes)}")
+    
+    if backend_changes:
+        message_parts.append("\n Backend Changes:")
+        for file, file_changes in backend_changes[:3]:  # Limit to first 3 files
+            # Clean and truncate changes
+            clean_changes = [
+                change.strip() 
+                for change in file_changes 
+                if change.strip() and len(change) < 50
+            ][:2]  # Limit to 2 changes per file
+            
+            # Get short file name
+            short_file_name = os.path.basename(file)
+            message_parts.append(f"- {short_file_name}: {', '.join(clean_changes)}")
+    
+    # Combine and format message
+    commit_message = ' '.join(message_parts)
+    
+    # Ensure message is not too long
+    if len(commit_message) > 200:
+        commit_message = commit_message[:197] + '...'
+    
+    return commit_message
 
 def git_add_all():
     """Stage all changes."""
@@ -180,6 +245,56 @@ def git_commit(message: str):
     except Exception as e:
         print(f"Error during commit: {e}")
 
+def git_commit_and_push(commit_message):
+    """
+    Commit changes and immediately push to the current branch.
+    
+    Args:
+        commit_message (str): Commit message to use
+    
+    Returns:
+        Tuple[bool, str]: (Success status, Output message)
+    """
+    try:
+        # Stage all changes
+        subprocess.run(['git', 'add', '.'], 
+                       cwd='/Users/T/Documents/GitHub/metalcraft2', 
+                       check=True)
+        
+        # Commit changes
+        commit_result = subprocess.run(
+            ['git', 'commit', '-m', commit_message], 
+            cwd='/Users/T/Documents/GitHub/metalcraft2', 
+            capture_output=True, 
+            text=True,
+            check=True
+        )
+        
+        # Get current branch
+        branch_result = subprocess.run(
+            ['git', 'rev-parse', '--abbrev-ref', 'HEAD'], 
+            cwd='/Users/T/Documents/GitHub/metalcraft2', 
+            capture_output=True, 
+            text=True,
+            check=True
+        )
+        current_branch = branch_result.stdout.strip()
+        
+        # Push to current branch
+        push_result = subprocess.run(
+            ['git', 'push', 'origin', current_branch], 
+            cwd='/Users/T/Documents/GitHub/metalcraft2', 
+            capture_output=True, 
+            text=True,
+            check=True
+        )
+        
+        return True, f"Committed and pushed to {current_branch}"
+    
+    except subprocess.CalledProcessError as e:
+        error_message = e.stderr.strip() if e.stderr else str(e)
+        return False, f"Git operation failed: {error_message}"
+
 def git_push():
     """Push commits to the remote repository."""
     try:
@@ -193,6 +308,29 @@ def git_push():
         return False
     return True
 
+def git_revert_all_changes():
+    """
+    Completely revert all uncommitted changes in the repository.
+    
+    Returns:
+        bool: True if revert was successful, False otherwise
+    """
+    try:
+        # Revert unstaged changes
+        subprocess.run(['git', 'checkout', '--', '.'], 
+                       cwd='/Users/T/Documents/GitHub/metalcraft2', 
+                       check=True)
+        
+        # Remove untracked files and directories
+        subprocess.run(['git', 'clean', '-fd'], 
+                       cwd='/Users/T/Documents/GitHub/metalcraft2', 
+                       check=True)
+        
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"Error reverting changes: {e}")
+        return False
+
 def create_commit_ui(commit_message, changes):
     """
     Create a UI for commit confirmation with detailed change preview
@@ -202,42 +340,55 @@ def create_commit_ui(commit_message, changes):
         changes (Dict): Detailed changes dictionary
     
     Returns:
-        str: User's action ('commit', 'edit', 'cancel')
+        str: User's action ('commit', 'push', 'edit', 'cancel', 'revert')
     """
     # Create main window
     root = tk.Tk()
-    root.title("Git Commit Confirmation")
+    root.title("Git Commit")
     root.geometry("600x500")
-    root.configure(bg='#f0f0f0')
-
+    
+    # macOS-inspired dark theme colors
+    bg_dark = '#2C2C2C'
+    bg_light = '#3A3A3C'
+    text_color = '#FFFFFF'
+    button_bg = '#DDDDDD'
+    button_fg = '#000000'
+    
+    # Configure root window
+    root.configure(bg=bg_dark)
+    root.option_add('*Background', bg_dark)
+    root.option_add('*Foreground', text_color)
+    
     # Result storage
     commit_action = [None]
 
     # Styling
-    font_title = ('Arial', 12, 'bold')
-    font_normal = ('Arial', 10)
+    font_title = ('San Francisco', 12, 'bold')
+    font_normal = ('San Francisco', 10)
 
     # Title Frame
-    title_frame = tk.Frame(root, bg='#f0f0f0')
+    title_frame = tk.Frame(root, bg=bg_dark)
     title_frame.pack(pady=10, padx=10, fill='x')
     
     title_label = tk.Label(
         title_frame, 
         text="Review Git Commit Changes", 
         font=font_title, 
-        bg='#f0f0f0'
+        bg=bg_dark, 
+        fg=text_color
     )
     title_label.pack()
 
     # Commit Message Frame
-    message_frame = tk.Frame(root, bg='white', borderwidth=1, relief='solid')
+    message_frame = tk.Frame(root, bg=bg_light, borderwidth=1, relief='solid')
     message_frame.pack(pady=10, padx=10, fill='both', expand=True)
     
     message_label = tk.Label(
         message_frame, 
         text="Commit Message:", 
         font=font_title, 
-        bg='white', 
+        bg=bg_light, 
+        fg=text_color, 
         anchor='w'
     )
     message_label.pack(fill='x', padx=5, pady=(5,0))
@@ -247,21 +398,25 @@ def create_commit_ui(commit_message, changes):
         height=5, 
         font=font_normal, 
         wrap='word', 
-        borderwidth=0
+        borderwidth=0,
+        bg=bg_light,
+        fg=text_color,
+        insertbackground=text_color  # Cursor color
     )
     message_text.insert(tk.END, commit_message)
     message_text.config(state=tk.DISABLED)
     message_text.pack(fill='both', expand=True, padx=5, pady=5)
 
     # Changes Preview Frame
-    changes_frame = tk.Frame(root, bg='white', borderwidth=1, relief='solid')
+    changes_frame = tk.Frame(root, bg=bg_light, borderwidth=1, relief='solid')
     changes_frame.pack(pady=10, padx=10, fill='both', expand=True)
     
     changes_label = tk.Label(
         changes_frame, 
         text="Changes Preview:", 
         font=font_title, 
-        bg='white', 
+        bg=bg_light, 
+        fg=text_color, 
         anchor='w'
     )
     changes_label.pack(fill='x', padx=5, pady=(5,0))
@@ -271,7 +426,10 @@ def create_commit_ui(commit_message, changes):
         height=10, 
         font=font_normal, 
         wrap='word', 
-        borderwidth=0
+        borderwidth=0,
+        bg=bg_light,
+        fg=text_color,
+        insertbackground=text_color  # Cursor color
     )
     
     # Populate changes text
@@ -289,11 +447,15 @@ def create_commit_ui(commit_message, changes):
     changes_text.pack(fill='both', expand=True, padx=5, pady=5)
 
     # Button Frame
-    button_frame = tk.Frame(root, bg='#f0f0f0')
+    button_frame = tk.Frame(root, bg=bg_dark)
     button_frame.pack(pady=10, padx=10, fill='x')
 
     def on_commit():
         commit_action[0] = 'commit'
+        root.quit()
+
+    def on_push_commit():
+        commit_action[0] = 'push'
         root.quit()
 
     def on_edit():
@@ -304,34 +466,94 @@ def create_commit_ui(commit_message, changes):
         commit_action[0] = 'cancel'
         root.quit()
 
-    # Buttons
+    def on_revert():
+        # Show confirmation dialog
+        revert_confirm = messagebox.askyesno(
+            "Confirm Revert", 
+            "Are you sure you want to revert ALL changes? This cannot be undone.",
+            icon='warning'
+        )
+        
+        if revert_confirm:
+            # Attempt to revert changes
+            revert_success = git_revert_all_changes()
+            
+            if revert_success:
+                messagebox.showinfo(
+                    "Revert Successful", 
+                    "All changes have been reverted to the last committed state."
+                )
+                commit_action[0] = 'revert'
+                root.quit()
+            else:
+                messagebox.showerror(
+                    "Revert Failed", 
+                    "Could not revert changes. Please check your git repository."
+                )
+
+    # Buttons with macOS-like styling
     commit_btn = tk.Button(
         button_frame, 
         text="Commit", 
         command=on_commit, 
-        bg='#4CAF50', 
-        fg='white', 
-        font=font_normal
+        bg=button_bg, 
+        fg=button_fg, 
+        font=font_normal,
+        relief=tk.FLAT,
+        padx=10,
+        pady=5
     )
     commit_btn.pack(side=tk.LEFT, expand=True, padx=5)
+
+    push_commit_btn = tk.Button(
+        button_frame, 
+        text="Commit & Push", 
+        command=on_push_commit, 
+        bg='#4CAF50',  # Green color to indicate positive action
+        fg='white', 
+        font=font_normal,
+        relief=tk.FLAT,
+        padx=10,
+        pady=5
+    )
+    push_commit_btn.pack(side=tk.LEFT, expand=True, padx=5)
 
     edit_btn = tk.Button(
         button_frame, 
         text="Edit Message", 
         command=on_edit, 
-        bg='#2196F3', 
-        fg='white', 
-        font=font_normal
+        bg=button_bg, 
+        fg=button_fg, 
+        font=font_normal,
+        relief=tk.FLAT,
+        padx=10,
+        pady=5
     )
     edit_btn.pack(side=tk.LEFT, expand=True, padx=5)
+
+    revert_btn = tk.Button(
+        button_frame, 
+        text="Revert All", 
+        command=on_revert, 
+        bg='#FF6B6B',  # Reddish color to indicate destructive action 
+        fg='white', 
+        font=font_normal,
+        relief=tk.FLAT,
+        padx=10,
+        pady=5
+    )
+    revert_btn.pack(side=tk.LEFT, expand=True, padx=5)
 
     cancel_btn = tk.Button(
         button_frame, 
         text="Cancel", 
         command=on_cancel, 
-        bg='#f44336', 
-        fg='white', 
-        font=font_normal
+        bg=button_bg, 
+        fg=button_fg, 
+        font=font_normal,
+        relief=tk.FLAT,
+        padx=10,
+        pady=5
     )
     cancel_btn.pack(side=tk.LEFT, expand=True, padx=5)
 
@@ -359,7 +581,7 @@ def main():
     changes = analyze_changes(git_diff_content)
     
     # Generate commit message
-    commit_message = generate_commit_message(changes)
+    commit_message = generate_smart_commit_message(changes)
     
     # Stage all changes
     git_add_all()
@@ -383,6 +605,14 @@ def main():
         else:
             messagebox.showinfo("Local Commit", "Changes committed locally. Not pushed to remote.")
     
+    elif user_action == 'push':
+        # Commit and push
+        commit_push_result = git_commit_and_push(commit_message)
+        if commit_push_result[0]:
+            messagebox.showinfo("Success", commit_push_result[1])
+        else:
+            messagebox.showerror("Error", commit_push_result[1])
+    
     elif user_action == 'edit':
         # Open dialog for custom message
         custom_message = simpledialog.askstring(
@@ -404,7 +634,18 @@ def main():
                 git_push()
                 messagebox.showinfo("Success", "Changes committed and pushed successfully!")
             else:
-                messagebox.showinfo("Local Commit", "Changes committed locally. Not pushed to remote.")
+                push_again_response = messagebox.askyesno(
+                    "Push Later", 
+                    "Do you want to push these changes later?"
+                )
+                
+                if push_again_response:
+                    messagebox.showinfo("Local Commit", "Changes committed locally. Push later.")
+                else:
+                    messagebox.showinfo("Local Commit", "Changes committed locally. Not pushed to remote.")
+    
+    elif user_action == 'revert':
+        pass  # Revert action handled in UI
     
     else:
         messagebox.showinfo("Cancelled", "Git commit was cancelled.")
