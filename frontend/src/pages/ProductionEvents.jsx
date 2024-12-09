@@ -54,10 +54,28 @@ const ProductionEvents = () => {
             page_size: rowsPerPage
           }
         });
-        setEvents(response.data.events);
-        setTotalEvents(response.data.total_events);
+        console.log('Production Events Response:', response.data);
+        
+        // Ensure events is always an array and has expected structure
+        const eventData = Array.isArray(response.data.events) 
+          ? response.data.events 
+          : [];
+        const totalCount = response.data.total_events || 0;
+        
+        setEvents(eventData);
+        setTotalEvents(totalCount);
       } catch (error) {
-        console.error('Error fetching production events:', error);
+        console.error('Error fetching production events:', error.response || error);
+        // If error has a response, log more details
+        if (error.response) {
+          console.error('Error details:', {
+            status: error.response.status,
+            data: error.response.data,
+            headers: error.response.headers
+          });
+        }
+        setEvents([]);
+        setTotalEvents(0);
       }
     };
 

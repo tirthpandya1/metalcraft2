@@ -133,7 +133,7 @@ function Sidebar() {
   const renderMenuItem = (item) => {
     if (item.children) {
       return (
-        <>
+        <React.Fragment key={item.text}>
           <ListItem 
             button 
             onClick={item.onClick}
@@ -160,7 +160,7 @@ function Sidebar() {
               {item.children.map((child) => (
                 <ListItem 
                   button 
-                  key={child.text}
+                  key={child.path}  
                   component={Link}
                   to={child.path}
                   sx={{ 
@@ -184,12 +184,13 @@ function Sidebar() {
               ))}
             </List>
           </Collapse>
-        </>
+        </React.Fragment>
       );
     }
 
     return (
       <ListItem 
+        key={item.path}  
         button 
         component={Link} 
         to={item.path}

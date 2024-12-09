@@ -3,7 +3,8 @@ from django.contrib.auth.models import User
 from .models import (
     WorkStation, Material, Product, ProductMaterial, WorkOrder, 
     ProductionLog, MaterialReservation, WorkstationProcess, 
-    WorkstationEfficiencyMetric, ProductionDesign, ProductionEvent
+    WorkstationEfficiencyMetric, ProductionDesign, ProductionEvent, 
+    ProductWorkstationSequence
 )
 from django.utils import timezone
 
@@ -77,6 +78,7 @@ class ProductMaterialSerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     materials = ProductMaterialSerializer(source='productmaterial_set', many=True, required=False)
     stock_status_display = serializers.CharField(source='get_stock_status_display', read_only=True)
+    workstation_sequences = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
         model = Product
@@ -90,9 +92,22 @@ class ProductSerializer(serializers.ModelSerializer):
             'max_stock_level', 
             'stock_status', 
             'stock_status_display',
+            'workstation_sequences',
             'created_at'
         ]
         read_only_fields = ['id', 'created_at', 'stock_status', 'stock_status_display']
+
+    def get_workstation_sequences(self, obj):
+        """
+        Retrieve workstation sequences for the product
+        """
+        try:
+            sequences = obj.workstation_sequences.order_by('sequence_order')
+            return ProductWorkstationSequenceSerializer(sequences, many=True).data
+        except Exception as e:
+            # Log the error or return an empty list
+            print(f"Error retrieving workstation sequences: {e}")
+            return []
 
     def create(self, validated_data):
         # Extract materials data, ensuring we handle potential Material objects
@@ -143,6 +158,25 @@ class ProductSerializer(serializers.ModelSerializer):
             ProductMaterial.objects.create(product=instance, **material_data)
         
         return instance
+
+class ProductWorkstationSequenceSerializer(serializers.ModelSerializer):
+    """
+    Serializer for ProductWorkstationSequence to provide detailed workstation sequence information
+    """
+    workstation_name = serializers.CharField(source='workstation.name', read_only=True)
+    workstation_code = serializers.CharField(source='workstation.code', read_only=True)
+    
+    class Meta:
+        model = ProductWorkstationSequence
+        fields = [
+            'id', 
+            'workstation', 
+            'workstation_name', 
+            'workstation_code',
+            'sequence_order', 
+            'estimated_time', 
+            'instruction_set'
+        ]
 
 class MaterialReservationSerializer(serializers.ModelSerializer):
     material_name = serializers.CharField(source='material.name', read_only=True)

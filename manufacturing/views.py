@@ -7,13 +7,14 @@ from django.utils import timezone
 from .models import (
     WorkStation, Material, Product, WorkOrder, ProductionLog, 
     WorkstationProcess, WorkstationEfficiencyMetric, 
-    ProductionDesign, ProductionEvent
+    ProductionDesign, ProductionEvent, ProductWorkstationSequence
 )
 from .serializers import (
     WorkStationSerializer, MaterialSerializer, ProductSerializer,
     WorkOrderSerializer, ProductionLogSerializer, 
     WorkstationProcessSerializer, WorkstationEfficiencyMetricSerializer,
-    ProductionDesignSerializer, ProductionEventSerializer
+    ProductionDesignSerializer, ProductionEventSerializer,
+    ProductWorkstationSequenceSerializer
 )
 import logging
 
@@ -138,6 +139,171 @@ class ProductViewSet(viewsets.ModelViewSet):
             'status': 'Available' if material.material.quantity >= material.quantity else 'Insufficient'
         } for material in materials]
         return Response(data)
+
+    @action(detail=True, methods=['GET'])
+    def workstation_sequence(self, request, pk=None):
+        """
+        Retrieve the workstation sequence for a specific product
+        """
+        try:
+            product = self.get_object()
+            sequences = ProductWorkstationSequence.objects.filter(product=product).order_by('sequence_order')
+            
+            # Log the number of sequences found
+            logger.info(f"Found {sequences.count()} workstation sequences for product {product.id}")
+            
+            # If no sequences, log a debug message
+            if not sequences.exists():
+                logger.debug(f"No workstation sequences found for product {product.id}")
+            
+            # Use the existing serializer
+            serializer = ProductWorkstationSequenceSerializer(sequences, many=True)
+            return Response(serializer.data)
+        except Product.DoesNotExist:
+            logger.error(f"Product with id {pk} does not exist")
+            return Response({'error': 'Product not found'}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as e:
+            logger.error(f"Error retrieving workstation sequence for product {pk}: {str(e)}")
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    @action(detail=True, methods=['POST'])
+    def update_workstation_sequence(self, request, pk=None):
+        """
+        Update or create workstation sequences for a product
+        
+        Expected payload:
+        {
+            "sequences": [
+                {
+                    "workstation_id": 1,
+                    "sequence_order": 1,
+                    "estimated_time": "01:30:00",
+                    "instruction_set": {"key": "value"}
+                },
+                ...
+            ]
+        }
+        """
+        from datetime import timedelta
+
+        product = self.get_object()
+        sequences_data = request.data.get('sequences', [])
+        
+        # Clear existing sequences
+        ProductWorkstationSequence.objects.filter(product=product).delete()
+        
+        # Create new sequences
+        sequences_to_create = []
+        for seq_data in sequences_data:
+            workstation_id = seq_data.get('workstation_id')
+            try:
+                # Parse estimated time string to timedelta
+                estimated_time_str = seq_data.get('estimated_time', '00:00:00')
+                hours, minutes, seconds = map(int, estimated_time_str.split(':'))
+                estimated_time = timedelta(hours=hours, minutes=minutes, seconds=seconds)
+
+                workstation = WorkStation.objects.get(id=workstation_id)
+                sequence = ProductWorkstationSequence(
+                    product=product,
+                    workstation=workstation,
+                    sequence_order=seq_data.get('sequence_order', 0),
+                    estimated_time=estimated_time,
+                    instruction_set=seq_data.get('instruction_set', {})
+                )
+                sequences_to_create.append(sequence)
+            except WorkStation.DoesNotExist:
+                return Response(
+                    {'error': f'Workstation with ID {workstation_id} does not exist'}, 
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            except (ValueError, TypeError) as e:
+                return Response(
+                    {'error': f'Invalid estimated time format: {str(e)}'}, 
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+        
+        # Bulk create sequences
+        ProductWorkstationSequence.objects.bulk_create(sequences_to_create)
+        
+        # Retrieve and return the created sequences
+        created_sequences = ProductWorkstationSequence.objects.filter(product=product)
+        serializer = ProductWorkstationSequenceSerializer(created_sequences, many=True)
+        
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    @action(detail=True, methods=['post'])
+    def cancel(self, request, pk=None):
+        """
+        Cancel a pending or in-progress work order
+        """
+        work_order = self.get_object()
+        
+        # Validate current status
+        if work_order.status not in ['PENDING', 'IN_PROGRESS']:
+            return Response({
+                'error': 'Work order can only be cancelled when PENDING or IN_PROGRESS'
+            }, status=400)
+        
+        # Optional cancellation reason
+        reason = request.data.get('reason', '')
+        
+        # If work order was in progress, restore materials
+        if work_order.status == 'IN_PROGRESS':
+            for product_material in work_order.product.productmaterial_set.all():
+                material = product_material.material
+                required_quantity = product_material.quantity * work_order.quantity
+                material.quantity += required_quantity
+                material.save()
+        
+        # Update work order
+        work_order.status = 'CANCELLED'
+        work_order.notes = f"Cancelled: {reason}"
+        work_order.save()
+        
+        serializer = self.get_serializer(work_order)
+        return Response(serializer.data)
+
+    @action(detail=False, methods=['get'])
+    def dashboard_stats(self, request):
+        """
+        Comprehensive work order dashboard statistics
+        """
+        today = timezone.now().date()
+        
+        stats = {
+            'total_work_orders': WorkOrder.objects.count(),
+            'status_breakdown': {
+                status: WorkOrder.objects.filter(status=status).count()
+                for status, _ in WorkOrder.WORK_ORDER_STATUS_CHOICES
+            },
+            'priority_breakdown': {
+                priority: WorkOrder.objects.filter(priority=priority).count()
+                for priority, _ in WorkOrder.PRIORITY_CHOICES
+            },
+            'today_work_orders': {
+                'total': WorkOrder.objects.filter(start_date__date=today).count(),
+                'completed': WorkOrder.objects.filter(
+                    start_date__date=today, 
+                    status='COMPLETED'
+                ).count(),
+                'in_progress': WorkOrder.objects.filter(
+                    start_date__date=today, 
+                    status='IN_PROGRESS'
+                ).count()
+            },
+            'overdue_work_orders': WorkOrder.objects.filter(
+                end_date__lt=today, 
+                status__in=['PENDING', 'IN_PROGRESS']
+            ).count(),
+            'blocked_work_orders': WorkOrder.objects.filter(
+                status='BLOCKED'
+            ).count(),
+            'upcoming_dependencies': WorkOrder.objects.filter(
+                dependencies__status='PENDING'
+            ).values('id', 'product__name', 'status').distinct()
+        }
+        
+        return Response(stats)
 
 class WorkOrderViewSet(viewsets.ModelViewSet):
     queryset = WorkOrder.objects.all()
@@ -558,10 +724,24 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['GET'])
     def event_timeline(self, request):
         """
-        Generate a comprehensive event timeline
+        Generate a comprehensive event timeline with pagination
         """
-        events = self.get_queryset().order_by('created_at')
-        serializer = self.get_serializer(events, many=True)
+        # Get query parameters for pagination
+        page = int(request.query_params.get('page', 1))
+        page_size = int(request.query_params.get('page_size', 10))
+        
+        # Calculate start and end indices
+        start_index = (page - 1) * page_size
+        end_index = start_index + page_size
+        
+        # Get base queryset and order
+        events = self.get_queryset().order_by('-created_at')
+        
+        # Paginate the events
+        paginated_events = events[start_index:end_index]
+        
+        # Serialize the events
+        serializer = self.get_serializer(paginated_events, many=True)
         
         return Response({
             'total_events': events.count(),

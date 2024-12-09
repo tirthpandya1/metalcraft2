@@ -27,8 +27,9 @@ import {
   Error as ErrorIcon,
   CheckCircle as CheckCircleIcon
 } from '@mui/icons-material';
+import WorkstationSequenceComponent from '../components/WorkstationSequenceComponent';
 
-const ProductCard = ({ product, onEdit, onDelete }) => {
+const ProductCard = ({ product, onEdit, onDelete, onProductSelect }) => {
   const getStatusColor = (status) => {
     switch(status) {
       case 'IN_STOCK': return 'success';
@@ -49,67 +50,97 @@ const ProductCard = ({ product, onEdit, onDelete }) => {
     }
   };
 
+  const [showWorkstationSequence, setShowWorkstationSequence] = useState(false);
+
+  const handleOpenWorkstationSequence = (e) => {
+    e.stopPropagation();
+    setShowWorkstationSequence(true);
+  };
+
+  const handleCloseWorkstationSequence = () => {
+    setShowWorkstationSequence(false);
+  };
+
   return (
-    <Card 
-      variant="outlined" 
-      sx={{ 
-        height: '100%', 
-        display: 'flex', 
-        flexDirection: 'column', 
-        justifyContent: 'space-between' 
-      }}
-    >
-      <CardContent>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-          <Typography variant="h6" gutterBottom>
-            {product.name}
+    <>
+      <Card 
+        variant="outlined" 
+        sx={{ 
+          height: '100%', 
+          display: 'flex', 
+          flexDirection: 'column', 
+          justifyContent: 'space-between' 
+        }}
+        onClick={() => onProductSelect(product)}
+      >
+        <CardContent>
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
+            <Typography variant="h6" gutterBottom>
+              {product.name}
+            </Typography>
+            {getStatusIcon(product.stock_status)}
+          </Box>
+          
+          <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+            {product.description || 'No description available'}
           </Typography>
-          {getStatusIcon(product.stock_status)}
-        </Box>
-        
-        <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-          {product.description || 'No description available'}
-        </Typography>
-        
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
-          <Chip 
-            label={product.stock_status_display} 
-            color={
-              product.stock_status === 'OUT_OF_STOCK' ? 'error' : 
-              product.stock_status === 'LOW_STOCK' ? 'warning' : 
-              'success'
-            }
-            size="small"
-          />
-        </Box>
-        
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-          <Typography variant="caption">
-            Materials: {product.materials ? product.materials.length : 0}
+          
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+            <Chip 
+              label={product.stock_status_display} 
+              color={
+                product.stock_status === 'OUT_OF_STOCK' ? 'error' : 
+                product.stock_status === 'LOW_STOCK' ? 'warning' : 
+                'success'
+              }
+              size="small"
+            />
+          </Box>
+          
+          <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
+            <Typography variant="caption">
+              Materials: {product.materials ? product.materials.length : 0}
+            </Typography>
+            <Typography variant="caption">
+              Quantity: {product.current_quantity} / {product.max_stock_level}
+            </Typography>
+          </Box>
+          
+          <Typography variant="caption" color="text.secondary">
+            Created: {new Date(product.created_at).toLocaleDateString()}
           </Typography>
-          <Typography variant="caption">
-            Quantity: {product.current_quantity} / {product.max_stock_level}
-          </Typography>
-        </Box>
+          <Button 
+            variant="outlined" 
+            color="primary" 
+            onClick={handleOpenWorkstationSequence}
+            sx={{ mt: 2 }}
+          >
+            View Workstation Sequence
+          </Button>
+        </CardContent>
         
-        <Typography variant="caption" color="text.secondary">
-          Created: {new Date(product.created_at).toLocaleDateString()}
-        </Typography>
-      </CardContent>
-      
-      <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
-        <Tooltip title="Edit Product">
-          <IconButton size="small" onClick={onEdit}>
-            <EditIcon />
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Delete Product">
-          <IconButton size="small" onClick={onDelete}>
-            <DeleteIcon />
-          </IconButton>
-        </Tooltip>
-      </Box>
-    </Card>
+        <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
+          <Tooltip title="Edit Product">
+            <IconButton size="small" onClick={onEdit}>
+              <EditIcon />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Delete Product">
+            <IconButton size="small" onClick={onDelete}>
+              <DeleteIcon />
+            </IconButton>
+          </Tooltip>
+        </Box>
+      </Card>
+
+      {showWorkstationSequence && (
+        <WorkstationSequenceComponent 
+          productId={product.id} 
+          onClose={handleCloseWorkstationSequence} 
+          editable={true}
+        />
+      )}
+    </>
   );
 };
 
@@ -206,6 +237,10 @@ export default function Products() {
     }
   };
 
+  const handleProductSelect = (product) => {
+    console.log('Product selected:', product);
+  };
+
   return (
     <Box sx={{ p: 3 }}>
       {loading && <LinearProgress />}
@@ -244,6 +279,7 @@ export default function Products() {
               product={product} 
               onEdit={() => handleEdit(product)} 
               onDelete={() => handleDelete(product.id)} 
+              onProductSelect={handleProductSelect}
             />
           </Grid>
         ))}

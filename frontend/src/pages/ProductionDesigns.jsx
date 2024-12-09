@@ -23,9 +23,16 @@ const ProductionDesigns = () => {
     const fetchDesigns = async () => {
       try {
         const response = await axios.get('/api/production-designs/');
-        setDesigns(response.data);
+        console.log('Production Designs Response:', response);
+        
+        // Ensure designs is always an array
+        const designData = Array.isArray(response.data) ? response.data : 
+                            (response.data.results ? response.data.results : []);
+        
+        setDesigns(designData);
       } catch (error) {
         console.error('Error fetching production designs:', error);
+        setDesigns([]);
       }
     };
 

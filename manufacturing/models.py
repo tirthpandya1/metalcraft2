@@ -641,3 +641,37 @@ class ProductionEvent(models.Model):
 
     def __str__(self):
         return f"{self.event_type} - {self.product.name} - {self.created_at}"
+
+class ProductWorkstationSequence(models.Model):
+    """
+    Defines the sequence of workstations for a specific product's manufacturing process
+    """
+    product = models.ForeignKey(
+        Product, 
+        on_delete=models.CASCADE, 
+        related_name='workstation_sequences'
+    )
+    workstation = models.ForeignKey(
+        'WorkStation', 
+        on_delete=models.CASCADE
+    )
+    sequence_order = models.PositiveIntegerField(
+        help_text='Order of this workstation in the product manufacturing process'
+    )
+    estimated_time = models.DurationField(
+        null=True, 
+        blank=True, 
+        help_text='Estimated time for this workstation process'
+    )
+    instruction_set = models.JSONField(
+        null=True, 
+        blank=True, 
+        help_text='Specific instructions for this workstation in the product process'
+    )
+
+    class Meta:
+        unique_together = ('product', 'workstation', 'sequence_order')
+        ordering = ['sequence_order']
+
+    def __str__(self):
+        return f"{self.product.name} - {self.workstation.name} (Step {self.sequence_order})"
