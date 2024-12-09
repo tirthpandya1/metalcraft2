@@ -1,8 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.utils import timezone
 
 # Create your models here.
+
+# Get the current user model
+User = get_user_model()
 
 class WorkStation(models.Model):
     name = models.CharField(max_length=100)

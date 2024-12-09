@@ -297,3 +297,80 @@ class ProductionLogViewSet(viewsets.ModelViewSet):
             'today_production': today_stats['total_produced'] or 0,
             'today_wastage': today_stats['total_wastage'] or 0
         })
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status, permissions
+from django.contrib.auth import authenticate, login, logout
+from rest_framework.authtoken.models import Token
+from django.contrib.auth.models import User
+
+class LoginView(APIView):
+    permission_classes = [permissions.AllowAny]
+    
+    def post(self, request):
+        username = request.data.get('username')
+        password = request.data.get('password')
+        
+        user = authenticate(username=username, password=password)
+        
+        if user:
+            # Create or get token for the user
+            token, _ = Token.objects.get_or_create(user=user)
+            
+            return Response({
+                'token': token.key,
+                'user': {
+                    'id': user.id,
+                    'username': user.username,
+                    'email': user.email,
+                }
+            })
+        
+        return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
+
+class RegisterView(APIView):
+    permission_classes = [permissions.AllowAny]
+    
+    def post(self, request):
+        username = request.data.get('username')
+        email = request.data.get('email')
+        password = request.data.get('password')
+        
+        # Basic validation
+        if not username or not email or not password:
+            return Response({'error': 'All fields are required'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Check if user already exists
+        if User.objects.filter(username=username).exists():
+            return Response({'error': 'Username already exists'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Create user
+        user = User.objects.create_user(
+            username=username, 
+            email=email, 
+            password=password
+        )
+        
+        # Create token for the user
+        token, _ = Token.objects.get_or_create(user=user)
+        
+        return Response({
+            'token': token.key,
+            'user': {
+                'id': user.id,
+                'username': user.username,
+                'email': user.email,
+            }
+        }, status=status.HTTP_201_CREATED)
+
+class LogoutView(APIView):
+    def post(self, request):
+        # Delete the user's token
+        try:
+            request.user.auth_token.delete()
+        except:
+            pass
+        
+        logout(request)
+        return Response({'message': 'Successfully logged out'}, status=status.HTTP_200_OK)

@@ -1,128 +1,85 @@
-import React, { useState } from 'react';
-import {
-  Box,
-  Typography,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Chip,
-  IconButton,
-  Button,
-} from '@mui/material';
-import {
-  Edit as EditIcon,
-  Refresh as RefreshIcon,
-  Build as BuildIcon,
-} from '@mui/icons-material';
+import React from 'react';
+import { Build as BuildIcon } from '@mui/icons-material';
+import { Chip } from '@mui/material';
+import { workStationService } from '../services/api';
+import { withCrudList } from '../components/CrudListPage';
 
-// Mock data - replace with actual API data
-const mockWorkStations = [
-  {
-    id: 1,
-    name: 'CNC Machine 1',
-    status: 'Active',
-    currentJob: 'Metal Cutting - Order #123',
-    efficiency: '95%',
-    lastMaintenance: '2024-11-30',
-  },
-  {
-    id: 2,
-    name: 'Welding Station 1',
-    status: 'Idle',
-    currentJob: '-',
-    efficiency: '88%',
-    lastMaintenance: '2024-12-01',
-  },
-  {
-    id: 3,
-    name: 'Assembly Line A',
-    status: 'Maintenance',
-    currentJob: 'Scheduled Maintenance',
-    efficiency: '92%',
-    lastMaintenance: '2024-12-07',
-  },
-];
-
-function WorkStations() {
-  const [workStations, setWorkStations] = useState(mockWorkStations);
-
-  const getStatusColor = (status) => {
-    switch (status.toLowerCase()) {
-      case 'active':
-        return 'success';
-      case 'idle':
-        return 'warning';
-      case 'maintenance':
-        return 'error';
-      default:
-        return 'default';
-    }
-  };
-
+function WorkstationForm({ item, onItemChange }) {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
-        <Typography variant="h4">Work Stations</Typography>
-        <Button
-          variant="contained"
-          startIcon={<BuildIcon />}
-          onClick={() => {/* Add new work station logic */}}
-        >
-          Add Work Station
-        </Button>
-      </Box>
-      
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Name</TableCell>
-              <TableCell>Status</TableCell>
-              <TableCell>Current Job</TableCell>
-              <TableCell>Efficiency</TableCell>
-              <TableCell>Last Maintenance</TableCell>
-              <TableCell>Actions</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {workStations.map((station) => (
-              <TableRow key={station.id}>
-                <TableCell>{station.name}</TableCell>
-                <TableCell>
-                  <Chip
-                    label={station.status}
-                    color={getStatusColor(station.status)}
-                    size="small"
-                  />
-                </TableCell>
-                <TableCell>{station.currentJob}</TableCell>
-                <TableCell>{station.efficiency}</TableCell>
-                <TableCell>{station.lastMaintenance}</TableCell>
-                <TableCell>
-                  <IconButton
-                    size="small"
-                    onClick={() => {/* Edit station logic */}}
-                  >
-                    <EditIcon />
-                  </IconButton>
-                  <IconButton
-                    size="small"
-                    onClick={() => {/* Refresh station status logic */}}
-                  >
-                    <RefreshIcon />
-                  </IconButton>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </Box>
+    <>
+      {/* Basic form fields for workstation */}
+      <input 
+        type="text"
+        placeholder="Name"
+        value={item.name || ''}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          name: e.target.value
+        }))}
+      />
+      <input 
+        type="text"
+        placeholder="Description"
+        value={item.description || ''}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          description: e.target.value
+        }))}
+      />
+      <select
+        value={item.status || 'INACTIVE'}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          status: e.target.value
+        }))}
+      >
+        <option value="ACTIVE">Active</option>
+        <option value="INACTIVE">Inactive</option>
+        <option value="MAINTENANCE">Maintenance</option>
+      </select>
+    </>
   );
 }
 
-export default WorkStations;
+// Configuration for Workstations page
+const workstationConfig = {
+  entityName: 'Workstation',
+  pageTitle: 'Workstations',
+  addButtonIcon: <BuildIcon />,
+  defaultSortKey: 'name',
+  defaultItem: {
+    name: '',
+    description: '',
+    status: 'INACTIVE'
+  },
+  searchFields: ['name', 'description'],
+  columns: [
+    { key: 'name', label: 'Name' },
+    { key: 'description', label: 'Description' },
+    { 
+      key: 'status', 
+      label: 'Status', 
+      render: (item) => {
+        const colorMap = {
+          'ACTIVE': 'success',
+          'INACTIVE': 'default',
+          'MAINTENANCE': 'warning'
+        };
+        return (
+          <Chip 
+            label={item.status} 
+            color={colorMap[item.status] || 'default'}
+            size="small"
+          />
+        );
+      }
+    }
+  ]
+};
+
+// Create the Workstations page using the HOC
+export default withCrudList(
+  WorkstationForm, 
+  workStationService, 
+  workstationConfig
+);

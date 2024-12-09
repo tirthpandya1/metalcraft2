@@ -11,6 +11,7 @@ A real-time manufacturing management system for metal works production tracking 
 - Real-time alerts and notifications
 - Material wastage tracking
 - Production planning and forecasting
+- Token-based authentication
 
 ## Tech Stack
 
@@ -18,7 +19,8 @@ A real-time manufacturing management system for metal works production tracking 
 - Frontend: React with Material-UI
 - Database: PostgreSQL
 - Real-time Communication: WebSocket
-- State Management: Redux
+- Authentication: Token-based with Django REST Framework
+- State Management: React Context API
 
 ## Setup Instructions
 
@@ -39,17 +41,66 @@ cd frontend
 npm install
 ```
 
-4. Run migrations:
+4. Configure PostgreSQL Database
+- Create a database named `metalcraft_db`
+- Create a user with appropriate permissions
+- Update database settings in `settings.py`
+
+5. Run migrations:
 ```bash
+python manage.py makemigrations
 python manage.py migrate
 ```
 
-5. Start the development servers:
+6. Create initial superuser:
 ```bash
-# Backend
+python manage.py create_initial_user
+```
+
+7. Start the development servers:
+```bash
+# Backend (in one terminal)
 python manage.py runserver
 
-# Frontend (in a separate terminal)
+# Frontend (in another terminal)
 cd frontend
-npm start
+npm run dev
 ```
+
+## Authentication Endpoints
+
+- `POST /api/auth/register/`: Register a new user
+  - Request: `{username, email, password}`
+  - Response: `{token, user{id, username, email}}`
+
+- `POST /api/auth/login/`: Authenticate user
+  - Request: `{username, password}`
+  - Response: `{token, user{id, username, email}}`
+
+- `POST /api/auth/logout/`: Invalidate current token
+  - Requires authentication token
+
+## Default Credentials (Development Only)
+
+- Username: `admin`
+- Email: `admin@metalcraft.com`
+- Password: `adminpassword`
+
+## Security Notes
+
+- Use strong, unique passwords
+- Keep SECRET_KEY confidential
+- Do not use development settings in production
+- Configure proper CORS and security settings
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+[Specify your license here]

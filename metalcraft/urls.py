@@ -22,7 +22,7 @@ from django.conf.urls.static import static
 from rest_framework.routers import DefaultRouter
 from manufacturing.views import (
     WorkStationViewSet, MaterialViewSet, ProductViewSet,
-    WorkOrderViewSet, ProductionLogViewSet
+    WorkOrderViewSet, ProductionLogViewSet, LoginView, RegisterView, LogoutView
 )
 
 router = DefaultRouter()
@@ -34,6 +34,14 @@ router.register(r'production-logs', ProductionLogViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    # API endpoints
+    path('api/auth/', include('accounts.urls')),
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls')),
+    
+    # Authentication routes
+    path('api/login/', LoginView.as_view(), name='login'),
+    path('api/register/', RegisterView.as_view(), name='register'),
+    path('api/logout/', LogoutView.as_view(), name='logout'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
