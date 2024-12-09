@@ -509,8 +509,8 @@ def create_commit_ui(commit_message, changes):
         button_frame, 
         text="Commit & Push", 
         command=on_push_commit, 
-        bg='#4CAF50',  # Green color to indicate positive action
-        fg='white', 
+        bg=button_bg, 
+        fg=button_fg, 
         font=font_normal,
         relief=tk.FLAT,
         padx=10,
@@ -535,8 +535,8 @@ def create_commit_ui(commit_message, changes):
         button_frame, 
         text="Revert All", 
         command=on_revert, 
-        bg='#FF6B6B',  # Reddish color to indicate destructive action 
-        fg='white', 
+        bg=button_bg, 
+        fg=button_fg, 
         font=font_normal,
         relief=tk.FLAT,
         padx=10,
