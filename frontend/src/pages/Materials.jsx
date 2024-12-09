@@ -13,27 +13,6 @@ import {
 import { withCrudList } from '../components/CrudListPage';
 import { materialService } from '../services/api';
 
-// Row component for Materials
-function MaterialRow({ item, onEdit, onDelete }) {
-  return (
-    <TableRow>
-      <TableCell>{item.name}</TableCell>
-      <TableCell>{item.unit}</TableCell>
-      <TableCell>{item.quantity}</TableCell>
-      <TableCell>{item.reorder_level}</TableCell>
-      <TableCell>{item.cost_per_unit || 'N/A'}</TableCell>
-      <TableCell>
-        <IconButton size="small" onClick={onEdit}>
-          <EditIcon />
-        </IconButton>
-        <IconButton size="small" onClick={onDelete}>
-          <DeleteIcon />
-        </IconButton>
-      </TableCell>
-    </TableRow>
-  );
-}
-
 // Configuration for Materials page
 const materialsConfig = {
   entityName: 'Material',
@@ -98,6 +77,21 @@ const materialsConfig = {
     { key: 'quantity', label: 'Quantity' },
     { key: 'reorder_level', label: 'Reorder Level' },
     { key: 'cost_per_unit', label: 'Cost per Unit' },
+    { 
+      key: 'status', 
+      label: 'Status',
+      render: (item) => (
+        <Chip 
+          label={item.status} 
+          color={
+            item.status === 'Out of Stock' ? 'error' : 
+            item.status === 'Low Stock' ? 'warning' : 
+            'success'
+          }
+          size="small"
+        />
+      )
+    }
   ],
   defaultItem: {
     name: '',
@@ -110,4 +104,4 @@ const materialsConfig = {
 };
 
 // Create the Materials page using the HOC
-export default withCrudList(MaterialRow, materialService, materialsConfig);
+export default withCrudList(null, materialService, materialsConfig);
