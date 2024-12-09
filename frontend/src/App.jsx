@@ -15,11 +15,17 @@ import Sidebar from './components/Sidebar';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Box, CssBaseline } from '@mui/material';
 
-// Import other pages
+// Import existing pages
 import WorkOrders from './pages/WorkOrders';
 import Materials from './pages/Materials';
 import Products from './pages/Products';
 import Workstations from './pages/Workstations';
+
+// Import new Production Line Management pages
+import WorkstationProcesses from './pages/WorkstationProcesses';
+import WorkstationEfficiency from './pages/WorkstationEfficiency';
+import ProductionDesigns from './pages/ProductionDesigns';
+import ProductionEvents from './pages/ProductionEvents';
 
 // Create a theme
 const theme = createTheme({
@@ -51,91 +57,28 @@ const theme = createTheme({
     h2: {
       color: '#c0caf5',
     },
-    body1: {
-      color: '#c0caf5',
-    },
-  },
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: `
-        body {
-          background-color: #1a1b26;
-          color: #c0caf5;
-        }
-        ::-webkit-scrollbar {
-          width: 12px;
-        }
-        ::-webkit-scrollbar-track {
-          background: #16161e;
-        }
-        ::-webkit-scrollbar-thumb {
-          background: #2a2b3d;
-          border-radius: 6px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-          background: #3a3b4d;
-        }
-      `,
-    },
-    MuiAppBar: {
-      styleOverrides: {
-        root: {
-          backgroundColor: '#16161e',
-        },
-      },
-    },
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          backgroundColor: '#16161e',
-          color: '#c0caf5',
-          borderColor: '#2a2b3d',
-        },
-      },
-    },
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          textTransform: 'none',
-          borderRadius: '8px',
-        },
-        containedPrimary: {
-          backgroundColor: '#7aa2f7',
-          '&:hover': {
-            backgroundColor: '#89b4fa',
-          },
-        },
-        containedSecondary: {
-          backgroundColor: '#9ece6a',
-          '&:hover': {
-            backgroundColor: '#a9dc76',
-          },
-        },
-      },
-    },
   },
 });
 
 // Wrapper component for protected routes with Sidebar
 const ProtectedRoute = ({ children }) => {
-  // Check authentication (you can modify this logic)
-  const isAuthenticated = localStorage.getItem('token') !== null;
+  const isAuthenticated = localStorage.getItem('token');
 
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
   }
 
   return (
-    <Box sx={{ display: 'flex', minHeight: '100vh' }}>
-      <CssBaseline />
+    <Box sx={{ display: 'flex' }}>
       <Sidebar />
       <Box 
         component="main" 
         sx={{ 
           flexGrow: 1, 
-          overflow: 'auto',
-          padding: 3,
-          width: 'calc(100% - 240px)' // Adjust based on Sidebar width
+          p: 3, 
+          width: { sm: `calc(100% - 240px)` },
+          backgroundColor: 'background.default',
+          minHeight: '100vh'
         }}
       >
         {children}
@@ -149,10 +92,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Routes>
-        {/* Public Routes */}
+        {/* Authentication Routes */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        
+
         {/* Protected Routes */}
         <Route 
           path="/dashboard" 
@@ -195,9 +138,43 @@ function App() {
           } 
         />
 
-        {/* Redirect */}
-        <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="*" element={<Navigate to="/login" replace />} />
+        {/* New Production Line Management Routes */}
+        <Route 
+          path="/workstation-processes" 
+          element={
+            <ProtectedRoute>
+              <WorkstationProcesses />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/workstation-efficiency" 
+          element={
+            <ProtectedRoute>
+              <WorkstationEfficiency />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/production-designs" 
+          element={
+            <ProtectedRoute>
+              <ProductionDesigns />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/production-events" 
+          element={
+            <ProtectedRoute>
+              <ProductionEvents />
+            </ProtectedRoute>
+          } 
+        />
+
+        {/* Redirect to Dashboard by default */}
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
+        <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Routes>
     </ThemeProvider>
   );

@@ -1,13 +1,19 @@
 from django.shortcuts import render
-from rest_framework import viewsets, permissions
+from rest_framework import viewsets, permissions, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from django.db.models import Sum, Count, Avg
+from django.db.models import Sum, Count, Avg, F, ExpressionWrapper, fields
 from django.utils import timezone
-from .models import WorkStation, Material, Product, WorkOrder, ProductionLog
+from .models import (
+    WorkStation, Material, Product, WorkOrder, ProductionLog, 
+    WorkstationProcess, WorkstationEfficiencyMetric, 
+    ProductionDesign, ProductionEvent
+)
 from .serializers import (
     WorkStationSerializer, MaterialSerializer, ProductSerializer,
-    WorkOrderSerializer, ProductionLogSerializer
+    WorkOrderSerializer, ProductionLogSerializer, 
+    WorkstationProcessSerializer, WorkstationEfficiencyMetricSerializer,
+    ProductionDesignSerializer, ProductionEventSerializer
 )
 import logging
 
@@ -436,6 +442,130 @@ class ProductionLogViewSet(viewsets.ModelViewSet):
         return Response({
             'today_production': today_stats['total_produced'] or 0,
             'today_wastage': today_stats['total_wastage'] or 0
+        })
+
+class WorkstationProcessViewSet(viewsets.ModelViewSet):
+    """
+    ViewSet for managing manufacturing processes
+    Provides CRUD operations and additional insights
+    """
+    queryset = WorkstationProcess.objects.all()
+    serializer_class = WorkstationProcessSerializer
+    permission_classes = [permissions.AllowAny]
+
+    @action(detail=False, methods=['GET'])
+    def process_sequence(self, request):
+        """
+        Get process sequence for a specific product
+        """
+        product_id = request.query_params.get('product_id')
+        if not product_id:
+            return Response({'error': 'Product ID is required'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        processes = WorkstationProcess.objects.filter(product_id=product_id).order_by('sequence_order')
+        serializer = self.get_serializer(processes, many=True)
+        return Response(serializer.data)
+
+class WorkstationEfficiencyViewSet(viewsets.ModelViewSet):
+    """
+    ViewSet for tracking and analyzing workstation efficiency
+    """
+    queryset = WorkstationEfficiencyMetric.objects.all()
+    serializer_class = WorkstationEfficiencyMetricSerializer
+    permission_classes = [permissions.AllowAny]
+
+    @action(detail=False, methods=['GET'])
+    def performance_summary(self, request):
+        """
+        Provide a comprehensive performance summary
+        """
+        # Aggregate efficiency metrics across all workstations
+        summary = self.get_queryset().aggregate(
+            avg_idle_time=Avg('total_idle_time'),
+            avg_material_wastage=Avg(
+                ExpressionWrapper(
+                    F('total_material_wasted') / F('total_material_used') * 100, 
+                    output_field=fields.FloatField()
+                )
+            ),
+            avg_defect_rate=Avg(
+                ExpressionWrapper(
+                    F('total_items_with_defects') / F('total_items_processed') * 100, 
+                    output_field=fields.FloatField()
+                )
+            )
+        )
+        return Response(summary)
+
+class ProductionDesignViewSet(viewsets.ModelViewSet):
+    """
+    ViewSet for managing production designs and cutting diagrams
+    """
+    queryset = ProductionDesign.objects.all()
+    serializer_class = ProductionDesignSerializer
+    permission_classes = [permissions.AllowAny]
+
+    @action(detail=True, methods=['POST'])
+    def upload_cutting_diagram(self, request, pk=None):
+        """
+        Upload a nested cutting diagram for a specific design
+        """
+        design = self.get_object()
+        diagram = request.FILES.get('diagram')
+        
+        if not diagram:
+            return Response({'error': 'No diagram uploaded'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        design.nested_cutting_diagram = diagram
+        design.save()
+        
+        return Response({
+            'message': 'Cutting diagram uploaded successfully',
+            'diagram_url': design.nested_cutting_diagram.url
+        })
+
+class ProductionEventViewSet(viewsets.ModelViewSet):
+    """
+    ViewSet for tracking and analyzing production events
+    """
+    queryset = ProductionEvent.objects.all()
+    serializer_class = ProductionEventSerializer
+    permission_classes = [permissions.AllowAny]
+
+    def get_queryset(self):
+        """
+        Optionally filter events by various parameters
+        """
+        queryset = super().get_queryset()
+        
+        # Filter by event type
+        event_type = self.request.query_params.get('event_type')
+        if event_type:
+            queryset = queryset.filter(event_type=event_type)
+        
+        # Filter by work order
+        work_order_id = self.request.query_params.get('work_order_id')
+        if work_order_id:
+            queryset = queryset.filter(work_order_id=work_order_id)
+        
+        # Filter by product
+        product_id = self.request.query_params.get('product_id')
+        if product_id:
+            queryset = queryset.filter(product_id=product_id)
+        
+        return queryset
+
+    @action(detail=False, methods=['GET'])
+    def event_timeline(self, request):
+        """
+        Generate a comprehensive event timeline
+        """
+        events = self.get_queryset().order_by('created_at')
+        serializer = self.get_serializer(events, many=True)
+        
+        return Response({
+            'total_events': events.count(),
+            'events': serializer.data
         })
 
 from rest_framework.views import APIView

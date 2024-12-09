@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   Drawer, 
   List, 
@@ -8,24 +8,46 @@ import {
   Toolbar,
   Divider,
   Box,
-  Typography
+  Typography,
+  Collapse
 } from '@mui/material';
 import { 
   Dashboard as DashboardIcon, 
-  Work as WorkOrderIcon, 
-  Inventory as MaterialIcon, 
+  Inventory as InventoryIcon, 
+  Factory as ProductionIcon,
   Widgets as ProductIcon,
+  Inventory2 as MaterialIcon,
+  Computer as WorkstationIcon,
+  Settings as ProcessIcon,
+  DesignServices as DesignIcon,
+  Event as EventIcon,
+  ExpandLess,
+  ExpandMore,
   Logout as LogoutIcon,
-  Computer as WorkstationIcon
+  Work as WorkOrderIcon,
+  Analytics as EfficiencyIcon
 } from '@mui/icons-material';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { authService } from '../services/api';
 
 const drawerWidth = 240;
 
 function Sidebar() {
   const navigate = useNavigate();
+  const location = useLocation();
   const user = authService.getCurrentUser();
+
+  const [openInventory, setOpenInventory] = useState(
+    location.pathname === '/products' || location.pathname === '/materials'
+  );
+  const [openProduction, setOpenProduction] = useState(
+    [
+      '/workstations', 
+      '/workstation-processes', 
+      '/production-designs', 
+      '/production-events'
+    ].includes(location.pathname)
+  );
 
   const handleLogout = async () => {
     try {
@@ -34,6 +56,14 @@ function Sidebar() {
     } catch (error) {
       console.error('Logout failed', error);
     }
+  };
+
+  const handleInventoryClick = () => {
+    setOpenInventory(!openInventory);
+  };
+
+  const handleProductionClick = () => {
+    setOpenProduction(!openProduction);
   };
 
   const menuItems = [
@@ -48,21 +78,140 @@ function Sidebar() {
       path: '/work-orders' 
     },
     { 
-      text: 'Materials', 
-      icon: <MaterialIcon />, 
-      path: '/materials' 
+      text: 'Efficiency Metrics', 
+      icon: <EfficiencyIcon />, 
+      path: '/workstation-efficiency' 
     },
     { 
-      text: 'Products', 
-      icon: <ProductIcon />, 
-      path: '/products' 
+      text: 'Inventory', 
+      icon: <InventoryIcon />, 
+      onClick: handleInventoryClick,
+      open: openInventory,
+      children: [
+        { 
+          text: 'Products', 
+          icon: <ProductIcon />, 
+          path: '/products' 
+        },
+        { 
+          text: 'Materials', 
+          icon: <MaterialIcon />, 
+          path: '/materials' 
+        }
+      ]
     },
     { 
-      text: 'Workstations', 
-      icon: <WorkstationIcon />, 
-      path: '/workstations' 
+      text: 'Production', 
+      icon: <ProductionIcon />, 
+      onClick: handleProductionClick,
+      open: openProduction,
+      children: [
+        { 
+          text: 'Workstations', 
+          icon: <WorkstationIcon />, 
+          path: '/workstations' 
+        },
+        { 
+          text: 'Workstation Processes', 
+          icon: <ProcessIcon />, 
+          path: '/workstation-processes' 
+        },
+        { 
+          text: 'Production Designs', 
+          icon: <DesignIcon />, 
+          path: '/production-designs' 
+        },
+        { 
+          text: 'Production Events', 
+          icon: <EventIcon />, 
+          path: '/production-events' 
+        }
+      ]
     }
   ];
+
+  const renderMenuItem = (item) => {
+    if (item.children) {
+      return (
+        <>
+          <ListItem 
+            button 
+            onClick={item.onClick}
+            sx={{
+              '&:hover': {
+                backgroundColor: 'rgba(255,255,255,0.08)'
+              }
+            }}
+          >
+            <ListItemIcon sx={{ color: '#c0caf5' }}>
+              {item.icon}
+            </ListItemIcon>
+            <ListItemText 
+              primary={item.text} 
+              primaryTypographyProps={{ 
+                color: 'text.primary',
+                variant: 'body1'
+              }} 
+            />
+            {item.open ? <ExpandLess /> : <ExpandMore />}
+          </ListItem>
+          <Collapse in={item.open} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              {item.children.map((child) => (
+                <ListItem 
+                  button 
+                  key={child.text}
+                  component={Link}
+                  to={child.path}
+                  sx={{ 
+                    pl: 4,
+                    '&:hover': {
+                      backgroundColor: 'rgba(255,255,255,0.08)'
+                    }
+                  }}
+                >
+                  <ListItemIcon sx={{ color: '#c0caf5' }}>
+                    {child.icon}
+                  </ListItemIcon>
+                  <ListItemText 
+                    primary={child.text} 
+                    primaryTypographyProps={{ 
+                      color: 'text.primary',
+                      variant: 'body1'
+                    }} 
+                  />
+                </ListItem>
+              ))}
+            </List>
+          </Collapse>
+        </>
+      );
+    }
+
+    return (
+      <ListItem 
+        button 
+        component={Link} 
+        to={item.path}
+        sx={{
+          '&:hover': {
+            backgroundColor: 'rgba(255,255,255,0.08)'
+          }
+        }}
+      >
+        <ListItemIcon sx={{ color: '#c0caf5' }}>
+          {item.icon}
+        </ListItemIcon>
+        <ListItemText 
+          primary={item.text} 
+          primaryTypographyProps={{ 
+            color: 'text.primary',
+            variant: 'body1'
+          }} 
+        />
+      </ListItem>
+    );
+  };
 
   return (
     <Drawer
@@ -72,51 +221,56 @@ function Sidebar() {
         '& .MuiDrawer-paper': {
           width: drawerWidth,
           boxSizing: 'border-box',
+          backgroundColor: '#16161e',
+          borderRight: 'none'
         },
       }}
       variant="permanent"
       anchor="left"
     >
       <Toolbar>
-        <Typography variant="h6" noWrap>
-          Metalcraft
-        </Typography>
-      </Toolbar>
-      <Divider />
-      
-      {/* User Info */}
-      {user && (
-        <Box sx={{ p: 2, textAlign: 'center' }}>
-          <Typography variant="subtitle1">
-            Welcome, {user.username || 'User'}
+        <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+          <Typography 
+            variant="h5" 
+            sx={{ 
+              flexGrow: 1, 
+              color: '#7aa2f7', 
+              fontWeight: 'bold' 
+            }}
+          >
+            Metalcraft
           </Typography>
         </Box>
-      )}
+      </Toolbar>
       
       <Divider />
       
-      {/* Menu Items */}
       <List>
-        {menuItems.map((item) => (
-          <ListItem 
-            key={item.text} 
-            component={Link} 
-            to={item.path}
-            button
-          >
-            <ListItemIcon>{item.icon}</ListItemIcon>
-            <ListItemText primary={item.text} />
-          </ListItem>
-        ))}
+        {menuItems.map((item) => renderMenuItem(item))}
       </List>
-      
+
       <Divider />
-      
-      {/* Logout */}
+
       <List>
-        <ListItem button onClick={handleLogout}>
-          <ListItemIcon><LogoutIcon /></ListItemIcon>
-          <ListItemText primary="Logout" />
+        <ListItem 
+          button 
+          onClick={handleLogout}
+          sx={{
+            '&:hover': {
+              backgroundColor: 'rgba(255,255,255,0.08)'
+            }
+          }}
+        >
+          <ListItemIcon sx={{ color: '#f7768e' }}>
+            <LogoutIcon />
+          </ListItemIcon>
+          <ListItemText 
+            primary="Logout" 
+            primaryTypographyProps={{ 
+              color: 'text.primary',
+              variant: 'body1'
+            }} 
+          />
         </ListItem>
       </List>
     </Drawer>

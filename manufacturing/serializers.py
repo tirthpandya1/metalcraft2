@@ -1,6 +1,10 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import WorkStation, Material, Product, ProductMaterial, WorkOrder, ProductionLog, MaterialReservation
+from .models import (
+    WorkStation, Material, Product, ProductMaterial, WorkOrder, 
+    ProductionLog, MaterialReservation, WorkstationProcess, 
+    WorkstationEfficiencyMetric, ProductionDesign, ProductionEvent
+)
 from django.utils import timezone
 
 class UserSerializer(serializers.ModelSerializer):
@@ -292,3 +296,119 @@ class ProductionLogSerializer(serializers.ModelSerializer):
         model = ProductionLog
         fields = ['id', 'work_order_id', 'workstation_id', 'quantity_produced', 'wastage', 'start_time', 'end_time', 'status', 'created_at']
         read_only_fields = ['id', 'created_at']
+
+class WorkstationProcessSerializer(serializers.ModelSerializer):
+    """
+    Serializer for WorkstationProcess model
+    Provides detailed information about manufacturing processes
+    """
+    product_name = serializers.CharField(source='product.name', read_only=True)
+    workstation_name = serializers.CharField(source='workstation.name', read_only=True)
+    
+    class Meta:
+        model = WorkstationProcess
+        fields = [
+            'id', 
+            'product', 
+            'product_name', 
+            'workstation', 
+            'workstation_name',
+            'process_type', 
+            'sequence_order', 
+            'estimated_time', 
+            'instruction_set',
+            'created_at', 
+            'updated_at'
+        ]
+        read_only_fields = ['id', 'created_at', 'updated_at']
+
+class WorkstationEfficiencyMetricSerializer(serializers.ModelSerializer):
+    """
+    Serializer for WorkstationEfficiencyMetric model
+    Provides comprehensive efficiency tracking
+    """
+    workstation_name = serializers.CharField(source='workstation.name', read_only=True)
+    
+    class Meta:
+        model = WorkstationEfficiencyMetric
+        fields = [
+            'id', 
+            'workstation', 
+            'workstation_name',
+            'total_working_time', 
+            'total_idle_time', 
+            'total_material_used', 
+            'total_material_wasted',
+            'total_items_processed', 
+            'total_items_with_defects', 
+            'timestamp',
+            'idle_time_percentage', 
+            'material_wastage_percentage', 
+            'defect_rate'
+        ]
+        read_only_fields = ['id', 'timestamp', 'idle_time_percentage', 'material_wastage_percentage', 'defect_rate']
+
+class ProductionDesignSerializer(serializers.ModelSerializer):
+    """
+    Serializer for ProductionDesign model
+    Manages design specifications and cutting diagrams
+    """
+    product_name = serializers.CharField(source='product.name', read_only=True)
+    created_by_username = serializers.CharField(source='created_by.username', read_only=True, allow_null=True)
+    
+    class Meta:
+        model = ProductionDesign
+        fields = [
+            'id', 
+            'product', 
+            'product_name',
+            'design_file', 
+            'nested_cutting_diagram', 
+            'instruction_set',
+            'created_by', 
+            'created_by_username',
+            'created_at'
+        ]
+        read_only_fields = ['id', 'created_at']
+
+class ProductionEventSerializer(serializers.ModelSerializer):
+    """
+    Serializer for ProductionEvent model
+    Provides comprehensive event tracking for production workflow
+    """
+    product_name = serializers.CharField(source='product.name', read_only=True)
+    work_order_status = serializers.CharField(source='work_order.status', read_only=True)
+    workstation_name = serializers.CharField(source='workstation.name', read_only=True, allow_null=True)
+    created_by_username = serializers.CharField(source='created_by.username', read_only=True, allow_null=True)
+    
+    class Meta:
+        model = ProductionEvent
+        fields = [
+            'id', 
+            'event_type', 
+            'work_order', 
+            'work_order_status',
+            'product', 
+            'product_name',
+            'workstation', 
+            'workstation_name',
+            'details', 
+            'created_at', 
+            'created_by', 
+            'created_by_username'
+        ]
+        read_only_fields = ['id', 'created_at']
+
+    def to_representation(self, instance):
+        """
+        Custom representation to handle complex event details
+        """
+        representation = super().to_representation(instance)
+        
+        # Attempt to parse and format details if it's a dictionary
+        if isinstance(representation.get('details'), dict):
+            representation['details_summary'] = ', '.join([
+                f"{k}: {v}" for k, v in representation['details'].items()
+            ])
+        
+        return representation

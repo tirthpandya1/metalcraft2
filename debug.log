@@ -17252,3 +17252,535 @@ INFO 2024-12-09 19:20:37,714 basehttp 27638 6160412672 "GET /api/analytics/cost/
 INFO 2024-12-09 19:20:37,714 basehttp 27638 6160412672 "GET /api/analytics/cost/ HTTP/1.1" 200 274
 INFO 2024-12-09 19:20:37,721 basehttp 27638 6143586304 "GET /api/analytics/dashboard/ HTTP/1.1" 200 552
 INFO 2024-12-09 19:20:37,721 basehttp 27638 6143586304 "GET /api/analytics/dashboard/ HTTP/1.1" 200 552
+INFO 2024-12-09 19:22:24,862 autoreload 27638 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-09 19:22:24,862 autoreload 27638 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-09 19:22:25,183 autoreload 27824 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 19:22:25,183 autoreload 27824 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 19:22:32,406 views 27824 6156398592 Product list request received
+INFO 2024-12-09 19:22:32,406 views 27824 6156398592 Product list request received
+INFO 2024-12-09 19:22:32,409 views 27824 6156398592 Total number of products: 1
+INFO 2024-12-09 19:22:32,409 views 27824 6156398592 Total number of products: 1
+INFO 2024-12-09 19:22:32,416 views 27824 6156398592 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:22:32,416 views 27824 6156398592 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:22:32,418 basehttp 27824 6173224960 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:22:32,418 basehttp 27824 6156398592 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:22:32,418 basehttp 27824 6173224960 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:22:32,418 basehttp 27824 6156398592 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:22:32,420 views 27824 6156398592 Product list request received
+INFO 2024-12-09 19:22:32,420 views 27824 6156398592 Product list request received
+INFO 2024-12-09 19:22:32,423 views 27824 6156398592 Total number of products: 1
+INFO 2024-12-09 19:22:32,423 views 27824 6156398592 Total number of products: 1
+INFO 2024-12-09 19:22:32,427 views 27824 6156398592 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:22:32,427 views 27824 6156398592 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:22:32,428 basehttp 27824 6173224960 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:22:32,429 basehttp 27824 6156398592 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:22:32,429 basehttp 27824 6156398592 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:22:32,428 basehttp 27824 6173224960 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:23:28,766 autoreload 27824 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py changed, reloading.
+INFO 2024-12-09 19:23:28,766 autoreload 27824 8535504960 /Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py changed, reloading.
+INFO 2024-12-09 19:23:29,145 autoreload 27867 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 19:23:29,145 autoreload 27867 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 19:25:19,032 autoreload 27867 8535504960 /Users/T/Documents/GitHub/metalcraft2/metalcraft/urls.py changed, reloading.
+INFO 2024-12-09 19:25:19,032 autoreload 27867 8535504960 /Users/T/Documents/GitHub/metalcraft2/metalcraft/urls.py changed, reloading.
+INFO 2024-12-09 19:25:19,423 autoreload 27963 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 19:25:19,423 autoreload 27963 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 19:28:30,230 views 27963 6193180672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:28:30,230 views 27963 6193180672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:28:30,231 views 27963 6193180672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:28:30,231 views 27963 6193180672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:28:30,231 views 27963 6193180672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:28:30,231 views 27963 6193180672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:28:30,232 basehttp 27963 6193180672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:28:30,232 basehttp 27963 6193180672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:28:30,236 views 27963 6193180672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:28:30,236 views 27963 6193180672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:28:30,237 views 27963 6193180672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:28:30,237 views 27963 6193180672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:28:30,237 views 27963 6193180672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:28:30,237 views 27963 6193180672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:28:30,237 basehttp 27963 6193180672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:28:30,237 basehttp 27963 6193180672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:28:30,974 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:28:30,974 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:28:30,974 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:28:30,974 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:28:30,976 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:30,976 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:30,976 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:30,976 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:30,979 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:28:30,979 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:28:30,980 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:28:30,980 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:28:30,982 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:30,982 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:30,983 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:30,983 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:31,908 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:28:31,908 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:28:31,911 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:28:31,911 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:28:31,915 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:31,915 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:31,917 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:31,917 basehttp 27963 6210007040 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 19:28:31,917 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:31,917 basehttp 27963 6210007040 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 19:28:31,922 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:28:31,922 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:28:31,925 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:28:31,925 basehttp 27963 6193180672 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 19:28:31,925 basehttp 27963 6193180672 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 19:28:31,925 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:28:31,933 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:31,933 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:31,933 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:31,933 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:32,592 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:28:32,592 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:28:32,599 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:28:32,599 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:28:32,605 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:32,605 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:32,608 basehttp 27963 6193180672 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:28:32,608 basehttp 27963 6193180672 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:28:32,609 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:32,609 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:32,611 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:28:32,611 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:28:32,615 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:28:32,615 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:28:32,620 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:32,620 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:32,623 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:32,623 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:32,628 basehttp 27963 6193180672 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:28:32,628 basehttp 27963 6193180672 "GET /api/work-orders/ HTTP/1.1" 200 512
+WARNING 2024-12-09 19:28:37,795 log 27963 6193180672 Bad Request: /api/work-orders/12/
+WARNING 2024-12-09 19:28:37,795 log 27963 6193180672 Bad Request: /api/work-orders/12/
+WARNING 2024-12-09 19:28:37,795 basehttp 27963 6193180672 "PUT /api/work-orders/12/ HTTP/1.1" 400 72
+WARNING 2024-12-09 19:28:37,795 basehttp 27963 6193180672 "PUT /api/work-orders/12/ HTTP/1.1" 400 72
+INFO 2024-12-09 19:28:39,987 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:28:39,987 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:28:40,013 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:28:40,013 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:28:40,022 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:40,022 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:40,024 basehttp 27963 6210007040 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:28:40,024 basehttp 27963 6210007040 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:28:40,024 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:40,024 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:40,026 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:28:40,026 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:28:40,034 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:28:40,034 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:28:40,037 basehttp 27963 6193180672 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:28:40,037 basehttp 27963 6193180672 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:28:40,038 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:40,038 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:40,039 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:40,039 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:41,539 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:28:41,539 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:28:41,543 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:28:41,543 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:28:41,544 basehttp 27963 6193180672 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 19:28:41,544 basehttp 27963 6193180672 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 19:28:41,546 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:41,546 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:41,547 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:41,547 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:41,548 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:28:41,548 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:28:41,550 basehttp 27963 6193180672 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 19:28:41,550 basehttp 27963 6193180672 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 19:28:41,550 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:28:41,550 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:28:41,552 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:41,552 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:28:41,553 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:41,553 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:28:44,277 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:28:44,277 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:28:44,278 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:28:44,278 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:28:44,278 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:28:44,278 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:28:44,278 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:28:44,278 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:28:44,282 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:28:44,282 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:28:44,283 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:28:44,283 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:28:44,283 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:28:44,283 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:28:44,283 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:28:44,283 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:28:49,151 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 261
+INFO 2024-12-09 19:28:49,151 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 261
+INFO 2024-12-09 19:28:49,155 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:28:49,155 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:28:49,155 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:28:49,155 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:28:49,156 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 19:28:49,156 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 19:28:49,156 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 506
+INFO 2024-12-09 19:28:49,156 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 506
+INFO 2024-12-09 19:28:56,109 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 256
+INFO 2024-12-09 19:28:56,109 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 256
+INFO 2024-12-09 19:28:56,117 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:28:56,117 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:28:56,118 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:28:56,118 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:28:56,118 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:28:56,118 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:28:56,119 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:28:56,119 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:29:05,018 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 261
+INFO 2024-12-09 19:29:05,018 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 261
+INFO 2024-12-09 19:29:05,027 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:05,027 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:05,028 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:05,028 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:05,028 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 19:29:05,028 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 19:29:05,029 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 506
+INFO 2024-12-09 19:29:05,029 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 506
+INFO 2024-12-09 19:29:09,391 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 256
+INFO 2024-12-09 19:29:09,391 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 256
+INFO 2024-12-09 19:29:09,399 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:09,399 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:09,400 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:09,400 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:09,400 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:29:09,400 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:29:09,400 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:29:09,400 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:29:10,747 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:10,747 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:10,747 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:10,747 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:10,747 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:29:10,747 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:29:10,748 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:29:10,748 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:29:10,752 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:10,752 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:10,752 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:10,752 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:10,752 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:29:10,752 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:29:10,753 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:29:10,753 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:29:19,170 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 261
+INFO 2024-12-09 19:29:19,170 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 261
+INFO 2024-12-09 19:29:19,176 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:19,176 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:19,176 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:19,176 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:19,176 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 19:29:19,176 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 19:29:19,177 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 506
+INFO 2024-12-09 19:29:19,177 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 506
+INFO 2024-12-09 19:29:22,424 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 256
+INFO 2024-12-09 19:29:22,424 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 256
+INFO 2024-12-09 19:29:22,433 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:22,433 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:22,433 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:22,433 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:22,433 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:29:22,433 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:29:22,434 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:29:22,434 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:29:26,692 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 261
+INFO 2024-12-09 19:29:26,692 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 261
+INFO 2024-12-09 19:29:26,700 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:26,700 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:26,701 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:26,701 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:26,701 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 19:29:26,701 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 19:29:26,702 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 506
+INFO 2024-12-09 19:29:26,702 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 506
+INFO 2024-12-09 19:29:30,247 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 256
+INFO 2024-12-09 19:29:30,247 basehttp 27963 6226833408 "PUT /api/workstations/6/ HTTP/1.1" 200 256
+INFO 2024-12-09 19:29:30,252 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:30,252 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:29:30,252 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:30,252 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:29:30,252 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:29:30,252 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:29:30,253 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:29:30,253 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:31:46,159 basehttp 27963 6226833408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:46,159 basehttp 27963 6226833408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:46,165 basehttp 27963 6226833408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:46,165 basehttp 27963 6226833408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:47,633 basehttp 27963 6226833408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:47,633 basehttp 27963 6226833408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:47,651 basehttp 27963 6226833408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:47,651 basehttp 27963 6226833408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:49,666 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:31:49,666 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:31:49,666 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:31:49,666 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:31:49,667 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:31:49,667 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:31:49,667 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:31:49,667 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:31:49,670 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:31:49,670 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:31:49,671 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:31:49,671 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:31:49,671 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:31:49,671 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:31:49,672 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:31:49,672 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:31:50,904 basehttp 27963 6226833408 "GET /api/production-designs/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:50,904 basehttp 27963 6226833408 "GET /api/production-designs/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:50,909 basehttp 27963 6226833408 "GET /api/production-designs/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:50,909 basehttp 27963 6226833408 "GET /api/production-designs/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:52,011 basehttp 27963 6226833408 "GET /api/production-designs/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:52,011 basehttp 27963 6226833408 "GET /api/production-designs/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:52,020 basehttp 27963 6226833408 "GET /api/production-designs/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:52,020 basehttp 27963 6226833408 "GET /api/production-designs/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:31:53,828 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:31:53,828 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:31:53,829 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:31:53,829 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:31:53,829 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:31:53,829 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:31:53,830 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:31:53,830 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:31:53,834 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:31:53,834 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:31:53,834 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:31:53,834 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:31:53,834 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:31:53,834 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:31:53,835 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:31:53,835 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+WARNING 2024-12-09 19:31:55,435 log 27963 6226833408 Not Found: /api/production-events/event-timeline/
+WARNING 2024-12-09 19:31:55,435 log 27963 6226833408 Not Found: /api/production-events/event-timeline/
+WARNING 2024-12-09 19:31:55,435 basehttp 27963 6226833408 "GET /api/production-events/event-timeline/?page=1&page_size=10 HTTP/1.1" 404 23
+WARNING 2024-12-09 19:31:55,435 basehttp 27963 6226833408 "GET /api/production-events/event-timeline/?page=1&page_size=10 HTTP/1.1" 404 23
+WARNING 2024-12-09 19:31:55,443 log 27963 6226833408 Not Found: /api/production-events/event-timeline/
+WARNING 2024-12-09 19:31:55,443 log 27963 6226833408 Not Found: /api/production-events/event-timeline/
+WARNING 2024-12-09 19:31:55,444 basehttp 27963 6226833408 "GET /api/production-events/event-timeline/?page=1&page_size=10 HTTP/1.1" 404 23
+WARNING 2024-12-09 19:31:55,444 basehttp 27963 6226833408 "GET /api/production-events/event-timeline/?page=1&page_size=10 HTTP/1.1" 404 23
+INFO 2024-12-09 19:31:58,284 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:31:58,284 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:31:58,284 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:31:58,284 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:31:58,285 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:31:58,285 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:31:58,285 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:31:58,285 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:31:58,290 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:31:58,290 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:31:58,290 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:31:58,290 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:31:58,290 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:31:58,290 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:31:58,291 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:31:58,291 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:32:00,464 basehttp 27963 6226833408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:32:00,464 basehttp 27963 6226833408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:32:00,468 basehttp 27963 6226833408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:32:00,468 basehttp 27963 6226833408 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:32:02,951 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:32:02,951 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:32:02,952 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:32:02,952 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:32:02,952 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:32:02,952 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:32:02,952 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:32:02,952 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:32:02,956 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:32:02,956 views 27963 6226833408 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:32:02,956 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:32:02,956 views 27963 6226833408 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:32:02,957 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:32:02,957 views 27963 6226833408 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:32:02,957 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:32:02,957 basehttp 27963 6226833408 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:34:34,051 views 27963 6193180672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:34:34,051 views 27963 6193180672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:34:34,052 views 27963 6193180672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:34:34,052 views 27963 6193180672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:34:34,052 views 27963 6193180672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:34:34,052 views 27963 6193180672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:34:34,053 basehttp 27963 6193180672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:34:34,053 basehttp 27963 6193180672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:34:34,058 views 27963 6193180672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:34:34,058 views 27963 6193180672 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:34:34,058 views 27963 6193180672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:34:34,058 views 27963 6193180672 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:34:34,058 views 27963 6193180672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:34:34,058 views 27963 6193180672 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:34:34,059 basehttp 27963 6193180672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:34:34,059 basehttp 27963 6193180672 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:35:10,340 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:35:10,340 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:35:10,340 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:35:10,340 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:35:10,342 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:10,342 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:10,342 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:10,342 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:10,348 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:35:10,348 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:35:10,349 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:35:10,349 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:35:10,350 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:10,350 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:10,351 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:10,351 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:12,470 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:35:12,470 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:35:12,473 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:35:12,473 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:35:12,477 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:12,477 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:12,479 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:12,479 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:12,479 basehttp 27963 6210007040 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:35:12,479 basehttp 27963 6210007040 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:35:12,482 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:35:12,482 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:35:12,484 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:35:12,484 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:35:12,486 basehttp 27963 6193180672 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:35:12,486 basehttp 27963 6193180672 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:35:12,488 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:12,488 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:12,489 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:12,489 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+WARNING 2024-12-09 19:35:13,153 log 27963 6226833408 Not Found: /api/workstation-efficiency/performance-summary/
+WARNING 2024-12-09 19:35:13,153 log 27963 6226833408 Not Found: /api/workstation-efficiency/performance-summary/
+WARNING 2024-12-09 19:35:13,154 basehttp 27963 6226833408 "GET /api/workstation-efficiency/performance-summary/ HTTP/1.1" 404 23
+WARNING 2024-12-09 19:35:13,154 basehttp 27963 6226833408 "GET /api/workstation-efficiency/performance-summary/ HTTP/1.1" 404 23
+WARNING 2024-12-09 19:35:13,156 log 27963 6226833408 Not Found: /api/workstation-efficiency/performance-summary/
+WARNING 2024-12-09 19:35:13,156 log 27963 6226833408 Not Found: /api/workstation-efficiency/performance-summary/
+WARNING 2024-12-09 19:35:13,156 basehttp 27963 6226833408 "GET /api/workstation-efficiency/performance-summary/ HTTP/1.1" 404 23
+WARNING 2024-12-09 19:35:13,156 basehttp 27963 6226833408 "GET /api/workstation-efficiency/performance-summary/ HTTP/1.1" 404 23
+INFO 2024-12-09 19:35:15,431 views 27963 6226833408 Product list request received
+INFO 2024-12-09 19:35:15,431 views 27963 6226833408 Product list request received
+INFO 2024-12-09 19:35:15,431 views 27963 6226833408 Total number of products: 1
+INFO 2024-12-09 19:35:15,431 views 27963 6226833408 Total number of products: 1
+INFO 2024-12-09 19:35:15,433 views 27963 6226833408 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:15,433 views 27963 6226833408 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:15,433 basehttp 27963 6226833408 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:15,433 basehttp 27963 6226833408 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:15,438 views 27963 6226833408 Product list request received
+INFO 2024-12-09 19:35:15,438 views 27963 6226833408 Product list request received
+INFO 2024-12-09 19:35:15,438 views 27963 6226833408 Total number of products: 1
+INFO 2024-12-09 19:35:15,438 views 27963 6226833408 Total number of products: 1
+INFO 2024-12-09 19:35:15,440 views 27963 6226833408 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:15,440 views 27963 6226833408 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:15,441 basehttp 27963 6226833408 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:15,441 basehttp 27963 6226833408 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:16,052 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:35:16,052 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:35:16,055 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:35:16,055 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:35:16,058 basehttp 27963 6193180672 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 19:35:16,058 basehttp 27963 6193180672 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 19:35:16,059 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:16,059 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:16,060 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:16,060 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:16,061 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:35:16,061 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:35:16,062 basehttp 27963 6226833408 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 19:35:16,062 basehttp 27963 6226833408 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-09 19:35:16,064 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:35:16,064 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:35:16,067 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:16,067 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:16,067 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:16,067 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:17,504 views 27963 6243659776 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:35:17,504 views 27963 6243659776 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:35:17,505 views 27963 6243659776 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:35:17,505 views 27963 6243659776 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:35:17,505 views 27963 6243659776 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:35:17,505 views 27963 6243659776 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:35:17,506 basehttp 27963 6243659776 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:35:17,506 basehttp 27963 6243659776 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:35:17,512 views 27963 6243659776 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:35:17,512 views 27963 6243659776 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:35:17,513 views 27963 6243659776 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:35:17,513 views 27963 6243659776 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:35:17,513 views 27963 6243659776 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:35:17,513 views 27963 6243659776 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:35:17,514 basehttp 27963 6243659776 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:35:17,514 basehttp 27963 6243659776 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:35:18,032 basehttp 27963 6243659776 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:35:18,032 basehttp 27963 6243659776 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:35:18,035 basehttp 27963 6243659776 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:35:18,035 basehttp 27963 6243659776 "GET /api/workstation-processes/ HTTP/1.1" 200 52
+INFO 2024-12-09 19:35:21,217 views 27963 6243659776 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:35:21,217 views 27963 6243659776 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:35:21,217 views 27963 6243659776 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:35:21,217 views 27963 6243659776 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:35:21,218 views 27963 6243659776 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:35:21,218 views 27963 6243659776 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:35:21,219 basehttp 27963 6243659776 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:35:21,219 basehttp 27963 6243659776 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:35:21,226 views 27963 6243659776 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:35:21,226 views 27963 6243659776 Fetching workstations: Total 2 workstations
+INFO 2024-12-09 19:35:21,227 views 27963 6243659776 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:35:21,227 views 27963 6243659776 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 19:35:21,227 views 27963 6243659776 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:35:21,227 views 27963 6243659776 Workstation: 6, Name: AMADA Metal Forming, Status: ACTIVE
+INFO 2024-12-09 19:35:21,227 basehttp 27963 6243659776 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:35:21,227 basehttp 27963 6243659776 "GET /api/workstations/ HTTP/1.1" 200 501
+INFO 2024-12-09 19:35:32,705 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:35:32,705 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:35:32,727 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:35:32,727 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:35:32,734 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:32,734 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:32,735 basehttp 27963 6226833408 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:35:32,735 basehttp 27963 6226833408 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:35:32,735 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:32,735 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:32,737 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:35:32,737 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:35:32,741 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:35:32,741 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:35:32,744 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:32,744 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:32,745 basehttp 27963 6226833408 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:35:32,745 basehttp 27963 6226833408 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:35:32,746 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:32,746 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+WARNING 2024-12-09 19:35:33,637 log 27963 6243659776 Not Found: /api/workstation-efficiency/performance-summary/
+WARNING 2024-12-09 19:35:33,637 log 27963 6243659776 Not Found: /api/workstation-efficiency/performance-summary/
+WARNING 2024-12-09 19:35:33,638 basehttp 27963 6243659776 "GET /api/workstation-efficiency/performance-summary/ HTTP/1.1" 404 23
+WARNING 2024-12-09 19:35:33,638 basehttp 27963 6243659776 "GET /api/workstation-efficiency/performance-summary/ HTTP/1.1" 404 23
+WARNING 2024-12-09 19:35:33,641 log 27963 6243659776 Not Found: /api/workstation-efficiency/performance-summary/
+WARNING 2024-12-09 19:35:33,641 log 27963 6243659776 Not Found: /api/workstation-efficiency/performance-summary/
+WARNING 2024-12-09 19:35:33,641 basehttp 27963 6243659776 "GET /api/workstation-efficiency/performance-summary/ HTTP/1.1" 404 23
+WARNING 2024-12-09 19:35:33,641 basehttp 27963 6243659776 "GET /api/workstation-efficiency/performance-summary/ HTTP/1.1" 404 23
+INFO 2024-12-09 19:35:34,363 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:35:34,363 views 27963 6210007040 Product list request received
+INFO 2024-12-09 19:35:34,366 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:35:34,366 views 27963 6210007040 Total number of products: 1
+INFO 2024-12-09 19:35:34,371 basehttp 27963 6226833408 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:35:34,372 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:34,371 basehttp 27963 6226833408 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:35:34,372 views 27963 6210007040 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:34,373 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:34,374 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:35:34,373 basehttp 27963 6210007040 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:34,374 views 27963 6193180672 Product list request received
+INFO 2024-12-09 19:35:34,377 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:35:34,377 views 27963 6193180672 Total number of products: 1
+INFO 2024-12-09 19:35:34,382 basehttp 27963 6226833408 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:35:34,382 basehttp 27963 6226833408 "GET /api/work-orders/ HTTP/1.1" 200 512
+INFO 2024-12-09 19:35:34,383 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:34,383 views 27963 6193180672 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'materials': [], 'current_quantity': 27, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'stock_status_display': 'In Stock', 'created_at': '2024-12-09T15:55:13.776432Z'})]
+INFO 2024-12-09 19:35:34,384 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
+INFO 2024-12-09 19:35:34,384 basehttp 27963 6193180672 "GET /api/products/ HTTP/1.1" 200 260
