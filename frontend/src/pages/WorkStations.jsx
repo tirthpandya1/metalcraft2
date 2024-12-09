@@ -88,7 +88,7 @@ const WorkstationCard = ({ workstation, onEdit, onDelete }) => {
         </Box>
         <Box sx={{ mt: 2 }}>
           <Typography variant="caption">
-            Last Maintenance: {workstation.last_maintenance ? formatRelativeTime(workstation.last_maintenance) : 'N/A'}
+            Last Maintenance: {formatRelativeTime(workstation.last_maintenance_display) || 'N/A'}
           </Typography>
         </Box>
       </CardContent>

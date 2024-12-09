@@ -22,7 +22,10 @@ export const formatRelativeTime = (dateString) => {
   if (!dateString) return 'N/A';
   
   const date = new Date(dateString);
-  const now = new Date();
+  const now = new Date(new Date().toLocaleString('en-IN', {
+    timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
+  }));
+  
   const diffInSeconds = Math.floor((now - date) / 1000);
   
   const minute = 60;
