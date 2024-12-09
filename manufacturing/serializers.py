@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import WorkStation, Material, Product, ProductMaterial, WorkOrder, ProductionLog
+from .models import WorkStation, Material, Product, ProductMaterial, WorkOrder, ProductionLog, MaterialReservation
 from django.utils import timezone
 
 class UserSerializer(serializers.ModelSerializer):
@@ -140,6 +140,19 @@ class ProductSerializer(serializers.ModelSerializer):
         
         return instance
 
+class MaterialReservationSerializer(serializers.ModelSerializer):
+    material_name = serializers.CharField(source='material.name', read_only=True)
+    
+    class Meta:
+        model = MaterialReservation
+        fields = [
+            'id', 
+            'material', 
+            'material_name', 
+            'quantity_reserved', 
+            'reserved_at'
+        ]
+
 class WorkOrderSerializer(serializers.ModelSerializer):
     product_name = serializers.SerializerMethodField(read_only=True)
     workstation_name = serializers.CharField(source='workstation.name', read_only=True, allow_null=True)
@@ -154,6 +167,7 @@ class WorkOrderSerializer(serializers.ModelSerializer):
     )
     can_start = serializers.SerializerMethodField(read_only=True)
     is_overdue = serializers.SerializerMethodField(read_only=True)
+    material_reservations = MaterialReservationSerializer(many=True, read_only=True)
     
     class Meta:
         model = WorkOrder
@@ -175,10 +189,11 @@ class WorkOrderSerializer(serializers.ModelSerializer):
             'blocking_reason',
             'can_start',
             'is_overdue',
+            'material_reservations',
             'created_at', 
             'updated_at'
         ]
-        read_only_fields = ['id', 'created_at', 'updated_at', 'can_start', 'is_overdue']
+        read_only_fields = ['id', 'created_at', 'updated_at', 'can_start', 'is_overdue', 'material_reservations']
 
     def get_product_name(self, obj):
         """
@@ -195,6 +210,18 @@ class WorkOrderSerializer(serializers.ModelSerializer):
 
     def get_is_overdue(self, obj):
         return obj.is_overdue()
+
+    def validate_status(self, value):
+        """
+        Validate work order status transitions
+        """
+        instance = getattr(self, 'instance', None)
+        if instance:
+            try:
+                instance.validate_status_transition(value)
+            except ValueError as e:
+                raise serializers.ValidationError(str(e))
+        return value
 
     def create(self, validated_data):
         # Extract dependencies if provided
@@ -229,24 +256,36 @@ class WorkOrderSerializer(serializers.ModelSerializer):
         return work_order
 
     def update(self, instance, validated_data):
-        # Extract dependencies if provided
-        dependencies_data = validated_data.pop('dependencies', None)
+        """
+        Custom update method to handle workflow logic
+        """
+        # Check if status is being changed
+        if 'status' in validated_data:
+            new_status = validated_data['status']
+            
+            # Perform specific actions based on status
+            if new_status == 'IN_PROGRESS':
+                # Check material availability and reserve
+                material_status = instance.check_material_availability()
+                if not material_status['available']:
+                    raise serializers.ValidationError({
+                        'status': 'Insufficient materials to start work order',
+                        'material_details': material_status['materials']
+                    })
+                
+                # Reserve materials
+                instance.reserve_materials()
+            
+            elif new_status == 'COMPLETED':
+                # Complete work order workflow
+                instance.complete_work_order()
+            
+            elif new_status == 'CANCELLED':
+                # Release reserved materials
+                instance.release_reserved_materials()
         
-        # Update status logic
-        new_status = validated_data.get('status', instance.status)
-        
-        # If work order is completed, set end date
-        if new_status == 'COMPLETED' and instance.status != 'COMPLETED':
-            validated_data['end_date'] = timezone.now()
-        
-        # Update work order
-        work_order = super().update(instance, validated_data)
-        
-        # Update dependencies if provided
-        if dependencies_data is not None:
-            work_order.dependencies.set(dependencies_data)
-        
-        return work_order
+        # Proceed with standard update
+        return super().update(instance, validated_data)
 
 class ProductionLogSerializer(serializers.ModelSerializer):
     class Meta:

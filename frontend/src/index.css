@@ -1,12 +1,84 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  color-scheme: dark;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  @apply bg-background text-foreground;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f5f5f5;
+}
+
+/* Tokyo Night Theme Specific Styles */
+.dark-theme {
+  background-color: #1a1b26;
+  color: #c0caf5;
+}
+
+.card {
+  @apply bg-background-secondary border border-border rounded-tokyo shadow-tokyo-dark;
+}
+
+.btn {
+  @apply rounded-tokyo transition-all duration-300 ease-in-out;
+}
+
+.btn-primary {
+  @apply bg-primary text-background hover:bg-primary-hover;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-background hover:bg-secondary-hover;
+}
+
+.input {
+  @apply bg-background-secondary border-border text-foreground focus:ring-primary focus:border-primary;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #16161e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2b3d;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3b4d;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply text-foreground font-bold;
+}
+
+a {
+  @apply text-primary hover:text-primary-hover transition-colors;
+}
+
+/* Transition and Animation Defaults */
+.transition-tokyo {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  @apply bg-background-secondary text-foreground-muted hover:bg-border;
 }

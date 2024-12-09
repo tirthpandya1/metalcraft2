@@ -366,6 +366,7 @@ export const withCrudList = (
           justifyContent="center" 
           alignItems="center" 
           height="100%"
+          className="dark-theme min-h-screen p-6"
         >
           <CircularProgress />
         </Box>
@@ -375,20 +376,21 @@ export const withCrudList = (
     // Render error state
     if (error) {
       return (
-        <Alert severity="error">
+        <Alert severity="error" className="dark-theme min-h-screen p-6">
           {error}
         </Alert>
       );
     }
 
     return (
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1 }} className="dark-theme min-h-screen p-6">
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
-          <Typography variant="h4">{fullConfig.pageTitle}</Typography>
+          <Typography variant="h4" className="text-foreground">{fullConfig.pageTitle}</Typography>
           <Button
             variant="contained"
             startIcon={fullConfig.addButtonIcon}
             onClick={() => openItemDialog()}
+            className="btn btn-primary px-4 py-2"
           >
             {`Add ${fullConfig.entityName}`}
           </Button>
@@ -408,13 +410,14 @@ export const withCrudList = (
                 </InputAdornment>
               ),
             }}
+            className="text-foreground"
           />
         </Box>
 
         <TableContainer>
-          <Table>
+          <Table className="w-full text-sm">
             <TableHead>
-              <TableRow>
+              <TableRow className="border-b border-border">
                 {fullConfig.columns.map(col => (
                   <SortableColumnHeader 
                     key={col.key} 
@@ -422,37 +425,43 @@ export const withCrudList = (
                     sortKey={col.key}
                   />
                 ))}
-                <TableCell>Actions</TableCell>
+                <TableCell className="px-4 py-3 text-right text-foreground-muted">
+                  Actions
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {sortedFilteredItems.length === 0 ? (
                 <TableRow>
-                  <TableCell colSpan={fullConfig.columns.length + 1} align="center">
+                  <TableCell colSpan={fullConfig.columns.length + 1} align="center" className="px-4 py-3 text-foreground-muted">
                     No {fullConfig.entityName} found
                   </TableCell>
                 </TableRow>
               ) : (
                 sortedFilteredItems.map((item) => (
-                  <TableRow key={item.id}>
+                  <TableRow key={item.id} className="hover:bg-background-secondary transition-tokyo">
                     {fullConfig.columns.map(col => (
-                      <TableCell key={col.key}>
+                      <TableCell key={col.key} className="px-4 py-3 text-foreground">
                         {col.render ? col.render(item, fullConfig) : item[col.key]}
                       </TableCell>
                     ))}
-                    <TableCell>
-                      <IconButton 
-                        color="primary" 
-                        onClick={() => openItemDialog(item)}
-                      >
-                        <EditIcon />
-                      </IconButton>
-                      <IconButton 
-                        color="secondary"
-                        onClick={() => handleDeleteItem(item.id)}
-                      >
-                        <DeleteIcon />
-                      </IconButton>
+                    <TableCell className="px-4 py-3 text-right">
+                      <div className="flex justify-end space-x-2">
+                        <IconButton 
+                          color="primary" 
+                          onClick={() => openItemDialog(item)}
+                          className="btn btn-secondary px-3 py-1 text-xs"
+                        >
+                          <EditIcon />
+                        </IconButton>
+                        <IconButton 
+                          color="secondary"
+                          onClick={() => handleDeleteItem(item.id)}
+                          className="btn btn-destructive px-3 py-1 text-xs"
+                        >
+                          <DeleteIcon />
+                        </IconButton>
+                      </div>
                     </TableCell>
                   </TableRow>
                 ))
@@ -467,8 +476,9 @@ export const withCrudList = (
           onClose={() => setOpenDialog(false)} 
           maxWidth="md" 
           fullWidth
+          className="dark-theme"
         >
-          <DialogTitle>
+          <DialogTitle className="text-foreground">
             {currentItem?.id ? `Edit ${fullConfig.entityName}` : `Add ${fullConfig.entityName}`}
           </DialogTitle>
           <DialogContent>
@@ -493,6 +503,7 @@ export const withCrudList = (
                     ...prev,
                     [field.key]: e.target.value
                   }))}
+                  className="text-foreground"
                 >
                   {field.type === 'select' && field.options && field.options.map((option) => (
                     <MenuItem 
@@ -507,10 +518,10 @@ export const withCrudList = (
             })}
           </DialogContent>
           <DialogActions>
-            <Button onClick={() => setOpenDialog(false)} color="secondary">
+            <Button onClick={() => setOpenDialog(false)} color="secondary" className="btn btn-secondary px-4 py-2">
               Cancel
             </Button>
-            <Button onClick={handleSaveItem} color="primary" variant="contained">
+            <Button onClick={handleSaveItem} color="primary" variant="contained" className="btn btn-primary px-4 py-2">
               Save
             </Button>
           </DialogActions>

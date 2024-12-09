@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import viewsets, permissions
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from django.db.models import Sum, Count
+from django.db.models import Sum, Count, Avg
 from django.utils import timezone
 from .models import WorkStation, Material, Product, WorkOrder, ProductionLog
 from .serializers import (
@@ -168,41 +168,141 @@ class WorkOrderViewSet(viewsets.ModelViewSet):
     @action(detail=True, methods=['post'])
     def start(self, request, pk=None):
         """
-        Start a pending work order
+        Start a pending work order with comprehensive checks
         """
         work_order = self.get_object()
         
-        # Validate current status
-        if work_order.status != 'PENDING':
-            return Response({
-                'error': 'Work order can only be started from PENDING status'
-            }, status=400)
-        
-        # Check material availability
-        for product_material in work_order.product.productmaterial_set.all():
-            material = product_material.material
-            required_quantity = product_material.quantity * work_order.quantity
+        try:
+            # Validate status transition
+            work_order.validate_status_transition('IN_PROGRESS')
             
-            if material.quantity < required_quantity:
+            # Check material availability
+            material_status = work_order.check_material_availability()
+            
+            if not material_status['available']:
+                # Log detailed material availability issues
+                logger.error(f"Material availability check failed for Work Order {pk}")
+                for material in material_status['materials']:
+                    logger.error(
+                        f"Insufficient Material: {material['material_name']} "
+                        f"(ID: {material['material_id']})\n"
+                        f"Required: {material['required_quantity']} "
+                        f"Available: {material['available_quantity']}"
+                    )
+                
                 return Response({
-                    'error': f'Insufficient material: {material.name}. '
-                             f'Required: {required_quantity}, Available: {material.quantity}'
+                    'error': 'Insufficient materials',
+                    'material_details': material_status['materials']
                 }, status=400)
+            
+            # Reserve materials
+            work_order.reserve_materials()
+            
+            # Update work order status
+            work_order.status = 'IN_PROGRESS'
+            work_order.start_date = timezone.now()
+            work_order.save()
+            
+            return Response({
+                'status': 'Work order started successfully',
+                'work_order_id': work_order.id,
+                'material_status': material_status
+            })
         
-        # Deduct materials
-        for product_material in work_order.product.productmaterial_set.all():
-            material = product_material.material
-            required_quantity = product_material.quantity * work_order.quantity
-            material.quantity -= required_quantity
-            material.save()
+        except ValueError as e:
+            # Log the specific error
+            logger.error(f"Value Error starting work order {pk}: {str(e)}")
+            return Response({
+                'error': str(e)
+            }, status=400)
+        except Exception as e:
+            # Log unexpected errors
+            logger.error(f"Error starting work order {pk}: {str(e)}")
+            return Response({
+                'error': 'Failed to start work order'
+            }, status=500)
+
+    @action(detail=True, methods=['post'])
+    def complete(self, request, pk=None):
+        """
+        Complete a work order with comprehensive workflow
+        """
+        work_order = self.get_object()
         
-        # Update work order
-        work_order.status = 'IN_PROGRESS'
-        work_order.start_date = timezone.now()
-        work_order.save()
+        try:
+            # Validate status transition
+            work_order.validate_status_transition('COMPLETED')
+            
+            # Complete the work order
+            work_order.complete_work_order()
+            
+            return Response({
+                'status': 'Work order completed successfully',
+                'work_order_id': work_order.id,
+                'product_quantity': work_order.product.current_quantity
+            })
         
-        serializer = self.get_serializer(work_order)
-        return Response(serializer.data)
+        except ValueError as e:
+            return Response({
+                'error': str(e)
+            }, status=400)
+        except Exception as e:
+            logger.error(f"Error completing work order {pk}: {str(e)}")
+            return Response({
+                'error': 'Failed to complete work order'
+            }, status=500)
+
+    @action(detail=True, methods=['post'])
+    def cancel(self, request, pk=None):
+        """
+        Cancel a work order and release reserved materials
+        """
+        work_order = self.get_object()
+        
+        try:
+            # Validate status transition
+            work_order.validate_status_transition('CANCELLED')
+            
+            # Release reserved materials
+            work_order.release_reserved_materials()
+            
+            return Response({
+                'status': 'Work order cancelled successfully',
+                'work_order_id': work_order.id
+            })
+        
+        except ValueError as e:
+            return Response({
+                'error': str(e)
+            }, status=400)
+        except Exception as e:
+            logger.error(f"Error cancelling work order {pk}: {str(e)}")
+            return Response({
+                'error': 'Failed to cancel work order'
+            }, status=500)
+
+    @action(detail=False, methods=['get'])
+    def workflow_summary(self, request):
+        """
+        Provide a comprehensive summary of work order workflow
+        """
+        # Aggregate work order status
+        status_summary = WorkOrder.objects.values('status').annotate(
+            count=Count('id'),
+            total_quantity=Sum('quantity')
+        )
+        
+        # Detailed status breakdown
+        detailed_summary = {
+            'total_work_orders': WorkOrder.objects.count(),
+            'status_breakdown': list(status_summary),
+            'recent_work_orders': WorkOrderSerializer(
+                WorkOrder.objects.order_by('-created_at')[:10], 
+                many=True
+            ).data
+        }
+        
+        return Response(detailed_summary)
 
     @action(detail=True, methods=['post'])
     def complete(self, request, pk=None):

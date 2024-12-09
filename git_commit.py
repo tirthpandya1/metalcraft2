@@ -73,55 +73,55 @@ def analyze_changes(diff: str) -> Dict[str, List[Tuple[str, List[str]]]]:
 
 def generate_commit_message(changes: Dict[str, List[Tuple[str, List[str]]]]) -> str:
     """Generate a detailed, context-aware commit message."""
-    message_parts = []
-    
-    # Categorize changes by project area
+    # Categorize changes
     frontend_changes = [
-        (file, changes) for file, changes in changes.get('modified', []) 
+        (file, file_changes) for file, file_changes in changes.get('modified', []) 
         if file.startswith('frontend/')
     ]
     backend_changes = [
-        (file, changes) for file, changes in changes.get('modified', []) 
+        (file, file_changes) for file, file_changes in changes.get('modified', []) 
         if file.startswith('manufacturing/')
     ]
     
-    # High-level summary
+    # Prepare message components
+    message_lines = ["Comprehensive Project Update"]
+    
+    # Detailed change tracking
+    if frontend_changes:
+        message_lines.append("\n🖥️ Frontend Updates:")
+        for file, file_changes in frontend_changes:
+            # Clean and truncate changes
+            clean_changes = [
+                change[:100] + '...' if len(change) > 100 else change 
+                for change in file_changes[:3]  # Limit to first 3 changes
+            ]
+            # Extract meaningful file name
+            short_file_name = file.replace('frontend/src/', '').replace('/', ' > ')
+            message_lines.append(f"- {short_file_name}: {', '.join(clean_changes)}")
+    
+    if backend_changes:
+        message_lines.append("\n🔧 Backend Updates:")
+        for file, file_changes in backend_changes:
+            # Clean and truncate changes
+            clean_changes = [
+                change[:100] + '...' if len(change) > 100 else change 
+                for change in file_changes[:3]  # Limit to first 3 changes
+            ]
+            # Extract meaningful file name
+            short_file_name = file.replace('manufacturing/', '').replace('/', ' > ')
+            message_lines.append(f"- {short_file_name}: {', '.join(clean_changes)}")
+    
+    # Add summary of changes
     summary_parts = []
     if frontend_changes:
         summary_parts.append(f"{len(frontend_changes)} frontend files")
     if backend_changes:
         summary_parts.append(f"{len(backend_changes)} backend files")
     
-    # Detailed message
-    message_lines = [
-        "Comprehensive Project Update",
-        f"Changes: {', '.join(summary_parts)}"
-    ]
+    # Combine message
+    full_message = '\n'.join(message_lines)
     
-    # Frontend changes details
-    if frontend_changes:
-        message_lines.append("\nFrontend Updates:")
-        for file, file_changes in frontend_changes:
-            # Truncate and clean file changes
-            clean_changes = [
-                change[:100] + '...' if len(change) > 100 else change 
-                for change in file_changes[:3]  # Limit to first 3 changes
-            ]
-            message_lines.append(f"- {file.replace('frontend/', '')}: {', '.join(clean_changes)}")
-    
-    # Backend changes details
-    if backend_changes:
-        message_lines.append("\nBackend Updates:")
-        for file, file_changes in backend_changes:
-            # Truncate and clean file changes
-            clean_changes = [
-                change[:100] + '...' if len(change) > 100 else change 
-                for change in file_changes[:3]  # Limit to first 3 changes
-            ]
-            message_lines.append(f"- {file.replace('manufacturing/', '')}: {', '.join(clean_changes)}")
-    
-    # Combine and wrap the message
-    return '\n'.join(message_lines)
+    return full_message
 
 def git_add_all():
     """Stage all changes."""

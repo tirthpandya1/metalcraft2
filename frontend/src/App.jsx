@@ -24,9 +24,94 @@ import Workstations from './pages/Workstations';
 // Create a theme
 const theme = createTheme({
   palette: {
-    mode: 'light', // or 'dark'
+    mode: 'dark',
     primary: {
-      main: '#1976d2', // Adjust primary color
+      main: '#7aa2f7',  // Primary color
+    },
+    secondary: {
+      main: '#9ece6a',  // Secondary color
+    },
+    background: {
+      default: '#1a1b26',  // Main background
+      paper: '#16161e',    // Paper/card background
+    },
+    text: {
+      primary: '#c0caf5',  // Primary text
+      secondary: '#6272a4', // Secondary text
+    },
+    error: {
+      main: '#f7768e',     // Error/destructive color
+    },
+  },
+  typography: {
+    fontFamily: 'Inter, sans-serif',
+    h1: {
+      color: '#c0caf5',
+    },
+    h2: {
+      color: '#c0caf5',
+    },
+    body1: {
+      color: '#c0caf5',
+    },
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: `
+        body {
+          background-color: #1a1b26;
+          color: #c0caf5;
+        }
+        ::-webkit-scrollbar {
+          width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #16161e;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #2a2b3d;
+          border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #3a3b4d;
+        }
+      `,
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#16161e',
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#16161e',
+          color: '#c0caf5',
+          borderColor: '#2a2b3d',
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          borderRadius: '8px',
+        },
+        containedPrimary: {
+          backgroundColor: '#7aa2f7',
+          '&:hover': {
+            backgroundColor: '#89b4fa',
+          },
+        },
+        containedSecondary: {
+          backgroundColor: '#9ece6a',
+          '&:hover': {
+            backgroundColor: '#a9dc76',
+          },
+        },
+      },
     },
   },
 });
