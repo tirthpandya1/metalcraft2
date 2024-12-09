@@ -19,10 +19,19 @@ class DashboardAnalyticsView(APIView):
             completed_work_orders = WorkOrder.objects.filter(status='COMPLETED').count()
             in_progress_work_orders = WorkOrder.objects.filter(status='IN_PROGRESS').count()
 
-            # Material Usage Analytics
-            material_usage = Material.objects.annotate(
+            # Total material consumption for percentage calculation
+            total_material_consumption = Material.objects.aggregate(
                 total_consumed=Sum('productmaterial__quantity', default=0)
-            ).values('name', 'total_consumed')
+            )['total_consumed'] or 1
+
+            # Material Usage Analytics with percentage and sorting
+            material_usage = Material.objects.annotate(
+                total_consumed=Sum('productmaterial__quantity', default=0),
+                percentage=ExpressionWrapper(
+                    F('total_consumed') / Value(total_material_consumption) * 100, 
+                    output_field=DecimalField()
+                )
+            ).values('name', 'total_consumed', 'percentage').order_by('-total_consumed')
 
             # Production Performance
             monthly_production = WorkOrder.objects.annotate(
