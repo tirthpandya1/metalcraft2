@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { toast } from 'react-toastify';
+import { formatLocalDateTime } from '../utils/timeUtils';
 
 const WEBSOCKET_URL = process.env.REACT_APP_WEBSOCKET_URL || 'ws://localhost:8000/ws/manufacturing/';
 
@@ -77,7 +78,11 @@ export const useWebSocketEvents = () => {
         const { event_type, data } = eventData;
 
         // Add to events list for tracking
-        setEvents(prevEvents => [...prevEvents, { event_type, data, timestamp: new Date() }]);
+        setEvents(prevEvents => [...prevEvents, { 
+            event_type, 
+            data, 
+            timestamp: formatLocalDateTime(new Date().toISOString()) 
+        }]);
 
         // Specific event type handling with toast notifications
         switch (event_type) {

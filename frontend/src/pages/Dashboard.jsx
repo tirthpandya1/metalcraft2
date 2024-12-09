@@ -34,6 +34,7 @@ import {
 } from '@mui/icons-material';
 
 import axios from '../services/axiosConfig';
+import { formatLocalDateTime, formatRelativeTime } from '../utils/timeUtils';
 
 const Dashboard = () => {
   const [dashboardData, setDashboardData] = useState(null);
@@ -151,11 +152,11 @@ const Dashboard = () => {
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis 
                     dataKey="month" 
-                    tickFormatter={(tick) => new Date(tick).toLocaleDateString('default', { month: 'short' })}
+                    tickFormatter={(tick) => formatLocalDateTime(tick, { month: 'short' })}
                   />
                   <YAxis label={{ value: 'Quantity', angle: -90, position: 'insideLeft' }} />
                   <ChartTooltip 
-                    labelFormatter={(label) => new Date(label).toLocaleDateString('default', { month: 'long', year: 'numeric' })}
+                    labelFormatter={(label) => formatLocalDateTime(label, { month: 'long', year: 'numeric' })}
                   />
                   <Line type="monotone" dataKey="avg_quantity" stroke="#8884d8" />
                 </LineChart>
@@ -228,7 +229,7 @@ const Dashboard = () => {
               <Grid container spacing={2}>
                 <Grid item xs={12}>
                   <Typography variant="body2">
-                    Total Work Order Cost: ${costData.work_order_cost.total_cost?.toFixed(2) || 0}
+                    Total Work Order Cost: ₹{costData.work_order_cost.total_cost?.toFixed(2) || 0}
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
@@ -238,13 +239,13 @@ const Dashboard = () => {
                       <XAxis dataKey="category" />
                       <YAxis 
                         label={{ 
-                          value: 'Cost ($)', 
+                          value: 'Cost (₹)', 
                           angle: -90, 
                           position: 'insideLeft' 
                         }} 
                       />
                       <ChartTooltip 
-                        formatter={(value) => [`$${value.toFixed(2)}`, 'Cost']}
+                        formatter={(value) => [`₹${value.toFixed(2)}`, 'Cost']}
                       />
                       <Bar dataKey="amount" fill="#8884d8" />
                     </BarChart>

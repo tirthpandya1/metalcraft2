@@ -83,6 +83,8 @@ export const withCrudList = (
           label: key.charAt(0).toUpperCase() + key.slice(1)
         })),
         addButtonIcon: config.addButtonIcon || <AddIcon />,
+        renderView: config.renderView || 'table',
+        renderCardView: config.renderCardView || null,
       };
 
       return baseConfig;
@@ -350,9 +352,7 @@ export const withCrudList = (
         }}>
           {label}
           {sortConfig.key === sortKey && (
-            sortConfig.direction === 'asc' 
-              ? <ArrowUpwardIcon fontSize="small" sx={{ ml: 1 }} /> 
-              : <ArrowDownwardIcon fontSize="small" sx={{ ml: 1 }} />
+            sortConfig.direction === 'asc' ? <ArrowUpwardIcon fontSize="small" sx={{ ml: 1 }} /> : <ArrowDownwardIcon fontSize="small" sx={{ ml: 1 }} />
           )}
         </Box>
       </TableCell>
@@ -414,61 +414,66 @@ export const withCrudList = (
           />
         </Box>
 
-        <TableContainer>
-          <Table className="w-full text-sm">
-            <TableHead>
-              <TableRow className="border-b border-border">
-                {fullConfig.columns.map(col => (
-                  <SortableColumnHeader 
-                    key={col.key} 
-                    label={col.label} 
-                    sortKey={col.key}
-                  />
-                ))}
-                <TableCell className="px-4 py-3 text-right text-foreground-muted">
-                  Actions
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {sortedFilteredItems.length === 0 ? (
-                <TableRow>
-                  <TableCell colSpan={fullConfig.columns.length + 1} align="center" className="px-4 py-3 text-foreground-muted">
-                    No {fullConfig.entityName} found
+        {/* Render view based on configuration */}
+        {fullConfig.renderView === 'card' && fullConfig.renderCardView ? (
+          fullConfig.renderCardView(sortedFilteredItems, openItemDialog, handleDeleteItem)
+        ) : (
+          <TableContainer>
+            <Table className="w-full text-sm">
+              <TableHead>
+                <TableRow className="border-b border-border">
+                  {fullConfig.columns.map(col => (
+                    <SortableColumnHeader 
+                      key={col.key} 
+                      label={col.label} 
+                      sortKey={col.key}
+                    />
+                  ))}
+                  <TableCell className="px-4 py-3 text-right text-foreground-muted">
+                    Actions
                   </TableCell>
                 </TableRow>
-              ) : (
-                sortedFilteredItems.map((item) => (
-                  <TableRow key={item.id} className="hover:bg-background-secondary transition-tokyo">
-                    {fullConfig.columns.map(col => (
-                      <TableCell key={col.key} className="px-4 py-3 text-foreground">
-                        {col.render ? col.render(item, fullConfig) : item[col.key]}
-                      </TableCell>
-                    ))}
-                    <TableCell className="px-4 py-3 text-right">
-                      <div className="flex justify-end space-x-2">
-                        <IconButton 
-                          color="primary" 
-                          onClick={() => openItemDialog(item)}
-                          className="btn btn-secondary px-3 py-1 text-xs"
-                        >
-                          <EditIcon />
-                        </IconButton>
-                        <IconButton 
-                          color="secondary"
-                          onClick={() => handleDeleteItem(item.id)}
-                          className="btn btn-destructive px-3 py-1 text-xs"
-                        >
-                          <DeleteIcon />
-                        </IconButton>
-                      </div>
+              </TableHead>
+              <TableBody>
+                {sortedFilteredItems.length === 0 ? (
+                  <TableRow>
+                    <TableCell colSpan={fullConfig.columns.length + 1} align="center" className="px-4 py-3 text-foreground-muted">
+                      No {fullConfig.entityName} found
                     </TableCell>
                   </TableRow>
-                ))
-              )}
-            </TableBody>
-          </Table>
-        </TableContainer>
+                ) : (
+                  sortedFilteredItems.map((item) => (
+                    <TableRow key={item.id} className="hover:bg-background-secondary transition-tokyo">
+                      {fullConfig.columns.map(col => (
+                        <TableCell key={col.key} className="px-4 py-3 text-foreground">
+                          {col.render ? col.render(item, fullConfig) : item[col.key]}
+                        </TableCell>
+                      ))}
+                      <TableCell className="px-4 py-3 text-right">
+                        <div className="flex justify-end space-x-2">
+                          <IconButton 
+                            color="primary" 
+                            onClick={() => openItemDialog(item)}
+                            className="btn btn-secondary px-3 py-1 text-xs"
+                          >
+                            <EditIcon />
+                          </IconButton>
+                          <IconButton 
+                            color="secondary"
+                            onClick={() => handleDeleteItem(item.id)}
+                            className="btn btn-destructive px-3 py-1 text-xs"
+                          >
+                            <DeleteIcon />
+                          </IconButton>
+                        </div>
+                      </TableCell>
+                    </TableRow>
+                  ))
+                )}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        )}
 
         {/* Dialog for Add/Edit */}
         <Dialog 

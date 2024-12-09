@@ -1,14 +1,19 @@
 import React from 'react';
 import { 
-  TableCell, 
-  TableRow, 
-  Chip,
-  IconButton
+  Box, 
+  Card, 
+  CardContent, 
+  CardActions, 
+  Typography, 
+  Grid, 
+  Chip, 
+  IconButton, 
+  Tooltip 
 } from '@mui/material';
 import { 
   Edit as EditIcon, 
   Delete as DeleteIcon,
-  Build as BuildIcon
+  Build as BuildIcon 
 } from '@mui/icons-material';
 import { withCrudList } from '../components/CrudListPage';
 import { materialService } from '../services/api';
@@ -71,6 +76,56 @@ const materialsConfig = {
       required: false
     }
   ],
+  renderCardView: (items, onEdit, onDelete) => (
+    <Grid container spacing={3}>
+      {items.map((material) => (
+        <Grid item xs={12} sm={6} md={4} key={material.id}>
+          <Card>
+            <CardContent>
+              <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+                <Typography variant="h6">{material.name}</Typography>
+                <Chip 
+                  label={material.status || 'In Stock'} 
+                  color={
+                    material.status === 'Out of Stock' ? 'error' : 
+                    material.status === 'Low Stock' ? 'warning' : 
+                    'success'
+                  }
+                  size="small"
+                />
+              </Box>
+              <Typography variant="body2" color="textSecondary">
+                <strong>Quantity:</strong> {material.quantity} {material.unit}
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                <strong>Reorder Level:</strong> {material.reorder_level} {material.unit}
+              </Typography>
+              <Typography variant="body2" color="textSecondary">
+                <strong>Cost per Unit:</strong> ₹{material.cost_per_unit || 'N/A'}
+              </Typography>
+              {material.description && (
+                <Typography variant="body2" color="textSecondary" sx={{ mt: 1 }}>
+                  {material.description}
+                </Typography>
+              )}
+            </CardContent>
+            <CardActions>
+              <Tooltip title="Edit Material">
+                <IconButton size="small" onClick={() => onEdit(material)}>
+                  <EditIcon fontSize="small" />
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="Delete Material">
+                <IconButton size="small" color="error" onClick={() => onDelete(material.id)}>
+                  <DeleteIcon fontSize="small" />
+                </IconButton>
+              </Tooltip>
+            </CardActions>
+          </Card>
+        </Grid>
+      ))}
+    </Grid>
+  ),
   columns: [
     { key: 'name', label: 'Name' },
     { key: 'unit', label: 'Unit' },
@@ -103,5 +158,11 @@ const materialsConfig = {
   }
 };
 
-// Create the Materials page using the HOC
-export default withCrudList(null, materialService, materialsConfig);
+export default function MaterialsPage() {
+  const MaterialsListComponent = withCrudList(null, materialService, {
+    ...materialsConfig,
+    renderView: 'card'
+  });
+
+  return <MaterialsListComponent />;
+}

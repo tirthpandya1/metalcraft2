@@ -7,6 +7,7 @@ import {
   Paper 
 } from '@mui/material';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
+import { formatLocalDateTime } from '../utils/timeUtils';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -44,7 +45,7 @@ class ErrorBoundary extends React.Component {
         body: JSON.stringify({
           error: error.toString(),
           errorInfo: errorInfo,
-          timestamp: new Date().toISOString(),
+          timestamp: formatLocalDateTime(new Date().toISOString()),
           user: localStorage.getItem('username') || 'anonymous'
         })
       });

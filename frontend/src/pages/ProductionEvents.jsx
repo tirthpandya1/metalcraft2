@@ -14,6 +14,7 @@ import {
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import axios from 'axios';
+import { formatLocalDateTime } from '../utils/timeUtils';
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:nth-of-type(odd)': {
@@ -123,7 +124,7 @@ const ProductionEvents = () => {
                   <TableCell>{event.work_order}</TableCell>
                   <TableCell>{event.product}</TableCell>
                   <TableCell>{event.workstation || 'N/A'}</TableCell>
-                  <TableCell>{new Date(event.created_at).toLocaleString()}</TableCell>
+                  <TableCell>{formatLocalDateTime(event.created_at)}</TableCell>
                 </StyledTableRow>
               );
             })}

@@ -28,6 +28,7 @@ import {
   CheckCircle as CheckCircleIcon
 } from '@mui/icons-material';
 import WorkstationSequenceComponent from '../components/WorkstationSequenceComponent';
+import { formatLocalDateTime } from '../utils/timeUtils';
 
 const ProductCard = ({ product, onEdit, onDelete, onProductSelect }) => {
   const getStatusColor = (status) => {
@@ -107,7 +108,7 @@ const ProductCard = ({ product, onEdit, onDelete, onProductSelect }) => {
           </Box>
           
           <Typography variant="caption" color="text.secondary">
-            Created: {new Date(product.created_at).toLocaleDateString()}
+            Created: {formatLocalDateTime(product.created_at)}
           </Typography>
           <Button 
             variant="outlined" 

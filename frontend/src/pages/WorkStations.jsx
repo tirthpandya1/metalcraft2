@@ -30,6 +30,7 @@ import {
   Warning as WarningIcon,
   CheckCircle as CheckCircleIcon
 } from '@mui/icons-material';
+import { formatRelativeTime } from '../utils/timeUtils';
 
 const WorkstationCard = ({ workstation, onEdit, onDelete }) => {
   const getStatusColor = (status) => {
@@ -87,7 +88,7 @@ const WorkstationCard = ({ workstation, onEdit, onDelete }) => {
         </Box>
         <Box sx={{ mt: 2 }}>
           <Typography variant="caption">
-            Last Maintenance: {workstation.last_maintenance || 'N/A'}
+            Last Maintenance: {workstation.last_maintenance ? formatRelativeTime(workstation.last_maintenance) : 'N/A'}
           </Typography>
         </Box>
       </CardContent>
