@@ -1,109 +1,102 @@
 import React, { useState } from 'react';
 import { 
-  Box, 
   Button, 
   TextField, 
+  Container, 
   Typography, 
+  Box, 
   Paper, 
-  Container,
-  Alert
+  Alert 
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { authService } from '../services/api';
+import axios from 'axios';
 
-function Login() {
+export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setError(null);
 
     try {
-      await authService.login(username, password);
-      navigate('/dashboard');  // Redirect to dashboard after successful login
+      const response = await axios.post('/api/token/', {
+        username,
+        password
+      });
+
+      // Store tokens securely
+      localStorage.setItem('access_token', response.data.access);
+      localStorage.setItem('refresh_token', response.data.refresh);
+
+      // Set default Authorization header
+      axios.defaults.headers.common['Authorization'] = 
+        `Bearer ${response.data.access}`;
+
+      // Redirect to dashboard
+      navigate('/dashboard');
     } catch (err) {
-      setError(err.response?.data?.error || 'Login failed');
+      setError('Invalid credentials. Please try again.');
+      console.error('Login failed:', err);
     }
   };
 
   return (
     <Container maxWidth="xs">
-      <Box 
-        sx={{
-          marginTop: 8,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+      <Paper 
+        elevation={3} 
+        sx={{ 
+          marginTop: 8, 
+          display: 'flex', 
+          flexDirection: 'column', 
+          alignItems: 'center', 
+          padding: 3 
         }}
       >
         <Typography component="h1" variant="h5">
-          Sign in to Metalcraft
+          Metalcraft Login
         </Typography>
-        <Paper 
-          elevation={3} 
-          sx={{ 
-            padding: 3, 
-            marginTop: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            width: '100%'
-          }}
+        <Box 
+          component="form" 
+          onSubmit={handleLogin} 
+          noValidate 
+          sx={{ mt: 1, width: '100%' }}
         >
-          <form onSubmit={handleSubmit}>
-            {error && (
-              <Alert 
-                severity="error" 
-                sx={{ width: '100%', marginBottom: 2 }}
-              >
-                {error}
-              </Alert>
-            )}
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              label="Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              autoFocus
-            />
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              label="Password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign In
-            </Button>
-            <Button
-              fullWidth
-              variant="outlined"
-              color="secondary"
-              onClick={() => navigate('/register')}
-            >
-              Register
-            </Button>
-          </form>
-        </Paper>
-      </Box>
+          {error && (
+            <Alert severity="error" sx={{ mb: 2 }}>
+              {error}
+            </Alert>
+          )}
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            label="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            autoFocus
+          />
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            label="Password"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            sx={{ mt: 3, mb: 2 }}
+          >
+            Sign In
+          </Button>
+        </Box>
+      </Paper>
     </Container>
   );
 }
-
-export default Login;

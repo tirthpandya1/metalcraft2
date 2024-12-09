@@ -9,6 +9,9 @@ from .serializers import (
     WorkStationSerializer, MaterialSerializer, ProductSerializer,
     WorkOrderSerializer, ProductionLogSerializer
 )
+import logging
+
+logger = logging.getLogger(__name__)
 
 # Create your views here.
 
@@ -16,6 +19,24 @@ class WorkStationViewSet(viewsets.ModelViewSet):
     queryset = WorkStation.objects.all()
     serializer_class = WorkStationSerializer
     permission_classes = [permissions.AllowAny]  # Change to AllowAny for development
+
+    def list(self, request):
+        """
+        Override list method to add logging and custom response
+        """
+        try:
+            queryset = self.get_queryset()
+            serializer = self.get_serializer(queryset, many=True)
+            
+            # Log the number of workstations and their details
+            logger.info(f"Fetching workstations: Total {queryset.count()} workstations")
+            for workstation in queryset:
+                logger.info(f"Workstation: {workstation.id}, Name: {workstation.name}, Status: {workstation.status}")
+            
+            return Response(serializer.data)
+        except Exception as e:
+            logger.error(f"Error fetching workstations: {str(e)}")
+            return Response({'error': 'Failed to fetch workstations'}, status=500)
 
     @action(detail=True, methods=['post'])
     def update_status(self, request, pk=None):

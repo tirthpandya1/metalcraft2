@@ -1,0 +1,90 @@
+Cost Analytics Error: Cannot resolve keyword 'quantity_in_stock' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Internal Server Error: /api/analytics/cost/
+Efficiency Trend Error: Cannot resolve keyword 'timestamp' into field. Choices are: created_at, created_by, created_by_id, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+Internal Server Error: /api/analytics/efficiency/
+"GET /api/analytics/cost/ HTTP/1.1" 500 197
+Dashboard Analytics Error: Cannot resolve keyword 'productionlog' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Cost Analytics Error: Cannot resolve keyword 'quantity_in_stock' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Dashboard Analytics Error: Cannot resolve keyword 'productionlog' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+"GET /api/analytics/efficiency/ HTTP/1.1" 500 216
+Internal Server Error: /api/analytics/dashboard/
+Internal Server Error: /api/analytics/cost/
+Internal Server Error: /api/analytics/dashboard/
+Efficiency Trend Error: Cannot resolve keyword 'timestamp' into field. Choices are: created_at, created_by, created_by_id, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+"GET /api/analytics/dashboard/ HTTP/1.1" 500 193
+"GET /api/analytics/cost/ HTTP/1.1" 500 197
+"GET /api/analytics/dashboard/ HTTP/1.1" 500 193
+Internal Server Error: /api/analytics/efficiency/
+"GET /api/analytics/efficiency/ HTTP/1.1" 500 216
+Efficiency Trend Error: Cannot resolve keyword 'timestamp' into field. Choices are: created_at, created_by, created_by_id, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+Internal Server Error: /api/analytics/efficiency/
+Efficiency Trend Error: Cannot resolve keyword 'timestamp' into field. Choices are: created_at, created_by, created_by_id, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+Internal Server Error: /api/analytics/efficiency/
+"GET /api/analytics/efficiency/ HTTP/1.1" 500 216
+Dashboard Analytics Error: Cannot resolve keyword 'productionlog' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+"GET /api/analytics/efficiency/ HTTP/1.1" 500 216
+Internal Server Error: /api/analytics/dashboard/
+"GET /api/analytics/dashboard/ HTTP/1.1" 500 193
+Cost Analytics Error: Cannot resolve keyword 'quantity_in_stock' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Internal Server Error: /api/analytics/cost/
+Cost Analytics Error: Cannot resolve keyword 'quantity_in_stock' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Dashboard Analytics Error: Cannot resolve keyword 'productionlog' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Internal Server Error: /api/analytics/cost/
+"GET /api/analytics/cost/ HTTP/1.1" 500 197
+Internal Server Error: /api/analytics/dashboard/
+"GET /api/analytics/cost/ HTTP/1.1" 500 197
+"GET /api/analytics/dashboard/ HTTP/1.1" 500 193
+Cost Analytics Error: Cannot resolve keyword 'quantity_in_stock' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Internal Server Error: /api/analytics/cost/
+Efficiency Trend Error: Cannot resolve keyword 'timestamp' into field. Choices are: created_at, created_by, created_by_id, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+Internal Server Error: /api/analytics/efficiency/
+"GET /api/analytics/cost/ HTTP/1.1" 500 197
+Efficiency Trend Error: Cannot resolve keyword 'timestamp' into field. Choices are: created_at, created_by, created_by_id, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+Cost Analytics Error: Cannot resolve keyword 'quantity_in_stock' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Internal Server Error: /api/analytics/efficiency/
+Internal Server Error: /api/analytics/cost/
+"GET /api/analytics/efficiency/ HTTP/1.1" 500 216
+Dashboard Analytics Error: Cannot resolve keyword 'productionlog' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+"GET /api/analytics/efficiency/ HTTP/1.1" 500 216
+Internal Server Error: /api/analytics/dashboard/
+"GET /api/analytics/cost/ HTTP/1.1" 500 197
+Dashboard Analytics Error: Cannot resolve keyword 'productionlog' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Internal Server Error: /api/analytics/dashboard/
+"GET /api/analytics/dashboard/ HTTP/1.1" 500 193
+"GET /api/analytics/dashboard/ HTTP/1.1" 500 193
+Efficiency Trend Error: no such column: manufacturing_productionlog.efficiency_rate
+Cost Analytics Error: Cannot resolve keyword 'quantity_in_stock' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Internal Server Error: /api/analytics/efficiency/
+Efficiency Trend Error: no such column: manufacturing_productionlog.efficiency_rate
+Internal Server Error: /api/analytics/cost/
+Cost Analytics Error: Cannot resolve keyword 'quantity_in_stock' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Internal Server Error: /api/analytics/efficiency/
+Dashboard Analytics Error: Cannot resolve keyword 'productionlog' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+"GET /api/analytics/efficiency/ HTTP/1.1" 500 71
+Internal Server Error: /api/analytics/cost/
+"GET /api/analytics/cost/ HTTP/1.1" 500 197
+"GET /api/analytics/efficiency/ HTTP/1.1" 500 71
+Internal Server Error: /api/analytics/dashboard/
+"GET /api/analytics/cost/ HTTP/1.1" 500 197
+Dashboard Analytics Error: Cannot resolve keyword 'productionlog' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+"GET /api/analytics/dashboard/ HTTP/1.1" 500 193
+Internal Server Error: /api/analytics/dashboard/
+"GET /api/analytics/dashboard/ HTTP/1.1" 500 193
+Dashboard Analytics Error: Cannot resolve keyword 'productionlog' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Internal Server Error: /api/analytics/dashboard/
+Dashboard Analytics Error: Cannot resolve keyword 'productionlog' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+"GET /api/analytics/dashboard/ HTTP/1.1" 500 193
+Internal Server Error: /api/analytics/dashboard/
+"GET /api/analytics/dashboard/ HTTP/1.1" 500 193
+Dashboard Analytics Error: Cannot resolve keyword 'productionlog' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Internal Server Error: /api/analytics/dashboard/
+Dashboard Analytics Error: Cannot resolve keyword 'productionlog' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Internal Server Error: /api/analytics/dashboard/
+"GET /api/analytics/dashboard/ HTTP/1.1" 500 193
+"GET /api/analytics/dashboard/ HTTP/1.1" 500 193
+Dashboard Analytics Error: Cannot resolve keyword 'productionlog' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Dashboard Analytics Error: Cannot resolve keyword 'productionlog' into field. Choices are: cost_per_unit, created_at, description, id, name, product, productmaterial, quantity, reorder_level, unit, updated_at
+Internal Server Error: /api/analytics/dashboard/
+Internal Server Error: /api/analytics/dashboard/
+"GET /api/analytics/dashboard/ HTTP/1.1" 500 193
+"GET /api/analytics/dashboard/ HTTP/1.1" 500 193

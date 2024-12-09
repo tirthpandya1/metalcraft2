@@ -167,6 +167,36 @@ class ProductionLog(models.Model):
     created_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    
+    # Add efficiency calculation
+    efficiency_rate = models.DecimalField(
+        max_digits=5, 
+        decimal_places=2, 
+        null=True, 
+        blank=True, 
+        help_text="Calculated efficiency rate (0-100%)"
+    )
+
+    def calculate_efficiency(self):
+        """
+        Calculate efficiency based on quantity produced vs expected quantity
+        This is a placeholder method and should be customized based on specific business logic
+        """
+        try:
+            expected_quantity = self.work_order.quantity
+            efficiency = (self.quantity_produced / float(expected_quantity)) * 100 if expected_quantity > 0 else 0
+            self.efficiency_rate = min(max(efficiency, 0), 100)  # Clamp between 0 and 100
+            self.save()
+        except Exception as e:
+            print(f"Error calculating efficiency: {e}")
+        
+        return self.efficiency_rate
+
+    def save(self, *args, **kwargs):
+        # Automatically calculate efficiency before saving
+        if not self.efficiency_rate:
+            self.calculate_efficiency()
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return f"Log-{self.id} - WO-{self.work_order.id}"

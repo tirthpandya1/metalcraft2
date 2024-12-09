@@ -1,0 +1,226 @@
+INFO 2024-12-09 13:46:45,813 autoreload 19896 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 13:46:45,813 autoreload 19896 8535504960 Watching for file changes with StatReloader
+INFO 2024-12-09 13:48:42,653 views 19896 6170357760 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 13:48:42,653 views 19896 6170357760 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 13:48:42,654 views 19896 6170357760 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 13:48:42,654 views 19896 6170357760 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 13:48:42,654 views 19896 6170357760 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 13:48:42,654 views 19896 6170357760 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 13:48:42,655 views 19896 6170357760 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 13:48:42,655 views 19896 6170357760 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 13:48:42,655 views 19896 6170357760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:48:42,655 views 19896 6170357760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:48:42,655 views 19896 6170357760 Workstation: 5, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:48:42,655 views 19896 6170357760 Workstation: 5, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:48:42,658 basehttp 19896 6170357760 "GET /api/workstations/ HTTP/1.1" 200 928
+INFO 2024-12-09 13:48:42,658 basehttp 19896 6170357760 "GET /api/workstations/ HTTP/1.1" 200 928
+INFO 2024-12-09 13:48:55,537 views 19896 6187184128 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 13:48:55,537 views 19896 6170357760 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 13:48:55,537 views 19896 6187184128 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 13:48:55,538 views 19896 6187184128 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 13:48:55,538 views 19896 6187184128 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 13:48:55,538 views 19896 6187184128 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 13:48:55,538 views 19896 6187184128 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 13:48:55,538 views 19896 6187184128 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 13:48:55,538 views 19896 6187184128 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 13:48:55,538 views 19896 6187184128 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:48:55,538 views 19896 6187184128 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:48:55,538 views 19896 6187184128 Workstation: 5, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:48:55,538 views 19896 6187184128 Workstation: 5, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:48:55,537 views 19896 6170357760 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 13:48:55,539 basehttp 19896 6187184128 "GET /api/workstations/ HTTP/1.1" 200 928
+INFO 2024-12-09 13:48:55,539 basehttp 19896 6187184128 "GET /api/workstations/ HTTP/1.1" 200 928
+INFO 2024-12-09 13:48:55,540 views 19896 6170357760 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 13:48:55,540 views 19896 6170357760 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 13:48:55,540 views 19896 6170357760 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 13:48:55,540 views 19896 6170357760 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 13:48:55,540 views 19896 6170357760 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 13:48:55,540 views 19896 6170357760 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 13:48:55,540 views 19896 6170357760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:48:55,540 views 19896 6170357760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:48:55,542 views 19896 6170357760 Workstation: 5, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:48:55,542 views 19896 6170357760 Workstation: 5, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:48:55,544 basehttp 19896 6170357760 "GET /api/workstations/ HTTP/1.1" 200 928
+INFO 2024-12-09 13:48:55,544 basehttp 19896 6170357760 "GET /api/workstations/ HTTP/1.1" 200 928
+INFO 2024-12-09 13:49:10,844 basehttp 19896 6170357760 "DELETE /api/workstations/5/ HTTP/1.1" 204 0
+INFO 2024-12-09 13:49:10,844 basehttp 19896 6170357760 "DELETE /api/workstations/5/ HTTP/1.1" 204 0
+INFO 2024-12-09 13:49:10,853 views 19896 6170357760 Fetching workstations: Total 4 workstations
+INFO 2024-12-09 13:49:10,853 views 19896 6170357760 Fetching workstations: Total 4 workstations
+INFO 2024-12-09 13:49:10,853 views 19896 6170357760 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 13:49:10,853 views 19896 6170357760 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 13:49:10,853 views 19896 6170357760 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 13:49:10,853 views 19896 6170357760 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 13:49:10,853 views 19896 6170357760 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 13:49:10,853 views 19896 6170357760 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 13:49:10,853 views 19896 6170357760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:49:10,853 views 19896 6170357760 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:49:10,854 basehttp 19896 6170357760 "GET /api/workstations/ HTTP/1.1" 200 761
+INFO 2024-12-09 13:49:10,854 basehttp 19896 6170357760 "GET /api/workstations/ HTTP/1.1" 200 761
+INFO 2024-12-09 13:49:14,826 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:14,826 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:14,826 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:14,826 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:14,833 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:49:14,833 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:49:14,836 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:49:14,836 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:49:15,456 basehttp 19896 6170357760 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:15,456 basehttp 19896 6170357760 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:15,457 basehttp 19896 6187184128 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:15,457 basehttp 19896 6187184128 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:15,462 basehttp 19896 6170357760 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 13:49:15,462 basehttp 19896 6170357760 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 13:49:15,465 basehttp 19896 6187184128 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 13:49:15,465 basehttp 19896 6187184128 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 13:49:15,998 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:15,998 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:15,999 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:15,999 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:16,018 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:49:16,018 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:49:16,020 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:49:16,020 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:49:16,721 basehttp 19896 6204010496 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 13:49:16,721 basehttp 19896 6254489600 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 13:49:16,722 basehttp 19896 6220836864 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 13:49:16,722 basehttp 19896 6271315968 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 13:49:16,723 basehttp 19896 6288142336 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 13:49:16,724 basehttp 19896 6237663232 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 13:49:16,721 basehttp 19896 6204010496 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 13:49:16,721 basehttp 19896 6254489600 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 13:49:16,722 basehttp 19896 6220836864 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 13:49:16,722 basehttp 19896 6271315968 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 13:49:16,723 basehttp 19896 6288142336 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 13:49:16,724 basehttp 19896 6237663232 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 13:49:16,744 basehttp 19896 6220836864 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 13:49:16,744 basehttp 19896 6220836864 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 13:49:16,744 basehttp 19896 6204010496 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 13:49:16,745 basehttp 19896 6237663232 "GET /api/analytics/cost/ HTTP/1.1" 200 488
+INFO 2024-12-09 13:49:16,744 basehttp 19896 6204010496 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 13:49:16,747 basehttp 19896 6254489600 "GET /api/analytics/cost/ HTTP/1.1" 200 488
+INFO 2024-12-09 13:49:16,745 basehttp 19896 6237663232 "GET /api/analytics/cost/ HTTP/1.1" 200 488
+INFO 2024-12-09 13:49:16,747 basehttp 19896 6254489600 "GET /api/analytics/cost/ HTTP/1.1" 200 488
+INFO 2024-12-09 13:49:16,753 basehttp 19896 6271315968 "GET /api/analytics/dashboard/ HTTP/1.1" 200 816
+INFO 2024-12-09 13:49:16,753 basehttp 19896 6271315968 "GET /api/analytics/dashboard/ HTTP/1.1" 200 816
+INFO 2024-12-09 13:49:16,754 basehttp 19896 6288142336 "GET /api/analytics/dashboard/ HTTP/1.1" 200 816
+INFO 2024-12-09 13:49:16,754 basehttp 19896 6288142336 "GET /api/analytics/dashboard/ HTTP/1.1" 200 816
+INFO 2024-12-09 13:49:17,302 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:17,302 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:17,305 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:17,305 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:17,312 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:49:17,312 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:49:17,313 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:49:17,313 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:49:18,685 basehttp 19896 6187184128 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:18,685 basehttp 19896 6170357760 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:18,685 basehttp 19896 6187184128 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:18,685 basehttp 19896 6170357760 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:18,690 basehttp 19896 6170357760 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 13:49:18,690 basehttp 19896 6187184128 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 13:49:18,690 basehttp 19896 6170357760 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 13:49:18,690 basehttp 19896 6187184128 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 13:49:19,756 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:19,756 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:19,757 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:19,757 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:49:19,762 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:49:19,762 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:49:19,765 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:49:19,765 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:49:20,189 views 19896 6204010496 Fetching workstations: Total 4 workstations
+INFO 2024-12-09 13:49:20,189 views 19896 6204010496 Fetching workstations: Total 4 workstations
+INFO 2024-12-09 13:49:20,190 views 19896 6220836864 Fetching workstations: Total 4 workstations
+INFO 2024-12-09 13:49:20,190 views 19896 6220836864 Fetching workstations: Total 4 workstations
+INFO 2024-12-09 13:49:20,190 views 19896 6204010496 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 13:49:20,190 views 19896 6204010496 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 13:49:20,190 views 19896 6220836864 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 13:49:20,190 views 19896 6204010496 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 13:49:20,190 views 19896 6220836864 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 13:49:20,190 views 19896 6204010496 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 13:49:20,191 views 19896 6220836864 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 13:49:20,191 views 19896 6220836864 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 13:49:20,191 views 19896 6204010496 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 13:49:20,191 views 19896 6220836864 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 13:49:20,191 views 19896 6204010496 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 13:49:20,191 views 19896 6220836864 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 13:49:20,191 views 19896 6220836864 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:49:20,191 views 19896 6220836864 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:49:20,191 views 19896 6204010496 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:49:20,191 views 19896 6204010496 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:49:20,192 basehttp 19896 6220836864 "GET /api/workstations/ HTTP/1.1" 200 761
+INFO 2024-12-09 13:49:20,192 basehttp 19896 6204010496 "GET /api/workstations/ HTTP/1.1" 200 761
+INFO 2024-12-09 13:49:20,192 basehttp 19896 6220836864 "GET /api/workstations/ HTTP/1.1" 200 761
+INFO 2024-12-09 13:49:20,192 basehttp 19896 6204010496 "GET /api/workstations/ HTTP/1.1" 200 761
+INFO 2024-12-09 13:49:49,985 basehttp 19896 6204010496 "POST /api/workstations/ HTTP/1.1" 201 163
+INFO 2024-12-09 13:49:49,985 basehttp 19896 6204010496 "POST /api/workstations/ HTTP/1.1" 201 163
+INFO 2024-12-09 13:49:49,991 views 19896 6204010496 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 13:49:49,991 views 19896 6204010496 Fetching workstations: Total 5 workstations
+INFO 2024-12-09 13:49:49,992 views 19896 6204010496 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 13:49:49,992 views 19896 6204010496 Workstation: 1, Name: Assembly Line 1, Status: ACTIVE
+INFO 2024-12-09 13:49:49,992 views 19896 6204010496 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 13:49:49,992 views 19896 6204010496 Workstation: 2, Name: Packaging Station, Status: INACTIVE
+INFO 2024-12-09 13:49:49,992 views 19896 6204010496 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 13:49:49,992 views 19896 6204010496 Workstation: 3, Name: CNC Machining Center, Status: MAINTENANCE
+INFO 2024-12-09 13:49:49,992 views 19896 6204010496 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:49:49,992 views 19896 6204010496 Workstation: 4, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-09 13:49:49,992 views 19896 6204010496 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 13:49:49,992 views 19896 6204010496 Workstation: 6, Name: AMADA Metal Forming, Status: MAINTENANCE
+INFO 2024-12-09 13:49:49,993 basehttp 19896 6204010496 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 13:49:49,993 basehttp 19896 6204010496 "GET /api/workstations/ HTTP/1.1" 200 925
+INFO 2024-12-09 13:50:11,473 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:11,473 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:11,473 basehttp 19896 6187184128 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:11,473 basehttp 19896 6170357760 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:11,479 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:50:11,479 basehttp 19896 6187184128 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:50:11,480 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:50:11,480 basehttp 19896 6170357760 "GET /api/products/ HTTP/1.1" 200 361
+INFO 2024-12-09 13:50:12,585 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:12,585 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:12,585 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:12,585 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:12,598 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:50:12,598 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:50:12,600 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:50:12,600 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:50:13,326 basehttp 19896 6187184128 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:13,326 basehttp 19896 6187184128 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:13,327 basehttp 19896 6170357760 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:13,327 basehttp 19896 6170357760 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:13,333 basehttp 19896 6170357760 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 13:50:13,333 basehttp 19896 6170357760 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 13:50:13,335 basehttp 19896 6187184128 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 13:50:13,335 basehttp 19896 6187184128 "GET /api/materials/ HTTP/1.1" 200 684
+INFO 2024-12-09 13:50:13,865 basehttp 19896 6254489600 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 13:50:13,865 basehttp 19896 6254489600 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 13:50:13,865 basehttp 19896 6220836864 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 13:50:13,865 basehttp 19896 6220836864 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 13:50:13,873 basehttp 19896 6288142336 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 13:50:13,873 basehttp 19896 6288142336 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 13:50:13,873 basehttp 19896 6271315968 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 13:50:13,873 basehttp 19896 6237663232 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 13:50:13,873 basehttp 19896 6271315968 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-09 13:50:13,873 basehttp 19896 6204010496 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 13:50:13,873 basehttp 19896 6237663232 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-09 13:50:13,873 basehttp 19896 6204010496 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-09 13:50:13,879 basehttp 19896 6254489600 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 13:50:13,879 basehttp 19896 6254489600 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 13:50:13,891 basehttp 19896 6288142336 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 13:50:13,891 basehttp 19896 6204010496 "GET /api/analytics/cost/ HTTP/1.1" 200 488
+INFO 2024-12-09 13:50:13,891 basehttp 19896 6271315968 "GET /api/analytics/cost/ HTTP/1.1" 200 488
+INFO 2024-12-09 13:50:13,891 basehttp 19896 6288142336 "GET /api/analytics/efficiency/ HTTP/1.1" 200 2
+INFO 2024-12-09 13:50:13,891 basehttp 19896 6204010496 "GET /api/analytics/cost/ HTTP/1.1" 200 488
+INFO 2024-12-09 13:50:13,891 basehttp 19896 6271315968 "GET /api/analytics/cost/ HTTP/1.1" 200 488
+INFO 2024-12-09 13:50:13,896 basehttp 19896 6220836864 "GET /api/analytics/dashboard/ HTTP/1.1" 200 892
+INFO 2024-12-09 13:50:13,896 basehttp 19896 6220836864 "GET /api/analytics/dashboard/ HTTP/1.1" 200 892
+INFO 2024-12-09 13:50:13,898 basehttp 19896 6237663232 "GET /api/analytics/dashboard/ HTTP/1.1" 200 892
+INFO 2024-12-09 13:50:13,898 basehttp 19896 6237663232 "GET /api/analytics/dashboard/ HTTP/1.1" 200 892
+INFO 2024-12-09 13:50:16,740 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:16,740 basehttp 19896 6187184128 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:16,742 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:16,742 basehttp 19896 6170357760 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-09 13:50:16,758 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:50:16,758 basehttp 19896 6187184128 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:50:16,760 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
+INFO 2024-12-09 13:50:16,760 basehttp 19896 6170357760 "GET /api/work-orders/ HTTP/1.1" 200 1509
