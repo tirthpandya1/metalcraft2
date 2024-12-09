@@ -61,50 +61,45 @@ class ProductMaterialSerializer(serializers.ModelSerializer):
 
 class ProductSerializer(serializers.ModelSerializer):
     materials = ProductMaterialSerializer(source='productmaterial_set', many=True, required=False)
+    stock_status_display = serializers.CharField(source='get_stock_status_display', read_only=True)
 
     class Meta:
         model = Product
-        fields = ['id', 'name', 'description', 'materials', 'created_at']
-        read_only_fields = ['id', 'created_at']
-
-    def to_representation(self, instance):
-        """
-        Override to_representation to add more detailed logging
-        """
-        try:
-            representation = super().to_representation(instance)
-            # Log the representation for debugging
-            print(f"Product Serializer - Product {instance.id}: {representation}")
-            return representation
-        except Exception as e:
-            # Log any serialization errors
-            print(f"Error serializing product {instance.id}: {str(e)}")
-            raise
+        fields = [
+            'id', 
+            'name', 
+            'description', 
+            'materials', 
+            'current_quantity', 
+            'restock_level', 
+            'max_stock_level', 
+            'stock_status', 
+            'stock_status_display',
+            'created_at'
+        ]
+        read_only_fields = ['id', 'created_at', 'stock_status', 'stock_status_display']
 
     def create(self, validated_data):
         # Extract materials data, ensuring we handle potential Material objects
         materials_data = validated_data.pop('productmaterial_set', [])
         
-        # Validate materials data
-        if not materials_data:
-            raise serializers.ValidationError("At least one material is required")
-        
-        # Validate and convert material_id
-        for material_data in materials_data:
-            # Ensure material_id is an integer
-            if isinstance(material_data['material_id'], Material):
-                material_data['material_id'] = material_data['material_id'].id
-        
-        # Create the product
+        # Create the product with stock-related fields
         product = Product.objects.create(**validated_data)
         
         # Create associated product materials
         for material_data in materials_data:
+            # Ensure material_id is an integer
+            if isinstance(material_data['material_id'], Material):
+                material_data['material_id'] = material_data['material_id'].id
+            
             ProductMaterial.objects.create(
                 product=product, 
                 material_id=material_data['material_id'],
                 quantity=material_data.get('quantity', 0)
             )
+        
+        # Update stock status
+        product.update_stock_status()
         
         return product
 
@@ -114,7 +109,11 @@ class ProductSerializer(serializers.ModelSerializer):
         # Update basic product fields
         instance.name = validated_data.get('name', instance.name)
         instance.description = validated_data.get('description', instance.description)
-        instance.save()
+        instance.current_quantity = validated_data.get('current_quantity', instance.current_quantity)
+        instance.restock_level = validated_data.get('restock_level', instance.restock_level)
+        instance.max_stock_level = validated_data.get('max_stock_level', instance.max_stock_level)
+        
+        instance.save()  # This will trigger stock status update
         
         # Update materials
         # First, remove existing materials

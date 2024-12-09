@@ -41,14 +41,56 @@ class Material(models.Model):
         return self.name
 
 class Product(models.Model):
+    STOCK_STATUS_CHOICES = [
+        ('IN_STOCK', 'In Stock'),
+        ('LOW_STOCK', 'Low Stock'),
+        ('OUT_OF_STOCK', 'Out of Stock'),
+        ('DISCONTINUED', 'Discontinued')
+    ]
+
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True)
     materials = models.ManyToManyField(Material, through='ProductMaterial')
+    
+    # New stock-related fields
+    current_quantity = models.IntegerField(default=0)
+    restock_level = models.IntegerField(default=10)
+    max_stock_level = models.IntegerField(default=100)
+    stock_status = models.CharField(
+        max_length=20, 
+        choices=STOCK_STATUS_CHOICES, 
+        default='IN_STOCK'
+    )
+    
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def update_stock_status(self, save_instance=True):
+        """
+        Compute stock status based on current quantity and restock level
+        """
+        if self.current_quantity <= 0:
+            self.stock_status = 'OUT_OF_STOCK'
+        elif self.current_quantity <= self.restock_level:
+            self.stock_status = 'LOW_STOCK'
+        elif self.current_quantity >= self.max_stock_level:
+            self.stock_status = 'IN_STOCK'
+        else:
+            self.stock_status = 'IN_STOCK'
+        
+        if save_instance:
+            # Use update to avoid recursive save
+            Product.objects.filter(pk=self.pk).update(stock_status=self.stock_status)
+
+    def save(self, *args, **kwargs):
+        # Call update_stock_status with save_instance=False to prevent recursion
+        self.update_stock_status(save_instance=False)
+        
+        # Call the parent save method
+        super().save(*args, **kwargs)
+
     def __str__(self):
-        return self.name
+        return f"{self.name} (Stock: {self.current_quantity})"
 
 class ProductMaterial(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
