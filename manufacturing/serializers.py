@@ -9,10 +9,21 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ['id', 'username', 'email', 'first_name', 'last_name']
 
 class WorkStationSerializer(serializers.ModelSerializer):
+    last_maintenance_display = serializers.SerializerMethodField()
+
     class Meta:
         model = WorkStation
-        fields = ['id', 'name', 'description', 'status', 'created_at', 'updated_at']
-        read_only_fields = ['id', 'created_at', 'updated_at']
+        fields = ['id', 'name', 'description', 'status', 'created_at', 'updated_at', 
+                  'last_maintenance', 'last_maintenance_display']
+        read_only_fields = ['id', 'created_at', 'updated_at', 'last_maintenance']
+
+    def get_last_maintenance_display(self, obj):
+        """
+        Format last maintenance date for display
+        """
+        if obj.last_maintenance:
+            return obj.last_maintenance.strftime('%Y-%m-%d %H:%M:%S')
+        return 'No maintenance records'
 
 class MaterialSerializer(serializers.ModelSerializer):
     status = serializers.SerializerMethodField()

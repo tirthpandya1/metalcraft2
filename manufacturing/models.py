@@ -9,14 +9,43 @@ User = get_user_model()
 
 class WorkStation(models.Model):
     name = models.CharField(max_length=100)
-    description = models.TextField(blank=True)
-    status = models.CharField(max_length=20, choices=[
+    description = models.TextField(blank=True, null=True)
+    
+    status_choices = [
         ('ACTIVE', 'Active'),
-        ('INACTIVE', 'Inactive'),
-        ('MAINTENANCE', 'Maintenance')
-    ])
+        ('MAINTENANCE', 'Maintenance'),
+        ('INACTIVE', 'Inactive')
+    ]
+    
+    status = models.CharField(
+        max_length=20, 
+        choices=status_choices, 
+        default='ACTIVE'
+    )
+    
+    # New field to track last maintenance
+    last_maintenance = models.DateTimeField(
+        null=True, 
+        blank=True, 
+        help_text='Date and time of last maintenance'
+    )
+    
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        # Track last maintenance when status changes from MAINTENANCE to ACTIVE
+        original = None
+        if self.pk:
+            original = WorkStation.objects.get(pk=self.pk)
+        
+        # If status was MAINTENANCE and is now ACTIVE, update last_maintenance
+        if (original and 
+            original.status == 'MAINTENANCE' and 
+            self.status == 'ACTIVE'):
+            self.last_maintenance = timezone.now()
+        
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name

@@ -15,7 +15,12 @@ import {
   Button,
   LinearProgress,
   Tooltip,
-  TextField
+  TextField,
+  Table, 
+  TableHead, 
+  TableRow, 
+  TableCell, 
+  TableBody
 } from '@mui/material';
 import { 
   Build as BuildIcon, 
@@ -111,20 +116,11 @@ export default function WorkStations() {
       setLoading(true);
       const response = await axios.get('/api/workstations/');
       
-      // Detailed debugging
-      console.group('Workstations Fetch');
-      console.log('Raw Response:', response);
-      console.log('Response Data:', response.data);
-      console.log('Data Type:', typeof response.data);
-      console.log('Is Array:', Array.isArray(response.data));
-      
       // Ensure workstations is always an array
       const workstationData = Array.isArray(response.data) ? response.data : 
                                (response.data.results ? response.data.results : []);
       
-      console.log('Processed Workstations:', workstationData);
-      console.groupEnd();
-
+      // No need to fetch additional maintenance logs, as it's now part of the WorkStation model
       setWorkstations(workstationData);
       setError(null);
     } catch (err) {
@@ -132,15 +128,8 @@ export default function WorkStations() {
                            err.response?.data?.error || 
                            'Failed to fetch workstations';
       
-      // Detailed error logging
-      console.group('Workstations Fetch Error');
-      console.error('Full Error:', err);
-      console.error('Error Response:', err.response);
-      console.error('Error Message:', errorMessage);
-      console.groupEnd();
-
+      console.error('Workstations Fetch Error:', errorMessage);
       setError(errorMessage);
-      // Set to empty array to prevent map error
       setWorkstations([]);
     } finally {
       setLoading(false);
@@ -204,30 +193,51 @@ export default function WorkStations() {
         </Button>
       </Box>
 
-      {loading && <LinearProgress />}
-      {error && (
-        <Typography color="error" sx={{ mb: 2 }}>
-          {error}
-        </Typography>
+      {loading ? (
+        <LinearProgress />
+      ) : error ? (
+        <Typography color="error">{error}</Typography>
+      ) : (
+        <Grid container spacing={3}>
+          {workstations.map((workstation) => (
+            <Grid item xs={12} sm={6} md={4} key={workstation.id}>
+              <Card>
+                <CardContent>
+                  <Typography variant="h6">{workstation.name}</Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    {workstation.description || 'No description'}
+                  </Typography>
+                  <Chip 
+                    label={workstation.status} 
+                    color={
+                      workstation.status === 'ACTIVE' ? 'success' :
+                      workstation.status === 'MAINTENANCE' ? 'warning' :
+                      'default'
+                    }
+                    size="small"
+                    sx={{ mt: 1 }}
+                  />
+                  <Typography variant="body2" sx={{ mt: 1 }}>
+                    <strong>Last Maintenance:</strong> {workstation.last_maintenance_display || 'No maintenance records'}
+                  </Typography>
+                </CardContent>
+                <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
+                  <Tooltip title="Edit Workstation">
+                    <IconButton onClick={() => handleEdit(workstation)}>
+                      <EditIcon />
+                    </IconButton>
+                  </Tooltip>
+                  <Tooltip title="Delete Workstation">
+                    <IconButton color="error" onClick={() => handleDelete(workstation.id)}>
+                      <DeleteIcon />
+                    </IconButton>
+                  </Tooltip>
+                </Box>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
       )}
-
-      {!loading && workstations.length === 0 && (
-        <Typography variant="body1" color="textSecondary" sx={{ textAlign: 'center', mt: 4 }}>
-          No workstations found. Click "Add Workstation" to create one.
-        </Typography>
-      )}
-
-      <Grid container spacing={3}>
-        {workstations.map((workstation) => (
-          <Grid item xs={12} sm={6} md={4} key={workstation.id}>
-            <WorkstationCard 
-              workstation={workstation} 
-              onEdit={handleEdit}
-              onDelete={handleDelete}
-            />
-          </Grid>
-        ))}
-      </Grid>
 
       <Dialog open={isDialogOpen} onClose={handleDialogClose} maxWidth="sm" fullWidth>
         <DialogTitle>
