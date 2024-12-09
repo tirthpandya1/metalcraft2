@@ -30,6 +30,7 @@ import {
   ArrowUpward as ArrowUpwardIcon,
   ArrowDownward as ArrowDownwardIcon,
 } from '@mui/icons-material';
+import { productService } from '../services/api';  
 
 export const withCrudList = (
   WrappedComponent, 
@@ -44,6 +45,11 @@ export const withCrudList = (
     const [openDialog, setOpenDialog] = useState(false);
     const [currentItem, setCurrentItem] = useState(null);
     
+    // New state for dynamic options with initial state
+    const [dynamicOptions, setDynamicOptions] = useState({
+      products: []
+    });
+
     // Sorting state
     const [sortConfig, setSortConfig] = useState({
       key: config.defaultSortKey || 'name',
@@ -51,22 +57,73 @@ export const withCrudList = (
     });
 
     // Provide default configuration if not fully specified
-    const fullConfig = {
-      entityName: config.entityName || 'Item',
-      pageTitle: config.pageTitle || 'Items',
-      defaultSortKey: config.defaultSortKey || 'id',
-      defaultItem: config.defaultItem || {},
-      searchFields: config.searchFields || [],
-      dialogFields: config.dialogFields || Object.keys(config.defaultItem || {}).map(key => ({
-        key,
-        label: key.charAt(0).toUpperCase() + key.slice(1),
-        type: 'text'
-      })),
-      columns: config.columns || Object.keys(config.defaultItem || {}).map(key => ({
-        key,
-        label: key.charAt(0).toUpperCase() + key.slice(1)
-      })),
-      addButtonIcon: config.addButtonIcon || <AddIcon />,
+    const fullConfig = useMemo(() => {
+      console.log('Current dynamic options:', dynamicOptions);
+      const baseConfig = {
+        ...config,
+        entityName: config.entityName || 'Item',
+        pageTitle: config.pageTitle || 'Items',
+        defaultSortKey: config.defaultSortKey || 'id',
+        defaultItem: config.defaultItem || {},
+        searchFields: config.searchFields || [],
+        dialogFields: (config.dialogFields || []).map(field => {
+          // Special handling for product field
+          if (field.key === 'product') {
+            console.log('Configuring product field with options:', dynamicOptions.products);
+            return {
+              ...field,
+              type: 'select',
+              options: dynamicOptions.products
+            };
+          }
+          return field;
+        }),
+        columns: config.columns || Object.keys(config.defaultItem || {}).map(key => ({
+          key,
+          label: key.charAt(0).toUpperCase() + key.slice(1)
+        })),
+        addButtonIcon: config.addButtonIcon || <AddIcon />,
+      };
+
+      return baseConfig;
+    }, [config, dynamicOptions.products]);
+
+    // Fetch dynamic options (like products)
+    const fetchDynamicOptions = async () => {
+      try {
+        console.log('Attempting to fetch products...');
+        
+        // Fetch products
+        const productsResponse = await productService.getAll();
+        
+        console.log('Raw products response:', productsResponse);
+        
+        // Determine the actual product data
+        let productData = productsResponse;
+        if (productsResponse.data) {
+          productData = productsResponse.data;
+        }
+        
+        // Ensure productData is an array
+        const products = Array.isArray(productData) ? productData : [];
+        
+        console.log('Processed products:', products);
+        
+        const productOptions = products.map(product => ({
+          value: product.id,
+          label: product.name
+        }));
+
+        console.log('Product options:', productOptions);
+
+        // Directly update the state
+        setDynamicOptions(prev => ({
+          ...prev,
+          products: productOptions
+        }));
+      } catch (error) {
+        console.error('Failed to fetch dynamic options', error);
+      }
     };
 
     // Fetch items
@@ -132,36 +189,66 @@ export const withCrudList = (
       setOpenDialog(true);
     };
 
-    // Effect to fetch items on component mount
+    // Effect to fetch dynamic options and items
     useEffect(() => {
+      console.log('Fetching dynamic options and items...');
+      fetchDynamicOptions();
       fetchItems();
     }, []);
 
-    // Sorting function
-    const sortedItems = useMemo(() => {
-      // Ensure items is an array before sorting
-      const itemsArray = Array.isArray(items) ? items : [];
-      
-      let sortableItems = [...itemsArray];
-      
-      if (sortConfig.key !== null) {
-        sortableItems.sort((a, b) => {
-          if (a[sortConfig.key] < b[sortConfig.key]) {
-            return sortConfig.direction === 'asc' ? -1 : 1;
-          }
-          if (a[sortConfig.key] > b[sortConfig.key]) {
-            return sortConfig.direction === 'asc' ? 1 : -1;
-          }
-          return 0;
+    // Filtered and searched items
+    const filteredAndSearchedItems = useMemo(() => {
+      if (!items || items.length === 0) return [];
+
+      // Normalize search term
+      const normalizedSearchTerm = searchTerm.toLowerCase().trim();
+
+      // If no search term, return all items
+      if (!normalizedSearchTerm) return items;
+
+      // Perform search across multiple fields
+      return items.filter(item => {
+        // If no search fields specified, search across all fields
+        const searchFields = fullConfig.searchFields.length > 0 
+          ? fullConfig.searchFields 
+          : Object.keys(item);
+
+        // Check if any of the specified fields match the search term
+        return searchFields.some(field => {
+          // Get the value of the field, handling nested objects
+          const value = field.split('.').reduce((obj, key) => 
+            obj && obj[key] !== undefined ? obj[key] : '', item);
+
+          // Convert to string and check if it includes the search term
+          const stringValue = String(value).toLowerCase();
+          return stringValue.includes(normalizedSearchTerm);
         });
-      }
-      
-      return sortableItems.filter(item =>
-        fullConfig.searchFields.some(field => 
-          item[field] && item[field].toLowerCase().includes(searchTerm.toLowerCase())
-        )
-      );
-    }, [items, sortConfig, searchTerm]);
+      });
+    }, [items, searchTerm, fullConfig.searchFields]);
+
+    // Sorted and filtered items
+    const sortedFilteredItems = useMemo(() => {
+      if (!filteredAndSearchedItems) return [];
+
+      // Create a copy to avoid mutating the original array
+      return [...filteredAndSearchedItems].sort((a, b) => {
+        const key = sortConfig.key;
+        
+        // Handle nested keys (like 'product.name')
+        const getNestedValue = (obj, path) => {
+          return path.split('.').reduce((o, k) => 
+            o && o[k] !== undefined ? o[k] : '', obj);
+        };
+
+        const valueA = getNestedValue(a, key);
+        const valueB = getNestedValue(b, key);
+
+        // Compare values
+        if (valueA < valueB) return sortConfig.direction === 'asc' ? -1 : 1;
+        if (valueA > valueB) return sortConfig.direction === 'asc' ? 1 : -1;
+        return 0;
+      });
+    }, [filteredAndSearchedItems, sortConfig]);
 
     // Handle column sorting
     const handleSort = (key) => {
@@ -277,14 +364,14 @@ export const withCrudList = (
               </TableRow>
             </TableHead>
             <TableBody>
-              {sortedItems.length === 0 ? (
+              {sortedFilteredItems.length === 0 ? (
                 <TableRow>
                   <TableCell colSpan={fullConfig.columns.length + 1} align="center">
                     No {fullConfig.entityName} found
                   </TableCell>
                 </TableRow>
               ) : (
-                sortedItems.map((item) => (
+                sortedFilteredItems.map((item) => (
                   <TableRow key={item.id}>
                     {fullConfig.columns.map(col => (
                       <TableCell key={col.key}>
@@ -323,21 +410,39 @@ export const withCrudList = (
             {currentItem?.id ? `Edit ${fullConfig.entityName}` : `Add ${fullConfig.entityName}`}
           </DialogTitle>
           <DialogContent>
-            {fullConfig.dialogFields.map((field) => (
-              <TextField
-                key={field.key}
-                fullWidth
-                margin="normal"
-                label={field.label}
-                type={field.type || 'text'}
-                InputLabelProps={field.type === 'date' ? { shrink: true } : {}}
-                value={currentItem?.[field.key] || ''}
-                onChange={(e) => setCurrentItem(prev => ({
-                  ...prev,
-                  [field.key]: e.target.value
-                }))}
-              />
-            ))}
+            {fullConfig.dialogFields.map((field) => {
+              // Log the options for select fields
+              if (field.type === 'select') {
+                console.log(`Options for ${field.key}:`, field.options);
+              }
+
+              return (
+                <TextField
+                  key={field.key}
+                  fullWidth
+                  margin="normal"
+                  label={field.label}
+                  type={field.type === 'select' ? 'text' : field.type || 'text'}
+                  select={field.type === 'select'}
+                  multiline={field.multiline}
+                  rows={field.multiline ? 3 : undefined}
+                  value={currentItem?.[field.key] || ''}
+                  onChange={(e) => setCurrentItem(prev => ({
+                    ...prev,
+                    [field.key]: e.target.value
+                  }))}
+                >
+                  {field.type === 'select' && field.options && field.options.map((option) => (
+                    <MenuItem 
+                      key={option.value} 
+                      value={option.value}
+                    >
+                      {option.label}
+                    </MenuItem>
+                  ))}
+                </TextField>
+              );
+            })}
           </DialogContent>
           <DialogActions>
             <Button onClick={() => setOpenDialog(false)} color="secondary">

@@ -47,6 +47,20 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'description', 'materials', 'created_at']
         read_only_fields = ['id', 'created_at']
 
+    def to_representation(self, instance):
+        """
+        Override to_representation to add more detailed logging
+        """
+        try:
+            representation = super().to_representation(instance)
+            # Log the representation for debugging
+            print(f"Product Serializer - Product {instance.id}: {representation}")
+            return representation
+        except Exception as e:
+            # Log any serialization errors
+            print(f"Error serializing product {instance.id}: {str(e)}")
+            raise
+
     def create(self, validated_data):
         # Extract materials data, ensuring we handle potential Material objects
         materials_data = validated_data.pop('productmaterial_set', [])
@@ -60,19 +74,17 @@ class ProductSerializer(serializers.ModelSerializer):
             # Ensure material_id is an integer
             if isinstance(material_data['material_id'], Material):
                 material_data['material_id'] = material_data['material_id'].id
-            
-            if not isinstance(material_data['material_id'], int):
-                try:
-                    material_data['material_id'] = int(material_data['material_id'])
-                except (ValueError, TypeError):
-                    raise serializers.ValidationError(f"Invalid material_id: {material_data['material_id']}")
         
-        # Create product
+        # Create the product
         product = Product.objects.create(**validated_data)
         
-        # Create product materials
+        # Create associated product materials
         for material_data in materials_data:
-            ProductMaterial.objects.create(product=product, **material_data)
+            ProductMaterial.objects.create(
+                product=product, 
+                material_id=material_data['material_id'],
+                quantity=material_data.get('quantity', 0)
+            )
         
         return product
 
@@ -99,7 +111,7 @@ class ProductSerializer(serializers.ModelSerializer):
         return instance
 
 class WorkOrderSerializer(serializers.ModelSerializer):
-    product_name = serializers.CharField(source='product.name', read_only=True)
+    product_name = serializers.SerializerMethodField(read_only=True)
     workstation_name = serializers.CharField(source='workstation.name', read_only=True, allow_null=True)
     assigned_to_username = serializers.CharField(source='assigned_to.username', read_only=True, allow_null=True)
     
@@ -137,6 +149,16 @@ class WorkOrderSerializer(serializers.ModelSerializer):
             'updated_at'
         ]
         read_only_fields = ['id', 'created_at', 'updated_at', 'can_start', 'is_overdue']
+
+    def get_product_name(self, obj):
+        """
+        Safely get the product name, handling cases where product might be None
+        """
+        try:
+            return obj.product.name if obj.product else 'No Product'
+        except Exception as e:
+            print(f"Error fetching product name: {e}")
+            return 'No Product'
 
     def get_can_start(self, obj):
         return obj.can_start()
