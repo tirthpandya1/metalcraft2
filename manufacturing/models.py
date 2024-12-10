@@ -261,7 +261,7 @@ class WorkOrder(models.Model):
         Advanced material reservation with comprehensive checks and logging
         """
         # Validate work order before reservation
-        if self.status not in ['PENDING', 'DRAFT']:
+        if self.status not in ['PENDING', 'DRAFT', 'READY']:
             raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
         
         # Perform material availability check
@@ -279,16 +279,6 @@ class WorkOrder(models.Model):
                     f"({material['shortage_percentage']:.2f}%)\n\n"
                 )
             
-            # Log the material shortage event
-            # WorkflowEvent.dispatch_event(
-            #     EventType.MATERIAL_SHORTAGE,
-            #     {
-            #         'work_order_id': self.id,
-            #         'product_name': self.product.name,
-            #         'shortage_details': material_status['materials']
-            #     }
-            # )
-            
             raise ValueError(error_message)
         
         # Get materials required for the product
@@ -301,21 +291,22 @@ class WorkOrder(models.Model):
                 material = product_material.material
                 required_quantity = product_material.quantity * self.quantity
                 
+                # Reduce material quantity
+                material.quantity -= required_quantity
+                material.save()
+                
                 # Create material reservation record
                 MaterialReservation.objects.create(
                     work_order=self,
                     material=material,
                     quantity_reserved=required_quantity
                 )
-                
-                # Reduce material quantity
-                material.quantity -= required_quantity
-                material.save()
             
-            # Update work order status
-            self.status = 'IN_PROGRESS'
-            self.start_date = timezone.now()
-            self.save()
+            # Update work order status if needed
+            if self.status in ['READY', 'PENDING', 'DRAFT']:
+                self.status = 'IN_PROGRESS'
+                self.start_date = timezone.now()
+                self.save()
         
         # Dispatch workflow event
         # WorkflowEvent.dispatch_event(

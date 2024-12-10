@@ -1,3 +1,44 @@
+from django.contrib.auth.models import User
+from rest_framework import serializers
+from rest_framework.exceptions import APIException
+import logging
+from django.utils import timezone
+from .models import WorkOrder, ProductMaterial
+from .exceptions import MaterialShortageError, WorkOrderStatusTransitionError
+
+# Configure logging
+logger = logging.getLogger(__name__)
+
+class MaterialShortageAPIException(APIException):
+    """
+    Custom API Exception for Material Shortage
+    """
+    status_code = 400
+    default_detail = "Insufficient materials to create work order"
+    default_code = 'material_shortage'
+
+    def __init__(self, material_details=None, detail=None):
+        if detail is None:
+            detail = self.default_detail
+        
+        # Prepare error details
+        error_details = {
+            'type': 'MaterialShortageError',
+            'message': detail,
+            'material_details': material_details or []
+        }
+        
+        super().__init__(detail=error_details)
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'username', 'email', 'first_name', 'last_name']
+        extra_kwargs = {
+            'email': {'required': False},
+            'first_name': {'required': False},
+            'last_name': {'required': False}
+        }
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from .models import (
@@ -7,6 +48,11 @@ from .models import (
     ProductWorkstationSequence
 )
 from django.utils import timezone
+from .exceptions import MaterialShortageError, WorkOrderStatusTransitionError
+import logging
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -290,6 +336,90 @@ class WorkOrderSerializer(serializers.ModelSerializer):
     def get_is_overdue(self, obj):
         return obj.is_overdue()
 
+    def validate(self, data):
+        """
+        Additional validation for work order creation/update
+        """
+        # Validate product is provided
+        if 'product' not in data:
+            raise serializers.ValidationError({"product": "Product is required"})
+        
+        # Validate quantity
+        quantity = data.get('quantity')
+        if quantity is None or quantity <= 0:
+            raise serializers.ValidationError({"quantity": "Quantity must be greater than zero"})
+        
+        # Validate start and end dates
+        start_date = data.get('start_date')
+        end_date = data.get('end_date')
+        
+        if start_date and end_date and start_date > end_date:
+            raise serializers.ValidationError({
+                "start_date": "Start date cannot be later than end date"
+            })
+        
+        return data
+
+    def create(self, validated_data):
+        """
+        Custom create method with comprehensive validation
+        """
+        # Log the incoming data for debugging
+        logger.info(f"Creating Work Order with data: {validated_data}")
+        
+        # Extract dependencies if provided
+        dependencies_data = validated_data.pop('dependencies', [])
+        
+        # Check product availability
+        product = validated_data.get('product')
+        quantity = validated_data.get('quantity')
+        
+        # Validate if there are enough materials to create the work order
+        insufficient_materials = []
+        for product_material in product.productmaterial_set.all():
+            material = product_material.material
+            required_quantity = product_material.quantity * quantity
+            
+            if material.quantity < required_quantity:
+                insufficient_materials.append({
+                    'material_name': material.name,
+                    'material_id': material.id,
+                    'required_quantity': required_quantity,
+                    'available_quantity': material.quantity,
+                    'shortage_percentage': (required_quantity - material.quantity) / required_quantity * 100
+                })
+        
+        # If there are insufficient materials, raise a detailed error
+        if insufficient_materials:
+            logger.error(f"Material shortage when creating work order: {insufficient_materials}")
+            raise MaterialShortageError(
+                "Insufficient materials to create work order", 
+                material_details=insufficient_materials
+            )
+        
+        # Set default status if not provided
+        if 'status' not in validated_data:
+            validated_data['status'] = 'PENDING'
+        
+        # Set default dates if not provided
+        if 'start_date' not in validated_data:
+            validated_data['start_date'] = timezone.now()
+        
+        # Create work order
+        try:
+            work_order = super().create(validated_data)
+            
+            # Add dependencies
+            if dependencies_data:
+                work_order.dependencies.set(dependencies_data)
+            
+            logger.info(f"Successfully created Work Order: {work_order.id}")
+            return work_order
+        
+        except Exception as e:
+            logger.error(f"Error creating Work Order: {str(e)}", exc_info=True)
+            raise
+
     def validate_status(self, value):
         """
         Validate work order status transitions
@@ -302,55 +432,27 @@ class WorkOrderSerializer(serializers.ModelSerializer):
                 raise serializers.ValidationError(str(e))
         return value
 
-    def create(self, validated_data):
-        # Extract dependencies if provided
-        dependencies_data = validated_data.pop('dependencies', [])
-        
-        # Additional validation
-        if validated_data.get('quantity', 0) <= 0:
-            raise serializers.ValidationError("Quantity must be greater than zero")
-        
-        # Check product availability
-        product = validated_data.get('product')
-        quantity = validated_data.get('quantity')
-        
-        # Validate if there are enough materials to create the work order
-        for product_material in product.productmaterial_set.all():
-            material = product_material.material
-            required_quantity = product_material.quantity * quantity
-            
-            if material.quantity < required_quantity:
-                raise serializers.ValidationError(
-                    f"Insufficient material {material.name}. "
-                    f"Required: {required_quantity}, Available: {material.quantity}"
-                )
-        
-        # Create work order
-        work_order = super().create(validated_data)
-        
-        # Add dependencies
-        if dependencies_data:
-            work_order.dependencies.set(dependencies_data)
-        
-        return work_order
-
     def update(self, instance, validated_data):
         """
         Custom update method to handle workflow logic
         """
-        # Check if status is being changed
-        if 'status' in validated_data:
-            new_status = validated_data['status']
+        new_status = validated_data.get('status', instance.status)
+        
+        try:
+            # Validate status transition
+            instance.validate_status_transition(new_status)
             
-            # Perform specific actions based on status
+            # If status is changing to IN_PROGRESS
             if new_status == 'IN_PROGRESS':
-                # Check material availability and reserve
+                # Check material availability
                 material_status = instance.check_material_availability()
+                
                 if not material_status['available']:
-                    raise serializers.ValidationError({
-                        'status': 'Insufficient materials to start work order',
-                        'material_details': material_status['materials']
-                    })
+                    # Raise custom exception with material shortage details
+                    raise MaterialShortageError(
+                        "Insufficient materials to start work order", 
+                        material_details=material_status['materials']
+                    )
                 
                 # Reserve materials
                 instance.reserve_materials()
@@ -362,9 +464,17 @@ class WorkOrderSerializer(serializers.ModelSerializer):
             elif new_status == 'CANCELLED':
                 # Release reserved materials
                 instance.release_reserved_materials()
+            
+            # Update other fields
+            for attr, value in validated_data.items():
+                setattr(instance, attr, value)
+            
+            instance.save()
+            return instance
         
-        # Proceed with standard update
-        return super().update(instance, validated_data)
+        except (MaterialShortageError, WorkOrderStatusTransitionError) as e:
+            # These exceptions will be caught by the custom exception handler
+            raise
 
 class ProductionLogSerializer(serializers.ModelSerializer):
     class Meta:

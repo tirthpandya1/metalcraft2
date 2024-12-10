@@ -24570,3 +24570,1033 @@ WARNING 2024-12-10 05:26:26,436 log 5163 6208385024 Bad Request: /api/work-order
 WARNING 2024-12-10 05:26:26,436 log 5163 6208385024 Bad Request: /api/work-orders/15/
 WARNING 2024-12-10 05:26:26,436 basehttp 5163 6208385024 "PUT /api/work-orders/15/ HTTP/1.1" 400 68
 WARNING 2024-12-10 05:26:26,436 basehttp 5163 6208385024 "PUT /api/work-orders/15/ HTTP/1.1" 400 68
+INFO 2024-12-10 06:13:13,204 autoreload 7532 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:13:13,204 autoreload 7532 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:13:15,983 views 7532 6190755840 Product list request received
+INFO 2024-12-10 06:13:15,983 views 7532 6190755840 Product list request received
+INFO 2024-12-10 06:13:15,985 views 7532 6190755840 Total number of products: 2
+INFO 2024-12-10 06:13:15,985 views 7532 6190755840 Total number of products: 2
+INFO 2024-12-10 06:13:15,993 views 7532 6190755840 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:15,994 basehttp 7532 6207582208 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:13:15,993 views 7532 6190755840 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:15,994 basehttp 7532 6207582208 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:13:15,995 basehttp 7532 6190755840 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:15,995 basehttp 7532 6190755840 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:15,997 views 7532 6190755840 Product list request received
+INFO 2024-12-10 06:13:15,997 views 7532 6190755840 Product list request received
+INFO 2024-12-10 06:13:15,998 basehttp 7532 6224408576 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:13:15,998 basehttp 7532 6224408576 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:13:15,999 views 7532 6190755840 Total number of products: 2
+INFO 2024-12-10 06:13:15,999 views 7532 6190755840 Total number of products: 2
+INFO 2024-12-10 06:13:16,002 views 7532 6190755840 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:16,002 views 7532 6190755840 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:16,002 basehttp 7532 6190755840 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:16,002 basehttp 7532 6190755840 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:17,140 views 7532 6190755840 Product list request received
+INFO 2024-12-10 06:13:17,140 views 7532 6190755840 Product list request received
+INFO 2024-12-10 06:13:17,144 views 7532 6190755840 Total number of products: 2
+INFO 2024-12-10 06:13:17,144 views 7532 6190755840 Total number of products: 2
+INFO 2024-12-10 06:13:17,152 views 7532 6190755840 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:17,152 views 7532 6190755840 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:17,155 basehttp 7532 6190755840 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:17,156 views 7532 6207582208 Product list request received
+INFO 2024-12-10 06:13:17,155 basehttp 7532 6190755840 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:17,156 views 7532 6207582208 Product list request received
+INFO 2024-12-10 06:13:17,162 views 7532 6207582208 Total number of products: 2
+INFO 2024-12-10 06:13:17,162 views 7532 6207582208 Total number of products: 2
+INFO 2024-12-10 06:13:17,170 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 2385
+INFO 2024-12-10 06:13:17,170 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 2385
+INFO 2024-12-10 06:13:17,172 views 7532 6207582208 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:17,172 views 7532 6207582208 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:17,174 basehttp 7532 6207582208 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:17,174 basehttp 7532 6207582208 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:17,186 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 2385
+INFO 2024-12-10 06:13:17,186 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 2385
+INFO 2024-12-10 06:13:19,356 basehttp 7532 6224408576 "DELETE /api/work-orders/19/ HTTP/1.1" 204 0
+INFO 2024-12-10 06:13:19,356 basehttp 7532 6224408576 "DELETE /api/work-orders/19/ HTTP/1.1" 204 0
+INFO 2024-12-10 06:13:19,374 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 1805
+INFO 2024-12-10 06:13:19,374 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 1805
+INFO 2024-12-10 06:13:19,507 basehttp 7532 6224408576 "DELETE /api/work-orders/20/ HTTP/1.1" 204 0
+INFO 2024-12-10 06:13:19,507 basehttp 7532 6224408576 "DELETE /api/work-orders/20/ HTTP/1.1" 204 0
+INFO 2024-12-10 06:13:19,518 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 1370
+INFO 2024-12-10 06:13:19,518 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 1370
+INFO 2024-12-10 06:13:19,695 basehttp 7532 6224408576 "DELETE /api/work-orders/21/ HTTP/1.1" 204 0
+INFO 2024-12-10 06:13:19,695 basehttp 7532 6224408576 "DELETE /api/work-orders/21/ HTTP/1.1" 204 0
+INFO 2024-12-10 06:13:19,707 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 928
+INFO 2024-12-10 06:13:19,707 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 928
+INFO 2024-12-10 06:13:19,859 basehttp 7532 6224408576 "DELETE /api/work-orders/22/ HTTP/1.1" 204 0
+INFO 2024-12-10 06:13:19,859 basehttp 7532 6224408576 "DELETE /api/work-orders/22/ HTTP/1.1" 204 0
+INFO 2024-12-10 06:13:19,868 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 486
+INFO 2024-12-10 06:13:19,868 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 486
+INFO 2024-12-10 06:13:20,026 basehttp 7532 6224408576 "DELETE /api/work-orders/23/ HTTP/1.1" 204 0
+INFO 2024-12-10 06:13:20,026 basehttp 7532 6224408576 "DELETE /api/work-orders/23/ HTTP/1.1" 204 0
+INFO 2024-12-10 06:13:20,033 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 52
+INFO 2024-12-10 06:13:20,033 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 52
+INFO 2024-12-10 06:13:25,916 views 7532 6224408576 Product list request received
+INFO 2024-12-10 06:13:25,916 views 7532 6224408576 Product list request received
+INFO 2024-12-10 06:13:25,920 views 7532 6224408576 Total number of products: 2
+INFO 2024-12-10 06:13:25,920 views 7532 6224408576 Total number of products: 2
+INFO 2024-12-10 06:13:25,922 basehttp 7532 6207582208 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:13:25,922 basehttp 7532 6207582208 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:13:25,924 views 7532 6224408576 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:25,924 views 7532 6224408576 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:25,928 basehttp 7532 6207582208 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:13:25,928 basehttp 7532 6224408576 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:25,928 basehttp 7532 6207582208 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:13:25,928 basehttp 7532 6224408576 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:25,930 views 7532 6224408576 Product list request received
+INFO 2024-12-10 06:13:25,930 views 7532 6224408576 Product list request received
+INFO 2024-12-10 06:13:25,931 views 7532 6224408576 Total number of products: 2
+INFO 2024-12-10 06:13:25,931 views 7532 6224408576 Total number of products: 2
+INFO 2024-12-10 06:13:25,933 views 7532 6224408576 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:25,933 views 7532 6224408576 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:25,934 basehttp 7532 6224408576 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:25,934 basehttp 7532 6224408576 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:27,868 views 7532 6224408576 Product list request received
+INFO 2024-12-10 06:13:27,868 views 7532 6224408576 Product list request received
+INFO 2024-12-10 06:13:27,892 basehttp 7532 6207582208 "GET /api/work-orders/ HTTP/1.1" 200 52
+INFO 2024-12-10 06:13:27,892 basehttp 7532 6207582208 "GET /api/work-orders/ HTTP/1.1" 200 52
+INFO 2024-12-10 06:13:27,894 views 7532 6224408576 Total number of products: 2
+INFO 2024-12-10 06:13:27,894 views 7532 6224408576 Total number of products: 2
+INFO 2024-12-10 06:13:27,899 views 7532 6224408576 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:27,899 views 7532 6224408576 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:27,901 basehttp 7532 6207582208 "GET /api/work-orders/ HTTP/1.1" 200 52
+INFO 2024-12-10 06:13:27,901 basehttp 7532 6207582208 "GET /api/work-orders/ HTTP/1.1" 200 52
+INFO 2024-12-10 06:13:27,901 basehttp 7532 6224408576 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:27,901 basehttp 7532 6224408576 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:27,902 views 7532 6207582208 Product list request received
+INFO 2024-12-10 06:13:27,902 views 7532 6207582208 Product list request received
+INFO 2024-12-10 06:13:27,904 views 7532 6207582208 Total number of products: 2
+INFO 2024-12-10 06:13:27,904 views 7532 6207582208 Total number of products: 2
+INFO 2024-12-10 06:13:27,907 views 7532 6207582208 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:27,907 views 7532 6207582208 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:27,908 basehttp 7532 6207582208 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:27,908 basehttp 7532 6207582208 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:32,614 basehttp 7532 6207582208 "POST /api/work-orders/ HTTP/1.1" 201 431
+INFO 2024-12-10 06:13:32,614 basehttp 7532 6207582208 "POST /api/work-orders/ HTTP/1.1" 201 431
+INFO 2024-12-10 06:13:32,625 basehttp 7532 6207582208 "GET /api/work-orders/ HTTP/1.1" 200 483
+INFO 2024-12-10 06:13:32,625 basehttp 7532 6207582208 "GET /api/work-orders/ HTTP/1.1" 200 483
+INFO 2024-12-10 06:13:38,972 basehttp 7532 6207582208 "OPTIONS /api/work-orders/24/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:13:38,972 basehttp 7532 6207582208 "OPTIONS /api/work-orders/24/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:13:38,983 basehttp 7532 6207582208 "PUT /api/work-orders/24/ HTTP/1.1" 200 430
+INFO 2024-12-10 06:13:38,983 basehttp 7532 6207582208 "PUT /api/work-orders/24/ HTTP/1.1" 200 430
+INFO 2024-12-10 06:13:38,993 basehttp 7532 6207582208 "GET /api/work-orders/ HTTP/1.1" 200 482
+INFO 2024-12-10 06:13:38,993 basehttp 7532 6207582208 "GET /api/work-orders/ HTTP/1.1" 200 482
+INFO 2024-12-10 06:13:43,073 basehttp 7532 6207582208 "PUT /api/work-orders/24/ HTTP/1.1" 200 429
+INFO 2024-12-10 06:13:43,073 basehttp 7532 6207582208 "PUT /api/work-orders/24/ HTTP/1.1" 200 429
+INFO 2024-12-10 06:13:43,085 basehttp 7532 6207582208 "GET /api/work-orders/ HTTP/1.1" 200 481
+INFO 2024-12-10 06:13:43,085 basehttp 7532 6207582208 "GET /api/work-orders/ HTTP/1.1" 200 481
+ERROR 2024-12-10 06:13:46,823 log 7532 6207582208 Internal Server Error: /api/work-orders/24/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 356, in update
+    instance.reserve_materials()
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py", line 265, in reserve_materials
+    raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
+ValueError: Cannot reserve materials for work order with status READY
+ERROR 2024-12-10 06:13:46,823 log 7532 6207582208 Internal Server Error: /api/work-orders/24/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 356, in update
+    instance.reserve_materials()
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py", line 265, in reserve_materials
+    raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
+ValueError: Cannot reserve materials for work order with status READY
+ERROR 2024-12-10 06:13:46,825 basehttp 7532 6207582208 "PUT /api/work-orders/24/ HTTP/1.1" 500 124868
+ERROR 2024-12-10 06:13:46,825 basehttp 7532 6207582208 "PUT /api/work-orders/24/ HTTP/1.1" 500 124868
+INFO 2024-12-10 06:13:55,039 views 7532 6207582208 Product list request received
+INFO 2024-12-10 06:13:55,039 views 7532 6207582208 Product list request received
+INFO 2024-12-10 06:13:55,058 views 7532 6207582208 Total number of products: 2
+INFO 2024-12-10 06:13:55,058 views 7532 6207582208 Total number of products: 2
+INFO 2024-12-10 06:13:55,066 views 7532 6207582208 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:55,066 views 7532 6207582208 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:55,068 basehttp 7532 6207582208 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:55,068 basehttp 7532 6207582208 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:55,068 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 481
+INFO 2024-12-10 06:13:55,068 basehttp 7532 6224408576 "GET /api/work-orders/ HTTP/1.1" 200 481
+INFO 2024-12-10 06:13:55,071 views 7532 6224408576 Product list request received
+INFO 2024-12-10 06:13:55,071 views 7532 6224408576 Product list request received
+INFO 2024-12-10 06:13:55,074 views 7532 6224408576 Total number of products: 2
+INFO 2024-12-10 06:13:55,074 views 7532 6224408576 Total number of products: 2
+INFO 2024-12-10 06:13:55,079 views 7532 6224408576 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:55,079 views 7532 6224408576 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:13:55,081 basehttp 7532 6207582208 "GET /api/work-orders/ HTTP/1.1" 200 481
+INFO 2024-12-10 06:13:55,081 basehttp 7532 6207582208 "GET /api/work-orders/ HTTP/1.1" 200 481
+INFO 2024-12-10 06:13:55,082 basehttp 7532 6224408576 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:13:55,082 basehttp 7532 6224408576 "GET /api/products/ HTTP/1.1" 200 686
+ERROR 2024-12-10 06:14:00,651 log 7532 6224408576 Internal Server Error: /api/work-orders/24/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 356, in update
+    instance.reserve_materials()
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py", line 265, in reserve_materials
+    raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
+ValueError: Cannot reserve materials for work order with status READY
+ERROR 2024-12-10 06:14:00,651 log 7532 6224408576 Internal Server Error: /api/work-orders/24/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 356, in update
+    instance.reserve_materials()
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py", line 265, in reserve_materials
+    raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
+ValueError: Cannot reserve materials for work order with status READY
+ERROR 2024-12-10 06:14:00,653 basehttp 7532 6224408576 "PUT /api/work-orders/24/ HTTP/1.1" 500 124868
+ERROR 2024-12-10 06:14:00,653 basehttp 7532 6224408576 "PUT /api/work-orders/24/ HTTP/1.1" 500 124868
+INFO 2024-12-10 06:14:41,702 autoreload 7636 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:14:41,702 autoreload 7636 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:14:44,017 views 7636 6133100544 Product list request received
+INFO 2024-12-10 06:14:44,017 views 7636 6133100544 Product list request received
+INFO 2024-12-10 06:14:44,020 views 7636 6133100544 Total number of products: 2
+INFO 2024-12-10 06:14:44,020 views 7636 6133100544 Total number of products: 2
+INFO 2024-12-10 06:14:44,027 basehttp 7636 6149926912 "GET /api/work-orders/ HTTP/1.1" 200 481
+INFO 2024-12-10 06:14:44,027 views 7636 6133100544 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:14:44,027 basehttp 7636 6149926912 "GET /api/work-orders/ HTTP/1.1" 200 481
+INFO 2024-12-10 06:14:44,027 views 7636 6133100544 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:14:44,029 basehttp 7636 6133100544 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:14:44,029 basehttp 7636 6133100544 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:14:44,031 views 7636 6133100544 Product list request received
+INFO 2024-12-10 06:14:44,031 views 7636 6133100544 Product list request received
+INFO 2024-12-10 06:14:44,034 views 7636 6133100544 Total number of products: 2
+INFO 2024-12-10 06:14:44,034 views 7636 6133100544 Total number of products: 2
+INFO 2024-12-10 06:14:44,037 basehttp 7636 6149926912 "GET /api/work-orders/ HTTP/1.1" 200 481
+INFO 2024-12-10 06:14:44,037 basehttp 7636 6149926912 "GET /api/work-orders/ HTTP/1.1" 200 481
+INFO 2024-12-10 06:14:44,040 views 7636 6133100544 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:14:44,040 views 7636 6133100544 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:14:44,040 basehttp 7636 6133100544 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:14:44,040 basehttp 7636 6133100544 "GET /api/products/ HTTP/1.1" 200 686
+ERROR 2024-12-10 06:14:51,492 log 7636 6133100544 Internal Server Error: /api/work-orders/24/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 356, in update
+    instance.reserve_materials()
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py", line 265, in reserve_materials
+    raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
+ValueError: Cannot reserve materials for work order with status READY
+ERROR 2024-12-10 06:14:51,492 log 7636 6133100544 Internal Server Error: /api/work-orders/24/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 356, in update
+    instance.reserve_materials()
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py", line 265, in reserve_materials
+    raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
+ValueError: Cannot reserve materials for work order with status READY
+ERROR 2024-12-10 06:14:51,494 basehttp 7636 6133100544 "PUT /api/work-orders/24/ HTTP/1.1" 500 124868
+ERROR 2024-12-10 06:14:51,494 basehttp 7636 6133100544 "PUT /api/work-orders/24/ HTTP/1.1" 500 124868
+INFO 2024-12-10 06:15:46,497 autoreload 7636 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py changed, reloading.
+INFO 2024-12-10 06:15:46,497 autoreload 7636 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py changed, reloading.
+INFO 2024-12-10 06:15:46,792 autoreload 7709 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:15:46,792 autoreload 7709 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:15:56,653 views 7709 6163574784 Product list request received
+INFO 2024-12-10 06:15:56,653 views 7709 6163574784 Product list request received
+INFO 2024-12-10 06:15:56,658 views 7709 6163574784 Total number of products: 2
+INFO 2024-12-10 06:15:56,658 views 7709 6163574784 Total number of products: 2
+INFO 2024-12-10 06:15:56,663 basehttp 7709 6180401152 "GET /api/work-orders/ HTTP/1.1" 200 481
+INFO 2024-12-10 06:15:56,663 basehttp 7709 6180401152 "GET /api/work-orders/ HTTP/1.1" 200 481
+INFO 2024-12-10 06:15:56,666 views 7709 6163574784 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:15:56,666 views 7709 6163574784 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:15:56,667 basehttp 7709 6163574784 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:15:56,667 basehttp 7709 6163574784 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:15:56,671 views 7709 6163574784 Product list request received
+INFO 2024-12-10 06:15:56,671 views 7709 6163574784 Product list request received
+INFO 2024-12-10 06:15:56,673 views 7709 6163574784 Total number of products: 2
+INFO 2024-12-10 06:15:56,673 views 7709 6163574784 Total number of products: 2
+INFO 2024-12-10 06:15:56,673 basehttp 7709 6180401152 "GET /api/work-orders/ HTTP/1.1" 200 481
+INFO 2024-12-10 06:15:56,673 basehttp 7709 6180401152 "GET /api/work-orders/ HTTP/1.1" 200 481
+INFO 2024-12-10 06:15:56,676 views 7709 6163574784 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:15:56,676 views 7709 6163574784 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 30, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T05:26:01.041755Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:15:56,676 basehttp 7709 6163574784 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:15:56,676 basehttp 7709 6163574784 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:15:57,250 autoreload 7709 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py changed, reloading.
+INFO 2024-12-10 06:15:57,250 autoreload 7709 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py changed, reloading.
+INFO 2024-12-10 06:15:57,535 autoreload 7727 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:15:57,535 autoreload 7727 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:16:04,897 basehttp 7727 6192328704 "PUT /api/work-orders/24/ HTTP/1.1" 200 580
+INFO 2024-12-10 06:16:04,897 basehttp 7727 6192328704 "PUT /api/work-orders/24/ HTTP/1.1" 200 580
+INFO 2024-12-10 06:16:04,909 basehttp 7727 6192328704 "GET /api/work-orders/ HTTP/1.1" 200 632
+INFO 2024-12-10 06:16:04,909 basehttp 7727 6192328704 "GET /api/work-orders/ HTTP/1.1" 200 632
+INFO 2024-12-10 06:16:08,819 basehttp 7727 6192328704 "PUT /api/work-orders/24/ HTTP/1.1" 200 484
+INFO 2024-12-10 06:16:08,819 basehttp 7727 6192328704 "PUT /api/work-orders/24/ HTTP/1.1" 200 484
+INFO 2024-12-10 06:16:08,828 basehttp 7727 6192328704 "GET /api/work-orders/ HTTP/1.1" 200 536
+INFO 2024-12-10 06:16:08,828 basehttp 7727 6192328704 "GET /api/work-orders/ HTTP/1.1" 200 536
+INFO 2024-12-10 06:16:10,880 views 7727 6192328704 Product list request received
+INFO 2024-12-10 06:16:10,880 views 7727 6192328704 Product list request received
+INFO 2024-12-10 06:16:10,886 views 7727 6192328704 Total number of products: 2
+INFO 2024-12-10 06:16:10,886 views 7727 6192328704 Total number of products: 2
+INFO 2024-12-10 06:16:10,893 views 7727 6192328704 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:10,894 basehttp 7727 6209155072 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:16:10,893 views 7727 6192328704 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:10,894 basehttp 7727 6209155072 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:16:10,896 basehttp 7727 6192328704 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:16:10,896 basehttp 7727 6192328704 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:16:10,899 views 7727 6192328704 Product list request received
+INFO 2024-12-10 06:16:10,899 views 7727 6192328704 Product list request received
+INFO 2024-12-10 06:16:10,901 views 7727 6192328704 Total number of products: 2
+INFO 2024-12-10 06:16:10,901 views 7727 6192328704 Total number of products: 2
+INFO 2024-12-10 06:16:10,904 basehttp 7727 6209155072 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:16:10,904 basehttp 7727 6209155072 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:16:10,909 views 7727 6192328704 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:10,909 views 7727 6192328704 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:10,909 basehttp 7727 6192328704 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:16:10,909 basehttp 7727 6192328704 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:16:14,568 views 7727 6192328704 Product list request received
+INFO 2024-12-10 06:16:14,568 views 7727 6192328704 Product list request received
+INFO 2024-12-10 06:16:14,572 views 7727 6192328704 Total number of products: 2
+INFO 2024-12-10 06:16:14,572 views 7727 6192328704 Total number of products: 2
+INFO 2024-12-10 06:16:14,580 views 7727 6192328704 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:14,580 views 7727 6192328704 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:14,582 basehttp 7727 6209155072 "GET /api/work-orders/ HTTP/1.1" 200 536
+INFO 2024-12-10 06:16:14,582 basehttp 7727 6192328704 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:16:14,582 basehttp 7727 6192328704 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:16:14,582 basehttp 7727 6209155072 "GET /api/work-orders/ HTTP/1.1" 200 536
+INFO 2024-12-10 06:16:14,584 views 7727 6209155072 Product list request received
+INFO 2024-12-10 06:16:14,584 views 7727 6209155072 Product list request received
+INFO 2024-12-10 06:16:14,587 views 7727 6209155072 Total number of products: 2
+INFO 2024-12-10 06:16:14,587 views 7727 6209155072 Total number of products: 2
+INFO 2024-12-10 06:16:14,593 basehttp 7727 6192328704 "GET /api/work-orders/ HTTP/1.1" 200 536
+INFO 2024-12-10 06:16:14,593 basehttp 7727 6192328704 "GET /api/work-orders/ HTTP/1.1" 200 536
+INFO 2024-12-10 06:16:14,595 views 7727 6209155072 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:14,595 views 7727 6209155072 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 11, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'LOW_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T05:35:16.150835Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:14,596 basehttp 7727 6209155072 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:16:14,596 basehttp 7727 6209155072 "GET /api/products/ HTTP/1.1" 200 686
+INFO 2024-12-10 06:16:21,930 basehttp 7727 6209155072 "POST /api/work-orders/ HTTP/1.1" 201 439
+INFO 2024-12-10 06:16:21,930 basehttp 7727 6209155072 "POST /api/work-orders/ HTTP/1.1" 201 439
+INFO 2024-12-10 06:16:21,944 basehttp 7727 6209155072 "GET /api/work-orders/ HTTP/1.1" 200 976
+INFO 2024-12-10 06:16:21,944 basehttp 7727 6209155072 "GET /api/work-orders/ HTTP/1.1" 200 976
+INFO 2024-12-10 06:16:26,370 basehttp 7727 6209155072 "OPTIONS /api/work-orders/25/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:16:26,370 basehttp 7727 6209155072 "OPTIONS /api/work-orders/25/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:16:26,383 basehttp 7727 6209155072 "PUT /api/work-orders/25/ HTTP/1.1" 200 437
+INFO 2024-12-10 06:16:26,383 basehttp 7727 6209155072 "PUT /api/work-orders/25/ HTTP/1.1" 200 437
+INFO 2024-12-10 06:16:26,397 basehttp 7727 6209155072 "GET /api/work-orders/ HTTP/1.1" 200 974
+INFO 2024-12-10 06:16:26,397 basehttp 7727 6209155072 "GET /api/work-orders/ HTTP/1.1" 200 974
+INFO 2024-12-10 06:16:30,732 basehttp 7727 6209155072 "PUT /api/work-orders/25/ HTTP/1.1" 200 596
+INFO 2024-12-10 06:16:30,732 basehttp 7727 6209155072 "PUT /api/work-orders/25/ HTTP/1.1" 200 596
+INFO 2024-12-10 06:16:30,744 basehttp 7727 6209155072 "GET /api/work-orders/ HTTP/1.1" 200 1133
+INFO 2024-12-10 06:16:30,744 basehttp 7727 6209155072 "GET /api/work-orders/ HTTP/1.1" 200 1133
+INFO 2024-12-10 06:16:34,082 basehttp 7727 6209155072 "PUT /api/work-orders/25/ HTTP/1.1" 200 492
+INFO 2024-12-10 06:16:34,082 basehttp 7727 6209155072 "PUT /api/work-orders/25/ HTTP/1.1" 200 492
+INFO 2024-12-10 06:16:34,093 basehttp 7727 6209155072 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:16:34,093 basehttp 7727 6209155072 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:16:35,389 views 7727 6209155072 Product list request received
+INFO 2024-12-10 06:16:35,389 views 7727 6209155072 Product list request received
+INFO 2024-12-10 06:16:35,394 views 7727 6209155072 Total number of products: 2
+INFO 2024-12-10 06:16:35,394 views 7727 6209155072 Total number of products: 2
+INFO 2024-12-10 06:16:35,395 basehttp 7727 6192328704 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:16:35,395 basehttp 7727 6192328704 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:16:35,402 views 7727 6209155072 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:35,402 views 7727 6209155072 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:35,405 basehttp 7727 6209155072 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:16:35,405 basehttp 7727 6209155072 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:16:35,405 basehttp 7727 6192328704 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:16:35,405 basehttp 7727 6192328704 "GET /api/materials/ HTTP/1.1" 200 440
+INFO 2024-12-10 06:16:35,406 views 7727 6209155072 Product list request received
+INFO 2024-12-10 06:16:35,406 views 7727 6209155072 Product list request received
+INFO 2024-12-10 06:16:35,408 views 7727 6209155072 Total number of products: 2
+INFO 2024-12-10 06:16:35,408 views 7727 6209155072 Total number of products: 2
+INFO 2024-12-10 06:16:35,410 views 7727 6209155072 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:35,410 views 7727 6209155072 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:35,410 basehttp 7727 6209155072 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:16:35,410 basehttp 7727 6209155072 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:16:43,847 views 7727 6209155072 Product list request received
+INFO 2024-12-10 06:16:43,847 views 7727 6209155072 Product list request received
+INFO 2024-12-10 06:16:43,853 views 7727 6209155072 Total number of products: 2
+INFO 2024-12-10 06:16:43,853 views 7727 6209155072 Total number of products: 2
+INFO 2024-12-10 06:16:43,863 views 7727 6209155072 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:43,863 views 7727 6209155072 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:43,864 basehttp 7727 6209155072 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:16:43,864 basehttp 7727 6192328704 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:16:43,864 basehttp 7727 6209155072 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:16:43,864 basehttp 7727 6192328704 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:16:43,866 views 7727 6209155072 Product list request received
+INFO 2024-12-10 06:16:43,866 views 7727 6209155072 Product list request received
+INFO 2024-12-10 06:16:43,868 views 7727 6209155072 Total number of products: 2
+INFO 2024-12-10 06:16:43,868 views 7727 6209155072 Total number of products: 2
+INFO 2024-12-10 06:16:43,877 views 7727 6209155072 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:43,877 basehttp 7727 6192328704 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:16:43,877 views 7727 6209155072 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:16:43,877 basehttp 7727 6192328704 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:16:43,878 basehttp 7727 6209155072 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:16:43,878 basehttp 7727 6209155072 "GET /api/products/ HTTP/1.1" 200 685
+WARNING 2024-12-10 06:16:50,763 log 7727 6209155072 Bad Request: /api/work-orders/
+WARNING 2024-12-10 06:16:50,763 log 7727 6209155072 Bad Request: /api/work-orders/
+WARNING 2024-12-10 06:16:50,763 basehttp 7727 6209155072 "POST /api/work-orders/ HTTP/1.1" 400 81
+WARNING 2024-12-10 06:16:50,763 basehttp 7727 6209155072 "POST /api/work-orders/ HTTP/1.1" 400 81
+INFO 2024-12-10 06:17:57,788 autoreload 7727 8278161472 /Users/T/Documents/GitHub/metalcraft2/metalcraft/settings.py changed, reloading.
+INFO 2024-12-10 06:17:57,788 autoreload 7727 8278161472 /Users/T/Documents/GitHub/metalcraft2/metalcraft/settings.py changed, reloading.
+INFO 2024-12-10 06:17:58,188 autoreload 7799 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:17:58,188 autoreload 7799 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:18:10,697 autoreload 7799 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-10 06:18:10,697 autoreload 7799 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-10 06:18:10,966 autoreload 7815 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:18:10,966 autoreload 7815 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:20:59,686 basehttp 7815 6208958464 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:20:59,687 basehttp 7815 6192132096 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:20:59,688 basehttp 7815 6225784832 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:20:59,686 basehttp 7815 6208958464 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:20:59,687 basehttp 7815 6192132096 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:20:59,690 basehttp 7815 6242611200 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:20:59,688 basehttp 7815 6225784832 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:20:59,690 basehttp 7815 6242611200 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:20:59,695 views 7815 6192132096 Product list request received
+INFO 2024-12-10 06:20:59,695 views 7815 6225784832 Product list request received
+INFO 2024-12-10 06:20:59,695 views 7815 6192132096 Product list request received
+INFO 2024-12-10 06:20:59,695 views 7815 6225784832 Product list request received
+INFO 2024-12-10 06:20:59,699 views 7815 6192132096 Total number of products: 2
+INFO 2024-12-10 06:20:59,699 views 7815 6192132096 Total number of products: 2
+INFO 2024-12-10 06:20:59,703 views 7815 6225784832 Total number of products: 2
+INFO 2024-12-10 06:20:59,703 views 7815 6225784832 Total number of products: 2
+INFO 2024-12-10 06:20:59,713 views 7815 6192132096 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:20:59,714 views 7815 6225784832 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:20:59,713 views 7815 6192132096 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:20:59,714 views 7815 6225784832 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:20:59,717 basehttp 7815 6192132096 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:20:59,717 basehttp 7815 6192132096 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:20:59,721 basehttp 7815 6225784832 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:20:59,721 basehttp 7815 6225784832 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:20:59,724 basehttp 7815 6208958464 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:20:59,724 basehttp 7815 6242611200 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:20:59,724 basehttp 7815 6208958464 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:20:59,724 basehttp 7815 6242611200 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:21:16,199 basehttp 7815 6208958464 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:21:16,199 basehttp 7815 6208958464 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+ERROR 2024-12-10 06:21:16,234 log 7815 6208958464 Internal Server Error: /api/work-orders/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 324, in create
+    raise serializers.ValidationError(
+rest_framework.exceptions.ValidationError: [ErrorDetail(string='Insufficient material SS Sheet. Required: 1000.0000, Available: 220.00', code='invalid')]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 466, in handle_exception
+    response = exception_handler(exc, context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/exceptions.py", line 26, in custom_exception_handler
+    'message': response.data.get('detail', 'An error occurred'),
+               ^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+ERROR 2024-12-10 06:21:16,234 log 7815 6208958464 Internal Server Error: /api/work-orders/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 324, in create
+    raise serializers.ValidationError(
+rest_framework.exceptions.ValidationError: [ErrorDetail(string='Insufficient material SS Sheet. Required: 1000.0000, Available: 220.00', code='invalid')]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 466, in handle_exception
+    response = exception_handler(exc, context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/exceptions.py", line 26, in custom_exception_handler
+    'message': response.data.get('detail', 'An error occurred'),
+               ^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+ERROR 2024-12-10 06:21:16,236 basehttp 7815 6208958464 "POST /api/work-orders/ HTTP/1.1" 500 121007
+ERROR 2024-12-10 06:21:16,236 basehttp 7815 6208958464 "POST /api/work-orders/ HTTP/1.1" 500 121007
+INFO 2024-12-10 06:21:32,327 basehttp 7815 6242611200 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:21:32,327 basehttp 7815 6242611200 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:21:32,328 basehttp 7815 6192132096 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:21:32,328 basehttp 7815 6192132096 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:21:32,329 basehttp 7815 6208958464 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:21:32,329 basehttp 7815 6208958464 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:21:32,329 basehttp 7815 6225784832 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:21:32,329 basehttp 7815 6225784832 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:21:32,332 views 7815 6225784832 Product list request received
+INFO 2024-12-10 06:21:32,332 views 7815 6225784832 Product list request received
+INFO 2024-12-10 06:21:32,343 views 7815 6192132096 Product list request received
+INFO 2024-12-10 06:21:32,343 views 7815 6192132096 Product list request received
+INFO 2024-12-10 06:21:32,351 views 7815 6225784832 Total number of products: 2
+INFO 2024-12-10 06:21:32,351 views 7815 6225784832 Total number of products: 2
+INFO 2024-12-10 06:21:32,355 views 7815 6192132096 Total number of products: 2
+INFO 2024-12-10 06:21:32,355 views 7815 6192132096 Total number of products: 2
+INFO 2024-12-10 06:21:32,368 views 7815 6225784832 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:21:32,368 views 7815 6225784832 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:21:32,368 views 7815 6192132096 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:21:32,368 views 7815 6192132096 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:21:32,372 basehttp 7815 6192132096 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:21:32,373 basehttp 7815 6225784832 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:21:32,372 basehttp 7815 6192132096 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:21:32,373 basehttp 7815 6225784832 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:21:32,375 basehttp 7815 6208958464 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:21:32,375 basehttp 7815 6208958464 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:21:32,381 basehttp 7815 6242611200 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:21:32,381 basehttp 7815 6242611200 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:21:38,541 basehttp 7815 6242611200 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:21:38,541 basehttp 7815 6242611200 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+ERROR 2024-12-10 06:21:38,566 log 7815 6242611200 Internal Server Error: /api/work-orders/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 324, in create
+    raise serializers.ValidationError(
+rest_framework.exceptions.ValidationError: [ErrorDetail(string='Insufficient material SS Sheet. Required: 1000.0000, Available: 220.00', code='invalid')]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 466, in handle_exception
+    response = exception_handler(exc, context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/exceptions.py", line 26, in custom_exception_handler
+    'message': response.data.get('detail', 'An error occurred'),
+               ^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+ERROR 2024-12-10 06:21:38,566 log 7815 6242611200 Internal Server Error: /api/work-orders/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 324, in create
+    raise serializers.ValidationError(
+rest_framework.exceptions.ValidationError: [ErrorDetail(string='Insufficient material SS Sheet. Required: 1000.0000, Available: 220.00', code='invalid')]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 466, in handle_exception
+    response = exception_handler(exc, context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/exceptions.py", line 26, in custom_exception_handler
+    'message': response.data.get('detail', 'An error occurred'),
+               ^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'get'
+ERROR 2024-12-10 06:21:38,567 basehttp 7815 6242611200 "POST /api/work-orders/ HTTP/1.1" 500 121007
+ERROR 2024-12-10 06:21:38,567 basehttp 7815 6242611200 "POST /api/work-orders/ HTTP/1.1" 500 121007
+INFO 2024-12-10 06:22:16,768 autoreload 7815 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-10 06:22:16,768 autoreload 7815 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-10 06:22:17,122 autoreload 8104 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:22:17,122 autoreload 8104 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:22:35,065 basehttp 8104 6196457472 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:22:35,065 basehttp 8104 6196457472 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:22:35,086 basehttp 8104 6213283840 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:22:35,087 basehttp 8104 6230110208 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:22:35,086 basehttp 8104 6213283840 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:22:35,087 basehttp 8104 6230110208 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:22:35,088 basehttp 8104 6246936576 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:22:35,088 basehttp 8104 6246936576 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:22:35,094 views 8104 6196457472 Product list request received
+INFO 2024-12-10 06:22:35,095 views 8104 6230110208 Product list request received
+INFO 2024-12-10 06:22:35,094 views 8104 6196457472 Product list request received
+INFO 2024-12-10 06:22:35,095 views 8104 6230110208 Product list request received
+INFO 2024-12-10 06:22:35,100 views 8104 6196457472 Total number of products: 2
+INFO 2024-12-10 06:22:35,100 views 8104 6230110208 Total number of products: 2
+INFO 2024-12-10 06:22:35,100 views 8104 6196457472 Total number of products: 2
+INFO 2024-12-10 06:22:35,100 views 8104 6230110208 Total number of products: 2
+INFO 2024-12-10 06:22:35,127 views 8104 6230110208 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:22:35,127 views 8104 6230110208 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:22:35,131 views 8104 6196457472 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:22:35,131 views 8104 6196457472 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:22:35,131 basehttp 8104 6230110208 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:22:35,131 basehttp 8104 6230110208 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:22:35,135 basehttp 8104 6246936576 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:22:35,135 basehttp 8104 6246936576 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:22:35,136 basehttp 8104 6196457472 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:22:35,136 basehttp 8104 6196457472 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:22:35,136 basehttp 8104 6213283840 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:22:35,136 basehttp 8104 6213283840 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:22:39,970 basehttp 8104 6213283840 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:22:39,970 basehttp 8104 6213283840 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+ERROR 2024-12-10 06:22:40,006 log 8104 6213283840 Internal Server Error: /api/work-orders/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 335, in create
+    raise MaterialShortageError(
+manufacturing.exceptions.MaterialShortageError: Insufficient materials to create work order
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 471, in handle_exception
+    response.exception = True
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'exception'
+ERROR 2024-12-10 06:22:40,006 log 8104 6213283840 Internal Server Error: /api/work-orders/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 335, in create
+    raise MaterialShortageError(
+manufacturing.exceptions.MaterialShortageError: Insufficient materials to create work order
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 471, in handle_exception
+    response.exception = True
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'exception'
+ERROR 2024-12-10 06:22:40,007 basehttp 8104 6213283840 "POST /api/work-orders/ HTTP/1.1" 500 117291
+ERROR 2024-12-10 06:22:40,007 basehttp 8104 6213283840 "POST /api/work-orders/ HTTP/1.1" 500 117291
+INFO 2024-12-10 06:23:18,986 autoreload 8104 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/exceptions.py changed, reloading.
+INFO 2024-12-10 06:23:18,986 autoreload 8104 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/exceptions.py changed, reloading.
+INFO 2024-12-10 06:23:19,271 autoreload 8147 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:23:19,271 autoreload 8147 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:23:33,808 autoreload 8147 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-10 06:23:33,808 autoreload 8147 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-10 06:23:34,093 autoreload 8162 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:23:34,093 autoreload 8162 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:23:46,809 basehttp 8162 6159036416 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:23:46,809 basehttp 8162 6159036416 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:23:46,817 basehttp 8162 6125383680 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:23:46,817 basehttp 8162 6125383680 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:23:46,819 basehttp 8162 6142210048 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:23:46,819 basehttp 8162 6142210048 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:23:46,821 basehttp 8162 6175862784 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:23:46,821 basehttp 8162 6175862784 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:23:46,823 views 8162 6159036416 Product list request received
+INFO 2024-12-10 06:23:46,823 views 8162 6159036416 Product list request received
+INFO 2024-12-10 06:23:46,826 views 8162 6175862784 Product list request received
+INFO 2024-12-10 06:23:46,826 views 8162 6175862784 Product list request received
+INFO 2024-12-10 06:23:46,830 views 8162 6159036416 Total number of products: 2
+INFO 2024-12-10 06:23:46,830 views 8162 6159036416 Total number of products: 2
+INFO 2024-12-10 06:23:46,837 views 8162 6175862784 Total number of products: 2
+INFO 2024-12-10 06:23:46,837 views 8162 6175862784 Total number of products: 2
+INFO 2024-12-10 06:23:46,848 views 8162 6159036416 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:23:46,848 views 8162 6159036416 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:23:46,855 views 8162 6175862784 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:23:46,855 views 8162 6175862784 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:23:46,856 basehttp 8162 6159036416 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:23:46,856 basehttp 8162 6159036416 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:23:46,857 basehttp 8162 6142210048 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:23:46,857 basehttp 8162 6142210048 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:23:46,859 basehttp 8162 6175862784 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:23:46,859 basehttp 8162 6175862784 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:23:46,863 basehttp 8162 6125383680 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:23:46,863 basehttp 8162 6125383680 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:23:49,689 autoreload 8162 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/exceptions.py changed, reloading.
+INFO 2024-12-10 06:23:49,689 autoreload 8162 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/exceptions.py changed, reloading.
+INFO 2024-12-10 06:23:50,005 autoreload 8187 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:23:50,005 autoreload 8187 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:23:57,007 basehttp 8187 6204370944 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:23:57,007 basehttp 8187 6204370944 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+ERROR 2024-12-10 06:23:57,013 log 8187 6204370944 Internal Server Error: /api/work-orders/
+ERROR 2024-12-10 06:23:57,013 log 8187 6204370944 Internal Server Error: /api/work-orders/
+ERROR 2024-12-10 06:23:57,014 basehttp 8187 6204370944 "POST /api/work-orders/ HTTP/1.1" 500 212
+ERROR 2024-12-10 06:23:57,014 basehttp 8187 6204370944 "POST /api/work-orders/ HTTP/1.1" 500 212
+INFO 2024-12-10 06:24:35,366 autoreload 8187 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/exceptions.py changed, reloading.
+INFO 2024-12-10 06:24:35,366 autoreload 8187 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/exceptions.py changed, reloading.
+INFO 2024-12-10 06:24:35,671 autoreload 8217 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:24:35,671 autoreload 8217 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:24:46,085 autoreload 8217 8278161472 /Users/T/Documents/GitHub/metalcraft2/metalcraft/settings.py changed, reloading.
+INFO 2024-12-10 06:24:46,085 autoreload 8217 8278161472 /Users/T/Documents/GitHub/metalcraft2/metalcraft/settings.py changed, reloading.
+INFO 2024-12-10 06:28:14,366 autoreload 8482 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:28:14,366 autoreload 8482 8278161472 Watching for file changes with StatReloader
+INFO 2024-12-10 06:28:16,962 basehttp 8482 6224261120 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:28:16,963 basehttp 8482 6207434752 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:28:16,963 basehttp 8482 6190608384 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:28:16,962 basehttp 8482 6224261120 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:28:16,963 basehttp 8482 6207434752 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:28:16,963 basehttp 8482 6190608384 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:28:16,964 basehttp 8482 6241087488 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:28:16,964 basehttp 8482 6241087488 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:28:16,970 views 8482 6224261120 Product list request received
+INFO 2024-12-10 06:28:16,972 views 8482 6190608384 Product list request received
+INFO 2024-12-10 06:28:16,970 views 8482 6224261120 Product list request received
+INFO 2024-12-10 06:28:16,972 views 8482 6190608384 Product list request received
+INFO 2024-12-10 06:28:16,977 views 8482 6190608384 Total number of products: 2
+INFO 2024-12-10 06:28:16,977 views 8482 6224261120 Total number of products: 2
+INFO 2024-12-10 06:28:16,977 views 8482 6190608384 Total number of products: 2
+INFO 2024-12-10 06:28:16,977 views 8482 6224261120 Total number of products: 2
+INFO 2024-12-10 06:28:16,988 views 8482 6190608384 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:28:16,988 views 8482 6190608384 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:28:16,996 basehttp 8482 6190608384 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:28:16,996 basehttp 8482 6207434752 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:28:16,996 views 8482 6224261120 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:28:16,996 basehttp 8482 6190608384 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:28:16,996 basehttp 8482 6207434752 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:28:16,996 views 8482 6224261120 Serialized product data: [OrderedDict({'id': 3, 'name': 'SS Flex Box', 'description': 'SS Flex Box made using SS Sheet', 'current_quantity': 31, 'restock_level': 10, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T15:55:13.776432Z', 'updated_at': '2024-12-10T06:16:08.809729Z', 'materials': [{'material_id': 4, 'material_name': 'SS Sheet', 'quantity': Decimal('10.00')}]}), OrderedDict({'id': 4, 'name': 'Aluminium Flex Box', 'description': 'Aluminium Flex Box made using Aluminium Sheet', 'current_quantity': 21, 'restock_level': 15, 'max_stock_level': 100, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-09T21:59:22.258542Z', 'updated_at': '2024-12-10T06:16:34.073350Z', 'materials': [{'material_id': 5, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('15.00')}]})]
+INFO 2024-12-10 06:28:16,997 basehttp 8482 6241087488 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:28:16,997 basehttp 8482 6241087488 "GET /api/work-orders/ HTTP/1.1" 200 1029
+INFO 2024-12-10 06:28:16,998 basehttp 8482 6224261120 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:28:16,998 basehttp 8482 6224261120 "GET /api/products/ HTTP/1.1" 200 685
+INFO 2024-12-10 06:28:23,219 basehttp 8482 6224261120 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+INFO 2024-12-10 06:28:23,219 basehttp 8482 6224261120 "OPTIONS /api/work-orders/ HTTP/1.1" 200 0
+ERROR 2024-12-10 06:28:23,253 log 8482 6224261120 Internal Server Error: /api/work-orders/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 335, in create
+    raise MaterialShortageError(
+manufacturing.exceptions.MaterialShortageError: Insufficient materials to create work order
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 471, in handle_exception
+    response.exception = True
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'exception'
+ERROR 2024-12-10 06:28:23,253 log 8482 6224261120 Internal Server Error: /api/work-orders/
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 335, in create
+    raise MaterialShortageError(
+manufacturing.exceptions.MaterialShortageError: Insufficient materials to create work order
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 471, in handle_exception
+    response.exception = True
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'exception'
+ERROR 2024-12-10 06:28:23,254 basehttp 8482 6224261120 "POST /api/work-orders/ HTTP/1.1" 500 117350
+ERROR 2024-12-10 06:28:23,254 basehttp 8482 6224261120 "POST /api/work-orders/ HTTP/1.1" 500 117350
+INFO 2024-12-10 06:28:34,190 autoreload 8482 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-10 06:28:34,190 autoreload 8482 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.

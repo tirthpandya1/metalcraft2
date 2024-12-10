@@ -375,9 +375,23 @@ export const withCrudList = (
 
     // Render error state
     if (error) {
+      // Ensure error is converted to a string or a valid React node
+      const errorMessage = (() => {
+        if (typeof error === 'string') return error;
+        if (error instanceof Error) return error.message;
+        if (error.response && error.response.data) {
+          // Handle axios error responses
+          const errorData = error.response.data;
+          if (typeof errorData === 'string') return errorData;
+          if (errorData.message) return errorData.message;
+          return JSON.stringify(errorData);
+        }
+        return 'An unexpected error occurred';
+      })();
+
       return (
         <Alert severity="error" className="dark-theme min-h-screen p-6">
-          {error}
+          {errorMessage}
         </Alert>
       );
     }

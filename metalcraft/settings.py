@@ -184,6 +184,7 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
     ],
+    'EXCEPTION_HANDLER': 'manufacturing.exceptions.custom_exception_handler',
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
@@ -242,9 +243,9 @@ LOGGING = {
             'formatter': 'verbose'
         },
         'file': {
-            'level': 'DEBUG',
+            'level': 'ERROR',
             'class': 'logging.FileHandler',
-            'filename': 'debug.log',
+            'filename': 'django_errors.log',
             'formatter': 'verbose'
         },
     },
@@ -259,9 +260,10 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': True,
         },
-        '': {  # Root logger
+        'manufacturing.exceptions': {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
+            'propagate': True,
         }
     }
 }
