@@ -1,32 +1,40 @@
 import React, { useState, useEffect } from 'react';
-import axios from '../services/axiosConfig';
+import axios from 'axios';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { 
   Box, 
   Typography, 
+  Button, 
   Grid, 
   Card, 
   CardContent, 
   Chip, 
-  IconButton, 
   Dialog, 
   DialogTitle, 
   DialogContent, 
   DialogActions, 
-  Button,
+  TextField, 
+  Tooltip, 
+  IconButton,
+  MenuItem,
+  List,
+  ListItem,
+  ListItemText,
   LinearProgress,
-  Tooltip,
-  TextField,
-  MenuItem
+  CardHeader,
+  Divider
 } from '@mui/material';
 import { 
   Build as BuildIcon, 
   Edit as EditIcon, 
-  Delete as DeleteIcon, 
-  Inventory as InventoryIcon,
-  Warning as WarningIcon,
+  Delete as DeleteItemIcon, 
+  CheckCircle as CheckCircleIcon, 
+  Warning as WarningIcon, 
   Error as ErrorIcon,
-  CheckCircle as CheckCircleIcon
+  Inventory as InventoryIcon,
+  AddCircle as AddIcon
 } from '@mui/icons-material';
+import MaterialSelectionModal from '../components/MaterialSelectionModal';
 import WorkstationSequenceComponent from '../components/WorkstationSequenceComponent';
 import { formatLocalDateTime } from '../utils/timeUtils';
 
@@ -46,104 +54,104 @@ const ProductCard = ({ product, onEdit, onDelete, onProductSelect }) => {
       case 'IN_STOCK': return <CheckCircleIcon color="success" />;
       case 'LOW_STOCK': return <WarningIcon color="warning" />;
       case 'OUT_OF_STOCK': return <ErrorIcon color="error" />;
-      case 'DISCONTINUED': return <DeleteIcon color="default" />;
+      case 'DISCONTINUED': return <DeleteItemIcon color="default" />;
       default: return <InventoryIcon />;
     }
   };
 
-  const [showWorkstationSequence, setShowWorkstationSequence] = useState(false);
-
-  const handleOpenWorkstationSequence = (e) => {
-    e.stopPropagation();
-    setShowWorkstationSequence(true);
-  };
-
-  const handleCloseWorkstationSequence = () => {
-    setShowWorkstationSequence(false);
-  };
-
   return (
-    <>
-      <Card 
-        variant="outlined" 
-        sx={{ 
-          height: '100%', 
-          display: 'flex', 
-          flexDirection: 'column', 
-          justifyContent: 'space-between' 
-        }}
-        onClick={() => onProductSelect(product)}
-      >
-        <CardContent>
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-            <Typography variant="h6" gutterBottom>
-              {product.name}
-            </Typography>
-            {getStatusIcon(product.stock_status)}
-          </Box>
-          
-          <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-            {product.description || 'No description available'}
+    <Card 
+      variant="outlined" 
+      sx={{ 
+        height: '100%', 
+        display: 'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'space-between' 
+      }}
+      onClick={() => onProductSelect(product)}
+    >
+      <CardContent>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
+          <Typography variant="h6" gutterBottom>
+            {product.name}
           </Typography>
-          
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
-            <Chip 
-              label={product.stock_status_display} 
-              color={
-                product.stock_status === 'OUT_OF_STOCK' ? 'error' : 
-                product.stock_status === 'LOW_STOCK' ? 'warning' : 
-                'success'
-              }
-              size="small"
-            />
-          </Box>
-          
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-            <Typography variant="caption">
-              Materials: {product.materials ? product.materials.length : 0}
-            </Typography>
-            <Typography variant="caption">
-              Quantity: {product.current_quantity} / {product.max_stock_level}
-            </Typography>
-          </Box>
-          
-          <Typography variant="caption" color="text.secondary">
-            Created: {formatLocalDateTime(product.created_at)}
-          </Typography>
-          <Button 
-            variant="outlined" 
-            color="primary" 
-            onClick={handleOpenWorkstationSequence}
-            sx={{ mt: 2 }}
-          >
-            View Workstation Sequence
-          </Button>
-        </CardContent>
-        
-        <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
-          <Tooltip title="Edit Product">
-            <IconButton size="small" onClick={onEdit}>
-              <EditIcon />
-            </IconButton>
-          </Tooltip>
-          <Tooltip title="Delete Product">
-            <IconButton size="small" onClick={onDelete}>
-              <DeleteIcon />
-            </IconButton>
-          </Tooltip>
+          {getStatusIcon(product.stock_status)}
         </Box>
-      </Card>
-
-      {showWorkstationSequence && (
-        <WorkstationSequenceComponent 
-          productId={product.id} 
-          onClose={handleCloseWorkstationSequence} 
-          editable={true}
-        />
-      )}
-    </>
+        
+        <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+          {product.description || 'No description available'}
+        </Typography>
+        
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+          <Chip 
+            label={product.stock_status_display || product.stock_status} 
+            color={getStatusColor(product.stock_status)}
+            size="small"
+          />
+        </Box>
+        
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
+          <Typography variant="caption">
+            Materials: {product.materials ? product.materials.length : 0}
+          </Typography>
+          <Typography variant="caption">
+            Quantity: {product.current_quantity} / {product.max_stock_level}
+          </Typography>
+        </Box>
+        
+        {product.materials && product.materials.length > 0 && (
+          <Box sx={{ mt: 1 }}>
+            <Typography variant="caption" color="text.secondary">
+              Required Materials:
+            </Typography>
+            {product.materials.map((material, index) => (
+              <Typography key={index} variant="caption" display="block">
+                - {material.material_name || material.name} (Qty: {material.quantity})
+              </Typography>
+            ))}
+          </Box>
+        )}
+        
+        <Typography variant="caption" color="text.secondary">
+          Created: {formatLocalDateTime(product.created_at)}
+        </Typography>
+      </CardContent>
+      
+      <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between' }}>
+        <Tooltip title="Edit Product">
+          <IconButton size="small" onClick={onEdit}>
+            <EditIcon />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="Delete Product">
+          <IconButton size="small" onClick={onDelete}>
+            <DeleteItemIcon />
+          </IconButton>
+        </Tooltip>
+      </Box>
+    </Card>
   );
 };
+
+// Wrapper for Droppable to handle default props
+const DroppableWrapper = ({ droppableId, children }) => (
+  <Droppable droppableId={droppableId}>
+    {(provided = { droppableProps: {}, innerRef: () => {}, placeholder: null }) => 
+      children(provided)
+    }
+  </Droppable>
+);
+
+// Wrapper for Draggable to handle default props
+const DraggableWrapper = ({ draggableId, index, children }) => (
+  <Draggable draggableId={draggableId} index={index}>
+    {(provided = { 
+      draggableProps: {}, 
+      dragHandleProps: {}, 
+      innerRef: () => {} 
+    }) => children(provided)}
+  </Draggable>
+);
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -151,51 +159,51 @@ export default function Products() {
   const [error, setError] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [materials, setMaterials] = useState([]);
+  const [showMaterialModal, setShowMaterialModal] = useState(false);
 
   useEffect(() => {
-    fetchProducts();
+    const fetchData = async () => {
+      try {
+        console.group('Products Data Fetch');
+        const [productsResponse, materialsResponse] = await Promise.all([
+          axios.get('/api/products/'),
+          axios.get('/api/materials/')
+        ]);
+        
+        console.log('Products Response:', productsResponse.data);
+        console.log('Materials Response:', materialsResponse.data);
+        
+        // Extract results from paginated responses
+        const productData = productsResponse.data.results || productsResponse.data;
+        const materialsData = materialsResponse.data.results || materialsResponse.data;
+        
+        setProducts(productData);
+        setMaterials(materialsData);
+        
+        console.log('Products State:', productData);
+        console.log('Materials State:', materialsData);
+        console.groupEnd();
+        
+        setLoading(false);
+      } catch (err) {
+        console.error('Fetch Error:', err);
+        setError(err);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
-  const fetchProducts = async () => {
-    try {
-      setLoading(true);
-      const response = await axios.get('/api/products/');
-      
-      // Detailed debugging
-      console.group('Products Fetch');
-      console.log('Raw Response:', response);
-      console.log('Response Data:', response.data);
-      console.log('Data Type:', typeof response.data);
-      console.log('Is Array:', Array.isArray(response.data));
-      
-      // Ensure products is always an array
-      const productData = Array.isArray(response.data) ? response.data : 
-                          (response.data.results ? response.data.results : []);
-      
-      console.log('Processed Products:', productData);
-      console.groupEnd();
-
-      setProducts(productData);
-      setError(null);
-    } catch (err) {
-      const errorMessage = err.response?.data?.detail || 
-                           err.response?.data?.error || 
-                           'Failed to fetch products';
-      
-      // Detailed error logging
-      console.group('Products Fetch Error');
-      console.error('Full Error:', err);
-      console.error('Error Response:', err.response);
-      console.error('Error Message:', errorMessage);
-      console.groupEnd();
-
-      setError(errorMessage);
-      // Set to empty array to prevent map error
-      setProducts([]);
-    } finally {
-      setLoading(false);
-    }
-  };
+  useEffect(() => {
+    console.group('Materials State Debug');
+    console.log('Current Materials:', materials);
+    console.log('Materials Type:', typeof materials);
+    console.log('Is Array:', Array.isArray(materials));
+    console.log('Materials Length:', materials?.length);
+    console.groupEnd();
+  }, [materials]);
 
   const handleEdit = (product) => {
     setSelectedProduct(product);
@@ -205,7 +213,7 @@ export default function Products() {
   const handleDelete = async (productId) => {
     try {
       await axios.delete(`/api/products/${productId}/`);
-      fetchProducts();
+      setProducts(products.filter(product => product.id !== productId));
     } catch (err) {
       const errorMessage = err.response?.data?.detail || 
                            err.response?.data?.error || 
@@ -220,21 +228,45 @@ export default function Products() {
     setSelectedProduct(null);
   };
 
-  const handleSave = async () => {
+  const handleSaveProduct = async () => {
     try {
+      // Prepare product data
+      const productData = {
+        ...selectedProduct,
+        // Convert materials to productmaterial_set format
+        productmaterial_set: (selectedProduct.materials || []).map(material => ({
+          material_id: material.material_id || material.id,
+          quantity: material.quantity
+        }))
+      };
+
+      // Remove unnecessary fields
+      delete productData.materials;
+
+      // Determine if this is a create or update operation
       if (selectedProduct.id) {
-        await axios.put(`/api/products/${selectedProduct.id}/`, selectedProduct);
+        // Update existing product
+        await axios.put(`/api/products/${selectedProduct.id}/`, productData);
       } else {
-        await axios.post('/api/products/', selectedProduct);
+        // Create new product
+        await axios.post('/api/products/', productData);
       }
-      fetchProducts();
+
+      // Refresh products list
+      const response = await axios.get('/api/products/');
+      setProducts(response.data.results || response.data);
+      
+      // Close dialog
       handleDialogClose();
     } catch (err) {
+      console.error('Error saving product:', err);
+      // Handle error (show error message, etc.)
       const errorMessage = err.response?.data?.detail || 
                            err.response?.data?.error || 
                            'Failed to save product';
+      
+      // You might want to set an error state to show to the user
       setError(errorMessage);
-      console.error('Product save error:', err);
     }
   };
 
@@ -242,46 +274,56 @@ export default function Products() {
     console.log('Product selected:', product);
   };
 
+  const handleAddMaterial = (selectedMaterial, quantity) => {
+    setSelectedProduct(prev => ({
+      ...prev,
+      materials: [...(prev.materials || []), { 
+        material_id: selectedMaterial.id, 
+        material_name: selectedMaterial.name, 
+        quantity: quantity 
+      }]
+    }));
+    setShowMaterialModal(false);
+  };
+
+  const handleRemoveMaterial = (materialIndex) => {
+    setSelectedProduct(prev => ({
+      ...prev,
+      materials: prev.materials.filter((_, index) => index !== materialIndex)
+    }));
+  };
+
+  const onDragEnd = (result) => {
+    if (!result.destination) return;
+
+    const reorderedMaterials = Array.from(selectedProduct.materials || []);
+    const [reorderedItem] = reorderedMaterials.splice(result.source.index, 1);
+    reorderedMaterials.splice(result.destination.index, 0, reorderedItem);
+
+    setSelectedProduct(prev => ({
+      ...prev,
+      materials: reorderedMaterials
+    }));
+  };
+
+  const renderProductCard = (product) => (
+    <ProductCard 
+      product={product} 
+      onEdit={() => handleEdit(product)} 
+      onDelete={() => handleDelete(product.id)} 
+      onProductSelect={handleProductSelect}
+    />
+  );
+
   return (
     <Box sx={{ p: 3 }}>
       {loading && <LinearProgress />}
+      {error && <Typography color="error">Error loading products</Typography>}
       
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
-        <Typography variant="h4">Products</Typography>
-        <Button 
-          variant="contained" 
-          startIcon={<BuildIcon />}
-          onClick={() => {
-            setSelectedProduct({ 
-              name: '', 
-              description: '', 
-              current_quantity: 0, 
-              restock_level: 10, 
-              max_stock_level: 100,
-              materials: [] 
-            });
-            setIsDialogOpen(true);
-          }}
-        >
-          Add Product
-        </Button>
-      </Box>
-
-      {error && (
-        <Typography color="error" sx={{ mb: 2 }}>
-          {error}
-        </Typography>
-      )}
-
       <Grid container spacing={3}>
-        {products.map((product) => (
+        {products.map(product => (
           <Grid item xs={12} sm={6} md={4} key={product.id}>
-            <ProductCard 
-              product={product} 
-              onEdit={() => handleEdit(product)} 
-              onDelete={() => handleDelete(product.id)} 
-              onProductSelect={handleProductSelect}
-            />
+            {renderProductCard(product)}
           </Grid>
         ))}
       </Grid>
@@ -289,11 +331,11 @@ export default function Products() {
       <Dialog 
         open={isDialogOpen} 
         onClose={handleDialogClose} 
-        maxWidth="xs" 
+        maxWidth="md" 
         fullWidth
       >
         <DialogTitle>
-          {selectedProduct?.id ? 'Edit Product' : 'Add New Product'}
+          {selectedProduct ? 'Edit Product' : 'Create New Product'}
         </DialogTitle>
         <DialogContent>
           <TextField
@@ -345,12 +387,74 @@ export default function Products() {
             value={selectedProduct?.max_stock_level || 100}
             onChange={(e) => setSelectedProduct(prev => ({ ...prev, max_stock_level: parseInt(e.target.value) || 100 }))}
           />
+          
+          <Typography variant="subtitle1" sx={{ mt: 2, mb: 1 }}>
+            Required Materials
+          </Typography>
+          <Button 
+            variant="outlined" 
+            color="primary" 
+            onClick={() => setShowMaterialModal(true)}
+            startIcon={<AddIcon />}
+          >
+            Add Material
+          </Button>
+
+          <DragDropContext onDragEnd={onDragEnd}>
+            <DroppableWrapper droppableId="materials-list">
+              {(providedDroppable) => (
+                <List 
+                  {...providedDroppable.droppableProps} 
+                  ref={providedDroppable.innerRef}
+                >
+                  {(selectedProduct?.materials || []).map((material, index) => (
+                    <DraggableWrapper 
+                      key={`material-${material.material_id}-${index}`} 
+                      draggableId={`material-${material.material_id}`} 
+                      index={index}
+                    >
+                      {(providedDraggable) => (
+                        <ListItem
+                          ref={providedDraggable.innerRef}
+                          {...providedDraggable.draggableProps}
+                          {...providedDraggable.dragHandleProps}
+                          secondaryAction={
+                            <IconButton 
+                              edge="end" 
+                              onClick={() => handleRemoveMaterial(index)}
+                            >
+                              <DeleteItemIcon />
+                            </IconButton>
+                          }
+                        >
+                          <ListItemText 
+                            primary={material.material_name || material.name} 
+                            secondary={`Quantity: ${material.quantity}`} 
+                          />
+                        </ListItem>
+                      )}
+                    </DraggableWrapper>
+                  ))}
+                  {providedDroppable.placeholder}
+                </List>
+              )}
+            </DroppableWrapper>
+          </DragDropContext>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleDialogClose}>Cancel</Button>
-          <Button onClick={handleSave} color="primary">Save</Button>
+          <Button onClick={handleSaveProduct} color="primary">Save</Button>
         </DialogActions>
       </Dialog>
+
+      {showMaterialModal && (
+        <MaterialSelectionModal 
+          open={showMaterialModal}
+          materials={materials}
+          onClose={() => setShowMaterialModal(false)}
+          onAddMaterial={handleAddMaterial}
+        />
+      )}
     </Box>
   );
 }

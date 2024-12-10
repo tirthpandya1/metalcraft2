@@ -76,56 +76,92 @@ class ProductMaterialSerializer(serializers.ModelSerializer):
         return super().to_internal_value(data)
 
 class ProductSerializer(serializers.ModelSerializer):
-    materials = ProductMaterialSerializer(source='productmaterial_set', many=True, required=False)
-    stock_status_display = serializers.CharField(source='get_stock_status_display', read_only=True)
-    workstation_sequences = serializers.SerializerMethodField(read_only=True)
+    materials = serializers.SerializerMethodField()
+    productmaterial_set = serializers.ListField(
+        child=serializers.DictField(
+            child=serializers.IntegerField(),
+            required=False
+        ),
+        write_only=True,
+        required=False
+    )
 
     class Meta:
         model = Product
         fields = [
-            'id', 
-            'name', 
-            'description', 
-            'materials', 
-            'current_quantity', 
-            'restock_level', 
-            'max_stock_level', 
-            'stock_status', 
-            'stock_status_display',
-            'workstation_sequences',
-            'created_at'
+            'id', 'name', 'description', 'current_quantity', 
+            'restock_level', 'max_stock_level', 'stock_status', 
+            'created_at', 'updated_at', 'materials', 'productmaterial_set'
         ]
-        read_only_fields = ['id', 'created_at', 'stock_status', 'stock_status_display']
+        read_only_fields = ['stock_status', 'created_at', 'updated_at']
 
-    def get_workstation_sequences(self, obj):
+    def get_materials(self, obj):
         """
-        Retrieve workstation sequences for the product
+        Retrieve materials for the product with their quantities
         """
-        try:
-            sequences = obj.workstation_sequences.order_by('sequence_order')
-            return ProductWorkstationSequenceSerializer(sequences, many=True).data
-        except Exception as e:
-            # Log the error or return an empty list
-            print(f"Error retrieving workstation sequences: {e}")
-            return []
+        return [
+            {
+                'material_id': pm.material.id,
+                'material_name': pm.material.name,
+                'quantity': pm.quantity
+            } 
+            for pm in obj.productmaterial_set.select_related('material')
+        ]
+
+    def validate_productmaterial_set(self, value):
+        """
+        Validate material requirements:
+        1. Ensure unique materials
+        2. Validate material existence
+        3. Validate quantity > 0
+        """
+        if not value:
+            return value
+
+        material_ids = set()
+        validated_materials = []
+
+        for material_data in value:
+            material_id = material_data.get('material_id')
+            quantity = material_data.get('quantity', 0)
+
+            # Validate material existence
+            try:
+                material = Material.objects.get(id=material_id)
+            except Material.DoesNotExist:
+                raise serializers.ValidationError(f"Material with ID {material_id} does not exist")
+
+            # Check for duplicate materials
+            if material_id in material_ids:
+                raise serializers.ValidationError(f"Duplicate material: {material_id}")
+            material_ids.add(material_id)
+
+            # Validate quantity
+            if quantity <= 0:
+                raise serializers.ValidationError(f"Quantity for material {material_id} must be greater than 0")
+
+            validated_materials.append({
+                'material_id': material_id,
+                'quantity': quantity
+            })
+
+        return validated_materials
 
     def create(self, validated_data):
-        # Extract materials data, ensuring we handle potential Material objects
+        """
+        Create product with material requirements
+        """
         materials_data = validated_data.pop('productmaterial_set', [])
         
-        # Create the product with stock-related fields
+        # Create the product
         product = Product.objects.create(**validated_data)
         
-        # Create associated product materials
+        # Create product materials
         for material_data in materials_data:
-            # Ensure material_id is an integer
-            if isinstance(material_data['material_id'], Material):
-                material_data['material_id'] = material_data['material_id'].id
-            
             ProductMaterial.objects.create(
-                product=product, 
+                product=product,
                 material_id=material_data['material_id'],
-                quantity=material_data.get('quantity', 0)
+                quantity=material_data['quantity']
             )
         
         # Update stock status
@@ -134,28 +170,33 @@ class ProductSerializer(serializers.ModelSerializer):
         return product
 
     def update(self, instance, validated_data):
+        """
+        Update product with material requirements
+        """
         materials_data = validated_data.pop('productmaterial_set', [])
         
-        # Update basic product fields
+        # Update product fields
         instance.name = validated_data.get('name', instance.name)
         instance.description = validated_data.get('description', instance.description)
         instance.current_quantity = validated_data.get('current_quantity', instance.current_quantity)
         instance.restock_level = validated_data.get('restock_level', instance.restock_level)
         instance.max_stock_level = validated_data.get('max_stock_level', instance.max_stock_level)
         
-        instance.save()  # This will trigger stock status update
+        instance.save()
         
-        # Update materials
-        # First, remove existing materials
+        # Remove existing product materials
         instance.productmaterial_set.all().delete()
         
-        # Then add new materials
+        # Create new product materials
         for material_data in materials_data:
-            # Ensure material_id is an integer
-            if isinstance(material_data['material_id'], Material):
-                material_data['material_id'] = material_data['material_id'].id
-            
-            ProductMaterial.objects.create(product=instance, **material_data)
+            ProductMaterial.objects.create(
+                product=instance,
+                material_id=material_data['material_id'],
+                quantity=material_data['quantity']
+            )
+        
+        # Update stock status
+        instance.update_stock_status()
         
         return instance
 

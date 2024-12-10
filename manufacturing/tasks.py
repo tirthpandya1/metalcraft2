@@ -1,7 +1,13 @@
 from celery import shared_task
 from django.utils import timezone
-from .models import WorkOrder, Material, Product, ProductionLog
+from .models import WorkOrder, Material, Product, ProductionLog, InventoryHealthReport
 from .events import WorkflowEvent, EventType
+from django.db.models import F, ExpressionWrapper, FloatField, Sum, Count
+from django.db.models.functions import Max
+from datetime import timedelta
+import logging
+
+logger = logging.getLogger(__name__)
 
 @shared_task(bind=True)
 def process_work_order_completion(self, work_order_id):
@@ -74,23 +80,134 @@ def process_work_order_completion(self, work_order_id):
 @shared_task
 def check_low_stock_materials():
     """
-    Periodic task to check material stock levels
-    Sends notifications for materials below reorder level
+    Advanced periodic task to check material stock levels
+    Sends comprehensive notifications for materials below reorder level
+    Provides detailed insights and recommendations
     """
-    low_stock_materials = Material.objects.filter(
-        quantity__lte=models.F('reorder_level')
-    )
+    # Fetch materials below reorder level with detailed filtering
+    low_stock_materials = Material.objects.annotate(
+        shortage_percentage=ExpressionWrapper(
+            (F('reorder_level') - F('quantity')) * 100.0 / F('reorder_level'),
+            output_field=FloatField()
+        )
+    ).filter(
+        quantity__lte=F('reorder_level')
+    ).order_by('shortage_percentage')
+
+    # Track materials for different notification levels
+    critical_materials = []
+    warning_materials = []
     
     for material in low_stock_materials:
+        # Categorize materials based on shortage percentage
+        shortage_percentage = material.shortage_percentage
+        
+        if shortage_percentage >= 75:
+            critical_materials.append(material)
+        else:
+            warning_materials.append(material)
+        
+        # Dispatch detailed workflow events
         WorkflowEvent.dispatch_event(
             EventType.MATERIAL_LOW_STOCK,
             {
                 'material_id': material.id,
                 'material_name': material.name,
                 'current_quantity': material.quantity,
-                'reorder_level': material.reorder_level
+                'reorder_level': material.reorder_level,
+                'shortage_percentage': shortage_percentage,
+                'recommended_reorder_quantity': max(
+                    material.max_stock_level - material.quantity, 
+                    material.reorder_level * 2
+                )
             }
         )
+    
+    # Optional: Send aggregated notification
+    if critical_materials or warning_materials:
+        send_stock_alert_notification.delay(
+            critical_materials=critical_materials, 
+            warning_materials=warning_materials
+        )
+    
+    return {
+        'total_low_stock_materials': len(low_stock_materials),
+        'critical_materials_count': len(critical_materials),
+        'warning_materials_count': len(warning_materials)
+    }
+
+@shared_task
+def send_stock_alert_notification(critical_materials=None, warning_materials=None):
+    """
+    Send comprehensive stock alert notifications via multiple channels
+    """
+    critical_materials = critical_materials or []
+    warning_materials = warning_materials or []
+    
+    # Prepare notification content
+    notification_content = {
+        'subject': 'Inventory Stock Alert',
+        'body': '',
+        'severity': 'high' if critical_materials else 'medium'
+    }
+    
+    # Construct detailed message
+    if critical_materials:
+        notification_content['body'] += "CRITICAL LOW STOCK MATERIALS:\n"
+        for material in critical_materials:
+            notification_content['body'] += (
+                f"- {material.name}: {material.quantity} units "
+                f"(Reorder Level: {material.reorder_level})\n"
+            )
+    
+    if warning_materials:
+        notification_content['body'] += "\nWARNING LOW STOCK MATERIALS:\n"
+        for material in warning_materials:
+            notification_content['body'] += (
+                f"- {material.name}: {material.quantity} units "
+                f"(Reorder Level: {material.reorder_level})\n"
+            )
+    
+    # Send notifications via multiple channels
+    try:
+        # Email notification
+        send_email_notification(notification_content)
+        
+        # Slack/Teams notification
+        send_team_chat_notification(notification_content)
+        
+        # SMS notification for critical materials
+        if critical_materials:
+            send_sms_notification(notification_content)
+    
+    except Exception as e:
+        logger.error(f"Error sending stock alert notifications: {e}")
+    
+    return notification_content
+
+def send_email_notification(notification_content):
+    """Send email notification about low stock materials"""
+    from django.core.mail import send_mail
+    
+    send_mail(
+        subject=notification_content['subject'],
+        message=notification_content['body'],
+        from_email='inventory@metalcraft.com',
+        recipient_list=['inventory_manager@metalcraft.com'],
+        fail_silently=False
+    )
+
+def send_team_chat_notification(notification_content):
+    """Send notification to team communication platform"""
+    # Placeholder for Slack/Teams integration
+    # You would replace this with actual API calls to your preferred platform
+    logger.info(f"Team Chat Notification: {notification_content['body']}")
+
+def send_sms_notification(notification_content):
+    """Send SMS notification for critical stock levels"""
+    # Placeholder for SMS gateway integration
+    # You would replace this with actual SMS gateway API calls
+    logger.info(f"SMS Notification: {notification_content['body']}")
 
 @shared_task
 def generate_production_report(start_date=None, end_date=None):
@@ -126,3 +243,37 @@ def generate_production_report(start_date=None, end_date=None):
     )
     
     return production_data
+
+@shared_task
+def generate_inventory_health_report():
+    """
+    Generate detailed inventory health report
+    """
+    # Calculate inventory metrics
+    total_materials = Material.objects.count()
+    low_stock_materials = Material.objects.filter(quantity__lte=F('reorder_level')).count()
+    
+    report = {
+        'total_materials': total_materials,
+        'low_stock_materials': low_stock_materials,
+        'low_stock_percentage': (low_stock_materials / total_materials) * 100 if total_materials > 0 else 0,
+        'generated_at': timezone.now()
+    }
+    
+    # Optional: Store report in database or send via email
+    InventoryHealthReport.objects.create(**report)
+    
+    return report
+
+@shared_task(run_every=timedelta(hours=6))
+def periodic_inventory_check():
+    """
+    Comprehensive periodic inventory management task
+    Runs checks and generates reports
+    """
+    low_stock_result = check_low_stock_materials.delay()
+    
+    # Optional: Generate inventory health report
+    generate_inventory_health_report.delay()
+    
+    return low_stock_result

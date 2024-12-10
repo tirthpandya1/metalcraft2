@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils import timezone
+from django.db import transaction
 
 # Create your models here.
 
@@ -218,34 +219,30 @@ class WorkOrder(models.Model):
 
     def check_material_availability(self):
         """
-        Comprehensive material availability check
+        Comprehensive material availability check with detailed reporting
         
         Returns a dictionary with:
         - available: Boolean indicating if all materials are available
         - materials: List of materials with insufficient quantities
+        - total_required: Total materials required
+        - total_available: Total materials in stock
         """
         # Get materials required for the product
         product_materials = ProductMaterial.objects.filter(product=self.product)
         
         material_status = {
             'available': True,
-            'materials': []
+            'materials': [],
+            'total_required': 0,
+            'total_available': 0
         }
-        
-        # Debug logging
-        print(f"Checking material availability for Work Order {self.id}")
-        print(f"Product: {self.product.name}")
-        print(f"Work Order Quantity: {self.quantity}")
-        print(f"Total Product Materials: {product_materials.count()}")
         
         for product_material in product_materials:
             material = product_material.material
             required_quantity = product_material.quantity * self.quantity
             
-            # Additional debug logging
-            print(f"Material: {material.name}")
-            print(f"Material Quantity: {material.quantity}")
-            print(f"Required Quantity: {required_quantity}")
+            material_status['total_required'] += required_quantity
+            material_status['total_available'] += material.quantity
             
             if material.quantity < required_quantity:
                 material_status['available'] = False
@@ -253,57 +250,90 @@ class WorkOrder(models.Model):
                     'material_id': material.id,
                     'material_name': material.name,
                     'required_quantity': required_quantity,
-                    'available_quantity': material.quantity
+                    'available_quantity': material.quantity,
+                    'shortage_percentage': (required_quantity - material.quantity) / required_quantity * 100
                 })
-                
-                # More detailed debug logging for insufficient materials
-                print(f"INSUFFICIENT MATERIAL: {material.name}")
-                print(f"Available: {material.quantity}")
-                print(f"Required: {required_quantity}")
         
         return material_status
 
     def reserve_materials(self):
         """
-        Reserve materials for the work order
-        Reduces material quantities and tracks reservations
+        Advanced material reservation with comprehensive checks and logging
         """
-        # First, print out product materials for debugging
-        self.print_product_materials()
+        # Validate work order before reservation
+        if self.status not in ['PENDING', 'DRAFT']:
+            raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
         
-        # Check material availability
+        # Perform material availability check
         material_status = self.check_material_availability()
         
         if not material_status['available']:
-            # Raise a more informative error
+            # Construct detailed error message
             error_message = "Insufficient materials to start work order:\n"
             for material in material_status['materials']:
                 error_message += (
-                    f"Material: {material['material_name']} "
-                    f"(ID: {material['material_id']})\n"
-                    f"Required: {material['required_quantity']} "
-                    f"Available: {material['available_quantity']}\n"
+                    f"Material: {material['material_name']} (ID: {material['material_id']})\n"
+                    f"Required: {material['required_quantity']} \n"
+                    f"Available: {material['available_quantity']} \n"
+                    f"Shortage: {material['required_quantity'] - material['available_quantity']} "
+                    f"({material['shortage_percentage']:.2f}%)\n\n"
                 )
+            
+            # Log the material shortage event
+            # WorkflowEvent.dispatch_event(
+            #     EventType.MATERIAL_SHORTAGE,
+            #     {
+            #         'work_order_id': self.id,
+            #         'product_name': self.product.name,
+            #         'shortage_details': material_status['materials']
+            #     }
+            # )
+            
             raise ValueError(error_message)
         
         # Get materials required for the product
         product_materials = ProductMaterial.objects.filter(product=self.product)
         
-        # Create material reservations
-        for product_material in product_materials:
-            material = product_material.material
-            required_quantity = product_material.quantity * self.quantity
+        # Create material reservations with atomic transaction
+        with transaction.atomic():
+            # Create material reservations
+            for product_material in product_materials:
+                material = product_material.material
+                required_quantity = product_material.quantity * self.quantity
+                
+                # Create material reservation record
+                MaterialReservation.objects.create(
+                    work_order=self,
+                    material=material,
+                    quantity_reserved=required_quantity
+                )
+                
+                # Reduce material quantity
+                material.quantity -= required_quantity
+                material.save()
             
-            MaterialReservation.objects.create(
-                work_order=self,
-                material=material,
-                quantity_reserved=required_quantity
-            )
+            # Update work order status
+            self.status = 'IN_PROGRESS'
+            self.start_date = timezone.now()
+            self.save()
         
-        # Update work order status
-        self.status = 'IN_PROGRESS'
-        self.start_date = timezone.now()
-        self.save()
+        # Dispatch workflow event
+        # WorkflowEvent.dispatch_event(
+        #     EventType.WORK_ORDER_STARTED,
+        #     {
+        #         'work_order_id': self.id,
+        #         'product_name': self.product.name,
+        #         'quantity': self.quantity,
+        #         'materials_reserved': [
+        #             {
+        #                 'material_name': pm.material.name, 
+        #                 'quantity_reserved': pm.quantity * self.quantity
+        #             } for pm in product_materials
+        #         ]
+        #     }
+        # )
+        
+        return True
 
     def release_reserved_materials(self):
         """
