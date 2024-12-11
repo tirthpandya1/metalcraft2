@@ -31,15 +31,54 @@ function ProductionLogs() {
   const fetchProductionLogs = async (pageNum = 1) => {
     try {
       setLoading(true);
+      
+      // Map frontend sorting keys to backend field names
+      const sortingMap = {
+        'timestamp': 'created_at',
+        'work_order': 'work_order__id',
+        'machine': 'workstation__name',
+        'operation': 'work_order__product__name',
+        'quantity_produced': 'quantity_produced',
+        'notes': 'notes'
+      };
+
+      const mappedOrderBy = sortingMap[orderBy] || orderBy;
+      
       const params = { 
         page: pageNum, 
-        ordering: order === 'desc' ? `-${orderBy}` : orderBy,
+        ordering: order === 'desc' ? `-${mappedOrderBy}` : mappedOrderBy,
         search: searchTerm
       };
+      
       const response = await productionLogService.getAll(params);
       
-      setLogs(response.results);
-      setFilteredLogs(response.results);
+      // Ensure the logs are sorted on the frontend as a fallback
+      const sortedLogs = response.results.sort((a, b) => {
+        const modifier = order === 'desc' ? -1 : 1;
+        
+        switch(orderBy) {
+          case 'timestamp':
+            // Ensure correct sorting for timestamps in both directions
+            const dateA = new Date(a.created_at);
+            const dateB = new Date(b.created_at);
+            return modifier * (dateA.getTime() - dateB.getTime());
+          case 'work_order':
+            return modifier * (b.work_order.localeCompare(a.work_order));
+          case 'machine':
+            return modifier * (b.machine.localeCompare(a.machine));
+          case 'operation':
+            return modifier * (b.operation.localeCompare(a.operation));
+          case 'quantity_produced':
+            return modifier * (b.quantity_produced - a.quantity_produced);
+          case 'notes':
+            return modifier * (b.notes.localeCompare(a.notes));
+          default:
+            return 0;
+        }
+      });
+      
+      setLogs(sortedLogs);
+      setFilteredLogs(sortedLogs);
       setTotalPages(Math.ceil(response.count / 10));
       setLoading(false);
     } catch (error) {
@@ -49,23 +88,28 @@ function ProductionLogs() {
   };
 
   useEffect(() => {
-    fetchProductionLogs();
-  }, [orderBy, order, searchTerm]);
+    fetchProductionLogs(page);
+  }, [page, orderBy, order, searchTerm]);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
     setPage(1);
   };
 
-  const handleSort = (property) => {
-    const isAsc = orderBy === property && order === 'asc';
-    setOrder(isAsc ? 'desc' : 'asc');
-    setOrderBy(property);
+  const handleSort = (columnId) => {
+    // If sorting the same column, toggle between asc and desc
+    const newOrder = orderBy === columnId && order === 'desc' ? 'asc' : 'desc';
+    
+    // Update both orderBy and order states
+    setOrderBy(columnId);
+    setOrder(newOrder);
+    
+    // Reset to first page when sorting changes
+    setPage(1);
   };
 
   const handlePageChange = (newPage) => {
     setPage(newPage);
-    fetchProductionLogs(newPage);
   };
 
   const renderTableHeader = () => {
@@ -86,6 +130,11 @@ function ProductionLogs() {
           onClick={() => handleSort(header.id)}
         >
           {header.label}
+          {orderBy === header.id && (
+            <Box component="span" sx={{ display: 'none' }}>
+              {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
+            </Box>
+          )}
         </TableSortLabel>
       </TableCell>
     ));

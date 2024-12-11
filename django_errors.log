@@ -13543,3 +13543,723 @@ django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid fo
 ERROR 2024-12-11 22:03:52,614 log 56631 6158086144 Internal Server Error: /api/production-logs/
 ERROR 2024-12-11 22:03:52,614 basehttp 56631 6158086144 "GET /api/production-logs/?page=1&ordering=-timestamp&search= HTTP/1.1" 500 162
 ERROR 2024-12-11 22:03:52,614 basehttp 56631 6174912512 "GET /api/production-logs/?page=1&ordering=-timestamp&search= HTTP/1.1" 500 162
+ERROR 2024-12-11 22:09:48,401 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:48,401 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:48,406 log 58104 6194720768 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:09:48,406 basehttp 58104 6194720768 "GET /api/production-logs/?page=1&ordering=-created_at&search=D HTTP/1.1" 500 311
+ERROR 2024-12-11 22:09:48,628 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:48,628 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:48,630 log 58104 6194720768 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:09:48,630 basehttp 58104 6194720768 "GET /api/production-logs/?page=1&ordering=-created_at&search=Dr HTTP/1.1" 500 311
+ERROR 2024-12-11 22:09:49,713 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:49,713 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:49,715 log 58104 6194720768 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:09:49,716 basehttp 58104 6194720768 "GET /api/production-logs/?page=1&ordering=-created_at&search=Dri HTTP/1.1" 500 311
+ERROR 2024-12-11 22:09:49,945 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:49,945 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:49,946 log 58104 6194720768 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:09:49,946 basehttp 58104 6194720768 "GET /api/production-logs/?page=1&ordering=-created_at&search=Dril HTTP/1.1" 500 311
+ERROR 2024-12-11 22:09:50,086 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:50,086 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:50,088 log 58104 6194720768 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:09:50,088 basehttp 58104 6194720768 "GET /api/production-logs/?page=1&ordering=-created_at&search=Drill HTTP/1.1" 500 311
+ERROR 2024-12-11 22:09:50,282 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:50,282 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:50,284 log 58104 6194720768 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:09:50,284 basehttp 58104 6194720768 "GET /api/production-logs/?page=1&ordering=-created_at&search=Drilli HTTP/1.1" 500 311
+ERROR 2024-12-11 22:09:50,437 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:50,437 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:50,438 log 58104 6194720768 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:09:50,438 basehttp 58104 6194720768 "GET /api/production-logs/?page=1&ordering=-created_at&search=Drillin HTTP/1.1" 500 311
+ERROR 2024-12-11 22:09:50,581 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:50,581 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:50,582 log 58104 6194720768 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:09:50,583 basehttp 58104 6194720768 "GET /api/production-logs/?page=1&ordering=-created_at&search=Drilling HTTP/1.1" 500 311
+ERROR 2024-12-11 22:09:59,714 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:59,714 exceptions 58104 6194720768 Unhandled Exception: FieldError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py", line 607, in get_queryset
+    queryset = queryset.filter(
+               ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1404, in build_filter
+    return self._add_q(
+           ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1426, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1236, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1724, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
+ERROR 2024-12-11 22:09:59,716 log 58104 6194720768 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:09:59,717 basehttp 58104 6194720768 "GET /api/production-logs/?page=1&ordering=-created_at&search=Drilling+ HTTP/1.1" 500 311

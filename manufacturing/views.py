@@ -596,8 +596,8 @@ class ProductionLogViewSet(viewsets.ModelViewSet):
     serializer_class = ProductionLogSerializer
     permission_classes = [permissions.AllowAny]
     pagination_class = StandardResultsSetPagination
-    filterset_fields = ['status', 'workstation__name', 'work_order__id']
-    search_fields = ['work_order__id', 'workstation__name', 'status']
+    filterset_fields = ['workstation__name', 'work_order__id']
+    search_fields = ['work_order__id', 'workstation__name', 'notes']
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -607,7 +607,8 @@ class ProductionLogViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(
                 Q(work_order__id__icontains=search_query) | 
                 Q(workstation__name__icontains=search_query) | 
-                Q(status__icontains=search_query)
+                Q(work_order__product__name__icontains=search_query) |
+                Q(notes__icontains=search_query)
             )
         
         return queryset
