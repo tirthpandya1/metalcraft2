@@ -5188,3 +5188,619 @@ Traceback (most recent call last):
   File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/serializers.py", line 57, in validate
     raise exceptions.AuthenticationFailed(
 rest_framework.exceptions.AuthenticationFailed: No active account found with the given credentials
+ERROR 2024-12-11 15:11:32,115 exceptions 16285 6213251072 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:11:32,115 exceptions 16285 6213251072 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:11:32,120 log 16285 6213251072 Internal Server Error: /api/workstation-efficiency/
+ERROR 2024-12-11 15:11:32,121 basehttp 16285 6213251072 "GET /api/workstation-efficiency/ HTTP/1.1" 500 156
+ERROR 2024-12-11 15:11:44,782 exceptions 16285 6230077440 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:11:44,782 exceptions 16285 6230077440 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:11:44,783 exceptions 16285 6246903808 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:11:44,795 log 16285 6230077440 Internal Server Error: /api/workstation-efficiency/
+ERROR 2024-12-11 15:11:44,783 exceptions 16285 6246903808 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:11:44,796 basehttp 16285 6230077440 "GET /api/workstation-efficiency/ HTTP/1.1" 500 156
+ERROR 2024-12-11 15:11:44,799 log 16285 6246903808 Internal Server Error: /api/workstation-efficiency/
+ERROR 2024-12-11 15:11:44,800 basehttp 16285 6246903808 "GET /api/workstation-efficiency/ HTTP/1.1" 500 156
+ERROR 2024-12-11 15:11:54,939 exceptions 16285 6230077440 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:11:54,939 exceptions 16285 6230077440 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:11:54,942 log 16285 6230077440 Internal Server Error: /api/workstation-efficiency/
+ERROR 2024-12-11 15:11:54,943 exceptions 16285 6213251072 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:11:54,945 basehttp 16285 6230077440 "GET /api/workstation-efficiency/ HTTP/1.1" 500 156
+ERROR 2024-12-11 15:11:54,943 exceptions 16285 6213251072 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:11:54,949 log 16285 6213251072 Internal Server Error: /api/workstation-efficiency/
+ERROR 2024-12-11 15:11:54,950 basehttp 16285 6213251072 "GET /api/workstation-efficiency/ HTTP/1.1" 500 156
+ERROR 2024-12-11 15:14:12,650 exceptions 16285 6213251072 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:14:12,650 exceptions 16285 6213251072 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:14:12,651 exceptions 16285 6246903808 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:14:12,653 log 16285 6213251072 Internal Server Error: /api/workstation-efficiency/
+ERROR 2024-12-11 15:14:12,651 exceptions 16285 6246903808 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:14:12,656 log 16285 6246903808 Internal Server Error: /api/workstation-efficiency/
+ERROR 2024-12-11 15:14:12,657 basehttp 16285 6246903808 "GET /api/workstation-efficiency/ HTTP/1.1" 500 156
+ERROR 2024-12-11 15:14:12,657 basehttp 16285 6213251072 "GET /api/workstation-efficiency/ HTTP/1.1" 500 156
+ERROR 2024-12-11 15:15:08,244 exceptions 16586 6215446528 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:15:08,248 exceptions 16586 6249099264 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:15:08,244 exceptions 16586 6215446528 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:15:08,248 exceptions 16586 6249099264 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:15:08,252 log 16586 6215446528 Internal Server Error: /api/workstation-efficiency/
+ERROR 2024-12-11 15:15:08,253 log 16586 6249099264 Internal Server Error: /api/workstation-efficiency/
+ERROR 2024-12-11 15:15:08,254 basehttp 16586 6215446528 "GET /api/workstation-efficiency/ HTTP/1.1" 500 156
+ERROR 2024-12-11 15:15:08,255 basehttp 16586 6249099264 "GET /api/workstation-efficiency/ HTTP/1.1" 500 156
+ERROR 2024-12-11 15:16:15,648 exceptions 16672 6150156288 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:16:15,652 exceptions 16672 6183809024 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:16:15,648 exceptions 16672 6150156288 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:16:15,652 exceptions 16672 6183809024 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 1838, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 567, in get_efficiency_percentage
+    efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+                               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+ERROR 2024-12-11 15:16:15,655 log 16672 6150156288 Internal Server Error: /api/workstation-efficiency/
+ERROR 2024-12-11 15:16:15,655 log 16672 6183809024 Internal Server Error: /api/workstation-efficiency/
+ERROR 2024-12-11 15:16:15,655 basehttp 16672 6150156288 "GET /api/workstation-efficiency/ HTTP/1.1" 500 156
+ERROR 2024-12-11 15:16:15,655 basehttp 16672 6183809024 "GET /api/workstation-efficiency/ HTTP/1.1" 500 156

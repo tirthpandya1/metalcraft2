@@ -519,11 +519,16 @@ class WorkstationProcessSerializer(serializers.ModelSerializer):
         read_only_fields = ['id', 'created_at', 'updated_at']
 
 class WorkstationEfficiencyMetricSerializer(serializers.ModelSerializer):
-    """
-    Serializer for WorkstationEfficiencyMetric model
+    """Serializer for WorkstationEfficiencyMetric model
     Provides comprehensive efficiency tracking
     """
     workstation_name = serializers.CharField(source='workstation.name', read_only=True)
+    
+    # Computed efficiency percentage
+    efficiency_percentage = serializers.SerializerMethodField(read_only=True)
+    
+    # Performance category based on efficiency
+    performance_category = serializers.SerializerMethodField(read_only=True)
     
     class Meta:
         model = WorkstationEfficiencyMetric
@@ -540,9 +545,40 @@ class WorkstationEfficiencyMetricSerializer(serializers.ModelSerializer):
             'timestamp',
             'idle_time_percentage', 
             'material_wastage_percentage', 
-            'defect_rate'
+            'defect_rate',
+            'efficiency_percentage',
+            'performance_category'
         ]
-        read_only_fields = ['id', 'timestamp', 'idle_time_percentage', 'material_wastage_percentage', 'defect_rate']
+        read_only_fields = [
+            'id', 'timestamp', 'idle_time_percentage', 
+            'material_wastage_percentage', 'defect_rate',
+            'efficiency_percentage', 'performance_category'
+        ]
+    
+    def get_efficiency_percentage(self, obj):
+        """Calculate overall efficiency percentage"""
+        # Combine multiple metrics into a single efficiency score
+        # Lower idle time, material wastage, and defect rate means higher efficiency
+        idle_penalty = float(obj.idle_time_percentage)
+        wastage_penalty = float(obj.material_wastage_percentage)
+        defect_penalty = float(obj.defect_rate)
+        
+        # Calculate efficiency: start at 100 and subtract penalties
+        efficiency = max(0, 100 - (idle_penalty + wastage_penalty + defect_penalty))
+        return round(efficiency, 2)
+    
+    def get_performance_category(self, obj):
+        """Categorize performance based on efficiency percentage"""
+        efficiency = self.get_efficiency_percentage(obj)
+        
+        if efficiency >= 90:
+            return 'HIGH'
+        elif efficiency >= 70:
+            return 'STANDARD'
+        elif efficiency >= 50:
+            return 'LOW'
+        else:
+            return 'CRITICAL'
 
 class ProductionDesignSerializer(serializers.ModelSerializer):
     """
