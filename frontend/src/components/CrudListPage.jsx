@@ -31,6 +31,7 @@ import {
   ArrowDownward as ArrowDownwardIcon,
 } from '@mui/icons-material';
 import { productService } from '../services/api';  
+import { materialService } from '../services/api';
 import { handleApiError } from '../utils/errorHandler';
 
 export const withCrudList = (
@@ -50,6 +51,9 @@ export const withCrudList = (
     const [dynamicOptions, setDynamicOptions] = useState({
       products: []
     });
+
+    // Add state for materials
+    const [materials, setMaterials] = useState([]);
 
     // Sorting state
     const [sortConfig, setSortConfig] = useState({
@@ -157,6 +161,19 @@ export const withCrudList = (
         setIsLoading(false);
       }
     };
+
+    // Fetch materials when component mounts
+    useEffect(() => {
+      const fetchMaterials = async () => {
+        try {
+          const materialsResponse = await materialService.getAll();
+          setMaterials(materialsResponse);
+        } catch (error) {
+          console.error('Failed to fetch materials:', error);
+        }
+      };
+      fetchMaterials();
+    }, []);
 
     // Handle add/edit item
     const handleSaveItem = async () => {
@@ -499,54 +516,28 @@ export const withCrudList = (
         <Dialog 
           open={openDialog} 
           onClose={() => setOpenDialog(false)} 
-          maxWidth="md" 
+          maxWidth="md"
           fullWidth
-          className="dark-theme"
         >
-          <DialogTitle className="text-foreground">
-            {currentItem?.id ? `Edit ${fullConfig.entityName}` : `Add ${fullConfig.entityName}`}
+          <DialogTitle>
+            {currentItem && currentItem.id ? `Edit ${fullConfig.entityName}` : `Add ${fullConfig.entityName}`}
           </DialogTitle>
           <DialogContent>
-            {fullConfig.dialogFields.map((field) => {
-              // Log the options for select fields
-              if (field.type === 'select') {
-                console.log(`Options for ${field.key}:`, field.options);
-              }
-
-              return (
-                <TextField
-                  key={field.key}
-                  fullWidth
-                  margin="normal"
-                  label={field.label}
-                  type={field.type === 'select' ? 'text' : field.type || 'text'}
-                  select={field.type === 'select'}
-                  multiline={field.multiline}
-                  rows={field.multiline ? 3 : undefined}
-                  value={currentItem?.[field.key] || ''}
-                  onChange={(e) => setCurrentItem(prev => ({
-                    ...prev,
-                    [field.key]: e.target.value
-                  }))}
-                  className="text-foreground"
-                >
-                  {field.type === 'select' && field.options && field.options.map((option) => (
-                    <MenuItem 
-                      key={option.value} 
-                      value={option.value}
-                    >
-                      {option.label}
-                    </MenuItem>
-                  ))}
-                </TextField>
-              );
-            })}
+            <WrappedComponent 
+              item={currentItem || fullConfig.defaultItem} 
+              onItemChange={setCurrentItem}
+              materials={materials}  
+            />
           </DialogContent>
           <DialogActions>
-            <Button onClick={() => setOpenDialog(false)} color="secondary" className="btn btn-secondary px-4 py-2">
+            <Button onClick={() => setOpenDialog(false)} color="secondary">
               Cancel
             </Button>
-            <Button onClick={handleSaveItem} color="primary" variant="contained" className="btn btn-primary px-4 py-2">
+            <Button 
+              onClick={handleSaveItem} 
+              color="primary" 
+              variant="contained"
+            >
               Save
             </Button>
           </DialogActions>
