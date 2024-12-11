@@ -209,10 +209,27 @@ export const withCrudList = (
         const cleanData = fullConfig.dialogFields.reduce((data, field) => {
           const value = currentItem[field.key];
           
+          // Always include required fields, even if null/undefined
+          if (field.required) {
+            if (value === undefined || value === null) {
+              // If a required field is missing, throw an error
+              throw new Error(`${field.label} is required`);
+            }
+            data[field.key] = value;
+            return data;
+          }
+          
           // Skip undefined or null values for optional fields
           if (value === undefined || value === null) {
-            if (!field.required) return data;
             return data;
+          }
+
+          // Perform custom validation if exists
+          if (field.validate) {
+            const validationError = field.validate(value);
+            if (validationError) {
+              throw new Error(validationError);
+            }
           }
 
           // Convert to appropriate type
@@ -223,6 +240,18 @@ export const withCrudList = (
                 data[field.key] = numValue;
               }
               break;
+            case 'select':
+              // Validate against options if it's a select field
+              if (field.options && field.options.length > 0) {
+                const validOption = field.options.some(option => 
+                  option.value === value || option.label === value
+                );
+                if (!validOption) {
+                  throw new Error(`Invalid option for ${field.label}`);
+                }
+                data[field.key] = value;
+              }
+              break;
             case 'text':
             default:
               data[field.key] = value;
@@ -230,6 +259,8 @@ export const withCrudList = (
           
           return data;
         }, {});
+
+        console.log('Clean data for save:', cleanData);
 
         if (currentItem.id) {
           // Update existing item
@@ -523,11 +554,12 @@ export const withCrudList = (
             {currentItem && currentItem.id ? `Edit ${fullConfig.entityName}` : `Add ${fullConfig.entityName}`}
           </DialogTitle>
           <DialogContent>
-            <WrappedComponent 
-              item={currentItem || fullConfig.defaultItem} 
-              onItemChange={setCurrentItem}
-              materials={materials}  
-            />
+            {WrappedComponent && (
+              <WrappedComponent 
+                item={currentItem || fullConfig.defaultItem} 
+                onItemChange={setCurrentItem}
+              />
+            )}
           </DialogContent>
           <DialogActions>
             <Button onClick={() => setOpenDialog(false)} color="secondary">

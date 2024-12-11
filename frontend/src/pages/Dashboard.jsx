@@ -160,18 +160,18 @@ function Dashboard() {
                     />
                     <YAxis 
                       label={{ 
-                        value: 'Avg Quantity', 
+                        value: 'Total Quantity', 
                         angle: -90, 
                         position: 'insideLeft' 
                       }} 
                     />
                     <ChartTooltip 
                       labelFormatter={(label) => `Date: ${label}`}
-                      formatter={(value) => [`${value.toFixed(2)} units`, 'Avg Quantity']}
+                      formatter={(value) => [`${value.toFixed(2)} units`, 'Total Quantity']}
                     />
                     <Line 
                       type="monotone" 
-                      dataKey="avg_quantity" 
+                      dataKey="total_quantity" 
                       stroke="#8884d8" 
                       activeDot={{ r: 8 }}
                     />

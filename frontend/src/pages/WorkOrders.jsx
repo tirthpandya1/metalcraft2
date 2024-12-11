@@ -1,11 +1,74 @@
 import React, { useState, useEffect } from 'react';
-import { Chip, MenuItem, TextField } from '@mui/material';
+import { 
+  Chip, 
+  MenuItem, 
+  TextField, 
+  CircularProgress, 
+  Select 
+} from '@mui/material';
+import { toast } from 'react-toastify';
 import { workOrderService, productService } from '../services/api';
 import { withCrudList } from '../components/CrudListPage';
 import { handleApiError, withErrorHandling } from '../utils/errorHandler';
 
+// Status transition mapping for display and color
+const STATUS_TRANSITION_MAP = {
+  'PENDING': [
+    { status: 'QUEUED', label: 'Queue', color: 'primary' },
+    { status: 'READY', label: 'Mark Ready', color: 'success' },
+    { status: 'CANCELLED', label: 'Cancel', color: 'error' }
+  ],
+  'QUEUED': [
+    { status: 'READY', label: 'Mark Ready', color: 'success' },
+    { status: 'CANCELLED', label: 'Cancel', color: 'error' }
+  ],
+  'READY': [
+    { status: 'IN_PROGRESS', label: 'Start', color: 'primary' },
+    { status: 'CANCELLED', label: 'Cancel', color: 'error' }
+  ],
+  'IN_PROGRESS': [
+    { status: 'PAUSED', label: 'Pause', color: 'warning' },
+    { status: 'COMPLETED', label: 'Complete', color: 'success' },
+    { status: 'BLOCKED', label: 'Block', color: 'error' },
+    { status: 'CANCELLED', label: 'Cancel', color: 'error' }
+  ],
+  'PAUSED': [
+    { status: 'IN_PROGRESS', label: 'Resume', color: 'primary' },
+    { status: 'CANCELLED', label: 'Cancel', color: 'error' }
+  ],
+  'BLOCKED': [
+    { status: 'READY', label: 'Unblock', color: 'success' },
+    { status: 'CANCELLED', label: 'Cancel', color: 'error' }
+  ],
+  'COMPLETED': [],
+  'CANCELLED': []
+};
+
 // Work Order Form Component
-function WorkOrderForm({ item, onItemChange, products }) {
+const WorkOrderForm = React.memo(({ item, onItemChange }) => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await productService.getAll();
+        console.log('Products response:', response);
+        setProducts(Array.isArray(response) ? response : (response.data || []));
+      } catch (error) {
+        handleApiError(error);
+        setProducts([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
+
+  if (loading) {
+    return <CircularProgress />;
+  }
+
   return (
     <>
       <TextField
@@ -13,10 +76,10 @@ function WorkOrderForm({ item, onItemChange, products }) {
         margin="normal"
         label="Product"
         select
-        value={item.product?.id || ''}
+        value={item.product || ''}
         onChange={(e) => onItemChange(prev => ({
           ...prev,
-          product: products.find(p => p.id === e.target.value)
+          product: e.target.value
         }))}
         required
       >
@@ -100,7 +163,7 @@ function WorkOrderForm({ item, onItemChange, products }) {
       />
     </>
   );
-}
+});
 
 // Configuration for Work Orders CRUD page
 const workOrderConfig = {
@@ -114,28 +177,31 @@ const workOrderConfig = {
     priority: 'MEDIUM',
     notes: ''
   },
-  searchFields: [
-    'product_name',  // Explicitly search product name
-    'notes',         // Search notes
-    'status',        // Search by status
-    'priority'       // Search by priority
-  ],
   dialogFields: [
-    { 
-      key: 'product', 
+    {
+      key: 'product',
       label: 'Product',
       type: 'select',
-      options: [] // This will be populated dynamically
+      required: true,
+      options: [] // Will be populated dynamically
     },
-    { 
-      key: 'quantity', 
+    {
+      key: 'quantity',
       label: 'Quantity',
-      type: 'number'
+      type: 'number',
+      required: true,
+      validate: (value) => {
+        if (!value || value <= 0) {
+          return 'Quantity must be greater than zero';
+        }
+        return null;
+      }
     },
-    { 
-      key: 'status', 
+    {
+      key: 'status',
       label: 'Status',
       type: 'select',
+      required: false,
       options: [
         { value: 'PENDING', label: 'Pending' },
         { value: 'QUEUED', label: 'Queued' },
@@ -147,10 +213,11 @@ const workOrderConfig = {
         { value: 'BLOCKED', label: 'Blocked' }
       ]
     },
-    { 
-      key: 'priority', 
+    {
+      key: 'priority',
       label: 'Priority',
       type: 'select',
+      required: false,
       options: [
         { value: 'LOW', label: 'Low Priority' },
         { value: 'MEDIUM', label: 'Medium Priority' },
@@ -162,8 +229,14 @@ const workOrderConfig = {
       key: 'notes',
       label: 'Notes',
       type: 'text',
-      multiline: true
+      required: false
     }
+  ],
+  searchFields: [
+    'product_name',
+    'notes',
+    'status',
+    'priority'
   ],
   columns: [
     { 
@@ -178,18 +251,71 @@ const workOrderConfig = {
     { 
       key: 'status', 
       label: 'Status',
-      render: (item) => (
-        <Chip 
-          label={item.status} 
-          color={
-            item.status === 'COMPLETED' ? 'success' : 
-            item.status === 'IN_PROGRESS' ? 'primary' : 
-            item.status === 'BLOCKED' ? 'error' : 
-            'default'
+      render: (item, { fetchItems }) => {
+        // Get possible transitions for the current status
+        const transitions = STATUS_TRANSITION_MAP[item.status] || [];
+        
+        // Determine chip color based on status
+        const getStatusColor = (status) => {
+          switch (status) {
+            case 'COMPLETED': return 'success';
+            case 'IN_PROGRESS': return 'primary';
+            case 'BLOCKED': return 'error';
+            case 'CANCELLED': return 'default';
+            case 'PAUSED': return 'warning';
+            default: return 'default';
           }
-          size="small"
-        />
-      )
+        };
+
+        // If no transitions are possible, render a static chip
+        if (transitions.length === 0) {
+          return (
+            <Chip 
+              label={item.status} 
+              color={getStatusColor(item.status)}
+              size="small"
+            />
+          );
+        }
+
+        // Render a chip with dropdown for status transitions
+        return (
+          <Select
+            value={item.status}
+            size="small"
+            renderValue={() => (
+              <Chip 
+                label={item.status} 
+                color={getStatusColor(item.status)}
+                size="small"
+              />
+            )}
+            onChange={(e) => {
+              const newStatus = e.target.value;
+              workOrderService.update(item.id, { status: newStatus })
+                .then(() => {
+                  fetchItems();
+                  toast.success(`Work Order ${item.id} transitioned to ${newStatus}`);
+                })
+                .catch(handleApiError);
+            }}
+            style={{ minWidth: 120 }}
+          >
+            {transitions.map(transition => (
+              <MenuItem 
+                key={transition.status} 
+                value={transition.status}
+              >
+                <Chip 
+                  label={transition.label} 
+                  color={transition.color} 
+                  size="small" 
+                />
+              </MenuItem>
+            ))}
+          </Select>
+        );
+      }
     },
     { 
       key: 'priority', 
@@ -210,11 +336,7 @@ const workOrderConfig = {
   ]
 };
 
-// Export Work Orders page with CrudListPage HOC and Error Handling
+// Wrap the form with CRUD functionality and error handling
 export default withErrorHandling(
-  withCrudList(
-    WorkOrderForm, 
-    workOrderService, 
-    workOrderConfig
-  )
+  withCrudList(WorkOrderForm, workOrderService, workOrderConfig)
 );
