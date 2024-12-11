@@ -27,6 +27,7 @@ function ProductionLogs() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [dateFilter, setDateFilter] = useState(null);
 
   const fetchProductionLogs = async (pageNum = 1) => {
     try {
@@ -47,7 +48,11 @@ function ProductionLogs() {
       const params = { 
         page: pageNum, 
         ordering: order === 'desc' ? `-${mappedOrderBy}` : mappedOrderBy,
-        search: searchTerm
+        search: searchTerm,
+        // Only send date if it's a valid date
+        ...(dateFilter && dateFilter instanceof Date 
+          ? { date: formatDate(dateFilter, 'yyyy-MM-dd') } 
+          : {})
       };
       
       const response = await productionLogService.getAll(params);
@@ -89,7 +94,7 @@ function ProductionLogs() {
 
   useEffect(() => {
     fetchProductionLogs(page);
-  }, [page, orderBy, order, searchTerm]);
+  }, [page, orderBy, order, searchTerm, dateFilter]);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -110,6 +115,28 @@ function ProductionLogs() {
 
   const handlePageChange = (newPage) => {
     setPage(newPage);
+  };
+
+  const handleDateFilterChange = (event) => {
+    const selectedDate = event.target.value;
+    
+    // Convert string to Date object
+    const dateObj = selectedDate ? new Date(selectedDate) : null;
+    
+    setDateFilter(dateObj);
+    setPage(1);
+  };
+
+  // Helper function to format date for input field
+  const formatDateForInput = (date) => {
+    if (!date) return '';
+    
+    const d = new Date(date);
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    
+    return `${year}-${month}-${day}`;
   };
 
   const renderTableHeader = () => {
@@ -155,6 +182,16 @@ function ProductionLogs() {
             value={searchTerm}
             onChange={handleSearchChange}
             placeholder="Search by work order, machine, or status"
+          />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <TextField
+            fullWidth
+            variant="outlined"
+            label="Date Filter"
+            type="date"
+            value={formatDateForInput(dateFilter)}
+            onChange={handleDateFilterChange}
           />
         </Grid>
       </Grid>

@@ -19,6 +19,7 @@ from .serializers import (
 import logging
 from django.db.models import Q
 from rest_framework.pagination import PageNumberPagination
+from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
@@ -601,6 +602,22 @@ class ProductionLogViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         queryset = super().get_queryset()
+        
+        # Get today's date in the current timezone
+        today = timezone.now().date()
+        
+        # Optional date filtering from query params
+        date_param = self.request.query_params.get('date', None)
+        if date_param:
+            try:
+                today = datetime.strptime(date_param, '%Y-%m-%d').date()
+            except ValueError:
+                # Fallback to current date if parsing fails
+                today = timezone.now().date()
+        
+        # Filter for logs on the specified date
+        queryset = queryset.filter(created_at__date=today)
+        
         search_query = self.request.query_params.get('search', None)
         
         if search_query:
@@ -612,21 +629,6 @@ class ProductionLogViewSet(viewsets.ModelViewSet):
             )
         
         return queryset
-
-    @action(detail=False, methods=['GET'])
-    def production_stats(self, request):
-        """
-        Provide comprehensive production statistics
-        """
-        total_logs = self.get_queryset().count()
-        status_breakdown = self.get_queryset().values('status').annotate(
-            count=Count('status')
-        )
-        
-        return Response({
-            'total_logs': total_logs,
-            'status_breakdown': {item['status']: item['count'] for item in status_breakdown}
-        })
 
 class WorkstationProcessViewSet(viewsets.ModelViewSet):
     """

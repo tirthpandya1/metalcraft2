@@ -14263,3 +14263,34 @@ Traceback (most recent call last):
 django.core.exceptions.FieldError: Cannot resolve keyword 'status' into field. Choices are: created_at, created_by, created_by_id, efficiency_rate, id, notes, quantity_produced, updated_at, wastage, work_order, work_order_id, workstation, workstation_id
 ERROR 2024-12-11 22:09:59,716 log 58104 6194720768 Internal Server Error: /api/production-logs/
 ERROR 2024-12-11 22:09:59,717 basehttp 58104 6194720768 "GET /api/production-logs/?page=1&ordering=-created_at&search=Drilling+ HTTP/1.1" 500 311
+ERROR 2024-12-11 22:25:19,412 serializers 59242 6208598016 Material shortage when creating work order: [{'material_name': 'Aluminium Sheet', 'material_id': 10, 'required_quantity': Decimal('2000.0000'), 'available_quantity': Decimal('200.00'), 'shortage_percentage': Decimal('90.0')}]
+ERROR 2024-12-11 22:25:19,412 exceptions 59242 6208598016 Unhandled Exception: MaterialShortageAPIException
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 406, in create
+    raise MaterialShortageAPIException(
+manufacturing.serializers.MaterialShortageAPIException: {'type': ErrorDetail(string='MaterialShortageError', code='material_shortage'), 'message': ErrorDetail(string='Insufficient materials to create work order', code='material_shortage'), 'material_details': [{'material_name': ErrorDetail(string='Aluminium Sheet', code='material_shortage'), 'material_id': ErrorDetail(string='10', code='material_shortage'), 'required_quantity': ErrorDetail(string='2000.0000', code='material_shortage'), 'available_quantity': ErrorDetail(string='200.00', code='material_shortage'), 'shortage_percentage': ErrorDetail(string='90.0', code='material_shortage')}]}
+ERROR 2024-12-11 22:25:19,412 exceptions 59242 6208598016 Unhandled Exception: MaterialShortageAPIException
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 406, in create
+    raise MaterialShortageAPIException(
+manufacturing.serializers.MaterialShortageAPIException: {'type': ErrorDetail(string='MaterialShortageError', code='material_shortage'), 'message': ErrorDetail(string='Insufficient materials to create work order', code='material_shortage'), 'material_details': [{'material_name': ErrorDetail(string='Aluminium Sheet', code='material_shortage'), 'material_id': ErrorDetail(string='10', code='material_shortage'), 'required_quantity': ErrorDetail(string='2000.0000', code='material_shortage'), 'available_quantity': ErrorDetail(string='200.00', code='material_shortage'), 'shortage_percentage': ErrorDetail(string='90.0', code='material_shortage')}]}
