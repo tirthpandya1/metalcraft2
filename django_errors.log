@@ -4304,3 +4304,507 @@ Traceback (most recent call last):
   File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
     raise ValidationError(self.errors)
 rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:33,541 exceptions 5459 6236778496 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:33,541 exceptions 5459 6236778496 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:33,548 exceptions 5459 6219952128 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:33,551 exceptions 5459 6253604864 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:33,548 exceptions 5459 6219952128 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:33,551 exceptions 5459 6253604864 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:33,552 exceptions 5459 6270431232 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:33,552 exceptions 5459 6270431232 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:33,558 exceptions 5459 6219952128 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:33,559 exceptions 5459 6236778496 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:33,559 exceptions 5459 6253604864 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:33,558 exceptions 5459 6219952128 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:33,560 exceptions 5459 6270431232 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:33,560 exceptions 5459 6287257600 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:33,559 exceptions 5459 6236778496 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:33,561 exceptions 5459 6304083968 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:33,559 exceptions 5459 6253604864 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:33,560 exceptions 5459 6270431232 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:33,560 exceptions 5459 6287257600 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:33,561 exceptions 5459 6304083968 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:33,597 exceptions 5459 6219952128 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:33,597 exceptions 5459 6219952128 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:33,602 exceptions 5459 6219952128 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:33,602 exceptions 5459 6219952128 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:42,279 exceptions 5459 12901707776 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:42,279 exceptions 5459 12901707776 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:42,283 exceptions 5459 6219952128 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:42,285 exceptions 5459 6236778496 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:42,283 exceptions 5459 6219952128 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:42,288 exceptions 5459 6253604864 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:42,285 exceptions 5459 6236778496 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:42,289 exceptions 5459 6270431232 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:42,290 exceptions 5459 6304083968 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:42,288 exceptions 5459 6253604864 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:42,289 exceptions 5459 6270431232 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:42,290 exceptions 5459 6304083968 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:42,294 exceptions 5459 6219952128 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:42,294 exceptions 5459 6219952128 Unhandled Exception: NotAuthenticated
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 415, in initial
+    self.check_permissions(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 333, in check_permissions
+    self.permission_denied(
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 174, in permission_denied
+    raise exceptions.NotAuthenticated()
+rest_framework.exceptions.NotAuthenticated: Authentication credentials were not provided.
+ERROR 2024-12-11 13:22:42,302 exceptions 5459 6219952128 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:42,306 exceptions 5459 6236778496 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:42,306 exceptions 5459 6236778496 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:42,302 exceptions 5459 6219952128 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:42,315 exceptions 5459 6236778496 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:42,315 exceptions 5459 6236778496 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:42,317 exceptions 5459 6219952128 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:42,317 exceptions 5459 6219952128 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:42,323 exceptions 5459 6253604864 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}
+ERROR 2024-12-11 13:22:42,323 exceptions 5459 6253604864 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'refresh': [ErrorDetail(string='This field may not be null.', code='null')]}

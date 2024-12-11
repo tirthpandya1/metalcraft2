@@ -35,19 +35,19 @@ export const authService = {
   // Login user
   async login(username, password) {
     try {
-      const response = await api.post('/auth/login/', { 
+      const response = await api.post('/token/', { 
         username, 
         password 
       });
       
-      // Ensure we store the token correctly
-      const token = response.data.token || response.data.key;
-      localStorage.setItem('token', token);
+      // Store tokens correctly for SimpleJWT
+      localStorage.setItem('access_token', response.data.access);
+      localStorage.setItem('refresh_token', response.data.refresh);
       
       // Store user info
       this.setCurrentUser({
         ...response.data.user,
-        token
+        access_token: response.data.access
       });
       
       return response.data;
@@ -57,13 +57,41 @@ export const authService = {
     }
   },
 
+  // Refresh token method
+  async refreshToken() {
+    try {
+      const refreshToken = localStorage.getItem('refresh_token');
+      if (!refreshToken) {
+        throw new Error('No refresh token available');
+      }
+
+      const response = await api.post('/token/refresh/', { 
+        refresh: refreshToken 
+      });
+
+      // Update access token
+      localStorage.setItem('access_token', response.data.access);
+      return response.data.access;
+    } catch (error) {
+      console.error('Token refresh error:', error);
+      // Logout user if refresh fails
+      this.clearCurrentUser();
+      throw error;
+    }
+  },
+
   // Logout user
   async logout() {
     try {
-      await api.post('/auth/logout/');
+      // Optionally invalidate the refresh token on the server if needed
+      await api.post('/auth/logout/', {
+        refresh_token: localStorage.getItem('refresh_token')
+      });
       this.clearCurrentUser();
     } catch (error) {
       console.error('Logout error:', error);
+      // Clear local tokens even if server logout fails
+      this.clearCurrentUser();
     }
   },
 
@@ -81,21 +109,22 @@ export const authService = {
   // Clear current user from localStorage
   clearCurrentUser() {
     localStorage.removeItem('user');
-    localStorage.removeItem('token');
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('refresh_token');
   },
 
   // Check if user is authenticated
   isAuthenticated() {
-    return !!localStorage.getItem('token');
+    return !!localStorage.getItem('access_token');
   }
 };
 
 // API Request Interceptor
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('access_token');
     if (token) {
-      config.headers['Authorization'] = `Token ${token}`;
+      config.headers['Authorization'] = `Bearer ${token}`;
     }
     return config;
   },
@@ -107,13 +136,24 @@ api.interceptors.request.use(
 // API Response Interceptor
 api.interceptors.response.use(
   (response) => response,
-  (error) => {
-    // Handle 401 (Unauthorized) errors
-    if (error.response && error.response.status === 401) {
-      // Token might be expired or invalid
-      authService.clearCurrentUser();
-      window.location.href = '/login';
+  async (error) => {
+    const originalRequest = error.config;
+
+    // If the error is due to an unauthorized access and we haven't retried yet
+    if (error.response?.status === 401 && !originalRequest._retry) {
+      originalRequest._retry = true;
+      try {
+        const newAccessToken = await authService.refreshToken();
+        originalRequest.headers['Authorization'] = `Bearer ${newAccessToken}`;
+        return axios(originalRequest);
+      } catch (refreshError) {
+        // Refresh failed, force logout
+        authService.clearCurrentUser();
+        window.location.href = '/login';
+        return Promise.reject(refreshError);
+      }
     }
+
     return Promise.reject(error);
   }
 );
