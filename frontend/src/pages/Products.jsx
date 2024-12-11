@@ -1,18 +1,97 @@
-import React from 'react';
-import { withCrudList } from '../components/CrudListPage';
+import React, { useState, useEffect } from 'react';
+import { Chip, MenuItem, TextField } from '@mui/material';
 import { productService } from '../services/api';
+import { withCrudList } from '../components/CrudListPage';
+import { handleApiError, withErrorHandling } from '../utils/errorHandler';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { Grid, Card, CardContent, CardActions, Typography, Box, Chip, Tooltip, IconButton } from '@mui/material';
+import { Grid, Card, CardContent, CardActions, Typography, Box, Tooltip, IconButton } from '@mui/material';
 
-// Configuration for Products page
+// Product Form Component
+function ProductForm({ item, onItemChange }) {
+  return (
+    <>
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Name"
+        value={item.name || ''}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          name: e.target.value
+        }))}
+        required
+      />
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Description"
+        multiline
+        rows={3}
+        value={item.description || ''}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          description: e.target.value
+        }))}
+      />
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Category"
+        select
+        value={item.category || 'STANDARD'}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          category: e.target.value
+        }))}
+      >
+        {[
+          { value: 'STANDARD', label: 'Standard Product' },
+          { value: 'CUSTOM', label: 'Custom Product' },
+          { value: 'PROTOTYPE', label: 'Prototype' }
+        ].map((option) => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
+      </TextField>
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Unit Price"
+        type="number"
+        value={item.unit_price || ''}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          unit_price: e.target.value
+        }))}
+      />
+    </>
+  );
+}
+
+// Configuration for Products CRUD page
 const productsConfig = {
   entityName: 'Product',
   pageTitle: 'Products',
   defaultSortKey: 'name',
   addButtonIcon: <AddIcon />,
-  searchFields: ['name', 'description'],
+  renderView: 'card', // Explicitly set to card view
+  defaultItem: {
+    name: '',
+    description: '',
+    category: 'STANDARD',
+    unit_price: 0,
+    current_quantity: '',
+    max_stock_level: '',
+    stock_status: 'IN_STOCK'
+  },
+  searchFields: [
+    'name',
+    'description',
+    'category'
+  ],
   dialogFields: [
     { 
       key: 'name', 
@@ -24,8 +103,23 @@ const productsConfig = {
       key: 'description', 
       label: 'Description',
       type: 'text',
-      required: false,
-      multiline: true
+      multiline: true,
+      required: false
+    },
+    { 
+      key: 'category', 
+      label: 'Category',
+      type: 'select',
+      options: [
+        { value: 'STANDARD', label: 'Standard Product' },
+        { value: 'CUSTOM', label: 'Custom Product' },
+        { value: 'PROTOTYPE', label: 'Prototype' }
+      ]
+    },
+    { 
+      key: 'unit_price', 
+      label: 'Unit Price',
+      type: 'number'
     },
     { 
       key: 'current_quantity', 
@@ -97,6 +191,8 @@ const productsConfig = {
   columns: [
     { key: 'name', label: 'Name' },
     { key: 'description', label: 'Description' },
+    { key: 'category', label: 'Category' },
+    { key: 'unit_price', label: 'Unit Price' },
     { key: 'current_quantity', label: 'Current Quantity' },
     { key: 'max_stock_level', label: 'Max Stock Level' },
     { 
@@ -114,21 +210,14 @@ const productsConfig = {
         />
       )
     }
-  ],
-  defaultItem: {
-    name: '',
-    description: '',
-    current_quantity: '',
-    max_stock_level: '',
-    stock_status: 'IN_STOCK'
-  }
+  ]
 };
 
-export default function ProductsPage() {
-  const ProductsListComponent = withCrudList(null, productService, {
-    ...productsConfig,
-    renderView: 'card'
-  });
-
-  return <ProductsListComponent />;
-}
+// Export Products page with CrudListPage HOC and Error Handling
+export default withErrorHandling(
+  withCrudList(
+    ProductForm, 
+    productService, 
+    productsConfig
+  )
+);

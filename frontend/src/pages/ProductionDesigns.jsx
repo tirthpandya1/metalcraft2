@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { 
   Box, 
   Typography, 
@@ -10,128 +10,165 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  DialogActions
+  DialogActions,
+  Chip, 
+  MenuItem, 
+  TextField
 } from '@mui/material';
-import axios from 'axios';
+import { productionDesignService, productService } from '../services/api';
+import { withCrudList } from '../components/CrudListPage';
+import { handleApiError, withErrorHandling } from '../utils/errorHandler';
 
-const ProductionDesigns = () => {
-  const [designs, setDesigns] = useState([]);
-  const [selectedDesign, setSelectedDesign] = useState(null);
-  const [openDialog, setOpenDialog] = useState(false);
-
-  useEffect(() => {
-    const fetchDesigns = async () => {
-      try {
-        const response = await axios.get('/api/production-designs/');
-        console.log('Production Designs Response:', response);
-        
-        // Ensure designs is always an array
-        const designData = Array.isArray(response.data) ? response.data : 
-                            (response.data.results ? response.data.results : []);
-        
-        setDesigns(designData);
-      } catch (error) {
-        console.error('Error fetching production designs:', error);
-        setDesigns([]);
-      }
-    };
-
-    fetchDesigns();
-  }, []);
-
-  const handleViewDetails = (design) => {
-    setSelectedDesign(design);
-    setOpenDialog(true);
-  };
-
-  const handleCloseDialog = () => {
-    setOpenDialog(false);
-    setSelectedDesign(null);
-  };
-
-  const handleUploadDiagram = async (designId) => {
-    const fileInput = document.createElement('input');
-    fileInput.type = 'file';
-    fileInput.accept = '.pdf,.png,.jpg,.jpeg';
-    
-    fileInput.onchange = async (e) => {
-      const file = e.target.files[0];
-      const formData = new FormData();
-      formData.append('diagram', file);
-
-      try {
-        await axios.post(`/api/production-designs/${designId}/upload-diagram/`, formData, {
-          headers: {
-            'Content-Type': 'multipart/form-data'
-          }
-        });
-        alert('Diagram uploaded successfully!');
-      } catch (error) {
-        console.error('Error uploading diagram:', error);
-        alert('Failed to upload diagram');
-      }
-    };
-
-    fileInput.click();
-  };
-
+// Production Design Form Component
+function ProductionDesignForm({ item, onItemChange, products }) {
   return (
-    <Box sx={{ flexGrow: 1, p: 3 }}>
-      <Typography variant="h4" gutterBottom>
-        Production Designs
-      </Typography>
-
-      <Grid container spacing={3}>
-        {designs.map((design) => (
-          <Grid item xs={12} sm={6} md={4} key={design.id}>
-            <Card>
-              <CardMedia
-                component="img"
-                height="200"
-                image={design.design_file || '/default-design.png'}
-                alt={`Design for ${design.product_name}`}
-              />
-              <CardContent>
-                <Typography variant="h6">{design.product_name}</Typography>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
-                  <Button 
-                    variant="outlined" 
-                    color="primary"
-                    onClick={() => handleViewDetails(design)}
-                  >
-                    View Details
-                  </Button>
-                  <Button 
-                    variant="contained" 
-                    color="secondary"
-                    onClick={() => handleUploadDiagram(design.id)}
-                  >
-                    Upload Diagram
-                  </Button>
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
+    <>
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Name"
+        value={item.name || ''}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          name: e.target.value
+        }))}
+        required
+      />
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Description"
+        multiline
+        rows={3}
+        value={item.description || ''}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          description: e.target.value
+        }))}
+      />
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Product"
+        select
+        value={item.product?.id || ''}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          product: products.find(p => p.id === e.target.value)
+        }))}
+        required
+      >
+        {products.map((product) => (
+          <MenuItem key={product.id} value={product.id}>
+            {product.name}
+          </MenuItem>
         ))}
-      </Grid>
-
-      <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="md" fullWidth>
-        <DialogTitle>Design Details</DialogTitle>
-        <DialogContent>
-          {selectedDesign && (
-            <Box>
-              <Typography variant="subtitle1">Product: {selectedDesign.product_name}</Typography>
-              <Typography variant="subtitle1">Instruction Set:</Typography>
-              <pre>{JSON.stringify(selectedDesign.instruction_set, null, 2)}</pre>
-            </Box>
-          )}
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCloseDialog} color="primary">Close</Button>
-        </DialogActions>
-      </Dialog>
-    </Box>
+      </TextField>
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Status"
+        select
+        value={item.status || 'DRAFT'}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          status: e.target.value
+        }))}
+      >
+        {[
+          { value: 'DRAFT', label: 'Draft' },
+          { value: 'REVIEW', label: 'Under Review' },
+          { value: 'APPROVED', label: 'Approved' },
+          { value: 'REJECTED', label: 'Rejected' }
+        ].map((option) => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
+      </TextField>
+    </>
   );
+}
+
+// Configuration for Production Designs CRUD page
+const productionDesignConfig = {
+  entityName: 'Production Design',
+  pageTitle: 'Production Designs',
+  defaultSortKey: 'created_at',
+  defaultItem: {
+    name: '',
+    description: '',
+    product: null,
+    status: 'DRAFT'
+  },
+  searchFields: [
+    'name',
+    'description',
+    'product_name'
+  ],
+  dialogFields: [
+    { 
+      key: 'name', 
+      label: 'Name',
+      type: 'text'
+    },
+    { 
+      key: 'description', 
+      label: 'Description',
+      type: 'text',
+      multiline: true
+    },
+    { 
+      key: 'product', 
+      label: 'Product',
+      type: 'select',
+      options: [] // This will be populated dynamically
+    },
+    { 
+      key: 'status', 
+      label: 'Status',
+      type: 'select',
+      options: [
+        { value: 'DRAFT', label: 'Draft' },
+        { value: 'REVIEW', label: 'Under Review' },
+        { value: 'APPROVED', label: 'Approved' },
+        { value: 'REJECTED', label: 'Rejected' }
+      ]
+    }
+  ],
+  columns: [
+    { 
+      key: 'name', 
+      label: 'Name' 
+    },
+    { 
+      key: 'product_name', 
+      label: 'Product' 
+    },
+    { 
+      key: 'status', 
+      label: 'Status',
+      render: (item) => (
+        <Chip 
+          label={item.status} 
+          color={
+            item.status === 'APPROVED' ? 'success' : 
+            item.status === 'REVIEW' ? 'warning' : 
+            item.status === 'REJECTED' ? 'error' : 
+            'default'
+          }
+          size="small"
+        />
+      )
+    }
+  ]
 };
 
-export default ProductionDesigns;
+// Export Production Designs page with CrudListPage HOC and Error Handling
+export default withErrorHandling(
+  withCrudList(
+    ProductionDesignForm, 
+    productionDesignService, 
+    productionDesignConfig
+  )
+);

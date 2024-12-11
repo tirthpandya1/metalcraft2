@@ -31,6 +31,7 @@ import {
   CheckCircle as CheckCircleIcon
 } from '@mui/icons-material';
 import { formatRelativeTime } from '../utils/timeUtils';
+import { handleApiError, withErrorHandling } from '../utils/errorHandler';
 
 const WorkstationCard = ({ workstation, onEdit, onDelete }) => {
   const getStatusColor = (status) => {
@@ -108,16 +109,153 @@ const WorkstationCard = ({ workstation, onEdit, onDelete }) => {
   );
 };
 
-export default function WorkStations() {
+const WorkstationForm = ({ item, onItemChange }) => {
+  return (
+    <>
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Name"
+        value={item.name || ''}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          name: e.target.value
+        }))}
+        required
+      />
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Description"
+        multiline
+        rows={3}
+        value={item.description || ''}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          description: e.target.value
+        }))}
+      />
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Process Type"
+        select
+        value={item.process_type || 'MANUAL'}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          process_type: e.target.value
+        }))}
+      >
+        <MenuItem value="MANUAL">Manual</MenuItem>
+        <MenuItem value="AUTOMATIC">Automatic</MenuItem>
+      </TextField>
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Status"
+        select
+        value={item.status || 'INACTIVE'}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          status: e.target.value
+        }))}
+      >
+        <MenuItem value="ACTIVE">Active</MenuItem>
+        <MenuItem value="INACTIVE">Inactive</MenuItem>
+        <MenuItem value="MAINTENANCE">Maintenance</MenuItem>
+      </TextField>
+    </>
+  );
+};
+
+const workstationConfig = {
+  entityName: 'Workstation',
+  pageTitle: 'Workstations',
+  defaultSortKey: 'name',
+  defaultItem: {
+    name: '',
+    description: '',
+    process_type: 'MANUAL',
+    status: 'INACTIVE'
+  },
+  searchFields: [
+    'name',
+    'description',
+    'process_type',
+    'status'
+  ],
+  dialogFields: [
+    { 
+      key: 'name', 
+      label: 'Name',
+      type: 'text'
+    },
+    { 
+      key: 'description', 
+      label: 'Description',
+      type: 'text',
+      multiline: true
+    },
+    { 
+      key: 'process_type', 
+      label: 'Process Type',
+      type: 'select',
+      options: [
+        { value: 'MANUAL', label: 'Manual' },
+        { value: 'AUTOMATIC', label: 'Automatic' }
+      ]
+    },
+    { 
+      key: 'status', 
+      label: 'Status',
+      type: 'select',
+      options: [
+        { value: 'ACTIVE', label: 'Active' },
+        { value: 'INACTIVE', label: 'Inactive' },
+        { value: 'MAINTENANCE', label: 'Maintenance' }
+      ]
+    }
+  ],
+  columns: [
+    { 
+      key: 'name', 
+      label: 'Name' 
+    },
+    { 
+      key: 'process_type', 
+      label: 'Process Type',
+      render: (item) => (
+        <Chip 
+          label={item.process_type} 
+          color={item.process_type === 'AUTOMATIC' ? 'primary' : 'secondary'}
+          size="small"
+        />
+      )
+    },
+    { 
+      key: 'status', 
+      label: 'Status',
+      render: (item) => (
+        <Chip 
+          label={item.status} 
+          color={
+            item.status === 'ACTIVE' ? 'success' : 
+            item.status === 'MAINTENANCE' ? 'warning' : 
+            'error'
+          }
+          size="small"
+        />
+      )
+    }
+  ]
+};
+
+const WorkStations = () => {
   const [workstations, setWorkstations] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedWorkstation, setSelectedWorkstation] = useState(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-
-  useEffect(() => {
-    fetchWorkstations();
-  }, []);
 
   const fetchWorkstations = async () => {
     try {
@@ -132,13 +270,7 @@ export default function WorkStations() {
       setWorkstations(workstationData);
       setError(null);
     } catch (err) {
-      const errorMessage = err.response?.data?.detail || 
-                           err.response?.data?.error || 
-                           'Failed to fetch workstations';
-      
-      console.error('Workstations Fetch Error:', errorMessage);
-      setError(errorMessage);
-      setWorkstations([]);
+      handleApiError(err, setError);
     } finally {
       setLoading(false);
     }
@@ -154,11 +286,7 @@ export default function WorkStations() {
       await axios.delete(`/api/workstations/${workstationId}/`);
       fetchWorkstations();
     } catch (err) {
-      const errorMessage = err.response?.data?.detail || 
-                           err.response?.data?.error || 
-                           'Failed to delete workstation';
-      setError(errorMessage);
-      console.error('Workstation delete error:', err);
+      handleApiError(err, setError);
     }
   };
 
@@ -177,13 +305,13 @@ export default function WorkStations() {
       fetchWorkstations();
       handleDialogClose();
     } catch (err) {
-      const errorMessage = err.response?.data?.detail || 
-                           err.response?.data?.error || 
-                           'Failed to save workstation';
-      setError(errorMessage);
-      console.error('Workstation save error:', err);
+      handleApiError(err, setError);
     }
   };
+
+  useEffect(() => {
+    fetchWorkstations();
+  }, []);
 
   return (
     <Box sx={{ p: 3 }}>
@@ -193,7 +321,7 @@ export default function WorkStations() {
           variant="contained" 
           startIcon={<BuildIcon />}
           onClick={() => {
-            setSelectedWorkstation({ name: '', description: '', status: 'INACTIVE', process_type: 'MANUAL' });
+            setSelectedWorkstation({ name: '', description: '', process_type: 'MANUAL', status: 'INACTIVE' });
             setIsDialogOpen(true);
           }}
         >
@@ -221,55 +349,7 @@ export default function WorkStations() {
         </DialogTitle>
         <DialogContent>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 1 }}>
-            <TextField
-              label="Name"
-              value={selectedWorkstation?.name || ''}
-              onChange={(e) => setSelectedWorkstation(prev => ({
-                ...prev,
-                name: e.target.value
-              }))}
-              fullWidth
-            />
-            <TextField
-              label="Description"
-              value={selectedWorkstation?.description || ''}
-              onChange={(e) => setSelectedWorkstation(prev => ({
-                ...prev,
-                description: e.target.value
-              }))}
-              fullWidth
-              multiline
-              rows={3}
-            />
-            <TextField
-              select
-              label="Status"
-              value={selectedWorkstation?.status || 'INACTIVE'}
-              onChange={(e) => setSelectedWorkstation(prev => ({
-                ...prev,
-                status: e.target.value
-              }))}
-              fullWidth
-              SelectProps={{ native: true }}
-            >
-              <option value="ACTIVE">Active</option>
-              <option value="INACTIVE">Inactive</option>
-              <option value="MAINTENANCE">Maintenance</option>
-            </TextField>
-            <TextField
-              select
-              label="Process Type"
-              value={selectedWorkstation?.process_type || 'MANUAL'}
-              onChange={(e) => setSelectedWorkstation(prev => ({
-                ...prev,
-                process_type: e.target.value
-              }))}
-              fullWidth
-              SelectProps={{ native: true }}
-            >
-              <option value="MANUAL">Manual</option>
-              <option value="AUTOMATIC">Automatic</option>
-            </TextField>
+            <WorkstationForm item={selectedWorkstation} onItemChange={setSelectedWorkstation} />
           </Box>
         </DialogContent>
         <DialogActions>
@@ -285,4 +365,6 @@ export default function WorkStations() {
       </Dialog>
     </Box>
   );
-}
+};
+
+export default withErrorHandling(WorkStations);

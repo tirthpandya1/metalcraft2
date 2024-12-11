@@ -429,243 +429,115 @@ def git_revert_all_changes():
 
 def create_commit_ui(commit_message, changes):
     """
-    Create a UI for commit confirmation with detailed change preview
-    
+    Create a UI for commit confirmation with detailed change preview and refresh option
+
     Args:
         commit_message (str): Generated commit message
         changes (Dict): Detailed changes dictionary
-    
+
     Returns:
         str: User's action ('commit', 'push', 'edit', 'cancel', 'revert')
     """
+    def on_commit():
+        root.destroy()
+        return_value.set('commit')
+
+    def on_push():
+        root.destroy()
+        return_value.set('push')
+
+    def on_edit():
+        edited_message = simpledialog.askstring(
+            "Edit Commit Message", 
+            "Edit your commit message:", 
+            initialvalue=commit_message
+        )
+        if edited_message:
+            commit_message_var.set(edited_message)
+
+    def on_refresh():
+        # Rerun the diff and message generation
+        nonlocal commit_message, changes
+        diff = get_git_diff()
+        changes = analyze_changes(diff)
+        new_commit_message = generate_commit_message(changes)
+        commit_message_var.set(new_commit_message)
+        update_changes_display()
+
+    def update_changes_display():
+        # Clear previous changes
+        for widget in changes_frame.winfo_children():
+            widget.destroy()
+
+        # Display modified files
+        for change_type in ['added', 'modified', 'deleted']:
+            files = changes.get(change_type, [])
+            if files:
+                tk.Label(
+                    changes_frame, 
+                    text=f"{change_type.capitalize()} Files:", 
+                    font=('Arial', 10, 'bold')
+                ).pack(anchor='w')
+                
+                for file, file_changes in files[:5]:  # Limit to first 5 files
+                    file_label = tk.Label(
+                        changes_frame, 
+                        text=file, 
+                        font=('Arial', 9)
+                    )
+                    file_label.pack(anchor='w')
+                    
+                    # Show first 3 changes for each file
+                    for change in file_changes[:3]:
+                        change_label = tk.Label(
+                            changes_frame, 
+                            text=f"  - {change}", 
+                            font=('Arial', 8), 
+                            wraplength=500, 
+                            justify='left'
+                        )
+                        change_label.pack(anchor='w')
+
     # Create main window
     root = tk.Tk()
     root.title("Git Commit")
-    root.geometry("600x500")
-    
-    # macOS-inspired dark theme colors
-    bg_dark = '#2C2C2C'
-    bg_light = '#3A3A3C'
-    text_color = '#FFFFFF'
-    button_bg = '#DDDDDD'
-    button_fg = '#000000'
-    
-    # Configure root window
-    root.configure(bg=bg_dark)
-    root.option_add('*Background', bg_dark)
-    root.option_add('*Foreground', text_color)
-    
-    # Result storage
-    commit_action = [None]
+    root.geometry("600x700")
 
-    # Styling
-    font_title = ('San Francisco', 12, 'bold')
-    font_normal = ('San Francisco', 10)
+    # Return value tracking
+    return_value = tk.StringVar()
 
-    # Title Frame
-    title_frame = tk.Frame(root, bg=bg_dark)
-    title_frame.pack(pady=10, padx=10, fill='x')
-    
-    title_label = tk.Label(
-        title_frame, 
-        text="Review Git Commit Changes", 
-        font=font_title, 
-        bg=bg_dark, 
-        fg=text_color
-    )
-    title_label.pack()
+    # Commit message variable
+    commit_message_var = tk.StringVar(value=commit_message)
 
-    # Commit Message Frame
-    message_frame = tk.Frame(root, bg=bg_light, borderwidth=1, relief='solid')
-    message_frame.pack(pady=10, padx=10, fill='both', expand=True)
-    
-    message_label = tk.Label(
-        message_frame, 
-        text="Commit Message:", 
-        font=font_title, 
-        bg=bg_light, 
-        fg=text_color, 
-        anchor='w'
-    )
-    message_label.pack(fill='x', padx=5, pady=(5,0))
-    
-    message_text = tk.Text(
-        message_frame, 
-        height=5, 
-        font=font_normal, 
-        wrap='word', 
-        borderwidth=0,
-        bg=bg_light,
-        fg=text_color,
-        insertbackground=text_color  # Cursor color
-    )
+    # Commit message display
+    tk.Label(root, text="Commit Message:", font=('Arial', 10, 'bold')).pack(anchor='w')
+    message_text = tk.Text(root, height=6, width=70, wrap=tk.WORD)
     message_text.insert(tk.END, commit_message)
-    message_text.config(state=tk.DISABLED)
-    message_text.pack(fill='both', expand=True, padx=5, pady=5)
+    message_text.pack(padx=10, pady=5)
 
-    # Changes Preview Frame
-    changes_frame = tk.Frame(root, bg=bg_light, borderwidth=1, relief='solid')
-    changes_frame.pack(pady=10, padx=10, fill='both', expand=True)
-    
-    changes_label = tk.Label(
-        changes_frame, 
-        text="Changes Preview:", 
-        font=font_title, 
-        bg=bg_light, 
-        fg=text_color, 
-        anchor='w'
-    )
-    changes_label.pack(fill='x', padx=5, pady=(5,0))
-    
-    changes_text = tk.Text(
-        changes_frame, 
-        height=10, 
-        font=font_normal, 
-        wrap='word', 
-        borderwidth=0,
-        bg=bg_light,
-        fg=text_color,
-        insertbackground=text_color  # Cursor color
-    )
-    
-    # Populate changes text
-    changes_content = []
-    for change_type, file_changes in changes.items():
-        if file_changes:
-            changes_content.append(f"{change_type.upper()} Changes:")
-            for file, details in file_changes:
-                changes_content.append(f"- {file}")
-                for detail in details[:3]:  # Limit to first 3 details
-                    changes_content.append(f"  * {detail}")
-    
-    changes_text.insert(tk.END, '\n'.join(changes_content))
-    changes_text.config(state=tk.DISABLED)
-    changes_text.pack(fill='both', expand=True, padx=5, pady=5)
+    # Changes frame
+    tk.Label(root, text="Changes:", font=('Arial', 10, 'bold')).pack(anchor='w')
+    changes_frame = tk.Frame(root)
+    changes_frame.pack(padx=10, fill='x', expand=True)
 
-    # Button Frame
-    button_frame = tk.Frame(root, bg=bg_dark)
-    button_frame.pack(pady=10, padx=10, fill='x')
+    # Initial changes display
+    update_changes_display()
 
-    def on_commit():
-        commit_action[0] = 'commit'
-        root.quit()
+    # Buttons frame
+    button_frame = tk.Frame(root)
+    button_frame.pack(pady=10)
 
-    def on_push_commit():
-        commit_action[0] = 'push'
-        root.quit()
+    # Action buttons
+    tk.Button(button_frame, text="Commit", command=on_commit).pack(side='left', padx=5)
+    tk.Button(button_frame, text="Push", command=on_push).pack(side='left', padx=5)
+    tk.Button(button_frame, text="Edit Message", command=on_edit).pack(side='left', padx=5)
+    tk.Button(button_frame, text="Refresh", command=on_refresh).pack(side='left', padx=5)
+    tk.Button(button_frame, text="Cancel", command=root.destroy).pack(side='left', padx=5)
 
-    def on_edit():
-        commit_action[0] = 'edit'
-        root.quit()
+    # Wait for user action
+    root.wait_variable(return_value)
 
-    def on_cancel():
-        commit_action[0] = 'cancel'
-        root.quit()
-
-    def on_revert():
-        # Show confirmation dialog
-        revert_confirm = messagebox.askyesno(
-            "Confirm Revert", 
-            "Are you sure you want to revert ALL changes? This cannot be undone.",
-            icon='warning'
-        )
-        
-        if revert_confirm:
-            # Attempt to revert changes
-            revert_success = git_revert_all_changes()
-            
-            if revert_success:
-                messagebox.showinfo(
-                    "Revert Successful", 
-                    "All changes have been reverted to the last committed state."
-                )
-                commit_action[0] = 'revert'
-                root.quit()
-            else:
-                messagebox.showerror(
-                    "Revert Failed", 
-                    "Could not revert changes. Please check your git repository."
-                )
-
-    # Buttons with macOS-like styling
-    commit_btn = tk.Button(
-        button_frame, 
-        text="Commit", 
-        command=on_commit, 
-        bg=button_bg, 
-        fg=button_fg, 
-        font=font_normal,
-        relief=tk.FLAT,
-        padx=10,
-        pady=5
-    )
-    commit_btn.pack(side=tk.LEFT, expand=True, padx=5)
-
-    push_commit_btn = tk.Button(
-        button_frame, 
-        text="Commit & Push", 
-        command=on_push_commit, 
-        bg=button_bg, 
-        fg=button_fg, 
-        font=font_normal,
-        relief=tk.FLAT,
-        padx=10,
-        pady=5
-    )
-    push_commit_btn.pack(side=tk.LEFT, expand=True, padx=5)
-
-    edit_btn = tk.Button(
-        button_frame, 
-        text="Edit Message", 
-        command=on_edit, 
-        bg=button_bg, 
-        fg=button_fg, 
-        font=font_normal,
-        relief=tk.FLAT,
-        padx=10,
-        pady=5
-    )
-    edit_btn.pack(side=tk.LEFT, expand=True, padx=5)
-
-    revert_btn = tk.Button(
-        button_frame, 
-        text="Revert All", 
-        command=on_revert, 
-        bg=button_bg, 
-        fg=button_fg, 
-        font=font_normal,
-        relief=tk.FLAT,
-        padx=10,
-        pady=5
-    )
-    revert_btn.pack(side=tk.LEFT, expand=True, padx=5)
-
-    cancel_btn = tk.Button(
-        button_frame, 
-        text="Cancel", 
-        command=on_cancel, 
-        bg=button_bg, 
-        fg=button_fg, 
-        font=font_normal,
-        relief=tk.FLAT,
-        padx=10,
-        pady=5
-    )
-    cancel_btn.pack(side=tk.LEFT, expand=True, padx=5)
-
-    # Center the window
-    root.update_idletasks()
-    width = root.winfo_width()
-    height = root.winfo_height()
-    x = (root.winfo_screenwidth() // 2) - (width // 2)
-    y = (root.winfo_screenheight() // 2) - (height // 2)
-    root.geometry(f'{width}x{height}+{x}+{y}')
-
-    # Show the window
-    root.mainloop()
-    root.destroy()
-
-    return commit_action[0]
+    return return_value.get()
 
 def main():
     """

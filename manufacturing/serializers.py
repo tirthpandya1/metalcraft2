@@ -21,11 +21,22 @@ class MaterialShortageAPIException(APIException):
         if detail is None:
             detail = self.default_detail
         
+        # Ensure material details are in a consistent format
+        formatted_details = []
+        for material in (material_details or []):
+            formatted_details.append({
+                'material_name': material.get('material_name', 'Unknown Material'),
+                'material_id': material.get('material_id'),
+                'required_quantity': material.get('required_quantity', 0),
+                'available_quantity': material.get('available_quantity', 0),
+                'shortage_percentage': material.get('shortage_percentage', 0)
+            })
+        
         # Prepare error details
         error_details = {
             'type': 'MaterialShortageError',
             'message': detail,
-            'material_details': material_details or []
+            'material_details': formatted_details
         }
         
         super().__init__(detail=error_details)
@@ -392,9 +403,9 @@ class WorkOrderSerializer(serializers.ModelSerializer):
         # If there are insufficient materials, raise a detailed error
         if insufficient_materials:
             logger.error(f"Material shortage when creating work order: {insufficient_materials}")
-            raise MaterialShortageError(
-                "Insufficient materials to create work order", 
-                material_details=insufficient_materials
+            raise MaterialShortageAPIException(
+                material_details=insufficient_materials, 
+                detail="Insufficient materials to create work order"
             )
         
         # Set default status if not provided

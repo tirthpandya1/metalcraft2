@@ -31,6 +31,7 @@ import {
   ArrowDownward as ArrowDownwardIcon,
 } from '@mui/icons-material';
 import { productService } from '../services/api';  
+import { handleApiError } from '../utils/errorHandler';
 
 export const withCrudList = (
   WrappedComponent, 
@@ -233,7 +234,12 @@ export const withCrudList = (
                              error.message || 
                              `Failed to save ${fullConfig.entityName}`;
         
-        setError(errorMessage);
+        // Use handleApiError for consistent error handling
+        handleApiError(error);
+        
+        // Optionally, you can still set a local error state if needed
+        // But don't block the UI
+        setError(null);
       }
     };
 

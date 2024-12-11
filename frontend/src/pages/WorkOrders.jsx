@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Chip, MenuItem, TextField } from '@mui/material';
 import { workOrderService, productService } from '../services/api';
 import { withCrudList } from '../components/CrudListPage';
+import { handleApiError, withErrorHandling } from '../utils/errorHandler';
 
 // Work Order Form Component
 function WorkOrderForm({ item, onItemChange, products }) {
@@ -209,9 +210,11 @@ const workOrderConfig = {
   ]
 };
 
-// Export Work Orders page with CrudListPage HOC
-export default withCrudList(
-  WorkOrderForm, 
-  workOrderService, 
-  workOrderConfig
+// Export Work Orders page with CrudListPage HOC and Error Handling
+export default withErrorHandling(
+  withCrudList(
+    WorkOrderForm, 
+    workOrderService, 
+    workOrderConfig
+  )
 );

@@ -27,6 +27,10 @@ import WorkstationEfficiency from './pages/WorkstationEfficiency';
 import ProductionDesigns from './pages/ProductionDesigns';
 import ProductionEvents from './pages/ProductionEvents';
 
+// Import toast
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // Create a theme
 const theme = createTheme({
   palette: {
@@ -91,6 +95,18 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <ToastContainer 
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <Routes>
         {/* Authentication Routes */}
         <Route path="/login" element={<Login />} />

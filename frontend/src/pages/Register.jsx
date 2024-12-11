@@ -1,137 +1,139 @@
 import React, { useState } from 'react';
 import { 
-  Box, 
   Button, 
   TextField, 
+  Box, 
   Typography, 
-  Paper, 
-  Container,
-  Alert
+  Container, 
+  Paper 
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { authService } from '../services/api';
+import { handleApiError, withErrorHandling } from '../utils/errorHandler';
 
-function Register() {
+const Register = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
-    setError(null);
-
-    // Basic validation
+    
+    // Basic client-side validation
     if (password !== confirmPassword) {
-      setError('Passwords do not match');
+      handleApiError(new Error('Passwords do not match'), {
+        message: 'Passwords do not match. Please try again.',
+        silent: false
+      });
       return;
     }
 
     try {
-      await authService.register(username, email, password);
-      navigate('/dashboard');  // Redirect to dashboard after successful registration
-    } catch (err) {
-      setError(err.response?.data?.error || 'Registration failed');
+      const response = await authService.register({
+        username,
+        email,
+        password
+      });
+      
+      // Store authentication token if returned
+      if (response.token) {
+        localStorage.setItem('authToken', response.token);
+      }
+      
+      // Redirect to login or dashboard
+      navigate('/login');
+    } catch (error) {
+      // Use centralized error handling with custom message
+      handleApiError(error, {
+        message: 'Registration failed. Please check your details.',
+        silent: false  // Ensure user sees the error
+      });
     }
   };
 
   return (
     <Container maxWidth="xs">
-      <Box 
-        sx={{
-          marginTop: 8,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+      <Paper 
+        elevation={3} 
+        sx={{ 
+          marginTop: 8, 
+          display: 'flex', 
+          flexDirection: 'column', 
+          alignItems: 'center', 
+          padding: 4 
         }}
       >
         <Typography component="h1" variant="h5">
           Register for Metalcraft
         </Typography>
-        <Paper 
-          elevation={3} 
-          sx={{ 
-            padding: 3, 
-            marginTop: 2,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            width: '100%'
-          }}
+        <Box 
+          component="form" 
+          onSubmit={handleRegister} 
+          sx={{ width: '100%', mt: 1 }}
         >
-          <form onSubmit={handleSubmit}>
-            {error && (
-              <Alert 
-                severity="error" 
-                sx={{ width: '100%', marginBottom: 2 }}
-              >
-                {error}
-              </Alert>
-            )}
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              label="Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              autoFocus
-            />
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              label="Email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              label="Password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              label="Confirm Password"
-              type="password"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Register
-            </Button>
-            <Button
-              fullWidth
-              variant="outlined"
-              color="secondary"
-              onClick={() => navigate('/login')}
-            >
-              Already have an account? Sign In
-            </Button>
-          </form>
-        </Paper>
-      </Box>
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            label="Username"
+            name="username"
+            autoComplete="username"
+            autoFocus
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            label="Email Address"
+            name="email"
+            autoComplete="email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="password"
+            label="Password"
+            type="password"
+            autoComplete="new-password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="confirm-password"
+            label="Confirm Password"
+            type="password"
+            autoComplete="new-password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="primary"
+            sx={{ mt: 3, mb: 2 }}
+          >
+            Register
+          </Button>
+        </Box>
+      </Paper>
     </Container>
   );
-}
+};
 
-export default Register;
+export default withErrorHandling(Register);

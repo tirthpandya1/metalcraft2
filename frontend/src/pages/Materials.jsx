@@ -17,6 +17,7 @@ import {
 } from '@mui/icons-material';
 import { withCrudList } from '../components/CrudListPage';
 import { materialService } from '../services/api';
+import { handleApiError, withErrorHandling } from '../utils/errorHandler';
 
 // Configuration for Materials page
 const materialsConfig = {
@@ -158,11 +159,9 @@ const materialsConfig = {
   }
 };
 
-export default function MaterialsPage() {
-  const MaterialsListComponent = withCrudList(null, materialService, {
+export default withErrorHandling(
+  withCrudList(null, materialService, {
     ...materialsConfig,
     renderView: 'card'
-  });
-
-  return <MaterialsListComponent />;
-}
+  })
+);

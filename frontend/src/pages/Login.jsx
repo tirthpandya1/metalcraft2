@@ -2,44 +2,37 @@ import React, { useState } from 'react';
 import { 
   Button, 
   TextField, 
-  Container, 
-  Typography, 
   Box, 
-  Paper, 
-  Alert 
+  Typography, 
+  Container, 
+  Paper 
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { authService } from '../services/api';
+import { handleApiError, withErrorHandling } from '../utils/errorHandler';
 
-export default function Login() {
+const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError(null);
-
+    
     try {
-      const response = await axios.post('/api/token/', {
-        username,
-        password
-      });
-
-      // Store tokens securely
-      localStorage.setItem('access_token', response.data.access);
-      localStorage.setItem('refresh_token', response.data.refresh);
-
-      // Set default Authorization header
-      axios.defaults.headers.common['Authorization'] = 
-        `Bearer ${response.data.access}`;
-
+      const response = await authService.login(username, password);
+      
+      // Store authentication token
+      localStorage.setItem('authToken', response.token);
+      
       // Redirect to dashboard
       navigate('/dashboard');
-    } catch (err) {
-      setError('Invalid credentials. Please try again.');
-      console.error('Login failed:', err);
+    } catch (error) {
+      // Use centralized error handling with custom message
+      handleApiError(error, {
+        message: 'Login failed. Please check your credentials.',
+        silent: false  // Ensure user sees the error
+      });
     }
   };
 
@@ -52,38 +45,38 @@ export default function Login() {
           display: 'flex', 
           flexDirection: 'column', 
           alignItems: 'center', 
-          padding: 3 
+          padding: 4 
         }}
       >
         <Typography component="h1" variant="h5">
-          Metalcraft Login
+          Sign in to Metalcraft
         </Typography>
         <Box 
           component="form" 
           onSubmit={handleLogin} 
-          noValidate 
-          sx={{ mt: 1, width: '100%' }}
+          sx={{ width: '100%', mt: 1 }}
         >
-          {error && (
-            <Alert severity="error" sx={{ mb: 2 }}>
-              {error}
-            </Alert>
-          )}
           <TextField
+            variant="outlined"
             margin="normal"
             required
             fullWidth
             label="Username"
+            name="username"
+            autoComplete="username"
+            autoFocus
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            autoFocus
           />
           <TextField
+            variant="outlined"
             margin="normal"
             required
             fullWidth
+            name="password"
             label="Password"
             type="password"
+            autoComplete="current-password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -91,6 +84,7 @@ export default function Login() {
             type="submit"
             fullWidth
             variant="contained"
+            color="primary"
             sx={{ mt: 3, mb: 2 }}
           >
             Sign In
@@ -99,4 +93,6 @@ export default function Login() {
       </Paper>
     </Container>
   );
-}
+};
+
+export default withErrorHandling(Login);

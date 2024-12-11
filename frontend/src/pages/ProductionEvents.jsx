@@ -1,147 +1,147 @@
-import React, { useState, useEffect } from 'react';
-import { 
-  Box, 
-  Typography, 
-  Table, 
-  TableBody, 
-  TableCell, 
-  TableContainer, 
-  TableHead, 
-  TableRow, 
-  Paper,
-  Chip,
-  TablePagination
-} from '@mui/material';
-import { styled } from '@mui/material/styles';
-import axios from 'axios';
-import { formatLocalDateTime } from '../utils/timeUtils';
+import React from 'react';
+import { Chip, MenuItem, TextField } from '@mui/material';
+import { productionEventService, workOrderService } from '../services/api';
+import { withCrudList } from '../components/CrudListPage';
+import { handleApiError, withErrorHandling } from '../utils/errorHandler';
 
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  '&:nth-of-type(odd)': {
-    backgroundColor: theme.palette.action.hover,
-  },
-}));
-
-const getEventColorAndVariant = (eventType) => {
-  const eventColorMap = {
-    'WORK_ORDER_CREATED': { color: 'primary', variant: 'outlined' },
-    'WORK_ORDER_STARTED': { color: 'success', variant: 'outlined' },
-    'WORK_ORDER_COMPLETED': { color: 'success', variant: 'contained' },
-    'WORKSTATION_PROCESSING_STARTED': { color: 'info', variant: 'outlined' },
-    'WORKSTATION_PROCESSING_COMPLETED': { color: 'info', variant: 'contained' },
-    'MATERIAL_USED': { color: 'default', variant: 'outlined' },
-    'MATERIAL_WASTED': { color: 'warning', variant: 'outlined' },
-    'QUALITY_CHECK_PASSED': { color: 'success', variant: 'outlined' },
-    'QUALITY_CHECK_FAILED': { color: 'error', variant: 'outlined' },
-    'PACKAGING_STARTED': { color: 'secondary', variant: 'outlined' },
-    'PACKAGING_COMPLETED': { color: 'secondary', variant: 'contained' },
-  };
-
-  return eventColorMap[eventType] || { color: 'default', variant: 'outlined' };
-};
-
-const ProductionEvents = () => {
-  const [events, setEvents] = useState([]);
-  const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
-  const [totalEvents, setTotalEvents] = useState(0);
-
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const response = await axios.get('/api/production-events/event-timeline/', {
-          params: {
-            page: page + 1,
-            page_size: rowsPerPage
-          }
-        });
-        console.log('Production Events Response:', response.data);
-        
-        // Ensure events is always an array and has expected structure
-        const eventData = Array.isArray(response.data.events) 
-          ? response.data.events 
-          : [];
-        const totalCount = response.data.total_events || 0;
-        
-        setEvents(eventData);
-        setTotalEvents(totalCount);
-      } catch (error) {
-        console.error('Error fetching production events:', error.response || error);
-        // If error has a response, log more details
-        if (error.response) {
-          console.error('Error details:', {
-            status: error.response.status,
-            data: error.response.data,
-            headers: error.response.headers
-          });
-        }
-        setEvents([]);
-        setTotalEvents(0);
-      }
-    };
-
-    fetchEvents();
-  }, [page, rowsPerPage]);
-
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
-
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
-
+// Production Event Form Component
+function ProductionEventForm({ item, onItemChange, workOrders }) {
   return (
-    <Box sx={{ width: '100%', p: 3 }}>
-      <Typography variant="h4" gutterBottom>
-        Production Event Timeline
-      </Typography>
-      
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Event Type</TableCell>
-              <TableCell>Work Order</TableCell>
-              <TableCell>Product</TableCell>
-              <TableCell>Workstation</TableCell>
-              <TableCell>Created At</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {events.map((event) => {
-              const { color, variant } = getEventColorAndVariant(event.event_type);
-              return (
-                <StyledTableRow key={event.id}>
-                  <TableCell>
-                    <Chip 
-                      label={event.event_type.replace(/_/g, ' ')} 
-                      color={color} 
-                      variant={variant} 
-                    />
-                  </TableCell>
-                  <TableCell>{event.work_order}</TableCell>
-                  <TableCell>{event.product}</TableCell>
-                  <TableCell>{event.workstation || 'N/A'}</TableCell>
-                  <TableCell>{formatLocalDateTime(event.created_at)}</TableCell>
-                </StyledTableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
-        <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
-          component="div"
-          count={totalEvents}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-        />
-      </TableContainer>
-    </Box>
+    <>
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Work Order"
+        select
+        value={item.work_order?.id || ''}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          work_order: workOrders.find(wo => wo.id === e.target.value)
+        }))}
+        required
+      >
+        {workOrders.map((workOrder) => (
+          <MenuItem key={workOrder.id} value={workOrder.id}>
+            {`${workOrder.product_name} - ${workOrder.quantity} units`}
+          </MenuItem>
+        ))}
+      </TextField>
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Event Type"
+        select
+        value={item.event_type || 'START'}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          event_type: e.target.value
+        }))}
+        required
+      >
+        {[
+          { value: 'START', label: 'Production Start' },
+          { value: 'PAUSE', label: 'Production Pause' },
+          { value: 'RESUME', label: 'Production Resume' },
+          { value: 'COMPLETE', label: 'Production Complete' },
+          { value: 'QUALITY_CHECK', label: 'Quality Check' },
+          { value: 'MATERIAL_SHORTAGE', label: 'Material Shortage' }
+        ].map((option) => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
+      </TextField>
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Notes"
+        multiline
+        rows={3}
+        value={item.notes || ''}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          notes: e.target.value
+        }))}
+      />
+    </>
   );
+}
+
+// Configuration for Production Events CRUD page
+const productionEventConfig = {
+  entityName: 'Production Event',
+  pageTitle: 'Production Events',
+  defaultSortKey: 'created_at',
+  defaultItem: {
+    work_order: null,
+    event_type: 'START',
+    notes: ''
+  },
+  searchFields: [
+    'work_order_product_name',
+    'event_type',
+    'notes'
+  ],
+  dialogFields: [
+    { 
+      key: 'work_order', 
+      label: 'Work Order',
+      type: 'select',
+      options: [] // This will be populated dynamically
+    },
+    { 
+      key: 'event_type', 
+      label: 'Event Type',
+      type: 'select',
+      options: [
+        { value: 'START', label: 'Production Start' },
+        { value: 'PAUSE', label: 'Production Pause' },
+        { value: 'RESUME', label: 'Production Resume' },
+        { value: 'COMPLETE', label: 'Production Complete' },
+        { value: 'QUALITY_CHECK', label: 'Quality Check' },
+        { value: 'MATERIAL_SHORTAGE', label: 'Material Shortage' }
+      ]
+    },
+    {
+      key: 'notes',
+      label: 'Notes',
+      type: 'text',
+      multiline: true
+    }
+  ],
+  columns: [
+    { 
+      key: 'work_order_product_name', 
+      label: 'Work Order' 
+    },
+    { 
+      key: 'event_type', 
+      label: 'Event Type',
+      render: (item) => (
+        <Chip 
+          label={item.event_type} 
+          color={
+            item.event_type === 'COMPLETE' ? 'success' : 
+            item.event_type === 'START' ? 'primary' : 
+            item.event_type === 'MATERIAL_SHORTAGE' ? 'error' : 
+            'default'
+          }
+          size="small"
+        />
+      )
+    },
+    { 
+      key: 'created_at', 
+      label: 'Timestamp' 
+    }
+  ]
 };
 
-export default ProductionEvents;
+// Export Production Events page with CrudListPage HOC and Error Handling
+export default withErrorHandling(
+  withCrudList(
+    ProductionEventForm, 
+    productionEventService, 
+    productionEventConfig
+  )
+);

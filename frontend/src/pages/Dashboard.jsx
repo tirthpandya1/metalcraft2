@@ -35,19 +35,18 @@ import {
 
 import axios from '../services/axiosConfig';
 import { formatLocalDateTime, formatRelativeTime } from '../utils/timeUtils';
+import { handleApiError, withErrorHandling } from '../utils/errorHandler';
 
-const Dashboard = () => {
+function Dashboard() {
   const [dashboardData, setDashboardData] = useState(null);
   const [efficiencyData, setEfficiencyData] = useState(null);
   const [costData, setCostData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchAnalytics = async () => {
       try {
         setLoading(true);
-        setError(null);
 
         // Fetch analytics with individual error handling
         const fetchWithErrorHandling = async (url) => {
@@ -55,7 +54,11 @@ const Dashboard = () => {
             const response = await axios.get(url);
             return response.data;
           } catch (err) {
-            console.error(`Error fetching ${url}:`, err.response ? err.response.data : err);
+            // Use centralized error handling with silent mode
+            handleApiError(err, { 
+              silent: true, 
+              customMessage: `Failed to fetch ${url} analytics` 
+            });
             throw err;
           }
         };
@@ -70,17 +73,9 @@ const Dashboard = () => {
         setEfficiencyData(efficiencyData);
         setCostData(costData);
       } catch (err) {
-        const errorMessage = err.response?.data?.error || 
-                             err.response?.data?.detail || 
-                             err.response?.data?.message || 
-                             'Failed to load dashboard analytics';
-        
-        setError(errorMessage);
-        console.error('Complete Analytics Fetch Error:', {
-          status: err.response?.status,
-          data: err.response?.data,
-          message: errorMessage,
-          url: err.config?.url
+        // This will catch any unhandled errors from the Promise.all
+        handleApiError(err, { 
+          customMessage: 'Failed to load dashboard analytics' 
         });
       } finally {
         setLoading(false);
@@ -91,7 +86,7 @@ const Dashboard = () => {
   }, []);
 
   if (loading) return <CircularProgress />;
-  if (error) return <Typography color="error">{error}</Typography>;
+  if (!dashboardData) return null;
 
   return (
     <Box sx={{ p: 3 }}>
@@ -258,6 +253,6 @@ const Dashboard = () => {
       </Grid>
     </Box>
   );
-};
+}
 
-export default Dashboard;
+export default withErrorHandling(Dashboard);

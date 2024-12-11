@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { handleApiError } from '../utils/errorHandler';
 
 // Base URL for API
 const BASE_URL = 'http://localhost:8000/api';
@@ -127,6 +128,11 @@ const apiService = {
       return response.data;
     } catch (error) {
       console.error(`Error fetching ${endpoint}:`, error);
+      // Only handle API error if it hasn't been handled already
+      if (!error.handled) {
+        handleApiError(error);
+        error.handled = true;
+      }
       throw error;
     }
   },
@@ -138,6 +144,11 @@ const apiService = {
       return response.data;
     } catch (error) {
       console.error(`Error fetching ${endpoint} by ID:`, error);
+      // Only handle API error if it hasn't been handled already
+      if (!error.handled) {
+        handleApiError(error);
+        error.handled = true;
+      }
       throw error;
     }
   },
@@ -150,12 +161,11 @@ const apiService = {
       return response.data;
     } catch (error) {
       console.error(`Error creating ${endpoint}:`, error);
-      console.error('Full error details:', {
-        message: error.message,
-        response: error.response?.data,
-        status: error.response?.status,
-        headers: error.response?.headers
-      });
+      // Only handle API error if it hasn't been handled already
+      if (!error.handled) {
+        handleApiError(error);
+        error.handled = true;
+      }
       throw error;
     }
   },
@@ -167,6 +177,11 @@ const apiService = {
       return response.data;
     } catch (error) {
       console.error(`Error updating ${endpoint}:`, error);
+      // Only handle API error if it hasn't been handled already
+      if (!error.handled) {
+        handleApiError(error);
+        error.handled = true;
+      }
       throw error;
     }
   },
@@ -178,34 +193,90 @@ const apiService = {
       return response.data;
     } catch (error) {
       console.error(`Error deleting ${endpoint}:`, error);
+      // Only handle API error if it hasn't been handled already
+      if (!error.handled) {
+        handleApiError(error);
+        error.handled = true;
+      }
       throw error;
     }
   }
 };
 
 // Specific service for each model
-export const workStationService = {
+export const workstationService = {
   async getAll() {
-    try {
-      const response = await apiService.getAll('workstations');
-      return response;
-    } catch (error) {
-      console.error('Error fetching workstations:', error);
-      throw error;
-    }
+    return apiService.getAll('workstations');
   },
-  getById: (id) => apiService.getById('workstations', id),
-  create: (data) => apiService.create('workstations', data),
-  update: (id, data) => apiService.update('workstations', id, data),
-  delete: (id) => apiService.delete('workstations', id)
+  
+  async getById(id) {
+    return apiService.getById('workstations', id);
+  },
+  
+  async create(data) {
+    return apiService.create('workstations', data);
+  },
+  
+  async update(id, data) {
+    return apiService.update('workstations', id, data);
+  },
+  
+  async delete(id) {
+    return apiService.delete('workstations', id);
+  }
 };
 
 export const materialService = {
-  getAll: () => apiService.getAll('materials'),
-  getById: (id) => apiService.getById('materials', id),
-  create: (data) => apiService.create('materials', data),
-  update: (id, data) => apiService.update('materials', id, data),
-  delete: (id) => apiService.delete('materials', id)
+  async getAll() {
+    try {
+      const response = await apiService.getAll('materials');
+      return response;
+    } catch (error) {
+      console.error('Error fetching materials:', error);
+      handleApiError(error);
+      throw error;
+    }
+  },
+  async getById(id) {
+    try {
+      const response = await apiService.getById('materials', id);
+      return response;
+    } catch (error) {
+      console.error('Error fetching material by ID:', error);
+      handleApiError(error);
+      throw error;
+    }
+  },
+  async create(data) {
+    try {
+      const response = await apiService.create('materials', data);
+      return response;
+    } catch (error) {
+      console.error('Error creating material:', error);
+      handleApiError(error);
+      throw error;
+    }
+  },
+  async update(id, data) {
+    try {
+      const response = await apiService.update('materials', id, data);
+      return response;
+    } catch (error) {
+      console.error('Error updating material:', error);
+      handleApiError(error);
+      throw error;
+    }
+  },
+  async delete(id) {
+    try {
+      const response = await apiService.delete('materials', id);
+      return response;
+    } catch (error) {
+      console.error('Error deleting material:', error);
+      handleApiError(error);
+      throw error;
+    }
+  }
 };
 
 export const productService = {
@@ -247,18 +318,167 @@ export const productService = {
       return [];
     }
   },
-  getById: (id) => apiService.getById('products', id),
-  create: (data) => apiService.create('products', data),
-  update: (id, data) => apiService.update('products', id, data),
-  delete: (id) => apiService.delete('products', id)
+  async getById(id) {
+    try {
+      const response = await apiService.getById('products', id);
+      return response;
+    } catch (error) {
+      console.error('Error fetching product by ID:', error);
+      handleApiError(error);
+      throw error;
+    }
+  },
+  async create(data) {
+    try {
+      const response = await apiService.create('products', data);
+      return response;
+    } catch (error) {
+      console.error('Error creating product:', error);
+      handleApiError(error);
+      throw error;
+    }
+  },
+  async update(id, data) {
+    try {
+      const response = await apiService.update('products', id, data);
+      return response;
+    } catch (error) {
+      console.error('Error updating product:', error);
+      handleApiError(error);
+      throw error;
+    }
+  },
+  async delete(id) {
+    try {
+      const response = await apiService.delete('products', id);
+      return response;
+    } catch (error) {
+      console.error('Error deleting product:', error);
+      handleApiError(error);
+      throw error;
+    }
+  }
 };
 
 export const workOrderService = {
-  getAll: () => apiService.getAll('work-orders'),
-  getById: (id) => apiService.getById('work-orders', id),
-  create: (data) => apiService.create('work-orders', data),
-  update: (id, data) => apiService.update('work-orders', id, data),
-  delete: (id) => apiService.delete('work-orders', id)
+  async getAll() {
+    try {
+      const response = await apiService.getAll('work-orders');
+      return response;
+    } catch (error) {
+      console.error('Error fetching work orders:', error);
+      handleApiError(error);
+      throw error;
+    }
+  },
+  async getById(id) {
+    try {
+      const response = await apiService.getById('work-orders', id);
+      return response;
+    } catch (error) {
+      console.error('Error fetching work order by ID:', error);
+      handleApiError(error);
+      throw error;
+    }
+  },
+  async create(data) {
+    try {
+      console.log('Creating Work Order with Data:', data);
+      const response = await apiService.create('work-orders', data);
+      return response;
+    } catch (error) {
+      console.error('Error creating work order:', error);
+      console.error('Error Response:', error.response);
+      console.error('Error Response Data:', error.response?.data);
+      throw error;
+    }
+  },
+  async update(id, data) {
+    try {
+      const response = await apiService.update('work-orders', id, data);
+      return response;
+    } catch (error) {
+      console.error('Error updating work order:', error);
+      handleApiError(error);
+      throw error;
+    }
+  },
+  async delete(id) {
+    try {
+      const response = await apiService.delete('work-orders', id);
+      return response;
+    } catch (error) {
+      console.error('Error deleting work order:', error);
+      handleApiError(error);
+      throw error;
+    }
+  }
+};
+
+export const workstationEfficiencyService = {
+  async getAll() {
+    return apiService.getAll('workstation-efficiency');
+  },
+  
+  async getById(id) {
+    return apiService.getById('workstation-efficiency', id);
+  },
+  
+  async create(data) {
+    return apiService.create('workstation-efficiency', data);
+  },
+  
+  async update(id, data) {
+    return apiService.update('workstation-efficiency', id, data);
+  },
+  
+  async delete(id) {
+    return apiService.delete('workstation-efficiency', id);
+  }
+};
+
+export const productionDesignService = {
+  async getAll() {
+    return apiService.getAll('production-designs');
+  },
+  
+  async getById(id) {
+    return apiService.getById('production-designs', id);
+  },
+  
+  async create(data) {
+    return apiService.create('production-designs', data);
+  },
+  
+  async update(id, data) {
+    return apiService.update('production-designs', id, data);
+  },
+  
+  async delete(id) {
+    return apiService.delete('production-designs', id);
+  }
+};
+
+export const productionEventService = {
+  async getAll() {
+    return apiService.getAll('production-events');
+  },
+  
+  async getById(id) {
+    return apiService.getById('production-events', id);
+  },
+  
+  async create(data) {
+    return apiService.create('production-events', data);
+  },
+  
+  async update(id, data) {
+    return apiService.update('production-events', id, data);
+  },
+  
+  async delete(id) {
+    return apiService.delete('production-events', id);
+  }
 };
 
 export default api;
