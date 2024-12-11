@@ -423,7 +423,7 @@ def git_commit(message: str):
     except Exception as e:
         print(f"Error during commit: {e}")
 
-def git_commit_and_push(commit_message):
+def git_commit_and_push(commit_message: str) -> Tuple[bool, str]:
     """
     Commit changes and immediately push to the current branch.
     
@@ -435,43 +435,54 @@ def git_commit_and_push(commit_message):
     """
     try:
         # Stage all changes
-        subprocess.run(['git', 'add', '.'], 
-                       cwd='/Users/T/Documents/GitHub/metalcraft2', 
-                       check=True)
+        git_add_all()
         
         # Commit changes
         commit_result = subprocess.run(
             ['git', 'commit', '-m', commit_message], 
-            cwd='/Users/T/Documents/GitHub/metalcraft2', 
             capture_output=True, 
-            text=True,
-            check=True
+            text=True, 
+            cwd='/Users/T/Documents/GitHub/metalcraft2'
         )
         
-        # Get current branch
-        branch_result = subprocess.run(
-            ['git', 'rev-parse', '--abbrev-ref', 'HEAD'], 
-            cwd='/Users/T/Documents/GitHub/metalcraft2', 
-            capture_output=True, 
-            text=True,
-            check=True
-        )
-        current_branch = branch_result.stdout.strip()
+        # Check if commit was successful
+        if commit_result.returncode != 0:
+            # If commit fails (e.g., no changes), return False
+            messagebox.showerror(
+                "Commit Failed", 
+                f"Could not commit changes:\n{commit_result.stderr}"
+            )
+            return False, commit_result.stderr
         
-        # Push to current branch
+        # Push changes
         push_result = subprocess.run(
-            ['git', 'push', 'origin', current_branch], 
-            cwd='/Users/T/Documents/GitHub/metalcraft2', 
+            ['git', 'push'], 
             capture_output=True, 
-            text=True,
-            check=True
+            text=True, 
+            cwd='/Users/T/Documents/GitHub/metalcraft2'
         )
         
-        return True, f"Committed and pushed to {current_branch}"
+        # Check if push was successful
+        if push_result.returncode == 0:
+            # Show success message
+            messagebox.showinfo(
+                "Commit and Push Successful", 
+                f"Changes committed with message:\n\n'{commit_message}'\n\nSuccessfully pushed to remote repository."
+            )
+            return True, "Commit and push successful"
+        else:
+            # If push fails, show error
+            messagebox.showerror(
+                "Push Failed", 
+                f"Commit was successful, but could not push changes:\n{push_result.stderr}"
+            )
+            return False, push_result.stderr
     
-    except subprocess.CalledProcessError as e:
-        error_message = e.stderr.strip() if e.stderr else str(e)
-        return False, f"Git operation failed: {error_message}"
+    except Exception as e:
+        # Catch any unexpected errors
+        error_message = f"An error occurred: {str(e)}"
+        messagebox.showerror("Error", error_message)
+        return False, error_message
 
 def git_push():
     """Push commits to the remote repository."""
