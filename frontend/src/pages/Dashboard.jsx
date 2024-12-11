@@ -142,20 +142,53 @@ function Dashboard() {
                 <TrendIcon sx={{ mr: 2, color: 'primary.main' }} />
                 <Typography variant="h6">Production Performance</Typography>
               </Box>
-              <ResponsiveContainer width="100%" height={300}>
-                <LineChart data={dashboardData.monthly_production}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis 
-                    dataKey="month" 
-                    tickFormatter={(tick) => formatLocalDateTime(tick, { month: 'short' })}
-                  />
-                  <YAxis label={{ value: 'Quantity', angle: -90, position: 'insideLeft' }} />
-                  <ChartTooltip 
-                    labelFormatter={(label) => formatLocalDateTime(label, { month: 'long', year: 'numeric' })}
-                  />
-                  <Line type="monotone" dataKey="avg_quantity" stroke="#8884d8" />
-                </LineChart>
-              </ResponsiveContainer>
+              {dashboardData.daily_production && dashboardData.daily_production.length > 0 ? (
+                <ResponsiveContainer width="100%" height={300}>
+                  <LineChart 
+                    data={dashboardData.daily_production.map(item => ({
+                      ...item,
+                      day: new Date(item.day).toLocaleDateString('default', { 
+                        month: 'short', 
+                        day: 'numeric' 
+                      })
+                    }))}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis 
+                      dataKey="day" 
+                      label={{ value: 'Date', position: 'insideBottom', offset: -5 }}
+                    />
+                    <YAxis 
+                      label={{ 
+                        value: 'Avg Quantity', 
+                        angle: -90, 
+                        position: 'insideLeft' 
+                      }} 
+                    />
+                    <ChartTooltip 
+                      labelFormatter={(label) => `Date: ${label}`}
+                      formatter={(value) => [`${value.toFixed(2)} units`, 'Avg Quantity']}
+                    />
+                    <Line 
+                      type="monotone" 
+                      dataKey="avg_quantity" 
+                      stroke="#8884d8" 
+                      activeDot={{ r: 8 }}
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+              ) : (
+                <Box 
+                  display="flex" 
+                  justifyContent="center" 
+                  alignItems="center" 
+                  height={300}
+                >
+                  <Typography variant="body2" color="textSecondary">
+                    No daily production data available
+                  </Typography>
+                </Box>
+              )}
             </CardContent>
           </Card>
         </Grid>
@@ -175,26 +208,20 @@ function Dashboard() {
                     <XAxis dataKey="name" />
                     <YAxis 
                       label={{ 
-                        value: 'Quantity', 
+                        value: 'Consumption', 
                         angle: -90, 
                         position: 'insideLeft' 
                       }} 
                     />
                     <ChartTooltip 
-                      formatter={(value, name, props) => [
-                        `${value.toFixed(2)} units`, 
-                        `${props.payload.percentage.toFixed(2)}%`
-                      ]}
-                      contentStyle={{ 
-                        backgroundColor: '#f5f5f5', 
-                        border: '1px solid #d5d5d5' 
+                      formatter={(value, name, props) => {
+                        if (name === 'total_consumed') {
+                          return [`${value.toFixed(2)} units`, 'Total Consumed'];
+                        }
+                        return value;
                       }}
                     />
-                    <Bar 
-                      dataKey="total_consumed" 
-                      fill="#8884d8" 
-                      fillOpacity={(entry) => Math.max(0.3, entry.percentage / 100)}
-                    />
+                    <Bar dataKey="total_consumed" fill="#8884d8" />
                   </BarChart>
                 </ResponsiveContainer>
               ) : (
@@ -221,32 +248,47 @@ function Dashboard() {
                 <MoneyIcon sx={{ mr: 2, color: 'primary.main' }} />
                 <Typography variant="h6">Cost Analysis</Typography>
               </Box>
-              <Grid container spacing={2}>
-                <Grid item xs={12}>
-                  <Typography variant="body2">
-                    Total Work Order Cost: ₹{costData.work_order_cost.total_cost?.toFixed(2) || 0}
+              {costData ? (
+                <Grid container spacing={2}>
+                  <Grid item xs={12}>
+                    <Typography variant="body2">
+                      Total Work Order Cost: ₹{costData.work_order_cost?.total_cost?.toFixed(2) || 0}
+                    </Typography>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <ResponsiveContainer width="100%" height={250}>
+                      <BarChart 
+                        data={costData.material_cost_analysis || []}
+                      >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="name" />
+                        <YAxis 
+                          label={{ 
+                            value: 'Cost (₹)', 
+                            angle: -90, 
+                            position: 'insideLeft' 
+                          }} 
+                        />
+                        <ChartTooltip 
+                          formatter={(value) => [`₹${value.toFixed(2)}`, 'Total Cost']}
+                        />
+                        <Bar dataKey="total_cost" fill="#8884d8" />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </Grid>
+                </Grid>
+              ) : (
+                <Box 
+                  display="flex" 
+                  justifyContent="center" 
+                  alignItems="center" 
+                  height={300}
+                >
+                  <Typography variant="body2" color="textSecondary">
+                    No cost data available
                   </Typography>
-                </Grid>
-                <Grid item xs={12}>
-                  <ResponsiveContainer width="100%" height={250}>
-                    <BarChart data={costData.cost_breakdown}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="category" />
-                      <YAxis 
-                        label={{ 
-                          value: 'Cost (₹)', 
-                          angle: -90, 
-                          position: 'insideLeft' 
-                        }} 
-                      />
-                      <ChartTooltip 
-                        formatter={(value) => [`₹${value.toFixed(2)}`, 'Cost']}
-                      />
-                      <Bar dataKey="amount" fill="#8884d8" />
-                    </BarChart>
-                  </ResponsiveContainer>
-                </Grid>
-              </Grid>
+                </Box>
+              )}
             </CardContent>
           </Card>
         </Grid>

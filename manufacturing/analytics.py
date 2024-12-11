@@ -1,5 +1,5 @@
 from django.db.models import Sum, Count, Avg, F, ExpressionWrapper, DecimalField, Q, Value
-from django.db.models.functions import TruncMonth
+from django.db.models.functions import TruncDay, TruncMonth
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
@@ -34,12 +34,12 @@ class DashboardAnalyticsView(APIView):
             ).values('name', 'total_consumed', 'percentage').order_by('-total_consumed')
 
             # Production Performance
-            monthly_production = WorkOrder.objects.annotate(
-                month=TruncMonth('created_at'),
+            daily_production = WorkOrder.objects.annotate(
+                day=TruncDay('created_at'),
                 total_production=Sum('quantity', default=0)
-            ).values('month').annotate(
+            ).values('day').annotate(
                 avg_quantity=Avg('quantity', default=0)
-            ).order_by('month')
+            ).order_by('day')
 
             # Workstation Utilization
             workstation_utilization = WorkStation.objects.annotate(
@@ -60,7 +60,7 @@ class DashboardAnalyticsView(APIView):
                     'in_progress': in_progress_work_orders
                 },
                 'material_usage': list(material_usage),
-                'monthly_production': list(monthly_production),
+                'daily_production': list(daily_production),
                 'workstation_utilization': list(workstation_utilization),
                 'product_performance': list(product_performance)
             })
