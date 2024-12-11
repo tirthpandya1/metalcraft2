@@ -12032,3 +12032,236 @@ Traceback (most recent call last):
   File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
     raise ValidationError(self.errors)
 rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:07:56,327 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:07:56,327 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:08:05,086 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:08:05,086 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:08:23,900 serializers 53013 6189477888 Material shortage when creating work order: [{'material_name': 'SS Sheet', 'material_id': 9, 'required_quantity': Decimal('20000.0000'), 'available_quantity': Decimal('600.00'), 'shortage_percentage': Decimal('97.00')}]
+ERROR 2024-12-11 21:08:23,900 exceptions 53013 6189477888 Unhandled Exception: MaterialShortageAPIException
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 406, in create
+    raise MaterialShortageAPIException(
+manufacturing.serializers.MaterialShortageAPIException: {'type': ErrorDetail(string='MaterialShortageError', code='material_shortage'), 'message': ErrorDetail(string='Insufficient materials to create work order', code='material_shortage'), 'material_details': [{'material_name': ErrorDetail(string='SS Sheet', code='material_shortage'), 'material_id': ErrorDetail(string='9', code='material_shortage'), 'required_quantity': ErrorDetail(string='20000.0000', code='material_shortage'), 'available_quantity': ErrorDetail(string='600.00', code='material_shortage'), 'shortage_percentage': ErrorDetail(string='97.00', code='material_shortage')}]}
+ERROR 2024-12-11 21:08:23,900 exceptions 53013 6189477888 Unhandled Exception: MaterialShortageAPIException
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 406, in create
+    raise MaterialShortageAPIException(
+manufacturing.serializers.MaterialShortageAPIException: {'type': ErrorDetail(string='MaterialShortageError', code='material_shortage'), 'message': ErrorDetail(string='Insufficient materials to create work order', code='material_shortage'), 'material_details': [{'material_name': ErrorDetail(string='SS Sheet', code='material_shortage'), 'material_id': ErrorDetail(string='9', code='material_shortage'), 'required_quantity': ErrorDetail(string='20000.0000', code='material_shortage'), 'available_quantity': ErrorDetail(string='600.00', code='material_shortage'), 'shortage_percentage': ErrorDetail(string='97.00', code='material_shortage')}]}
+ERROR 2024-12-11 21:08:44,849 serializers 53013 6189477888 Material shortage when creating work order: [{'material_name': 'Aluminium Sheet', 'material_id': 10, 'required_quantity': Decimal('2000.0000'), 'available_quantity': Decimal('200.00'), 'shortage_percentage': Decimal('90.0')}]
+ERROR 2024-12-11 21:08:44,849 exceptions 53013 6189477888 Unhandled Exception: MaterialShortageAPIException
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 406, in create
+    raise MaterialShortageAPIException(
+manufacturing.serializers.MaterialShortageAPIException: {'type': ErrorDetail(string='MaterialShortageError', code='material_shortage'), 'message': ErrorDetail(string='Insufficient materials to create work order', code='material_shortage'), 'material_details': [{'material_name': ErrorDetail(string='Aluminium Sheet', code='material_shortage'), 'material_id': ErrorDetail(string='10', code='material_shortage'), 'required_quantity': ErrorDetail(string='2000.0000', code='material_shortage'), 'available_quantity': ErrorDetail(string='200.00', code='material_shortage'), 'shortage_percentage': ErrorDetail(string='90.0', code='material_shortage')}]}
+ERROR 2024-12-11 21:08:44,849 exceptions 53013 6189477888 Unhandled Exception: MaterialShortageAPIException
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 406, in create
+    raise MaterialShortageAPIException(
+manufacturing.serializers.MaterialShortageAPIException: {'type': ErrorDetail(string='MaterialShortageError', code='material_shortage'), 'message': ErrorDetail(string='Insufficient materials to create work order', code='material_shortage'), 'material_details': [{'material_name': ErrorDetail(string='Aluminium Sheet', code='material_shortage'), 'material_id': ErrorDetail(string='10', code='material_shortage'), 'required_quantity': ErrorDetail(string='2000.0000', code='material_shortage'), 'available_quantity': ErrorDetail(string='200.00', code='material_shortage'), 'shortage_percentage': ErrorDetail(string='90.0', code='material_shortage')}]}
+ERROR 2024-12-11 21:08:59,755 serializers 53013 6189477888 Material shortage when creating work order: [{'material_name': 'Aluminium Sheet', 'material_id': 10, 'required_quantity': Decimal('202.0000'), 'available_quantity': Decimal('200.00'), 'shortage_percentage': Decimal('0.9900990099009900990099009901')}]
+ERROR 2024-12-11 21:08:59,755 exceptions 53013 6189477888 Unhandled Exception: MaterialShortageAPIException
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 406, in create
+    raise MaterialShortageAPIException(
+manufacturing.serializers.MaterialShortageAPIException: {'type': ErrorDetail(string='MaterialShortageError', code='material_shortage'), 'message': ErrorDetail(string='Insufficient materials to create work order', code='material_shortage'), 'material_details': [{'material_name': ErrorDetail(string='Aluminium Sheet', code='material_shortage'), 'material_id': ErrorDetail(string='10', code='material_shortage'), 'required_quantity': ErrorDetail(string='202.0000', code='material_shortage'), 'available_quantity': ErrorDetail(string='200.00', code='material_shortage'), 'shortage_percentage': ErrorDetail(string='0.9900990099009900990099009901', code='material_shortage')}]}
+ERROR 2024-12-11 21:08:59,755 exceptions 53013 6189477888 Unhandled Exception: MaterialShortageAPIException
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 406, in create
+    raise MaterialShortageAPIException(
+manufacturing.serializers.MaterialShortageAPIException: {'type': ErrorDetail(string='MaterialShortageError', code='material_shortage'), 'message': ErrorDetail(string='Insufficient materials to create work order', code='material_shortage'), 'material_details': [{'material_name': ErrorDetail(string='Aluminium Sheet', code='material_shortage'), 'material_id': ErrorDetail(string='10', code='material_shortage'), 'required_quantity': ErrorDetail(string='202.0000', code='material_shortage'), 'available_quantity': ErrorDetail(string='200.00', code='material_shortage'), 'shortage_percentage': ErrorDetail(string='0.9900990099009900990099009901', code='material_shortage')}]}
+ERROR 2024-12-11 21:09:28,028 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from PENDING to PENDING', code='invalid')]}
+ERROR 2024-12-11 21:09:28,028 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from PENDING to PENDING', code='invalid')]}
+ERROR 2024-12-11 21:11:19,064 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from PENDING to PENDING', code='invalid')]}
+ERROR 2024-12-11 21:11:19,064 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from PENDING to PENDING', code='invalid')]}
+ERROR 2024-12-11 21:12:44,683 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:12:44,683 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:13:02,376 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:13:02,376 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:13:09,109 exceptions 53013 6256783360 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:13:09,109 exceptions 53013 6256783360 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
