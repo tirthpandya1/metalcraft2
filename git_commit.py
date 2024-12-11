@@ -263,7 +263,7 @@ def stop_ollama_service():
 
 def generate_commit_message_with_ollama(changes_summary: str, full_diff: str) -> str:
     """
-    Generate a commit message using Ollama's Llama3.1 model with full changelog context.
+    Generate a concise commit message using Ollama's Llama3.1 model.
     
     Args:
         changes_summary (str): A summary of the changes detected in the repository
@@ -278,15 +278,15 @@ def generate_commit_message_with_ollama(changes_summary: str, full_diff: str) ->
     
     try:
         # Prepare the prompt for commit message generation
-        prompt = f"""Generate a git commit message based on the following changes:
+        prompt = f"""Generate ONLY a git commit message for these changes. 
+Do NOT include any explanation, context, or additional text. 
+Commit message must be a single line under 50 words:
 
-Changes Summary:
-{changes_summary}
+Summary: {changes_summary}
 
-Full Changelog:
-{full_diff}
+Diff: {full_diff[:500]}
 
-Commit Message:"""
+Message:"""
 
         # Make request to local Ollama service
         response = requests.post('http://localhost:11434/api/generate', json={
@@ -302,9 +302,15 @@ Commit Message:"""
             # Cleanup and validate the message
             generated_message = generated_message.replace('"', '').strip()
             
+            # Remove any leading text before the actual message
+            generated_message = re.sub(r'^.*?:\s*', '', generated_message, flags=re.IGNORECASE).strip()
+            
             # Fallback if generation fails
             if not generated_message or len(generated_message) < 10:
                 generated_message = "Chore: Minor project updates"
+            
+            # Truncate to 500 characters
+            generated_message = generated_message[:500]
             
             return generated_message
         else:
@@ -335,15 +341,15 @@ def generate_commit_message_with_ollama_async(changes_summary: str, full_diff: s
         
         try:
             # Prepare the prompt for commit message generation
-            prompt = f"""Generate a git commit message based on the following changes:
+            prompt = f"""Generate ONLY a git commit message for these changes. 
+Do NOT include any explanation, context, or additional text. 
+Commit message must be a single line under 50 words:
 
-Changes Summary:
-{changes_summary}
+Summary: {changes_summary}
 
-Full Changelog:
-{full_diff}
+Diff: {full_diff[:500]}
 
-Commit Message:"""
+Message:"""
 
             # Make request to local Ollama service
             response = requests.post('http://localhost:11434/api/generate', json={
@@ -359,9 +365,15 @@ Commit Message:"""
                 # Cleanup and validate the message
                 generated_message = generated_message.replace('"', '').strip()
                 
+                # Remove any leading text before the actual message
+                generated_message = re.sub(r'^.*?:\s*', '', generated_message, flags=re.IGNORECASE).strip()
+                
                 # Fallback if generation fails
                 if not generated_message or len(generated_message) < 10:
                     generated_message = "Chore: Minor project updates"
+                
+                # Truncate to 500 characters
+                generated_message = generated_message[:500]
                 
                 result_queue.put(generated_message)
             else:
@@ -370,14 +382,14 @@ Commit Message:"""
         
         except Exception as e:
             print(f"Error generating commit message: {e}")
-            result_queue.put("Chore: Minor updates across project")
+            result_queue.put("Chore: Minor project updates")
         finally:
             # Always stop the Ollama service after use
             stop_ollama_service()
     
     except Exception as e:
         print(f"Critical error in async message generation: {e}")
-        result_queue.put("Chore: Minor updates across project")
+        result_queue.put("Chore: Minor project updates")
 
 def git_add_all():
     """Stage all changes."""
