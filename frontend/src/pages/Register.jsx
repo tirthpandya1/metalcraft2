@@ -8,6 +8,7 @@ import {
   Paper 
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { authService } from '../services/api';
 import { handleApiError, withErrorHandling } from '../utils/errorHandler';
 
@@ -16,13 +17,27 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  
+  // New state for field-specific errors
+  const [usernameError, setUsernameError] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
+  const [confirmPasswordError, setConfirmPasswordError] = useState('');
+
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
     
+    // Reset previous errors
+    setUsernameError('');
+    setEmailError('');
+    setPasswordError('');
+    setConfirmPasswordError('');
+    
     // Basic client-side validation
     if (password !== confirmPassword) {
+      setConfirmPasswordError('Passwords do not match');
       handleApiError(new Error('Passwords do not match'), {
         message: 'Passwords do not match. Please try again.',
         silent: false
@@ -31,23 +46,44 @@ const Register = () => {
     }
 
     try {
-      const response = await authService.register({
-        username,
-        email,
+      const userData = {
+        username, 
+        email, 
         password
-      });
+      };
+      const response = await authService.register(userData);
       
-      // Store authentication token if returned
-      if (response.token) {
-        localStorage.setItem('authToken', response.token);
-      }
+      // Show success toast
+      toast.success(`Welcome, ${username}! Your account has been created.`, {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "colored"
+      });
       
       // Redirect to login or dashboard
       navigate('/login');
     } catch (error) {
+      // Detailed error handling
+      if (error.details) {
+        // Handle specific field errors
+        if (error.details.username) {
+          setUsernameError(error.details.username[0] || 'Invalid username');
+        }
+        if (error.details.email) {
+          setEmailError(error.details.email[0] || 'Invalid email');
+        }
+        if (error.details.password) {
+          setPasswordError(error.details.password[0] || 'Invalid password');
+        }
+      }
+
       // Use centralized error handling with custom message
       handleApiError(error, {
-        message: 'Registration failed. Please check your details.',
+        message: error.message || 'Registration failed. Please check your details.',
         silent: false  // Ensure user sees the error
       });
     }
@@ -84,6 +120,8 @@ const Register = () => {
             autoFocus
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            error={!!usernameError}
+            helperText={usernameError}
           />
           <TextField
             variant="outlined"
@@ -96,6 +134,8 @@ const Register = () => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            error={!!emailError}
+            helperText={emailError}
           />
           <TextField
             variant="outlined"
@@ -108,6 +148,8 @@ const Register = () => {
             autoComplete="new-password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            error={!!passwordError}
+            helperText={passwordError}
           />
           <TextField
             variant="outlined"
@@ -120,6 +162,8 @@ const Register = () => {
             autoComplete="new-password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
+            error={!!confirmPasswordError}
+            helperText={confirmPasswordError}
           />
           <Button
             type="submit"

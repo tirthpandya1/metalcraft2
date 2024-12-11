@@ -28,15 +28,33 @@ def install_tkinter():
         return False
 
 def get_git_diff() -> str:
-    """Retrieve the git diff of staged changes."""
+    """Retrieve the git diff of both staged and unstaged changes."""
     try:
-        result = subprocess.run(
+        # Capture staged changes
+        staged_result = subprocess.run(
             ['git', 'diff', '--cached'], 
             capture_output=True, 
             text=True, 
             cwd='/Users/T/Documents/GitHub/metalcraft2'
         )
-        return result.stdout
+        
+        # Capture unstaged changes
+        unstaged_result = subprocess.run(
+            ['git', 'diff'], 
+            capture_output=True, 
+            text=True, 
+            cwd='/Users/T/Documents/GitHub/metalcraft2'
+        )
+        
+        # Combine staged and unstaged changes
+        full_diff = staged_result.stdout + "\n" + unstaged_result.stdout
+        
+        # Print debug information
+        print(f"[DEBUG] Staged Changes Length: {len(staged_result.stdout)}")
+        print(f"[DEBUG] Unstaged Changes Length: {len(unstaged_result.stdout)}")
+        print(f"[DEBUG] Total Diff Length: {len(full_diff)}")
+        
+        return full_diff
     except Exception as e:
         print(f"Error retrieving git diff: {e}")
         return ""
@@ -260,25 +278,15 @@ def generate_commit_message_with_ollama(changes_summary: str, full_diff: str) ->
     
     try:
         # Prepare the prompt for commit message generation
-        prompt = f"""You are a professional git commit message generator for a Manufacturing Management System. 
-        Your task is to generate a concise, meaningful commit message that captures the essence of the changes.
+        prompt = f"""Generate a git commit message based on the following changes:
 
-        Context:
-        Changes Summary:
-        {changes_summary}
+Changes Summary:
+{changes_summary}
 
-        Full Changelog:
-        {full_diff}
+Full Changelog:
+{full_diff}
 
-        Requirements:
-        - Use conventional commit format (type: description)
-        - Be specific about the key changes
-        - Highlight the most significant modifications
-        - Use imperative mood
-        - Capitalize the first letter
-        - Focus on the impact and purpose of the changes
-
-        Generate ONLY the commit message, without any additional explanation."""
+Commit Message:"""
 
         # Make request to local Ollama service
         response = requests.post('http://localhost:11434/api/generate', json={
@@ -327,25 +335,15 @@ def generate_commit_message_with_ollama_async(changes_summary: str, full_diff: s
         
         try:
             # Prepare the prompt for commit message generation
-            prompt = f"""You are a professional git commit message generator for a Manufacturing Management System. 
-            Your task is to generate a concise, meaningful commit message that captures the essence of the changes.
+            prompt = f"""Generate a git commit message based on the following changes:
 
-            Context:
-            Changes Summary:
-            {changes_summary}
+Changes Summary:
+{changes_summary}
 
-            Full Changelog:
-            {full_diff}
+Full Changelog:
+{full_diff}
 
-            Requirements:
-            - Use conventional commit format (type: description)
-            - Be specific about the key changes
-            - Highlight the most significant modifications
-            - Use imperative mood
-            - Capitalize the first letter
-            - Focus on the impact and purpose of the changes
-
-            Generate ONLY the commit message, without any additional explanation."""
+Commit Message:"""
 
             # Make request to local Ollama service
             response = requests.post('http://localhost:11434/api/generate', json={

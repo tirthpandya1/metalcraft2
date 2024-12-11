@@ -15,29 +15,46 @@ export const toastConfig = {
     theme: "dark"
 };
 
-// Centralized error logging service
-const logErrorToService = async (error) => {
-    try {
-        const errorPayload = {
-            message: error.message,
-            stack: error.stack,
-            type: error.name,
-            timestamp: new Date().toISOString(),
-            url: window.location.href,
-            user: localStorage.getItem('username') || 'anonymous'
+// Function to extract most meaningful error message
+const extractErrorMessage = (error) => {
+    // If it's an error with a predefined message
+    if (error.message) return error.message;
+
+    // Check for backend error response
+    if (error.response && error.response.data) {
+        const errorData = error.response.data;
+
+        // Check for specific field errors
+        if (errorData.username) {
+            return errorData.username[0] || 'Invalid username';
+        }
+        if (errorData.email) {
+            return errorData.email[0] || 'Invalid email';
+        }
+        if (errorData.password) {
+            return errorData.password[0] || 'Invalid password';
+        }
+
+        // Check for detail or message in the response
+        if (errorData.detail) return errorData.detail;
+        if (errorData.message) return errorData.message;
+    }
+
+    // HTTP status code based messages
+    if (error.response) {
+        const statusMessages = {
+            400: 'Bad request. Please check your input.',
+            401: 'Unauthorized. Please log in again.',
+            403: 'Forbidden. You do not have permission.',
+            404: 'Resource not found.',
+            500: 'Server error. Please try again later.'
         };
 
-        await fetch('/api/log-error', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Token ${localStorage.getItem('token')}`
-            },
-            body: JSON.stringify(errorPayload)
-        });
-    } catch (logError) {
-        console.error('Failed to log error', logError);
+        return statusMessages[error.response.status] || 'An unexpected error occurred';
     }
+
+    // Fallback generic message
+    return 'An unexpected error occurred';
 };
 
 /**
@@ -54,22 +71,23 @@ export const handleApiError = (error, options = {}) => {
     if (error.handled) return;
     error.handled = true;
 
-    // Log error for debugging and tracking
-    console.error('API Error:', error);
-    console.error('Full Error Object:', JSON.stringify(error, null, 2));
-    
-    // Temporarily disable error logging service
-    // logErrorToService(error);
+    // Extract the most meaningful error message
+    const errorMessage = customMessage || extractErrorMessage(error);
 
+    // Log error for debugging
+    console.error('API Error:', error);
+    console.error('Extracted Error Message:', errorMessage);
+    
     // Prevent toast if silent mode is enabled
     if (silent) return;
 
-    // Check if error response comes from our custom backend error handler
+    // Display toast notification
+    toast.error(errorMessage, toastConfig);
+
+    // Additional specific error handling if needed
     if (error.response?.data) {
         const errorData = error.response.data;
-        console.log('Error Response Data:', JSON.stringify(errorData, null, 2));
         
-        // Different handling based on error type
         switch (errorData.type || errorData.field_errors?.type) {
             case 'MaterialShortageError':
             case 'MaterialShortageAPIException':
@@ -81,36 +99,7 @@ export const handleApiError = (error, options = {}) => {
             case 'ValidationError':
                 handleValidationError(errorData);
                 break;
-            default:
-                // Generic error handling for non-typed errors
-                const errorMessage = customMessage || 
-                    errorData.detail || 
-                    errorData.message || 
-                    'An unexpected error occurred';
-                
-                toast.error(errorMessage, toastConfig);
         }
-    } else if (error.response) {
-        // Standard HTTP error responses
-        const statusMessages = {
-            400: 'Invalid request data',
-            401: 'Please log in again',
-            403: 'You do not have permission',
-            404: 'Resource not found',
-            500: 'Server error, please try again',
-        };
-
-        const message = customMessage || 
-            statusMessages[error.response.status] || 
-            `Error: ${error.response.status}`;
-        
-        toast.error(message, toastConfig);
-    } else if (error.request) {
-        // Network errors
-        toast.error(customMessage || 'Unable to connect to server', toastConfig);
-    } else {
-        // Generic error
-        toast.error(customMessage || 'An error occurred', toastConfig);
     }
 };
 

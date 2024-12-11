@@ -15,20 +15,34 @@ const api = axios.create({
 // Authentication Service
 export const authService = {
   // Register a new user
-  async register(username, email, password) {
+  async register(userData) {
     try {
-      const response = await api.post('/auth/register/', { 
-        username, 
-        email, 
-        password 
-      });
+      const response = await api.post('/auth/register/', userData);
       
       // Store token and user info in localStorage
       this.setCurrentUser(response.data);
       return response.data;
     } catch (error) {
-      console.error('Registration error:', error.response?.data);
-      throw error;
+      // Detailed error handling for registration
+      const errorResponse = error.response?.data || {};
+      
+      // Create a custom error with more details
+      const registrationError = new Error('Registration failed');
+      registrationError.details = errorResponse;
+      
+      // Add specific error messages if available
+      if (errorResponse.username) {
+        registrationError.message = errorResponse.username[0] || 'Invalid username';
+      } else if (errorResponse.email) {
+        registrationError.message = errorResponse.email[0] || 'Invalid email';
+      } else if (errorResponse.password) {
+        registrationError.message = errorResponse.password[0] || 'Invalid password';
+      } else if (errorResponse.detail) {
+        registrationError.message = errorResponse.detail;
+      }
+
+      console.error('Registration error:', registrationError.message);
+      throw registrationError;
     }
   },
 
@@ -52,8 +66,26 @@ export const authService = {
       
       return response.data;
     } catch (error) {
-      console.error('Login error:', error.response?.data);
-      throw error;
+      // Detailed error handling for login
+      const errorResponse = error.response?.data || {};
+      
+      // Create a custom error with more details
+      const loginError = new Error('Login failed');
+      loginError.details = errorResponse;
+      
+      // Add specific error messages if available
+      if (errorResponse.detail) {
+        loginError.message = errorResponse.detail;
+      } else if (errorResponse.username) {
+        loginError.message = 'Invalid username';
+      } else if (errorResponse.password) {
+        loginError.message = 'Invalid password';
+      } else if (error.response?.status === 401) {
+        loginError.message = 'Unauthorized: Incorrect username or password';
+      }
+
+      console.error('Login error:', loginError.message);
+      throw loginError;
     }
   },
 
