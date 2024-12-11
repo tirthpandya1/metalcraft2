@@ -33,12 +33,11 @@ class DashboardAnalyticsView(APIView):
                 )
             ).values('name', 'total_consumed', 'percentage').order_by('-total_consumed')
 
-            # Production Performance
-            daily_production = WorkOrder.objects.annotate(
-                day=TruncDay('created_at'),
-                total_production=Sum('quantity', default=0)
+            # Daily Production
+            daily_production = ProductionLog.objects.annotate(
+                day=TruncDay('created_at')
             ).values('day').annotate(
-                avg_quantity=Avg('quantity', default=0)
+                total_quantity=Sum('quantity_produced')
             ).order_by('day')
 
             # Workstation Utilization

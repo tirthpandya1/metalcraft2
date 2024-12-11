@@ -20,7 +20,8 @@ import {
   TableHead, 
   TableRow, 
   TableCell, 
-  TableBody
+  TableBody,
+  MenuItem
 } from '@mui/material';
 import { 
   Build as BuildIcon, 
@@ -110,13 +111,21 @@ const WorkstationCard = ({ workstation, onEdit, onDelete }) => {
 };
 
 const WorkstationForm = ({ item, onItemChange }) => {
+  // If item is null, provide a default object
+  const safeItem = item || { 
+    name: '', 
+    description: '', 
+    process_type: 'MANUAL', 
+    status: 'INACTIVE' 
+  };
+
   return (
     <>
       <TextField
         fullWidth
         margin="normal"
         label="Name"
-        value={item.name || ''}
+        value={safeItem.name || ''}
         onChange={(e) => onItemChange(prev => ({
           ...prev,
           name: e.target.value
@@ -129,7 +138,7 @@ const WorkstationForm = ({ item, onItemChange }) => {
         label="Description"
         multiline
         rows={3}
-        value={item.description || ''}
+        value={safeItem.description || ''}
         onChange={(e) => onItemChange(prev => ({
           ...prev,
           description: e.target.value
@@ -140,7 +149,7 @@ const WorkstationForm = ({ item, onItemChange }) => {
         margin="normal"
         label="Process Type"
         select
-        value={item.process_type || 'MANUAL'}
+        value={safeItem.process_type || 'MANUAL'}
         onChange={(e) => onItemChange(prev => ({
           ...prev,
           process_type: e.target.value
@@ -154,7 +163,7 @@ const WorkstationForm = ({ item, onItemChange }) => {
         margin="normal"
         label="Status"
         select
-        value={item.status || 'INACTIVE'}
+        value={safeItem.status || 'INACTIVE'}
         onChange={(e) => onItemChange(prev => ({
           ...prev,
           status: e.target.value

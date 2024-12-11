@@ -5,7 +5,7 @@ from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
 from django.utils import timezone
 
-from .models import WorkOrder, Material, Product, ProductionLog, Workstation
+from .models import WorkOrder, Material, Product, ProductionLog, WorkStation
 
 User = get_user_model()
 channel_layer = get_channel_layer()
@@ -63,7 +63,7 @@ class WorkflowEvent:
             event_type (str): Type of event from EventType
             work_order (WorkOrder): Associated work order
             product (Product): Associated product
-            workstation (Workstation, optional): Associated workstation
+            workstation (WorkStation, optional): Associated workstation
             details (dict, optional): Additional event details
         """
         from .models import ProductionLog  # Import here to avoid circular import
@@ -83,7 +83,7 @@ class WorkflowEvent:
         Track and log workstation efficiency metrics
         
         Args:
-            workstation (Workstation): Workstation being tracked
+            workstation (WorkStation): Workstation being tracked
             processing_time (timedelta): Time taken to process
             material_used (float): Total material used
             material_wasted (float): Material wasted during processing
