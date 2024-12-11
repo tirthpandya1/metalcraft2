@@ -495,10 +495,34 @@ class WorkOrderSerializer(serializers.ModelSerializer):
             raise
 
 class ProductionLogSerializer(serializers.ModelSerializer):
+    work_order = serializers.SerializerMethodField()
+    machine = serializers.SerializerMethodField()
+    operation = serializers.SerializerMethodField()
+    timestamp = serializers.DateTimeField(source='created_at')
+
     class Meta:
         model = ProductionLog
-        fields = ['id', 'work_order_id', 'workstation_id', 'quantity_produced', 'wastage', 'start_time', 'end_time', 'status', 'created_at']
-        read_only_fields = ['id', 'created_at']
+        fields = [
+            'id', 
+            'work_order', 
+            'machine', 
+            'operation', 
+            'quantity_produced', 
+            'wastage', 
+            'timestamp', 
+            'notes'
+        ]
+        read_only_fields = ['id', 'timestamp']
+
+    def get_work_order(self, obj):
+        return str(obj.work_order.id) if obj.work_order else None
+
+    def get_machine(self, obj):
+        return obj.workstation.name if obj.workstation else None
+
+    def get_operation(self, obj):
+        # Derive operation from work order or other logic
+        return obj.work_order.product.name if obj.work_order else None
 
 class WorkstationProcessSerializer(serializers.ModelSerializer):
     """

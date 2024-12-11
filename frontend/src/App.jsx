@@ -26,6 +26,7 @@ import Workstations from './pages/Workstations';
 import WorkstationEfficiency from './pages/WorkstationEfficiency';
 import ProductionDesigns from './pages/ProductionDesigns';
 import ProductionEvents from './pages/ProductionEvents';
+import ProductionLogs from './pages/ProductionLogs';
 
 // Import toast
 import { ToastContainer } from 'react-toastify';
@@ -185,6 +186,22 @@ function App() {
           element={
             <ProtectedRoute>
               <ProductionEvents />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/production-logs" 
+          element={
+            <ProtectedRoute>
+              <ProductionLogs />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/production-logs" 
+          element={
+            <ProtectedRoute>
+              <ProductionLogs />
             </ProtectedRoute>
           } 
         />

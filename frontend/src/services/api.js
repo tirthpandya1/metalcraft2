@@ -553,4 +553,65 @@ export const productionEventService = {
   }
 };
 
+export const productionLogService = {
+  async getAll(params = {}) {
+    try {
+      const response = await api.get('/production-logs/', { params });
+      return response.data;
+    } catch (error) {
+      handleApiError(error);
+      throw error;
+    }
+  },
+
+  async getById(id) {
+    try {
+      const response = await api.get(`/production-logs/${id}/`);
+      return response.data;
+    } catch (error) {
+      handleApiError(error);
+      throw error;
+    }
+  },
+
+  async create(data) {
+    try {
+      const response = await api.post('/production-logs/', data);
+      return response.data;
+    } catch (error) {
+      handleApiError(error);
+      throw error;
+    }
+  },
+
+  async update(id, data) {
+    try {
+      const response = await api.put(`/production-logs/${id}/`, data);
+      return response.data;
+    } catch (error) {
+      handleApiError(error);
+      throw error;
+    }
+  },
+
+  async delete(id) {
+    try {
+      await api.delete(`/production-logs/${id}/`);
+    } catch (error) {
+      handleApiError(error);
+      throw error;
+    }
+  },
+
+  async getStats() {
+    try {
+      const response = await api.get('/production-logs/production_stats/');
+      return response.data;
+    } catch (error) {
+      handleApiError(error);
+      throw error;
+    }
+  }
+};
+
 export default api;

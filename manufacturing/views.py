@@ -17,6 +17,8 @@ from .serializers import (
     ProductWorkstationSequenceSerializer
 )
 import logging
+from django.db.models import Q
+from rest_framework.pagination import PageNumberPagination
 
 logger = logging.getLogger(__name__)
 
@@ -585,29 +587,44 @@ class WorkOrderViewSet(viewsets.ModelViewSet):
         
         return Response(stats)
 
+class StandardResultsSetPagination(PageNumberPagination):
+    page_size = 10
+    page_size_query_param = 'page_size'
+
 class ProductionLogViewSet(viewsets.ModelViewSet):
-    queryset = ProductionLog.objects.all()
+    queryset = ProductionLog.objects.all().order_by('-created_at')
     serializer_class = ProductionLogSerializer
-    permission_classes = [permissions.AllowAny]  # Change to AllowAny for development
+    permission_classes = [permissions.AllowAny]
+    pagination_class = StandardResultsSetPagination
+    filterset_fields = ['status', 'workstation__name', 'work_order__id']
+    search_fields = ['work_order__id', 'workstation__name', 'status']
 
-    def perform_create(self, serializer):
-        # Only set created_by if a user is authenticated
-        if self.request.user.is_authenticated:
-            serializer.save(created_by=self.request.user)
-        else:
-            serializer.save()
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        search_query = self.request.query_params.get('search', None)
+        
+        if search_query:
+            queryset = queryset.filter(
+                Q(work_order__id__icontains=search_query) | 
+                Q(workstation__name__icontains=search_query) | 
+                Q(status__icontains=search_query)
+            )
+        
+        return queryset
 
-    @action(detail=False, methods=['get'])
+    @action(detail=False, methods=['GET'])
     def production_stats(self, request):
-        today = timezone.now().date()
-        today_stats = ProductionLog.objects.filter(created_at__date=today).aggregate(
-            total_produced=Sum('quantity_produced'),
-            total_wastage=Sum('wastage')
+        """
+        Provide comprehensive production statistics
+        """
+        total_logs = self.get_queryset().count()
+        status_breakdown = self.get_queryset().values('status').annotate(
+            count=Count('status')
         )
-
+        
         return Response({
-            'today_production': today_stats['total_produced'] or 0,
-            'today_wastage': today_stats['total_wastage'] or 0
+            'total_logs': total_logs,
+            'status_breakdown': {item['status']: item['count'] for item in status_breakdown}
         })
 
 class WorkstationProcessViewSet(viewsets.ModelViewSet):

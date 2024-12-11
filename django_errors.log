@@ -12769,3 +12769,777 @@ Traceback (most recent call last):
 ValueError: Cannot reserve materials for work order with status PAUSED
 ERROR 2024-12-11 21:39:00,074 log 55997 6223425536 Internal Server Error: /api/work-orders/13/
 ERROR 2024-12-11 21:39:00,074 basehttp 55997 6223425536 "PUT /api/work-orders/13/ HTTP/1.1" 500 151
+ERROR 2024-12-11 22:00:41,598 exceptions 56631 6124433408 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+ERROR 2024-12-11 22:00:41,598 exceptions 56631 6124433408 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+ERROR 2024-12-11 22:00:41,615 exceptions 56631 6124433408 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+ERROR 2024-12-11 22:00:41,616 exceptions 56631 6141259776 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+ERROR 2024-12-11 22:00:41,616 exceptions 56631 6158086144 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+ERROR 2024-12-11 22:00:41,615 exceptions 56631 6124433408 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+ERROR 2024-12-11 22:00:41,617 exceptions 56631 6174912512 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+ERROR 2024-12-11 22:00:41,616 exceptions 56631 6141259776 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+ERROR 2024-12-11 22:00:41,619 exceptions 56631 6208565248 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+ERROR 2024-12-11 22:00:41,616 exceptions 56631 6158086144 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+ERROR 2024-12-11 22:00:41,617 exceptions 56631 6174912512 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+ERROR 2024-12-11 22:00:41,619 exceptions 56631 6208565248 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+ERROR 2024-12-11 22:03:09,709 exceptions 56631 6158086144 Unhandled Exception: ImproperlyConfigured
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid for model `ProductionLog`.
+ERROR 2024-12-11 22:03:09,709 exceptions 56631 6158086144 Unhandled Exception: ImproperlyConfigured
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid for model `ProductionLog`.
+ERROR 2024-12-11 22:03:09,711 log 56631 6158086144 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:03:09,712 basehttp 56631 6158086144 "GET /api/production-logs/?page=1&ordering=-timestamp&search= HTTP/1.1" 500 162
+ERROR 2024-12-11 22:03:22,482 exceptions 56631 6158086144 Unhandled Exception: ImproperlyConfigured
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid for model `ProductionLog`.
+ERROR 2024-12-11 22:03:22,482 exceptions 56631 6158086144 Unhandled Exception: ImproperlyConfigured
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid for model `ProductionLog`.
+ERROR 2024-12-11 22:03:22,484 log 56631 6158086144 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:03:22,485 basehttp 56631 6158086144 "GET /api/production-logs/?page=1&ordering=-timestamp&search= HTTP/1.1" 500 162
+ERROR 2024-12-11 22:03:32,388 exceptions 56631 6158086144 Unhandled Exception: ImproperlyConfigured
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid for model `ProductionLog`.
+ERROR 2024-12-11 22:03:32,388 exceptions 56631 6158086144 Unhandled Exception: ImproperlyConfigured
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid for model `ProductionLog`.
+ERROR 2024-12-11 22:03:32,389 log 56631 6158086144 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:03:32,390 basehttp 56631 6158086144 "GET /api/production-logs/?page=1&ordering=-timestamp&search= HTTP/1.1" 500 162
+ERROR 2024-12-11 22:03:42,805 exceptions 56631 6174912512 Unhandled Exception: ImproperlyConfigured
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid for model `ProductionLog`.
+ERROR 2024-12-11 22:03:42,809 exceptions 56631 6158086144 Unhandled Exception: ImproperlyConfigured
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid for model `ProductionLog`.
+ERROR 2024-12-11 22:03:42,805 exceptions 56631 6174912512 Unhandled Exception: ImproperlyConfigured
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid for model `ProductionLog`.
+ERROR 2024-12-11 22:03:42,809 exceptions 56631 6158086144 Unhandled Exception: ImproperlyConfigured
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid for model `ProductionLog`.
+ERROR 2024-12-11 22:03:42,810 log 56631 6174912512 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:03:42,810 log 56631 6158086144 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:03:42,811 basehttp 56631 6174912512 "GET /api/production-logs/?page=1&ordering=-timestamp&search= HTTP/1.1" 500 162
+ERROR 2024-12-11 22:03:42,811 basehttp 56631 6158086144 "GET /api/production-logs/?page=1&ordering=-timestamp&search= HTTP/1.1" 500 162
+ERROR 2024-12-11 22:03:52,612 exceptions 56631 6174912512 Unhandled Exception: ImproperlyConfigured
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid for model `ProductionLog`.
+ERROR 2024-12-11 22:03:52,612 exceptions 56631 6174912512 Unhandled Exception: ImproperlyConfigured
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid for model `ProductionLog`.
+ERROR 2024-12-11 22:03:52,613 exceptions 56631 6158086144 Unhandled Exception: ImproperlyConfigured
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid for model `ProductionLog`.
+ERROR 2024-12-11 22:03:52,613 log 56631 6174912512 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:03:52,613 exceptions 56631 6158086144 Unhandled Exception: ImproperlyConfigured
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 507, in to_representation
+    for field in fields:
+                 ^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/utils/functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `status` is not valid for model `ProductionLog`.
+ERROR 2024-12-11 22:03:52,614 log 56631 6158086144 Internal Server Error: /api/production-logs/
+ERROR 2024-12-11 22:03:52,614 basehttp 56631 6158086144 "GET /api/production-logs/?page=1&ordering=-timestamp&search= HTTP/1.1" 500 162
+ERROR 2024-12-11 22:03:52,614 basehttp 56631 6174912512 "GET /api/production-logs/?page=1&ordering=-timestamp&search= HTTP/1.1" 500 162

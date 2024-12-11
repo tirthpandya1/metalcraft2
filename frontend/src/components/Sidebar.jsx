@@ -44,7 +44,8 @@ function Sidebar() {
     [
       '/workstations', 
       '/production-designs', 
-      '/production-events'
+      '/production-events',
+      '/production-logs'
     ].includes(location.pathname)
   );
 
@@ -110,11 +111,11 @@ function Sidebar() {
           icon: <WorkstationIcon />, 
           path: '/workstations' 
         },
-        // { 
-        //   text: 'Workstation Processes', 
-        //   icon: <ProcessIcon />, 
-        //   path: '/workstation-processes' 
-        // },
+        { 
+          text: 'Production Logs', 
+          icon: <EventIcon />, 
+          path: '/production-logs' 
+        },
         { 
           text: 'Production Designs', 
           icon: <DesignIcon />, 
