@@ -12265,3 +12265,507 @@ Traceback (most recent call last):
   File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
     raise ValidationError(self.errors)
 rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:18:40,405 exceptions 53013 6223130624 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:18:40,405 exceptions 53013 6223130624 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:19:26,238 exceptions 53013 6223130624 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:19:26,238 exceptions 53013 6223130624 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:19:37,115 exceptions 53013 6223130624 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:19:37,115 exceptions 53013 6223130624 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'product': [ErrorDetail(string='This field is required.', code='required')], 'quantity': [ErrorDetail(string='This field is required.', code='required')]}
+ERROR 2024-12-11 21:21:33,554 exceptions 53013 6223130624 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from QUEUED to QUEUED', code='invalid')]}
+ERROR 2024-12-11 21:21:33,554 exceptions 53013 6223130624 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from QUEUED to QUEUED', code='invalid')]}
+ERROR 2024-12-11 21:31:54,060 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from PAUSED to PAUSED', code='invalid')]}
+ERROR 2024-12-11 21:31:54,060 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from PAUSED to PAUSED', code='invalid')]}
+ERROR 2024-12-11 21:32:04,728 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from PAUSED to PAUSED', code='invalid')]}
+ERROR 2024-12-11 21:32:04,728 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from PAUSED to PAUSED', code='invalid')]}
+ERROR 2024-12-11 21:32:32,293 exceptions 53013 6189477888 Unhandled Exception: ValueError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 469, in update
+    instance.reserve_materials()
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py", line 265, in reserve_materials
+    raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
+ValueError: Cannot reserve materials for work order with status PAUSED
+ERROR 2024-12-11 21:32:32,293 exceptions 53013 6189477888 Unhandled Exception: ValueError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 469, in update
+    instance.reserve_materials()
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py", line 265, in reserve_materials
+    raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
+ValueError: Cannot reserve materials for work order with status PAUSED
+ERROR 2024-12-11 21:32:32,294 log 53013 6189477888 Internal Server Error: /api/work-orders/13/
+ERROR 2024-12-11 21:32:32,294 basehttp 53013 6189477888 "PUT /api/work-orders/13/ HTTP/1.1" 500 151
+ERROR 2024-12-11 21:32:45,513 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from PENDING to PENDING', code='invalid')]}
+ERROR 2024-12-11 21:32:45,513 exceptions 53013 6189477888 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from PENDING to PENDING', code='invalid')]}
+ERROR 2024-12-11 21:35:02,574 exceptions 53013 6206304256 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 481, in update
+    setattr(instance, attr, value)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/fields/related_descriptors.py", line 626, in __set__
+    raise TypeError(
+TypeError: Direct assignment to the forward side of a many-to-many set is prohibited. Use dependencies.set() instead.
+ERROR 2024-12-11 21:35:02,574 exceptions 53013 6206304256 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 481, in update
+    setattr(instance, attr, value)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/fields/related_descriptors.py", line 626, in __set__
+    raise TypeError(
+TypeError: Direct assignment to the forward side of a many-to-many set is prohibited. Use dependencies.set() instead.
+ERROR 2024-12-11 21:35:02,576 log 53013 6206304256 Internal Server Error: /api/work-orders/12/
+ERROR 2024-12-11 21:35:02,576 basehttp 53013 6206304256 "PUT /api/work-orders/12/ HTTP/1.1" 500 198
+ERROR 2024-12-11 21:35:14,441 exceptions 53013 6206304256 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from IN_PROGRESS to IN_PROGRESS', code='invalid')]}
+ERROR 2024-12-11 21:35:14,441 exceptions 53013 6206304256 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from IN_PROGRESS to IN_PROGRESS', code='invalid')]}
+ERROR 2024-12-11 21:35:20,918 exceptions 53013 6206304256 Unhandled Exception: ValueError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 469, in update
+    instance.reserve_materials()
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py", line 265, in reserve_materials
+    raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
+ValueError: Cannot reserve materials for work order with status PAUSED
+ERROR 2024-12-11 21:35:20,918 exceptions 53013 6206304256 Unhandled Exception: ValueError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 469, in update
+    instance.reserve_materials()
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py", line 265, in reserve_materials
+    raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
+ValueError: Cannot reserve materials for work order with status PAUSED
+ERROR 2024-12-11 21:35:20,919 log 53013 6206304256 Internal Server Error: /api/work-orders/13/
+ERROR 2024-12-11 21:35:20,919 basehttp 53013 6206304256 "PUT /api/work-orders/13/ HTTP/1.1" 500 151
+ERROR 2024-12-11 21:35:30,557 exceptions 53013 6206304256 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from IN_PROGRESS to IN_PROGRESS', code='invalid')]}
+ERROR 2024-12-11 21:35:30,557 exceptions 53013 6206304256 Unhandled Exception: ValidationError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 67, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 235, in is_valid
+    raise ValidationError(self.errors)
+rest_framework.exceptions.ValidationError: {'status': [ErrorDetail(string='Invalid status transition from IN_PROGRESS to IN_PROGRESS', code='invalid')]}
+ERROR 2024-12-11 21:35:37,996 exceptions 53013 6223130624 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 481, in update
+    setattr(instance, attr, value)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/fields/related_descriptors.py", line 626, in __set__
+    raise TypeError(
+TypeError: Direct assignment to the forward side of a many-to-many set is prohibited. Use dependencies.set() instead.
+ERROR 2024-12-11 21:35:37,996 exceptions 53013 6223130624 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 481, in update
+    setattr(instance, attr, value)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/fields/related_descriptors.py", line 626, in __set__
+    raise TypeError(
+TypeError: Direct assignment to the forward side of a many-to-many set is prohibited. Use dependencies.set() instead.
+ERROR 2024-12-11 21:35:37,997 log 53013 6223130624 Internal Server Error: /api/work-orders/12/
+ERROR 2024-12-11 21:35:37,997 basehttp 53013 6223130624 "PUT /api/work-orders/12/ HTTP/1.1" 500 198
+ERROR 2024-12-11 21:36:25,296 exceptions 53013 6256783360 Unhandled Exception: ValueError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 469, in update
+    instance.reserve_materials()
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py", line 265, in reserve_materials
+    raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
+ValueError: Cannot reserve materials for work order with status PAUSED
+ERROR 2024-12-11 21:36:25,296 exceptions 53013 6256783360 Unhandled Exception: ValueError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 469, in update
+    instance.reserve_materials()
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py", line 265, in reserve_materials
+    raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
+ValueError: Cannot reserve materials for work order with status PAUSED
+ERROR 2024-12-11 21:36:25,296 log 53013 6256783360 Internal Server Error: /api/work-orders/13/
+ERROR 2024-12-11 21:36:25,296 basehttp 53013 6256783360 "PUT /api/work-orders/13/ HTTP/1.1" 500 151
+ERROR 2024-12-11 21:36:38,322 exceptions 53013 6273609728 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 481, in update
+    setattr(instance, attr, value)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/fields/related_descriptors.py", line 626, in __set__
+    raise TypeError(
+TypeError: Direct assignment to the forward side of a many-to-many set is prohibited. Use dependencies.set() instead.
+ERROR 2024-12-11 21:36:38,322 exceptions 53013 6273609728 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 481, in update
+    setattr(instance, attr, value)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/fields/related_descriptors.py", line 626, in __set__
+    raise TypeError(
+TypeError: Direct assignment to the forward side of a many-to-many set is prohibited. Use dependencies.set() instead.
+ERROR 2024-12-11 21:36:38,323 log 53013 6273609728 Internal Server Error: /api/work-orders/16/
+ERROR 2024-12-11 21:36:38,323 basehttp 53013 6273609728 "PUT /api/work-orders/16/ HTTP/1.1" 500 198
+ERROR 2024-12-11 21:36:44,013 exceptions 53013 6223130624 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 481, in update
+    setattr(instance, attr, value)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/fields/related_descriptors.py", line 626, in __set__
+    raise TypeError(
+TypeError: Direct assignment to the forward side of a many-to-many set is prohibited. Use dependencies.set() instead.
+ERROR 2024-12-11 21:36:44,013 exceptions 53013 6223130624 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 481, in update
+    setattr(instance, attr, value)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/fields/related_descriptors.py", line 626, in __set__
+    raise TypeError(
+TypeError: Direct assignment to the forward side of a many-to-many set is prohibited. Use dependencies.set() instead.
+ERROR 2024-12-11 21:36:44,014 log 53013 6223130624 Internal Server Error: /api/work-orders/16/
+ERROR 2024-12-11 21:36:44,014 basehttp 53013 6223130624 "PUT /api/work-orders/16/ HTTP/1.1" 500 198
+ERROR 2024-12-11 21:36:53,623 exceptions 53013 6206304256 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 481, in update
+    setattr(instance, attr, value)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/fields/related_descriptors.py", line 626, in __set__
+    raise TypeError(
+TypeError: Direct assignment to the forward side of a many-to-many set is prohibited. Use dependencies.set() instead.
+ERROR 2024-12-11 21:36:53,623 exceptions 53013 6206304256 Unhandled Exception: TypeError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 481, in update
+    setattr(instance, attr, value)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/fields/related_descriptors.py", line 626, in __set__
+    raise TypeError(
+TypeError: Direct assignment to the forward side of a many-to-many set is prohibited. Use dependencies.set() instead.
+ERROR 2024-12-11 21:36:53,624 log 53013 6206304256 Internal Server Error: /api/work-orders/16/
+ERROR 2024-12-11 21:36:53,624 basehttp 53013 6206304256 "PUT /api/work-orders/16/ HTTP/1.1" 500 198
+ERROR 2024-12-11 21:39:00,070 exceptions 55997 6223425536 Unhandled Exception: ValueError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 468, in update
+    instance.reserve_materials()
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py", line 265, in reserve_materials
+    raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
+ValueError: Cannot reserve materials for work order with status PAUSED
+ERROR 2024-12-11 21:39:00,070 exceptions 55997 6223425536 Unhandled Exception: ValueError
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 207, in save
+    self.instance = self.update(self.instance, validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py", line 468, in update
+    instance.reserve_materials()
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py", line 265, in reserve_materials
+    raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
+ValueError: Cannot reserve materials for work order with status PAUSED
+ERROR 2024-12-11 21:39:00,074 log 55997 6223425536 Internal Server Error: /api/work-orders/13/
+ERROR 2024-12-11 21:39:00,074 basehttp 55997 6223425536 "PUT /api/work-orders/13/ HTTP/1.1" 500 151

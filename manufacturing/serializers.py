@@ -444,13 +444,12 @@ class WorkOrderSerializer(serializers.ModelSerializer):
         return value
 
     def update(self, instance, validated_data):
-        """
-        Custom update method to handle workflow logic
-        """
-        new_status = validated_data.get('status', instance.status)
+        # Extract dependencies if present
+        dependencies_data = validated_data.pop('dependencies', None)
         
         try:
             # Validate status transition
+            new_status = validated_data.get('status', instance.status)
             instance.validate_status_transition(new_status)
             
             # If status is changing to IN_PROGRESS
@@ -481,6 +480,14 @@ class WorkOrderSerializer(serializers.ModelSerializer):
                 setattr(instance, attr, value)
             
             instance.save()
+
+            # Handle dependencies separately after save
+            if dependencies_data is not None:
+                # Clear existing dependencies and set new ones
+                instance.dependencies.clear()
+                if dependencies_data:
+                    instance.dependencies.add(*dependencies_data)
+            
             return instance
         
         except (MaterialShortageError, WorkOrderStatusTransitionError) as e:

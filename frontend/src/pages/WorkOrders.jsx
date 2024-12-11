@@ -251,7 +251,7 @@ const workOrderConfig = {
     { 
       key: 'status', 
       label: 'Status',
-      render: (item, { fetchItems }) => {
+      render: (item) => {
         // Get possible transitions for the current status
         const transitions = STATUS_TRANSITION_MAP[item.status] || [];
         
@@ -292,12 +292,7 @@ const workOrderConfig = {
             )}
             onChange={(e) => {
               const newStatus = e.target.value;
-              workOrderService.update(item.id, { status: newStatus })
-                .then(() => {
-                  fetchItems();
-                  toast.success(`Work Order ${item.id} transitioned to ${newStatus}`);
-                })
-                .catch(handleApiError);
+              handleStatusChange(item, newStatus);
             }}
             style={{ minWidth: 120 }}
           >
@@ -334,6 +329,71 @@ const workOrderConfig = {
       )
     }
   ]
+};
+
+const handleStatusChange = (item, newStatus) => {
+  console.log('Attempting to change status:', {
+    currentItem: item,
+    currentStatus: item.status,
+    newStatus: newStatus
+  });
+
+  // Only update if the status is actually different
+  if (item.status !== newStatus) {
+    console.log('Status is different, proceeding with update');
+    
+    // Fetch the full work order details first to ensure all required fields are present
+    workOrderService.getById(item.id)
+      .then(fullWorkOrder => {
+        console.log('Fetched full work order:', fullWorkOrder);
+
+        // Create a payload with full work order details
+        const updatePayload = {
+          product: fullWorkOrder.product,
+          quantity: fullWorkOrder.quantity,
+          status: newStatus,
+          priority: fullWorkOrder.priority,
+          notes: fullWorkOrder.notes || '',
+          workstation: fullWorkOrder.workstation,
+          assigned_to: fullWorkOrder.assigned_to,
+          // Send dependencies as an array of IDs
+          dependencies: fullWorkOrder.dependencies ? 
+            fullWorkOrder.dependencies.map(dep => dep.id || dep) : 
+            [],
+          blocking_reason: fullWorkOrder.blocking_reason || null
+        };
+
+        console.log('Update payload:', updatePayload);
+
+        // Perform the update
+        workOrderService.update(item.id, updatePayload)
+          .then(() => {
+            console.log('Status update successful');
+            // Reload the entire list of work orders
+            window.location.reload();
+            toast.success(`Work Order ${item.id} status updated to ${newStatus}`);
+          })
+          .catch((error) => {
+            console.error('Status update error:', error);
+            // Detailed error handling
+            if (error.response && error.response.data) {
+              const errorMessage = error.response.data.message || 
+                                  error.response.data.error || 
+                                  'Failed to update work order status';
+              toast.error(errorMessage);
+            } else {
+              toast.error('Failed to update work order status');
+            }
+            handleApiError(error);
+          });
+      })
+      .catch(error => {
+        console.error('Error fetching work order details:', error);
+        handleApiError(error);
+      });
+  } else {
+    console.log('Status is the same, no update needed');
+  }
 };
 
 // Wrap the form with CRUD functionality and error handling

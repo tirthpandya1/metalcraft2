@@ -261,7 +261,7 @@ class WorkOrder(models.Model):
         Advanced material reservation with comprehensive checks and logging
         """
         # Validate work order before reservation
-        if self.status not in ['PENDING', 'DRAFT', 'READY']:
+        if self.status not in ['PENDING', 'DRAFT', 'READY', 'PAUSED', 'IN_PROGRESS']:
             raise ValueError(f"Cannot reserve materials for work order with status {self.status}")
         
         # Perform material availability check
@@ -303,26 +303,10 @@ class WorkOrder(models.Model):
                 )
             
             # Update work order status if needed
-            if self.status in ['READY', 'PENDING', 'DRAFT']:
+            if self.status in ['READY', 'PENDING', 'DRAFT', 'PAUSED']:
                 self.status = 'IN_PROGRESS'
                 self.start_date = timezone.now()
                 self.save()
-        
-        # Dispatch workflow event
-        # WorkflowEvent.dispatch_event(
-        #     EventType.WORK_ORDER_STARTED,
-        #     {
-        #         'work_order_id': self.id,
-        #         'product_name': self.product.name,
-        #         'quantity': self.quantity,
-        #         'materials_reserved': [
-        #             {
-        #                 'material_name': pm.material.name, 
-        #                 'quantity_reserved': pm.quantity * self.quantity
-        #             } for pm in product_materials
-        #         ]
-        #     }
-        # )
         
         return True
 
