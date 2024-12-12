@@ -27379,3 +27379,356 @@ INFO 2024-12-12 16:50:42,807 basehttp 25258 6272544768 "GET /api/analytics/profi
 WARNING 2024-12-12 16:50:42,807 analytics 25258 6171586560 No products could be processed for profitability
 INFO 2024-12-12 16:50:42,808 basehttp 25258 6171586560 "GET /api/analytics/profitability/ HTTP/1.1" 200 112
 INFO 2024-12-12 16:51:38,013 autoreload 25258 8320923712 /Users/T/Documents/GitHub/metalcraft2/metalcraft/settings.py changed, reloading.
+INFO 2024-12-12 17:13:34,121 autoreload 27685 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 17:14:01,830 autoreload 27685 8320923712 /Users/T/Documents/GitHub/metalcraft2/metalcraft/urls.py changed, reloading.
+INFO 2024-12-12 17:14:02,139 autoreload 27847 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 17:14:12,597 basehttp 27847 6183038976 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 17:14:12,601 basehttp 27847 6199865344 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 17:14:12,601 basehttp 27847 6132559872 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 17:14:12,608 basehttp 27847 6166212608 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 17:14:12,609 basehttp 27847 6216691712 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 17:14:12,613 basehttp 27847 6149386240 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 17:14:13,027 basehttp 27847 6216691712 "GET /api/analytics/efficiency/ HTTP/1.1" 200 83
+INFO 2024-12-12 17:14:13,027 basehttp 27847 6166212608 "GET /api/analytics/efficiency/ HTTP/1.1" 200 83
+INFO 2024-12-12 17:14:13,029 basehttp 27847 6199865344 "GET /api/analytics/cost/ HTTP/1.1" 200 488
+INFO 2024-12-12 17:14:13,030 basehttp 27847 6149386240 "GET /api/analytics/cost/ HTTP/1.1" 200 488
+DEBUG 2024-12-12 17:14:13,036 analytics 27847 6183038976 Total number of products: 2
+DEBUG 2024-12-12 17:14:13,036 analytics 27847 6183038976 Processing product: Industrial Ergonomic Chair
+DEBUG 2024-12-12 17:14:13,037 analytics 27847 6183038976 Product ID: 14
+DEBUG 2024-12-12 17:14:13,037 analytics 27847 6183038976 Sell Cost: 450.00
+DEBUG 2024-12-12 17:14:13,037 analytics 27847 6183038976 Labor Cost: 75.50
+DEBUG 2024-12-12 17:14:13,038 analytics 27847 6183038976 Number of materials: 3
+DEBUG 2024-12-12 17:14:13,039 analytics 27847 6183038976 Material: Steel Sheet, Quantity: 2.50
+DEBUG 2024-12-12 17:14:13,040 analytics 27847 6183038976 Material: Stainless Steel Screws, Quantity: 0.50
+DEBUG 2024-12-12 17:14:13,041 analytics 27847 6183038976 Material: Industrial Paint, Quantity: 0.25
+DEBUG 2024-12-12 17:14:13,041 analytics 27847 6132559872 Total number of products: 2
+DEBUG 2024-12-12 17:14:13,041 analytics 27847 6183038976 Number of workstation sequences: 3
+DEBUG 2024-12-12 17:14:13,041 analytics 27847 6132559872 Processing product: Industrial Ergonomic Chair
+DEBUG 2024-12-12 17:14:13,041 analytics 27847 6183038976 Workstation: Cutting Station, Estimated Time: 1:00:00
+DEBUG 2024-12-12 17:14:13,041 analytics 27847 6132559872 Product ID: 14
+DEBUG 2024-12-12 17:14:13,042 analytics 27847 6183038976 Workstation: Welding Station, Estimated Time: 1:30:00
+DEBUG 2024-12-12 17:14:13,042 analytics 27847 6132559872 Sell Cost: 450.00
+DEBUG 2024-12-12 17:14:13,042 analytics 27847 6183038976 Workstation: Painting Station, Estimated Time: 0:30:00
+DEBUG 2024-12-12 17:14:13,042 analytics 27847 6132559872 Labor Cost: 75.50
+INFO 2024-12-12 17:14:13,042 analytics 27847 6183038976 Calculating profitability for product: Industrial Ergonomic Chair
+DEBUG 2024-12-12 17:14:13,042 analytics 27847 6132559872 Number of materials: 3
+INFO 2024-12-12 17:14:13,042 analytics 27847 6183038976 Product details - Sell Cost: 450.00, Labor Cost: 75.50
+DEBUG 2024-12-12 17:14:13,042 analytics 27847 6132559872 Material: Steel Sheet, Quantity: 2.50
+DEBUG 2024-12-12 17:14:13,045 analytics 27847 6132559872 Material: Stainless Steel Screws, Quantity: 0.50
+DEBUG 2024-12-12 17:14:13,046 analytics 27847 6132559872 Material: Industrial Paint, Quantity: 0.25
+DEBUG 2024-12-12 17:14:13,046 analytics 27847 6132559872 Number of workstation sequences: 3
+DEBUG 2024-12-12 17:14:13,047 analytics 27847 6132559872 Workstation: Cutting Station, Estimated Time: 1:00:00
+DEBUG 2024-12-12 17:14:13,047 analytics 27847 6132559872 Workstation: Welding Station, Estimated Time: 1:30:00
+DEBUG 2024-12-12 17:14:13,047 analytics 27847 6132559872 Workstation: Painting Station, Estimated Time: 0:30:00
+INFO 2024-12-12 17:14:13,047 analytics 27847 6132559872 Calculating profitability for product: Industrial Ergonomic Chair
+INFO 2024-12-12 17:14:13,049 analytics 27847 6132559872 Product details - Sell Cost: 450.00, Labor Cost: 75.50
+INFO 2024-12-12 17:14:13,052 analytics 27847 6183038976 Material Costs: 76.375
+INFO 2024-12-12 17:14:13,052 analytics 27847 6183038976 Material Breakdown: [{'material__name': 'Steel Sheet', 'material_total_cost': Decimal('63.75')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('2.625')}, {'material__name': 'Industrial Paint', 'material_total_cost': Decimal('10')}]
+INFO 2024-12-12 17:14:13,054 analytics 27847 6132559872 Material Costs: 76.375
+INFO 2024-12-12 17:14:13,054 analytics 27847 6132559872 Material Breakdown: [{'material__name': 'Steel Sheet', 'material_total_cost': Decimal('63.75')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('2.625')}, {'material__name': 'Industrial Paint', 'material_total_cost': Decimal('10')}]
+ERROR 2024-12-12 17:14:13,055 analytics 27847 6183038976 Error calculating profitability for product Industrial Ergonomic Chair: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 188, in calculate_product_profitability
+    ws_cost = hourly_rate * estimated_hours
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 17:14:13,057 analytics 27847 6132559872 Error calculating profitability for product Industrial Ergonomic Chair: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 188, in calculate_product_profitability
+    ws_cost = hourly_rate * estimated_hours
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+DEBUG 2024-12-12 17:14:13,057 analytics 27847 6183038976 Processing product: Modular Office Desk
+INFO 2024-12-12 17:14:13,058 basehttp 27847 6149386240 "GET /api/analytics/dashboard/ HTTP/1.1" 200 968
+DEBUG 2024-12-12 17:14:13,058 analytics 27847 6132559872 Processing product: Modular Office Desk
+DEBUG 2024-12-12 17:14:13,059 analytics 27847 6183038976 Product ID: 15
+INFO 2024-12-12 17:14:13,060 basehttp 27847 6166212608 "GET /api/analytics/dashboard/ HTTP/1.1" 200 968
+DEBUG 2024-12-12 17:14:13,061 analytics 27847 6132559872 Product ID: 15
+DEBUG 2024-12-12 17:14:13,062 analytics 27847 6132559872 Sell Cost: 350.00
+DEBUG 2024-12-12 17:14:13,062 analytics 27847 6132559872 Labor Cost: 65.00
+DEBUG 2024-12-12 17:14:13,062 analytics 27847 6132559872 Number of materials: 3
+DEBUG 2024-12-12 17:14:13,062 analytics 27847 6132559872 Material: Aluminum Tube, Quantity: 3.00
+DEBUG 2024-12-12 17:14:13,061 analytics 27847 6183038976 Sell Cost: 350.00
+DEBUG 2024-12-12 17:14:13,062 analytics 27847 6132559872 Material: Steel Sheet, Quantity: 1.50
+DEBUG 2024-12-12 17:14:13,062 analytics 27847 6183038976 Labor Cost: 65.00
+DEBUG 2024-12-12 17:14:13,063 analytics 27847 6132559872 Material: Stainless Steel Screws, Quantity: 0.75
+DEBUG 2024-12-12 17:14:13,063 analytics 27847 6183038976 Number of materials: 3
+DEBUG 2024-12-12 17:14:13,063 analytics 27847 6132559872 Number of workstation sequences: 3
+DEBUG 2024-12-12 17:14:13,063 analytics 27847 6183038976 Material: Aluminum Tube, Quantity: 3.00
+DEBUG 2024-12-12 17:14:13,063 analytics 27847 6132559872 Workstation: Cutting Station, Estimated Time: 1:30:00
+DEBUG 2024-12-12 17:14:13,063 analytics 27847 6183038976 Material: Steel Sheet, Quantity: 1.50
+DEBUG 2024-12-12 17:14:13,063 analytics 27847 6132559872 Workstation: Assembly Station, Estimated Time: 2:00:00
+DEBUG 2024-12-12 17:14:13,064 analytics 27847 6183038976 Material: Stainless Steel Screws, Quantity: 0.75
+DEBUG 2024-12-12 17:14:13,064 analytics 27847 6132559872 Workstation: Painting Station, Estimated Time: 0:45:00
+DEBUG 2024-12-12 17:14:13,064 analytics 27847 6183038976 Number of workstation sequences: 3
+INFO 2024-12-12 17:14:13,064 analytics 27847 6132559872 Calculating profitability for product: Modular Office Desk
+DEBUG 2024-12-12 17:14:13,064 analytics 27847 6183038976 Workstation: Cutting Station, Estimated Time: 1:30:00
+INFO 2024-12-12 17:14:13,064 analytics 27847 6132559872 Product details - Sell Cost: 350.00, Labor Cost: 65.00
+DEBUG 2024-12-12 17:14:13,064 analytics 27847 6183038976 Workstation: Assembly Station, Estimated Time: 2:00:00
+DEBUG 2024-12-12 17:14:13,065 analytics 27847 6183038976 Workstation: Painting Station, Estimated Time: 0:45:00
+INFO 2024-12-12 17:14:13,065 analytics 27847 6183038976 Calculating profitability for product: Modular Office Desk
+INFO 2024-12-12 17:14:13,066 analytics 27847 6183038976 Product details - Sell Cost: 350.00, Labor Cost: 65.00
+INFO 2024-12-12 17:14:13,067 analytics 27847 6132559872 Material Costs: 89.4375
+INFO 2024-12-12 17:14:13,067 analytics 27847 6132559872 Material Breakdown: [{'material__name': 'Aluminum Tube', 'material_total_cost': Decimal('47.25')}, {'material__name': 'Steel Sheet', 'material_total_cost': Decimal('38.25')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('3.9375')}]
+INFO 2024-12-12 17:14:13,067 analytics 27847 6183038976 Material Costs: 89.4375
+INFO 2024-12-12 17:14:13,067 analytics 27847 6183038976 Material Breakdown: [{'material__name': 'Aluminum Tube', 'material_total_cost': Decimal('47.25')}, {'material__name': 'Steel Sheet', 'material_total_cost': Decimal('38.25')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('3.9375')}]
+ERROR 2024-12-12 17:14:13,068 analytics 27847 6132559872 Error calculating profitability for product Modular Office Desk: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 188, in calculate_product_profitability
+    ws_cost = hourly_rate * estimated_hours
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+WARNING 2024-12-12 17:14:13,069 analytics 27847 6132559872 No products could be processed for profitability
+INFO 2024-12-12 17:14:13,070 basehttp 27847 6132559872 "GET /api/analytics/profitability/ HTTP/1.1" 200 112
+ERROR 2024-12-12 17:14:13,073 analytics 27847 6183038976 Error calculating profitability for product Modular Office Desk: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 188, in calculate_product_profitability
+    ws_cost = hourly_rate * estimated_hours
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+WARNING 2024-12-12 17:14:13,073 analytics 27847 6183038976 No products could be processed for profitability
+INFO 2024-12-12 17:14:13,073 basehttp 27847 6183038976 "GET /api/analytics/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 17:14:45,856 autoreload 27847 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py changed, reloading.
+INFO 2024-12-12 17:14:46,185 autoreload 28204 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 17:15:07,813 autoreload 28204 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py changed, reloading.
+INFO 2024-12-12 17:15:08,154 autoreload 28362 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 17:15:14,037 basehttp 28362 6213152768 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 17:15:14,045 basehttp 28362 6196326400 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 17:15:14,049 basehttp 28362 6129020928 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 17:15:14,054 basehttp 28362 6162673664 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 17:15:14,054 basehttp 28362 6179500032 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 17:15:14,056 basehttp 28362 6145847296 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 17:15:14,114 basehttp 28362 6145847296 "GET /api/analytics/cost/ HTTP/1.1" 200 488
+INFO 2024-12-12 17:15:14,120 basehttp 28362 6179500032 "GET /api/analytics/efficiency/ HTTP/1.1" 200 83
+INFO 2024-12-12 17:15:14,122 basehttp 28362 6162673664 "GET /api/analytics/efficiency/ HTTP/1.1" 200 83
+INFO 2024-12-12 17:15:14,123 basehttp 28362 6196326400 "GET /api/analytics/cost/ HTTP/1.1" 200 488
+INFO 2024-12-12 17:15:14,138 analytics 28362 6213152768 Calculating profitability for product: Industrial Ergonomic Chair
+INFO 2024-12-12 17:15:14,138 analytics 28362 6213152768 Product details - Sell Cost: 450.00, Labor Cost: 75.50
+INFO 2024-12-12 17:15:14,140 analytics 28362 6129020928 Calculating profitability for product: Industrial Ergonomic Chair
+INFO 2024-12-12 17:15:14,140 analytics 28362 6129020928 Product details - Sell Cost: 450.00, Labor Cost: 75.50
+INFO 2024-12-12 17:15:14,143 analytics 28362 6213152768 Material Costs: 76.375
+INFO 2024-12-12 17:15:14,143 analytics 28362 6129020928 Material Costs: 76.375
+INFO 2024-12-12 17:15:14,144 analytics 28362 6129020928 Material Breakdown: [{'material__name': 'Steel Sheet', 'material_total_cost': Decimal('63.75')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('2.625')}, {'material__name': 'Industrial Paint', 'material_total_cost': Decimal('10')}]
+INFO 2024-12-12 17:15:14,143 analytics 28362 6213152768 Material Breakdown: [{'material__name': 'Steel Sheet', 'material_total_cost': Decimal('63.75')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('2.625')}, {'material__name': 'Industrial Paint', 'material_total_cost': Decimal('10')}]
+INFO 2024-12-12 17:15:14,144 basehttp 28362 6229979136 "GET /api/analytics/dashboard/ HTTP/1.1" 200 968
+INFO 2024-12-12 17:15:14,147 analytics 28362 6129020928 Workstation Cutting Station: Hourly Rate = 35.50, Estimated Hours = 1.0, Cost = 35.500
+INFO 2024-12-12 17:15:14,147 analytics 28362 6129020928 Workstation Welding Station: Hourly Rate = 45.75, Estimated Hours = 1.5, Cost = 68.625
+INFO 2024-12-12 17:15:14,147 analytics 28362 6129020928 Workstation Painting Station: Hourly Rate = 30.00, Estimated Hours = 0.5, Cost = 15.000
+INFO 2024-12-12 17:15:14,147 analytics 28362 6129020928 Profitability Calculation for Industrial Ergonomic Chair:
+INFO 2024-12-12 17:15:14,148 analytics 28362 6213152768 Workstation Cutting Station: Hourly Rate = 35.50, Estimated Hours = 1.0, Cost = 35.500
+INFO 2024-12-12 17:15:14,148 analytics 28362 6129020928 Material Costs: 76.375
+INFO 2024-12-12 17:15:14,148 analytics 28362 6213152768 Workstation Welding Station: Hourly Rate = 45.75, Estimated Hours = 1.5, Cost = 68.625
+INFO 2024-12-12 17:15:14,148 basehttp 28362 6145847296 "GET /api/analytics/dashboard/ HTTP/1.1" 200 968
+INFO 2024-12-12 17:15:14,148 analytics 28362 6129020928 Labor Costs: 75.50
+INFO 2024-12-12 17:15:14,148 analytics 28362 6129020928 Workstation Costs: 119.125
+INFO 2024-12-12 17:15:14,148 analytics 28362 6129020928 Total Cost: 271.000
+INFO 2024-12-12 17:15:14,149 analytics 28362 6129020928 Sell Cost: 450.00
+INFO 2024-12-12 17:15:14,148 analytics 28362 6213152768 Workstation Painting Station: Hourly Rate = 30.00, Estimated Hours = 0.5, Cost = 15.000
+INFO 2024-12-12 17:15:14,149 analytics 28362 6129020928 Profit: 179.000
+INFO 2024-12-12 17:15:14,149 analytics 28362 6213152768 Profitability Calculation for Industrial Ergonomic Chair:
+INFO 2024-12-12 17:15:14,149 analytics 28362 6129020928 Profit Margin: 39.77777777777777777777777778%
+INFO 2024-12-12 17:15:14,149 analytics 28362 6213152768 Material Costs: 76.375
+INFO 2024-12-12 17:15:14,149 analytics 28362 6129020928 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:15:14,149 analytics 28362 6129020928 Calculating profitability for product: Modular Office Desk
+INFO 2024-12-12 17:15:14,149 analytics 28362 6129020928 Product details - Sell Cost: 350.00, Labor Cost: 65.00
+INFO 2024-12-12 17:15:14,149 analytics 28362 6213152768 Labor Costs: 75.50
+INFO 2024-12-12 17:15:14,150 analytics 28362 6213152768 Workstation Costs: 119.125
+INFO 2024-12-12 17:15:14,150 analytics 28362 6213152768 Total Cost: 271.000
+INFO 2024-12-12 17:15:14,150 analytics 28362 6213152768 Sell Cost: 450.00
+INFO 2024-12-12 17:15:14,151 analytics 28362 6213152768 Profit: 179.000
+INFO 2024-12-12 17:15:14,151 analytics 28362 6129020928 Material Costs: 89.4375
+INFO 2024-12-12 17:15:14,151 analytics 28362 6213152768 Profit Margin: 39.77777777777777777777777778%
+INFO 2024-12-12 17:15:14,151 analytics 28362 6129020928 Material Breakdown: [{'material__name': 'Aluminum Tube', 'material_total_cost': Decimal('47.25')}, {'material__name': 'Steel Sheet', 'material_total_cost': Decimal('38.25')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('3.9375')}]
+INFO 2024-12-12 17:15:14,151 analytics 28362 6213152768 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:15:14,152 analytics 28362 6129020928 Workstation Cutting Station: Hourly Rate = 35.50, Estimated Hours = 1.5, Cost = 53.250
+INFO 2024-12-12 17:15:14,152 analytics 28362 6213152768 Calculating profitability for product: Modular Office Desk
+INFO 2024-12-12 17:15:14,152 analytics 28362 6129020928 Workstation Assembly Station: Hourly Rate = 40.25, Estimated Hours = 2.0, Cost = 80.500
+INFO 2024-12-12 17:15:14,152 analytics 28362 6213152768 Product details - Sell Cost: 350.00, Labor Cost: 65.00
+INFO 2024-12-12 17:15:14,153 analytics 28362 6129020928 Workstation Painting Station: Hourly Rate = 30.00, Estimated Hours = 0.75, Cost = 22.5000
+INFO 2024-12-12 17:15:14,154 analytics 28362 6129020928 Profitability Calculation for Modular Office Desk:
+INFO 2024-12-12 17:15:14,155 analytics 28362 6129020928 Material Costs: 89.4375
+INFO 2024-12-12 17:15:14,155 analytics 28362 6129020928 Labor Costs: 65.00
+INFO 2024-12-12 17:15:14,155 analytics 28362 6129020928 Workstation Costs: 156.2500
+INFO 2024-12-12 17:15:14,155 analytics 28362 6129020928 Total Cost: 310.6875
+INFO 2024-12-12 17:15:14,155 analytics 28362 6213152768 Material Costs: 89.4375
+INFO 2024-12-12 17:15:14,155 analytics 28362 6129020928 Sell Cost: 350.00
+INFO 2024-12-12 17:15:14,156 analytics 28362 6213152768 Material Breakdown: [{'material__name': 'Aluminum Tube', 'material_total_cost': Decimal('47.25')}, {'material__name': 'Steel Sheet', 'material_total_cost': Decimal('38.25')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('3.9375')}]
+INFO 2024-12-12 17:15:14,156 analytics 28362 6129020928 Profit: 39.3125
+INFO 2024-12-12 17:15:14,156 analytics 28362 6129020928 Profit Margin: 11.23214285714285714285714286%
+INFO 2024-12-12 17:15:14,156 analytics 28362 6129020928 Profitability Category: Low Margin
+INFO 2024-12-12 17:15:14,156 analytics 28362 6213152768 Workstation Cutting Station: Hourly Rate = 35.50, Estimated Hours = 1.5, Cost = 53.250
+INFO 2024-12-12 17:15:14,157 analytics 28362 6129020928 Profitability Summary: {'total_products': 2, 'total_sell_cost': Decimal('800.00'), 'total_cost': Decimal('581.6875'), 'total_profit': Decimal('218.3125'), 'average_profit_margin': Decimal('25.50496031746031746031746032'), 'products': [{'product_id': 14, 'product_name': 'Industrial Ergonomic Chair', 'material_costs': Decimal('76.375'), 'material_breakdown': [{'material__name': 'Steel Sheet', 'material_total_cost': Decimal('63.75')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('2.625')}, {'material__name': 'Industrial Paint', 'material_total_cost': Decimal('10')}], 'labor_costs': Decimal('75.50'), 'workstation_costs': Decimal('119.125'), 'workstation_breakdown': [{'workstation_name': 'Cutting Station', 'hourly_rate': 35.5, 'estimated_time_hours': 1.0, 'cost': 35.5}, {'workstation_name': 'Welding Station', 'hourly_rate': 45.75, 'estimated_time_hours': 1.5, 'cost': 68.625}, {'workstation_name': 'Painting Station', 'hourly_rate': 30.0, 'estimated_time_hours': 0.5, 'cost': 15.0}], 'total_cost': Decimal('271.000'), 'sell_cost': Decimal('450.00'), 'profit': Decimal('179.000'), 'profit_margin': Decimal('39.77777777777777777777777778'), 'profitability_category': 'Highly Profitable'}, {'product_id': 15, 'product_name': 'Modular Office Desk', 'material_costs': Decimal('89.4375'), 'material_breakdown': [{'material__name': 'Aluminum Tube', 'material_total_cost': Decimal('47.25')}, {'material__name': 'Steel Sheet', 'material_total_cost': Decimal('38.25')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('3.9375')}], 'labor_costs': Decimal('65.00'), 'workstation_costs': Decimal('156.2500'), 'workstation_breakdown': [{'workstation_name': 'Cutting Station', 'hourly_rate': 35.5, 'estimated_time_hours': 1.5, 'cost': 53.25}, {'workstation_name': 'Assembly Station', 'hourly_rate': 40.25, 'estimated_time_hours': 2.0, 'cost': 80.5}, {'workstation_name': 'Painting Station', 'hourly_rate': 30.0, 'estimated_time_hours': 0.75, 'cost': 22.5}], 'total_cost': Decimal('310.6875'), 'sell_cost': Decimal('350.00'), 'profit': Decimal('39.3125'), 'profit_margin': Decimal('11.23214285714285714285714286'), 'profitability_category': 'Low Margin'}]}
+INFO 2024-12-12 17:15:14,157 analytics 28362 6213152768 Workstation Assembly Station: Hourly Rate = 40.25, Estimated Hours = 2.0, Cost = 80.500
+INFO 2024-12-12 17:15:14,157 analytics 28362 6213152768 Workstation Painting Station: Hourly Rate = 30.00, Estimated Hours = 0.75, Cost = 22.5000
+INFO 2024-12-12 17:15:14,157 analytics 28362 6213152768 Profitability Calculation for Modular Office Desk:
+INFO 2024-12-12 17:15:14,158 basehttp 28362 6129020928 "GET /api/analytics/profitability/ HTTP/1.1" 200 1750
+INFO 2024-12-12 17:15:14,158 analytics 28362 6213152768 Material Costs: 89.4375
+INFO 2024-12-12 17:15:14,158 analytics 28362 6213152768 Labor Costs: 65.00
+INFO 2024-12-12 17:15:14,158 analytics 28362 6213152768 Workstation Costs: 156.2500
+INFO 2024-12-12 17:15:14,158 analytics 28362 6213152768 Total Cost: 310.6875
+INFO 2024-12-12 17:15:14,158 analytics 28362 6213152768 Sell Cost: 350.00
+INFO 2024-12-12 17:15:14,158 analytics 28362 6213152768 Profit: 39.3125
+INFO 2024-12-12 17:15:14,158 analytics 28362 6213152768 Profit Margin: 11.23214285714285714285714286%
+INFO 2024-12-12 17:15:14,158 analytics 28362 6213152768 Profitability Category: Low Margin
+INFO 2024-12-12 17:15:14,159 analytics 28362 6213152768 Profitability Summary: {'total_products': 2, 'total_sell_cost': Decimal('800.00'), 'total_cost': Decimal('581.6875'), 'total_profit': Decimal('218.3125'), 'average_profit_margin': Decimal('25.50496031746031746031746032'), 'products': [{'product_id': 14, 'product_name': 'Industrial Ergonomic Chair', 'material_costs': Decimal('76.375'), 'material_breakdown': [{'material__name': 'Steel Sheet', 'material_total_cost': Decimal('63.75')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('2.625')}, {'material__name': 'Industrial Paint', 'material_total_cost': Decimal('10')}], 'labor_costs': Decimal('75.50'), 'workstation_costs': Decimal('119.125'), 'workstation_breakdown': [{'workstation_name': 'Cutting Station', 'hourly_rate': 35.5, 'estimated_time_hours': 1.0, 'cost': 35.5}, {'workstation_name': 'Welding Station', 'hourly_rate': 45.75, 'estimated_time_hours': 1.5, 'cost': 68.625}, {'workstation_name': 'Painting Station', 'hourly_rate': 30.0, 'estimated_time_hours': 0.5, 'cost': 15.0}], 'total_cost': Decimal('271.000'), 'sell_cost': Decimal('450.00'), 'profit': Decimal('179.000'), 'profit_margin': Decimal('39.77777777777777777777777778'), 'profitability_category': 'Highly Profitable'}, {'product_id': 15, 'product_name': 'Modular Office Desk', 'material_costs': Decimal('89.4375'), 'material_breakdown': [{'material__name': 'Aluminum Tube', 'material_total_cost': Decimal('47.25')}, {'material__name': 'Steel Sheet', 'material_total_cost': Decimal('38.25')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('3.9375')}], 'labor_costs': Decimal('65.00'), 'workstation_costs': Decimal('156.2500'), 'workstation_breakdown': [{'workstation_name': 'Cutting Station', 'hourly_rate': 35.5, 'estimated_time_hours': 1.5, 'cost': 53.25}, {'workstation_name': 'Assembly Station', 'hourly_rate': 40.25, 'estimated_time_hours': 2.0, 'cost': 80.5}, {'workstation_name': 'Painting Station', 'hourly_rate': 30.0, 'estimated_time_hours': 0.75, 'cost': 22.5}], 'total_cost': Decimal('310.6875'), 'sell_cost': Decimal('350.00'), 'profit': Decimal('39.3125'), 'profit_margin': Decimal('11.23214285714285714285714286'), 'profitability_category': 'Low Margin'}]}
+INFO 2024-12-12 17:15:14,159 basehttp 28362 6213152768 "GET /api/analytics/profitability/ HTTP/1.1" 200 1750
+INFO 2024-12-12 17:15:33,482 basehttp 28362 6129020928 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 17:15:33,496 basehttp 28362 6196326400 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 17:15:33,496 basehttp 28362 6179500032 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 17:15:33,497 basehttp 28362 6145847296 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 17:15:33,503 basehttp 28362 6213152768 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 17:15:33,512 basehttp 28362 6162673664 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 17:15:33,525 basehttp 28362 6179500032 "GET /api/analytics/efficiency/ HTTP/1.1" 200 83
+INFO 2024-12-12 17:15:33,534 basehttp 28362 6162673664 "GET /api/analytics/cost/ HTTP/1.1" 200 488
+INFO 2024-12-12 17:15:33,545 basehttp 28362 6229979136 "GET /api/analytics/cost/ HTTP/1.1" 200 488
+INFO 2024-12-12 17:15:33,546 basehttp 28362 6196326400 "GET /api/analytics/dashboard/ HTTP/1.1" 200 968
+INFO 2024-12-12 17:15:33,546 analytics 28362 6129020928 Calculating profitability for product: Industrial Ergonomic Chair
+INFO 2024-12-12 17:15:33,547 analytics 28362 6129020928 Product details - Sell Cost: 450.00, Labor Cost: 75.50
+INFO 2024-12-12 17:15:33,549 basehttp 28362 6179500032 "GET /api/analytics/efficiency/ HTTP/1.1" 200 83
+INFO 2024-12-12 17:15:33,549 basehttp 28362 6213152768 "GET /api/analytics/dashboard/ HTTP/1.1" 200 968
+INFO 2024-12-12 17:15:33,550 analytics 28362 6145847296 Calculating profitability for product: Industrial Ergonomic Chair
+INFO 2024-12-12 17:15:33,550 analytics 28362 6145847296 Product details - Sell Cost: 450.00, Labor Cost: 75.50
+INFO 2024-12-12 17:15:33,551 analytics 28362 6129020928 Material Costs: 76.375
+INFO 2024-12-12 17:15:33,551 analytics 28362 6129020928 Material Breakdown: [{'material__name': 'Steel Sheet', 'material_total_cost': Decimal('63.75')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('2.625')}, {'material__name': 'Industrial Paint', 'material_total_cost': Decimal('10')}]
+INFO 2024-12-12 17:15:33,553 analytics 28362 6129020928 Workstation Cutting Station: Hourly Rate = 35.50, Estimated Hours = 1.0, Cost = 35.500
+INFO 2024-12-12 17:15:33,553 analytics 28362 6129020928 Workstation Welding Station: Hourly Rate = 45.75, Estimated Hours = 1.5, Cost = 68.625
+INFO 2024-12-12 17:15:33,554 analytics 28362 6129020928 Workstation Painting Station: Hourly Rate = 30.00, Estimated Hours = 0.5, Cost = 15.000
+INFO 2024-12-12 17:15:33,554 analytics 28362 6129020928 Profitability Calculation for Industrial Ergonomic Chair:
+INFO 2024-12-12 17:15:33,554 analytics 28362 6129020928 Material Costs: 76.375
+INFO 2024-12-12 17:15:33,554 analytics 28362 6145847296 Material Costs: 76.375
+INFO 2024-12-12 17:15:33,554 analytics 28362 6129020928 Labor Costs: 75.50
+INFO 2024-12-12 17:15:33,554 analytics 28362 6145847296 Material Breakdown: [{'material__name': 'Steel Sheet', 'material_total_cost': Decimal('63.75')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('2.625')}, {'material__name': 'Industrial Paint', 'material_total_cost': Decimal('10')}]
+INFO 2024-12-12 17:15:33,554 analytics 28362 6129020928 Workstation Costs: 119.125
+INFO 2024-12-12 17:15:33,555 analytics 28362 6129020928 Total Cost: 271.000
+INFO 2024-12-12 17:15:33,555 analytics 28362 6129020928 Sell Cost: 450.00
+INFO 2024-12-12 17:15:33,555 analytics 28362 6145847296 Workstation Cutting Station: Hourly Rate = 35.50, Estimated Hours = 1.0, Cost = 35.500
+INFO 2024-12-12 17:15:33,555 analytics 28362 6129020928 Profit: 179.000
+INFO 2024-12-12 17:15:33,555 analytics 28362 6145847296 Workstation Welding Station: Hourly Rate = 45.75, Estimated Hours = 1.5, Cost = 68.625
+INFO 2024-12-12 17:15:33,556 analytics 28362 6129020928 Profit Margin: 39.77777777777777777777777778%
+INFO 2024-12-12 17:15:33,556 analytics 28362 6145847296 Workstation Painting Station: Hourly Rate = 30.00, Estimated Hours = 0.5, Cost = 15.000
+INFO 2024-12-12 17:15:33,556 analytics 28362 6129020928 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:15:33,556 analytics 28362 6145847296 Profitability Calculation for Industrial Ergonomic Chair:
+INFO 2024-12-12 17:15:33,556 analytics 28362 6129020928 Calculating profitability for product: Modular Office Desk
+INFO 2024-12-12 17:15:33,556 analytics 28362 6145847296 Material Costs: 76.375
+INFO 2024-12-12 17:15:33,556 analytics 28362 6129020928 Product details - Sell Cost: 350.00, Labor Cost: 65.00
+INFO 2024-12-12 17:15:33,556 analytics 28362 6145847296 Labor Costs: 75.50
+INFO 2024-12-12 17:15:33,557 analytics 28362 6145847296 Workstation Costs: 119.125
+INFO 2024-12-12 17:15:33,557 analytics 28362 6145847296 Total Cost: 271.000
+INFO 2024-12-12 17:15:33,557 analytics 28362 6129020928 Material Costs: 89.4375
+INFO 2024-12-12 17:15:33,557 analytics 28362 6145847296 Sell Cost: 450.00
+INFO 2024-12-12 17:15:33,557 analytics 28362 6129020928 Material Breakdown: [{'material__name': 'Aluminum Tube', 'material_total_cost': Decimal('47.25')}, {'material__name': 'Steel Sheet', 'material_total_cost': Decimal('38.25')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('3.9375')}]
+INFO 2024-12-12 17:15:33,557 analytics 28362 6145847296 Profit: 179.000
+INFO 2024-12-12 17:15:33,558 analytics 28362 6145847296 Profit Margin: 39.77777777777777777777777778%
+INFO 2024-12-12 17:15:33,558 analytics 28362 6145847296 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:15:33,558 analytics 28362 6145847296 Calculating profitability for product: Modular Office Desk
+INFO 2024-12-12 17:15:33,558 analytics 28362 6145847296 Product details - Sell Cost: 350.00, Labor Cost: 65.00
+INFO 2024-12-12 17:15:33,559 analytics 28362 6129020928 Workstation Cutting Station: Hourly Rate = 35.50, Estimated Hours = 1.5, Cost = 53.250
+INFO 2024-12-12 17:15:33,559 analytics 28362 6129020928 Workstation Assembly Station: Hourly Rate = 40.25, Estimated Hours = 2.0, Cost = 80.500
+INFO 2024-12-12 17:15:33,559 analytics 28362 6129020928 Workstation Painting Station: Hourly Rate = 30.00, Estimated Hours = 0.75, Cost = 22.5000
+INFO 2024-12-12 17:15:33,559 analytics 28362 6145847296 Material Costs: 89.4375
+INFO 2024-12-12 17:15:33,560 analytics 28362 6129020928 Profitability Calculation for Modular Office Desk:
+INFO 2024-12-12 17:15:33,560 analytics 28362 6145847296 Material Breakdown: [{'material__name': 'Aluminum Tube', 'material_total_cost': Decimal('47.25')}, {'material__name': 'Steel Sheet', 'material_total_cost': Decimal('38.25')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('3.9375')}]
+INFO 2024-12-12 17:15:33,560 analytics 28362 6129020928 Material Costs: 89.4375
+INFO 2024-12-12 17:15:33,561 analytics 28362 6129020928 Labor Costs: 65.00
+INFO 2024-12-12 17:15:33,561 analytics 28362 6129020928 Workstation Costs: 156.2500
+INFO 2024-12-12 17:15:33,561 analytics 28362 6145847296 Workstation Cutting Station: Hourly Rate = 35.50, Estimated Hours = 1.5, Cost = 53.250
+INFO 2024-12-12 17:15:33,561 analytics 28362 6129020928 Total Cost: 310.6875
+INFO 2024-12-12 17:15:33,562 analytics 28362 6145847296 Workstation Assembly Station: Hourly Rate = 40.25, Estimated Hours = 2.0, Cost = 80.500
+INFO 2024-12-12 17:15:33,562 analytics 28362 6129020928 Sell Cost: 350.00
+INFO 2024-12-12 17:15:33,563 analytics 28362 6145847296 Workstation Painting Station: Hourly Rate = 30.00, Estimated Hours = 0.75, Cost = 22.5000
+INFO 2024-12-12 17:15:33,563 analytics 28362 6129020928 Profit: 39.3125
+INFO 2024-12-12 17:15:33,563 analytics 28362 6145847296 Profitability Calculation for Modular Office Desk:
+INFO 2024-12-12 17:15:33,563 analytics 28362 6129020928 Profit Margin: 11.23214285714285714285714286%
+INFO 2024-12-12 17:15:33,563 analytics 28362 6145847296 Material Costs: 89.4375
+INFO 2024-12-12 17:15:33,563 analytics 28362 6145847296 Labor Costs: 65.00
+INFO 2024-12-12 17:15:33,563 analytics 28362 6129020928 Profitability Category: Low Margin
+INFO 2024-12-12 17:15:33,563 analytics 28362 6145847296 Workstation Costs: 156.2500
+INFO 2024-12-12 17:15:33,563 analytics 28362 6129020928 Profitability Summary: {'total_products': 2, 'total_sell_cost': Decimal('800.00'), 'total_cost': Decimal('581.6875'), 'total_profit': Decimal('218.3125'), 'average_profit_margin': Decimal('25.50496031746031746031746032'), 'products': [{'product_id': 14, 'product_name': 'Industrial Ergonomic Chair', 'material_costs': Decimal('76.375'), 'material_breakdown': [{'material__name': 'Steel Sheet', 'material_total_cost': Decimal('63.75')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('2.625')}, {'material__name': 'Industrial Paint', 'material_total_cost': Decimal('10')}], 'labor_costs': Decimal('75.50'), 'workstation_costs': Decimal('119.125'), 'workstation_breakdown': [{'workstation_name': 'Cutting Station', 'hourly_rate': 35.5, 'estimated_time_hours': 1.0, 'cost': 35.5}, {'workstation_name': 'Welding Station', 'hourly_rate': 45.75, 'estimated_time_hours': 1.5, 'cost': 68.625}, {'workstation_name': 'Painting Station', 'hourly_rate': 30.0, 'estimated_time_hours': 0.5, 'cost': 15.0}], 'total_cost': Decimal('271.000'), 'sell_cost': Decimal('450.00'), 'profit': Decimal('179.000'), 'profit_margin': Decimal('39.77777777777777777777777778'), 'profitability_category': 'Highly Profitable'}, {'product_id': 15, 'product_name': 'Modular Office Desk', 'material_costs': Decimal('89.4375'), 'material_breakdown': [{'material__name': 'Aluminum Tube', 'material_total_cost': Decimal('47.25')}, {'material__name': 'Steel Sheet', 'material_total_cost': Decimal('38.25')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('3.9375')}], 'labor_costs': Decimal('65.00'), 'workstation_costs': Decimal('156.2500'), 'workstation_breakdown': [{'workstation_name': 'Cutting Station', 'hourly_rate': 35.5, 'estimated_time_hours': 1.5, 'cost': 53.25}, {'workstation_name': 'Assembly Station', 'hourly_rate': 40.25, 'estimated_time_hours': 2.0, 'cost': 80.5}, {'workstation_name': 'Painting Station', 'hourly_rate': 30.0, 'estimated_time_hours': 0.75, 'cost': 22.5}], 'total_cost': Decimal('310.6875'), 'sell_cost': Decimal('350.00'), 'profit': Decimal('39.3125'), 'profit_margin': Decimal('11.23214285714285714285714286'), 'profitability_category': 'Low Margin'}]}
+INFO 2024-12-12 17:15:33,563 analytics 28362 6145847296 Total Cost: 310.6875
+INFO 2024-12-12 17:15:33,564 analytics 28362 6145847296 Sell Cost: 350.00
+INFO 2024-12-12 17:15:33,564 basehttp 28362 6129020928 "GET /api/analytics/profitability/ HTTP/1.1" 200 1750
+INFO 2024-12-12 17:15:33,564 analytics 28362 6145847296 Profit: 39.3125
+INFO 2024-12-12 17:15:33,564 analytics 28362 6145847296 Profit Margin: 11.23214285714285714285714286%
+INFO 2024-12-12 17:15:33,564 analytics 28362 6145847296 Profitability Category: Low Margin
+INFO 2024-12-12 17:15:33,564 analytics 28362 6145847296 Profitability Summary: {'total_products': 2, 'total_sell_cost': Decimal('800.00'), 'total_cost': Decimal('581.6875'), 'total_profit': Decimal('218.3125'), 'average_profit_margin': Decimal('25.50496031746031746031746032'), 'products': [{'product_id': 14, 'product_name': 'Industrial Ergonomic Chair', 'material_costs': Decimal('76.375'), 'material_breakdown': [{'material__name': 'Steel Sheet', 'material_total_cost': Decimal('63.75')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('2.625')}, {'material__name': 'Industrial Paint', 'material_total_cost': Decimal('10')}], 'labor_costs': Decimal('75.50'), 'workstation_costs': Decimal('119.125'), 'workstation_breakdown': [{'workstation_name': 'Cutting Station', 'hourly_rate': 35.5, 'estimated_time_hours': 1.0, 'cost': 35.5}, {'workstation_name': 'Welding Station', 'hourly_rate': 45.75, 'estimated_time_hours': 1.5, 'cost': 68.625}, {'workstation_name': 'Painting Station', 'hourly_rate': 30.0, 'estimated_time_hours': 0.5, 'cost': 15.0}], 'total_cost': Decimal('271.000'), 'sell_cost': Decimal('450.00'), 'profit': Decimal('179.000'), 'profit_margin': Decimal('39.77777777777777777777777778'), 'profitability_category': 'Highly Profitable'}, {'product_id': 15, 'product_name': 'Modular Office Desk', 'material_costs': Decimal('89.4375'), 'material_breakdown': [{'material__name': 'Aluminum Tube', 'material_total_cost': Decimal('47.25')}, {'material__name': 'Steel Sheet', 'material_total_cost': Decimal('38.25')}, {'material__name': 'Stainless Steel Screws', 'material_total_cost': Decimal('3.9375')}], 'labor_costs': Decimal('65.00'), 'workstation_costs': Decimal('156.2500'), 'workstation_breakdown': [{'workstation_name': 'Cutting Station', 'hourly_rate': 35.5, 'estimated_time_hours': 1.5, 'cost': 53.25}, {'workstation_name': 'Assembly Station', 'hourly_rate': 40.25, 'estimated_time_hours': 2.0, 'cost': 80.5}, {'workstation_name': 'Painting Station', 'hourly_rate': 30.0, 'estimated_time_hours': 0.75, 'cost': 22.5}], 'total_cost': Decimal('310.6875'), 'sell_cost': Decimal('350.00'), 'profit': Decimal('39.3125'), 'profit_margin': Decimal('11.23214285714285714285714286'), 'profitability_category': 'Low Margin'}]}
+INFO 2024-12-12 17:15:33,565 basehttp 28362 6145847296 "GET /api/analytics/profitability/ HTTP/1.1" 200 1750
+INFO 2024-12-12 17:16:05,689 basehttp 28362 6145847296 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 17:16:05,691 basehttp 28362 6129020928 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 17:16:05,696 basehttp 28362 6162673664 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 17:16:05,703 basehttp 28362 6196326400 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 17:16:05,712 basehttp 28362 6213152768 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 17:16:05,714 basehttp 28362 6179500032 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 17:16:05,726 basehttp 28362 6162673664 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 17:16:05,741 basehttp 28362 6213152768 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 17:16:05,748 basehttp 28362 6229979136 "GET /api/analytics/cost/ HTTP/1.1" 200 577
+INFO 2024-12-12 17:16:05,753 analytics 28362 6129020928 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 17:16:05,754 basehttp 28362 6196326400 "GET /api/analytics/dashboard/ HTTP/1.1" 200 941
+INFO 2024-12-12 17:16:05,754 analytics 28362 6129020928 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 17:16:05,755 basehttp 28362 6179500032 "GET /api/analytics/dashboard/ HTTP/1.1" 200 941
+INFO 2024-12-12 17:16:05,758 analytics 28362 6129020928 Material Costs: 80
+INFO 2024-12-12 17:16:05,759 analytics 28362 6129020928 Material Breakdown: [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}]
+INFO 2024-12-12 17:16:05,759 analytics 28362 6145847296 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 17:16:05,760 basehttp 28362 6162673664 "GET /api/analytics/cost/ HTTP/1.1" 200 577
+INFO 2024-12-12 17:16:05,760 analytics 28362 6145847296 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 17:16:05,763 analytics 28362 6129020928 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:16:05,763 analytics 28362 6129020928 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:16:05,764 analytics 28362 6129020928 Workstation Drilling Station: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:16:05,764 analytics 28362 6129020928 Profitability Calculation for Aluminium Flex Box:
+INFO 2024-12-12 17:16:05,765 analytics 28362 6129020928 Material Costs: 80
+INFO 2024-12-12 17:16:05,764 analytics 28362 6145847296 Material Costs: 80
+INFO 2024-12-12 17:16:05,765 analytics 28362 6129020928 Labor Costs: 5000.00
+INFO 2024-12-12 17:16:05,765 analytics 28362 6145847296 Material Breakdown: [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}]
+INFO 2024-12-12 17:16:05,765 analytics 28362 6129020928 Workstation Costs: 1900.000
+INFO 2024-12-12 17:16:05,766 analytics 28362 6129020928 Total Cost: 6980.000
+INFO 2024-12-12 17:16:05,766 analytics 28362 6129020928 Sell Cost: 50001.02
+INFO 2024-12-12 17:16:05,767 analytics 28362 6145847296 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:16:05,767 analytics 28362 6129020928 Profit: 43021.020
+INFO 2024-12-12 17:16:05,767 analytics 28362 6145847296 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:16:05,767 analytics 28362 6129020928 Profit Margin: 86.04028477819052491329176885%
+INFO 2024-12-12 17:16:05,767 analytics 28362 6145847296 Workstation Drilling Station: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:16:05,767 analytics 28362 6129020928 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:16:05,767 analytics 28362 6145847296 Profitability Calculation for Aluminium Flex Box:
+INFO 2024-12-12 17:16:05,767 analytics 28362 6129020928 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 17:16:05,767 analytics 28362 6145847296 Material Costs: 80
+INFO 2024-12-12 17:16:05,768 analytics 28362 6129020928 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 17:16:05,768 analytics 28362 6145847296 Labor Costs: 5000.00
+INFO 2024-12-12 17:16:05,770 analytics 28362 6145847296 Workstation Costs: 1900.000
+INFO 2024-12-12 17:16:05,770 analytics 28362 6145847296 Total Cost: 6980.000
+INFO 2024-12-12 17:16:05,770 analytics 28362 6145847296 Sell Cost: 50001.02
+INFO 2024-12-12 17:16:05,770 analytics 28362 6145847296 Profit: 43021.020
+INFO 2024-12-12 17:16:05,770 analytics 28362 6145847296 Profit Margin: 86.04028477819052491329176885%
+INFO 2024-12-12 17:16:05,770 analytics 28362 6145847296 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:16:05,771 analytics 28362 6145847296 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 17:16:05,771 analytics 28362 6129020928 Material Costs: 100
+INFO 2024-12-12 17:16:05,771 analytics 28362 6145847296 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 17:16:05,771 analytics 28362 6129020928 Material Breakdown: [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}]
+INFO 2024-12-12 17:16:05,773 analytics 28362 6129020928 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:16:05,773 analytics 28362 6145847296 Material Costs: 100
+INFO 2024-12-12 17:16:05,773 analytics 28362 6129020928 Workstation VNC Cutting Station 1: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:16:05,773 analytics 28362 6145847296 Material Breakdown: [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}]
+INFO 2024-12-12 17:16:05,773 analytics 28362 6129020928 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:16:05,774 analytics 28362 6129020928 Profitability Calculation for SS Flex Box:
+INFO 2024-12-12 17:16:05,774 analytics 28362 6129020928 Material Costs: 100
+INFO 2024-12-12 17:16:05,774 analytics 28362 6145847296 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:16:05,774 analytics 28362 6129020928 Labor Costs: 5000.00
+INFO 2024-12-12 17:16:05,774 analytics 28362 6145847296 Workstation VNC Cutting Station 1: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:16:05,775 analytics 28362 6129020928 Workstation Costs: 1900.000
+INFO 2024-12-12 17:16:05,775 analytics 28362 6145847296 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:16:05,775 analytics 28362 6129020928 Total Cost: 7000.000
+INFO 2024-12-12 17:16:05,775 analytics 28362 6145847296 Profitability Calculation for SS Flex Box:
+INFO 2024-12-12 17:16:05,775 analytics 28362 6129020928 Sell Cost: 60000.00
+INFO 2024-12-12 17:16:05,775 analytics 28362 6145847296 Material Costs: 100
+INFO 2024-12-12 17:16:05,775 analytics 28362 6129020928 Profit: 53000.000
+INFO 2024-12-12 17:16:05,775 analytics 28362 6145847296 Labor Costs: 5000.00
+INFO 2024-12-12 17:16:05,775 analytics 28362 6129020928 Profit Margin: 88.33333333333333333333333333%
+INFO 2024-12-12 17:16:05,775 analytics 28362 6145847296 Workstation Costs: 1900.000
+INFO 2024-12-12 17:16:05,775 analytics 28362 6129020928 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:16:05,775 analytics 28362 6145847296 Total Cost: 7000.000
+INFO 2024-12-12 17:16:05,776 analytics 28362 6129020928 Profitability Summary: {'total_products': 2, 'total_sell_cost': Decimal('110001.02'), 'total_cost': Decimal('13980.000'), 'total_profit': Decimal('96021.020'), 'average_profit_margin': Decimal('87.1868090557619291233125511'), 'products': [{'product_id': 10, 'product_name': 'Aluminium Flex Box', 'material_costs': Decimal('80'), 'material_breakdown': [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}, {'workstation_name': 'Drilling Station', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}], 'total_cost': Decimal('6980.000'), 'sell_cost': Decimal('50001.02'), 'profit': Decimal('43021.020'), 'profit_margin': Decimal('86.04028477819052491329176885'), 'profitability_category': 'Highly Profitable'}, {'product_id': 11, 'product_name': 'SS Flex Box', 'material_costs': Decimal('100'), 'material_breakdown': [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'VNC Cutting Station 1', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}], 'total_cost': Decimal('7000.000'), 'sell_cost': Decimal('60000.00'), 'profit': Decimal('53000.000'), 'profit_margin': Decimal('88.33333333333333333333333333'), 'profitability_category': 'Highly Profitable'}]}
+INFO 2024-12-12 17:16:05,776 analytics 28362 6145847296 Sell Cost: 60000.00
+INFO 2024-12-12 17:16:05,776 analytics 28362 6145847296 Profit: 53000.000
+INFO 2024-12-12 17:16:05,776 basehttp 28362 6129020928 "GET /api/analytics/profitability/ HTTP/1.1" 200 1533
+INFO 2024-12-12 17:16:05,777 analytics 28362 6145847296 Profit Margin: 88.33333333333333333333333333%
+INFO 2024-12-12 17:16:05,777 analytics 28362 6145847296 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:16:05,777 analytics 28362 6145847296 Profitability Summary: {'total_products': 2, 'total_sell_cost': Decimal('110001.02'), 'total_cost': Decimal('13980.000'), 'total_profit': Decimal('96021.020'), 'average_profit_margin': Decimal('87.1868090557619291233125511'), 'products': [{'product_id': 10, 'product_name': 'Aluminium Flex Box', 'material_costs': Decimal('80'), 'material_breakdown': [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}, {'workstation_name': 'Drilling Station', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}], 'total_cost': Decimal('6980.000'), 'sell_cost': Decimal('50001.02'), 'profit': Decimal('43021.020'), 'profit_margin': Decimal('86.04028477819052491329176885'), 'profitability_category': 'Highly Profitable'}, {'product_id': 11, 'product_name': 'SS Flex Box', 'material_costs': Decimal('100'), 'material_breakdown': [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'VNC Cutting Station 1', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}], 'total_cost': Decimal('7000.000'), 'sell_cost': Decimal('60000.00'), 'profit': Decimal('53000.000'), 'profit_margin': Decimal('88.33333333333333333333333333'), 'profitability_category': 'Highly Profitable'}]}
+INFO 2024-12-12 17:16:05,778 basehttp 28362 6145847296 "GET /api/analytics/profitability/ HTTP/1.1" 200 1533

@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
 import logging
+from decimal import Decimal
 
 from .models import WorkOrder, ProductionLog, Material, Product, WorkStation, ProductWorkstationSequence
 
@@ -183,16 +184,23 @@ class ProfitabilityAnalyticsView(APIView):
             for ws in workstation_sequence:
                 # Ensure hourly_operating_cost and estimated_time are not None
                 hourly_rate = ws.workstation.hourly_operating_cost or 0
-                estimated_hours = (ws.estimated_time.total_seconds() / 3600) if ws.estimated_time else 0
                 
-                ws_cost = hourly_rate * estimated_hours
+                # Convert estimated time to hours as a Decimal
+                estimated_hours = (
+                    Decimal(str(ws.estimated_time.total_seconds() / 3600)) 
+                    if ws.estimated_time 
+                    else Decimal('0')
+                )
+                
+                # Ensure both are Decimal for multiplication
+                ws_cost = Decimal(str(hourly_rate)) * estimated_hours
                 workstation_costs += ws_cost
                 
                 workstation_breakdown.append({
                     'workstation_name': ws.workstation.name,
-                    'hourly_rate': hourly_rate,
-                    'estimated_time_hours': estimated_hours,
-                    'cost': ws_cost
+                    'hourly_rate': float(hourly_rate),
+                    'estimated_time_hours': float(estimated_hours),
+                    'cost': float(ws_cost)
                 })
                 
                 logger.info(f"Workstation {ws.workstation.name}: Hourly Rate = {hourly_rate}, Estimated Hours = {estimated_hours}, Cost = {ws_cost}")
@@ -250,9 +258,15 @@ class ProfitabilityAnalyticsView(APIView):
         Generate an overall profitability summary for all products
         """
         import logging
+        from django.db import connection
         logger = logging.getLogger(__name__)
 
         try:
+            # Log raw SQL queries for debugging
+            def log_queries():
+                for query in connection.queries:
+                    print(f"SQL Query: {query['sql']}")
+
             # Fetch all products with more details
             products = Product.objects.prefetch_related(
                 'productmaterial_set', 
@@ -261,7 +275,35 @@ class ProfitabilityAnalyticsView(APIView):
                 'workstation_sequences__workstation'
             )
             
-            logger.debug(f"Total number of products: {products.count()}")
+            # Extensive logging
+            print("=" * 50)
+            print("PROFITABILITY ANALYTICS DEBUG")
+            print("=" * 50)
+            
+            # Log database connection details
+            print(f"Database: {connection.settings_dict['NAME']}")
+            print(f"Total number of products: {products.count()}")
+            
+            # Detailed product logging
+            for product in products:
+                print(f"\nProduct: {product.name}")
+                print(f"ID: {product.id}")
+                print(f"Sell Cost: {product.sell_cost}")
+                print(f"Labor Cost: {product.labor_cost}")
+                
+                # Log materials
+                print("Materials:")
+                materials = product.productmaterial_set.all()
+                for material in materials:
+                    print(f"- {material.material.name}: Quantity = {material.quantity}, Cost per Unit = {material.material.cost_per_unit}")
+                
+                # Log workstation sequences
+                print("Workstation Sequences:")
+                workstation_sequences = product.workstation_sequences.all()
+                for seq in workstation_sequences:
+                    print(f"- {seq.workstation.name}: Estimated Time = {seq.estimated_time}, Hourly Cost = {seq.workstation.hourly_operating_cost}")
+            
+            print("=" * 50)
             
             # If no products exist
             if not products.exists():
@@ -278,30 +320,14 @@ class ProfitabilityAnalyticsView(APIView):
             # Calculate profitability for each product
             profitability_data = []
             for product in products:
-                logger.debug(f"Processing product: {product.name}")
-                
-                # Log product details for debugging
-                logger.debug(f"Product ID: {product.id}")
-                logger.debug(f"Sell Cost: {product.sell_cost}")
-                logger.debug(f"Labor Cost: {product.labor_cost}")
-                
-                # Log materials
-                materials = product.productmaterial_set.all()
-                logger.debug(f"Number of materials: {materials.count()}")
-                for material in materials:
-                    logger.debug(f"Material: {material.material.name}, Quantity: {material.quantity}")
-                
-                # Log workstation sequences
-                workstation_sequences = product.workstation_sequences.all()
-                logger.debug(f"Number of workstation sequences: {workstation_sequences.count()}")
-                for seq in workstation_sequences:
-                    logger.debug(f"Workstation: {seq.workstation.name}, Estimated Time: {seq.estimated_time}")
-
                 try:
                     product_profitability = self.calculate_product_profitability(product)
                     if product_profitability:
                         profitability_data.append(product_profitability)
+                    else:
+                        print(f"WARNING: Could not calculate profitability for product {product.name}")
                 except Exception as prod_error:
+                    print(f"ERROR processing product {product.id}: {str(prod_error)}")
                     logger.error(f"Error processing product {product.id}: {str(prod_error)}", exc_info=True)
 
             # If no products have profitability calculated
@@ -330,6 +356,7 @@ class ProfitabilityAnalyticsView(APIView):
             return Response(summary)
 
         except Exception as e:
+            print(f"CRITICAL ERROR: {str(e)}")
             logger.error(f"Unexpected error in profitability analytics: {str(e)}", exc_info=True)
             return Response({
                 'error': str(e)

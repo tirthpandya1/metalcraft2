@@ -53,11 +53,11 @@ urlpatterns = [
     # Manufacturing API
     path('api/', include('manufacturing.urls')),
     
-    # Analytics Views
-    path('api/analytics/dashboard/', DashboardAnalyticsView.as_view(), name='dashboard-analytics'),
-    path('api/analytics/efficiency/', EfficiencyTrendView.as_view(), name='efficiency-analytics'),
-    path('api/analytics/cost/', CostAnalyticsView.as_view(), name='cost-analytics'),
-    path('api/analytics/profitability/', ProfitabilityAnalyticsView.as_view(), name='profitability-analytics'),
+    # Analytics Endpoints
+    path('api/analytics/dashboard/', DashboardAnalyticsView.as_view(), name='dashboard_analytics'),
+    path('api/analytics/efficiency/', EfficiencyTrendView.as_view(), name='efficiency_trend'),
+    path('api/analytics/cost/', CostAnalyticsView.as_view(), name='cost_analytics'),
+    path('api/analytics/profitability/', ProfitabilityAnalyticsView.as_view(), name='profitability_analytics'),
     
     path('api/', include(router.urls)),
     

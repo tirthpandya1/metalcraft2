@@ -673,4 +673,21 @@ export const productionLogService = {
   }
 };
 
+export const analyticsService = {
+  async fetchProfitabilityAnalytics() {
+    console.log('Fetching Profitability Analytics');
+    return axios.get('/api/analytics/profitability/', {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+      }
+    }).then(response => {
+      console.log('Profitability Analytics Response:', response.data);
+      return response.data;
+    }).catch(error => {
+      console.error('Error fetching profitability analytics:', error);
+      throw error;
+    });
+  }
+};
+
 export default api;
