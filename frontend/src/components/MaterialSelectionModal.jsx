@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { 
   Dialog, 
   DialogTitle, 
@@ -11,24 +11,34 @@ import {
   Typography
 } from '@mui/material';
 
-const MaterialSelectionModal = ({ open, materials, onClose, onAddMaterial }) => {
+const MaterialSelectionModal = ({ open, materials = [], onClose, onAddMaterial }) => {
   const [selectedMaterial, setSelectedMaterial] = useState(null);
   const [quantity, setQuantity] = useState(1);
 
-  // Ensure materials is an array and log for debugging
+  // Normalize materials list
+  const materialsList = useMemo(() => {
+    // If materials is already an array, use it
+    if (Array.isArray(materials)) return materials;
+
+    // Check for results or data property
+    if (materials.results && Array.isArray(materials.results)) return materials.results;
+    if (materials.data && Array.isArray(materials.data)) return materials.data;
+
+    // If no recognizable array structure, return an empty array
+    console.warn('Unexpected materials structure:', materials);
+    return [];
+  }, [materials]);
+
+  // Debug logging
   useEffect(() => {
     console.group('MaterialSelectionModal Debug');
     console.log('Raw Materials:', materials);
+    console.log('Processed Materials List:', materialsList);
     console.log('Materials Type:', typeof materials);
     console.log('Is Array:', Array.isArray(materials));
-    console.log('Materials Length:', materials?.length);
+    console.log('Materials Length:', materialsList.length);
     console.groupEnd();
-  }, [materials]);
-
-  // Ensure materials is an array, extracting results if needed
-  const materialsList = Array.isArray(materials) 
-    ? materials 
-    : (materials?.results || []);
+  }, [materials, materialsList]);
 
   const handleAddMaterial = () => {
     if (selectedMaterial && quantity > 0) {
@@ -36,6 +46,7 @@ const MaterialSelectionModal = ({ open, materials, onClose, onAddMaterial }) => 
       // Reset state
       setSelectedMaterial(null);
       setQuantity(1);
+      onClose(); // Close the modal after adding
     }
   };
 
@@ -64,7 +75,7 @@ const MaterialSelectionModal = ({ open, materials, onClose, onAddMaterial }) => 
               >
                 {materialsList.map((material) => (
                   <MenuItem key={material.id} value={material.id}>
-                    {material.name} (Current Stock: {material.quantity})
+                    {material.name} (Current Stock: {material.quantity || 0})
                   </MenuItem>
                 ))}
               </TextField>

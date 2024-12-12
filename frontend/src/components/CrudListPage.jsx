@@ -167,9 +167,36 @@ export const withCrudList = (
       const fetchMaterials = async () => {
         try {
           const materialsResponse = await materialService.getAll();
-          setMaterials(materialsResponse);
+          
+          // Normalize the materials response
+          const normalizedMaterials = (() => {
+            // If it's already an array, return it
+            if (Array.isArray(materialsResponse)) return materialsResponse;
+            
+            // If it has a 'results' property that is an array, return that
+            if (materialsResponse.results && Array.isArray(materialsResponse.results)) {
+              return materialsResponse.results;
+            }
+            
+            // If it has a 'data' property that is an array, return that
+            if (materialsResponse.data && Array.isArray(materialsResponse.data)) {
+              return materialsResponse.data;
+            }
+            
+            // If no recognizable array structure, return an empty array
+            console.warn('Unexpected materials response structure:', materialsResponse);
+            return [];
+          })();
+
+          console.group('Materials Fetch Debug');
+          console.log('Raw Materials Response:', materialsResponse);
+          console.log('Normalized Materials:', normalizedMaterials);
+          console.groupEnd();
+
+          setMaterials(normalizedMaterials);
         } catch (error) {
           console.error('Failed to fetch materials:', error);
+          setMaterials([]); // Ensure materials is always an array
         }
       };
       fetchMaterials();

@@ -8,7 +8,9 @@ import {
   Grid, 
   Chip, 
   IconButton, 
-  Tooltip 
+  Tooltip,
+  TextField,
+  MenuItem
 } from '@mui/material';
 import { 
   Edit as EditIcon, 
@@ -159,8 +161,82 @@ const materialsConfig = {
   }
 };
 
+// Custom form component for Materials
+const MaterialForm = ({ item, onItemChange }) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    onItemChange({ ...item, [name]: value });
+  };
+
+  return (
+    <Box display="flex" flexDirection="column" gap={2}>
+      <TextField
+        name="name"
+        label="Name"
+        value={item.name}
+        onChange={handleChange}
+        required
+        fullWidth
+      />
+      <TextField
+        name="unit"
+        label="Unit"
+        select
+        value={item.unit}
+        onChange={handleChange}
+        required
+        fullWidth
+      >
+        {materialsConfig.dialogFields.find(f => f.key === 'unit').options.map((option) => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
+        ))}
+      </TextField>
+      <TextField
+        name="quantity"
+        label="Quantity"
+        type="number"
+        value={item.quantity}
+        onChange={handleChange}
+        required
+        fullWidth
+        inputProps={{ step: '0.01' }}
+      />
+      <TextField
+        name="reorder_level"
+        label="Reorder Level"
+        type="number"
+        value={item.reorder_level}
+        onChange={handleChange}
+        required
+        fullWidth
+        inputProps={{ step: '0.01' }}
+      />
+      <TextField
+        name="cost_per_unit"
+        label="Cost per Unit"
+        type="number"
+        value={item.cost_per_unit}
+        onChange={handleChange}
+        fullWidth
+        inputProps={{ step: '0.01' }}
+      />
+      <TextField
+        name="description"
+        label="Description"
+        value={item.description}
+        onChange={handleChange}
+        fullWidth
+        multiline
+        rows={3}
+      />
+    </Box>
+  );
+};
+
 export default withErrorHandling(
-  withCrudList(null, materialService, {
+  withCrudList(MaterialForm, materialService, {
     ...materialsConfig,
     renderView: 'card'
   })
