@@ -146,10 +146,19 @@ class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = [
-            'id', 'name', 'description', 'current_quantity', 
-            'restock_level', 'max_stock_level', 'stock_status', 
-            'created_at', 'updated_at', 'materials', 'productmaterial_set',
-            'sell_cost'
+            'id', 
+            'name', 
+            'description', 
+            'materials', 
+            'sell_cost', 
+            'labor_cost',
+            'current_quantity', 
+            'restock_level', 
+            'max_stock_level', 
+            'stock_status', 
+            'created_at', 
+            'updated_at',
+            'productmaterial_set'
         ]
         read_only_fields = ['stock_status', 'created_at', 'updated_at']
 

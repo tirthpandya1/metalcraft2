@@ -102,6 +102,16 @@ class Product(models.Model):
         blank=False
     )
     
+    # Add labor_cost field
+    labor_cost = models.DecimalField(
+        max_digits=10, 
+        decimal_places=2, 
+        default=0.00, 
+        null=False, 
+        blank=False,
+        help_text='Total labor cost for producing this product'
+    )
+    
     # New stock-related fields
     current_quantity = models.IntegerField(default=0)
     restock_level = models.IntegerField(default=10)

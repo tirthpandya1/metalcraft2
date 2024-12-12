@@ -8,7 +8,8 @@ import {
   CardContent, 
   Divider,
   CircularProgress,
-  Tooltip
+  Tooltip,
+  TextField
 } from '@mui/material';
 import { 
   PieChart, 
@@ -296,5 +297,90 @@ function Dashboard() {
     </Box>
   );
 }
+
+const ProductForm = ({ product, onSubmit }) => {
+  const [formData, setFormData] = useState({
+    name: product?.name || '',
+    description: product?.description || '',
+    sell_cost: product?.sell_cost || 0,
+    labor_cost: product?.labor_cost || 0,
+    current_quantity: product?.current_quantity || 0,
+    restock_level: product?.restock_level || 10,
+    max_stock_level: product?.max_stock_level || 100,
+  });
+
+  const handleInputChange = (field, value) => {
+    setFormData({ ...formData, [field]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit(formData);
+  };
+
+  return (
+    <Box component="form" onSubmit={handleSubmit}>
+      <TextField
+        label="Name"
+        type="text"
+        value={formData.name}
+        onChange={(e) => handleInputChange('name', e.target.value)}
+        fullWidth
+        margin="normal"
+      />
+      <TextField
+        label="Description"
+        type="text"
+        value={formData.description}
+        onChange={(e) => handleInputChange('description', e.target.value)}
+        fullWidth
+        margin="normal"
+      />
+      <TextField
+        label="Sell Cost"
+        type="number"
+        value={formData.sell_cost}
+        onChange={(e) => handleInputChange('sell_cost', e.target.value)}
+        fullWidth
+        margin="normal"
+      />
+      <TextField
+        label="Labor Cost"
+        type="number"
+        value={formData.labor_cost}
+        onChange={(e) => handleInputChange('labor_cost', e.target.value)}
+        fullWidth
+        margin="normal"
+      />
+      <TextField
+        label="Current Quantity"
+        type="number"
+        value={formData.current_quantity}
+        onChange={(e) => handleInputChange('current_quantity', e.target.value)}
+        fullWidth
+        margin="normal"
+      />
+      <TextField
+        label="Restock Level"
+        type="number"
+        value={formData.restock_level}
+        onChange={(e) => handleInputChange('restock_level', e.target.value)}
+        fullWidth
+        margin="normal"
+      />
+      <TextField
+        label="Max Stock Level"
+        type="number"
+        value={formData.max_stock_level}
+        onChange={(e) => handleInputChange('max_stock_level', e.target.value)}
+        fullWidth
+        margin="normal"
+      />
+      <Button type="submit" variant="contained" color="primary">
+        Submit
+      </Button>
+    </Box>
+  );
+};
 
 export default withErrorHandling(Dashboard);
