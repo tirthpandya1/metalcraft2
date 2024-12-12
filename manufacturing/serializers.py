@@ -72,11 +72,12 @@ class UserSerializer(serializers.ModelSerializer):
 
 class WorkStationSerializer(serializers.ModelSerializer):
     last_maintenance_display = serializers.SerializerMethodField()
+    hourly_operating_cost = serializers.DecimalField(max_digits=10, decimal_places=2, required=False)
 
     class Meta:
         model = WorkStation
         fields = ['id', 'name', 'description', 'status', 'process_type', 'created_at', 'updated_at', 
-                  'last_maintenance', 'last_maintenance_display']
+                  'last_maintenance', 'last_maintenance_display', 'hourly_operating_cost']
         read_only_fields = ['id', 'created_at', 'updated_at', 'last_maintenance']
 
     def get_last_maintenance_display(self, obj):

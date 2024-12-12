@@ -21,7 +21,8 @@ import {
   TableRow, 
   TableCell, 
   TableBody,
-  MenuItem
+  MenuItem,
+  InputAdornment
 } from '@mui/material';
 import { 
   Build as BuildIcon, 
@@ -87,6 +88,13 @@ const WorkstationCard = ({ workstation, onEdit, onDelete }) => {
             color={workstation.process_type === 'AUTOMATIC' ? 'primary' : 'secondary'}
             size="small" 
           />
+          <Chip 
+            label={`₹${workstation.hourly_operating_cost || 0}/hr`} 
+            variant="outlined"
+            color="info"
+            size="small" 
+            sx={{ ml: 1 }}
+          />
         </Box>
         <Box sx={{ mt: 2 }}>
           <Typography variant="caption">
@@ -116,7 +124,8 @@ const WorkstationForm = ({ item, onItemChange }) => {
     name: '', 
     description: '', 
     process_type: 'MANUAL', 
-    status: 'INACTIVE' 
+    status: 'INACTIVE',
+    hourly_operating_cost: 0
   };
 
   return (
@@ -173,6 +182,20 @@ const WorkstationForm = ({ item, onItemChange }) => {
         <MenuItem value="INACTIVE">Inactive</MenuItem>
         <MenuItem value="MAINTENANCE">Maintenance</MenuItem>
       </TextField>
+      <TextField
+        fullWidth
+        margin="normal"
+        label="Hourly Operating Cost"
+        type="number"
+        value={safeItem.hourly_operating_cost || 0}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          hourly_operating_cost: parseFloat(e.target.value) || 0
+        }))}
+        InputProps={{
+          startAdornment: <InputAdornment position="start">₹</InputAdornment>
+        }}
+      />
     </>
   );
 };
@@ -185,7 +208,8 @@ const workstationConfig = {
     name: '',
     description: '',
     process_type: 'MANUAL',
-    status: 'INACTIVE'
+    status: 'INACTIVE',
+    hourly_operating_cost: 0
   },
   searchFields: [
     'name',
@@ -223,6 +247,11 @@ const workstationConfig = {
         { value: 'INACTIVE', label: 'Inactive' },
         { value: 'MAINTENANCE', label: 'Maintenance' }
       ]
+    },
+    { 
+      key: 'hourly_operating_cost', 
+      label: 'Hourly Operating Cost',
+      type: 'number'
     }
   ],
   columns: [
@@ -330,7 +359,7 @@ const WorkStations = () => {
           variant="contained" 
           startIcon={<BuildIcon />}
           onClick={() => {
-            setSelectedWorkstation({ name: '', description: '', process_type: 'MANUAL', status: 'INACTIVE' });
+            setSelectedWorkstation({ name: '', description: '', process_type: 'MANUAL', status: 'INACTIVE', hourly_operating_cost: 0 });
             setIsDialogOpen(true);
           }}
         >

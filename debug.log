@@ -26573,3 +26573,433 @@ INFO 2024-12-12 16:29:43,786 basehttp 23675 6122860544 "OPTIONS /api/materials/ 
 INFO 2024-12-12 16:29:43,786 basehttp 23675 6139686912 "OPTIONS /api/materials/ HTTP/1.1" 200 0
 INFO 2024-12-12 16:29:43,796 basehttp 23675 6139686912 "GET /api/materials/ HTTP/1.1" 200 524
 INFO 2024-12-12 16:29:43,796 basehttp 23675 6122860544 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:31:02,061 basehttp 23675 6122860544 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:31:02,062 basehttp 23675 6139686912 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:31:02,072 basehttp 23675 6122860544 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:31:02,074 basehttp 23675 6139686912 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:31:05,639 basehttp 23675 6139686912 "OPTIONS /api/products/11/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:31:05,648 basehttp 23675 6139686912 "GET /api/products/11/ HTTP/1.1" 200 351
+INFO 2024-12-12 16:31:05,650 basehttp 23675 6139686912 "OPTIONS /api/products/11/ HTTP/1.1" 200 0
+DEBUG 2024-12-12 16:31:05,652 views 23675 6139686912 Product Update Request - Raw Data: {"id": 11, "name": "SS Flex Box", "description": "", "materials": [{"material_id": 9, "material_name": "SS Sheet", "quantity": 2}], "sell_cost": "60000.00", "labor_cost": 5000, "current_quantity": 250, "restock_level": 10, "max_stock_level": 1000, "stock_status": "IN_STOCK", "created_at": "2024-12-12T15:23:29.549191+05:30", "updated_at": "2024-12-12T16:22:56.057633+05:30", "productmaterial_set": [{"material_id": 9, "quantity": 2}]}
+DEBUG 2024-12-12 16:31:05,653 serializers 23675 6139686912 Product Serializer - Processed Data: {'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': 2}], 'sell_cost': '60000.00', 'labor_cost': 5000.0, 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30', 'productmaterial_set': [{'material_id': 9, 'quantity': 2}]}
+DEBUG 2024-12-12 16:31:05,654 serializers 23675 6139686912 Product Update - Raw Validated Data: {"name": "SS Flex Box", "description": "", "sell_cost": "60000.00", "labor_cost": "5000.00", "current_quantity": 250, "restock_level": 10, "max_stock_level": 1000, "productmaterial_set": [{"material_id": 9, "quantity": 2}]}
+DEBUG 2024-12-12 16:31:05,654 serializers 23675 6139686912 Existing Product - ID: 11, Current Labor Cost: 0.00
+INFO 2024-12-12 16:31:05,655 serializers 23675 6139686912 Product Updated - ID: 11, Name: SS Flex Box, Labor Cost: 5000.00
+INFO 2024-12-12 16:31:05,659 views 23675 6139686912 Product Updated Successfully - Response: {"id": 11, "name": "SS Flex Box", "description": "", "materials": [{"material_id": 9, "material_name": "SS Sheet", "quantity": "2.00"}], "sell_cost": "60000.00", "labor_cost": "5000.00", "current_quantity": 250, "restock_level": 10, "max_stock_level": 1000, "stock_status": "IN_STOCK", "created_at": "2024-12-12T15:23:29.549191+05:30", "updated_at": "2024-12-12T16:31:05.654342+05:30"}
+INFO 2024-12-12 16:31:05,659 basehttp 23675 6139686912 "PUT /api/products/11/ HTTP/1.1" 200 354
+INFO 2024-12-12 16:31:06,841 basehttp 23675 6122860544 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:31:06,842 basehttp 23675 6139686912 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:31:06,866 basehttp 23675 6139686912 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:31:06,871 basehttp 23675 6122860544 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:31:11,267 basehttp 23675 6122860544 "OPTIONS /api/products/10/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:31:11,277 basehttp 23675 6122860544 "GET /api/products/10/ HTTP/1.1" 200 391
+INFO 2024-12-12 16:31:11,283 basehttp 23675 6122860544 "OPTIONS /api/products/10/ HTTP/1.1" 200 0
+DEBUG 2024-12-12 16:31:11,286 views 23675 6122860544 Product Update Request - Raw Data: {"id": 10, "name": "Aluminium Flex Box", "description": "Flexible Aluminium Box", "materials": [{"material_id": 10, "material_name": "Aluminium Sheet", "quantity": 2}], "sell_cost": "50001.02", "labor_cost": 5000, "current_quantity": 425, "restock_level": 60, "max_stock_level": 600, "stock_status": "IN_STOCK", "created_at": "2024-12-12T02:06:42.758734+05:30", "updated_at": "2024-12-12T16:29:42.612823+05:30", "productmaterial_set": [{"material_id": 10, "quantity": 2}]}
+DEBUG 2024-12-12 16:31:11,287 serializers 23675 6122860544 Product Serializer - Processed Data: {'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': 2}], 'sell_cost': '50001.02', 'labor_cost': 5000.0, 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:29:42.612823+05:30', 'productmaterial_set': [{'material_id': 10, 'quantity': 2}]}
+DEBUG 2024-12-12 16:31:11,288 serializers 23675 6122860544 Product Update - Raw Validated Data: {"name": "Aluminium Flex Box", "description": "Flexible Aluminium Box", "sell_cost": "50001.02", "labor_cost": "5000.00", "current_quantity": 425, "restock_level": 60, "max_stock_level": 600, "productmaterial_set": [{"material_id": 10, "quantity": 2}]}
+DEBUG 2024-12-12 16:31:11,288 serializers 23675 6122860544 Existing Product - ID: 10, Current Labor Cost: 60000.00
+INFO 2024-12-12 16:31:11,289 serializers 23675 6122860544 Product Updated - ID: 10, Name: Aluminium Flex Box, Labor Cost: 5000.00
+INFO 2024-12-12 16:31:11,292 views 23675 6122860544 Product Updated Successfully - Response: {"id": 10, "name": "Aluminium Flex Box", "description": "Flexible Aluminium Box", "materials": [{"material_id": 10, "material_name": "Aluminium Sheet", "quantity": "2.00"}], "sell_cost": "50001.02", "labor_cost": "5000.00", "current_quantity": 425, "restock_level": 60, "max_stock_level": 600, "stock_status": "IN_STOCK", "created_at": "2024-12-12T02:06:42.758734+05:30", "updated_at": "2024-12-12T16:31:11.288216+05:30"}
+INFO 2024-12-12 16:31:11,293 basehttp 23675 6122860544 "PUT /api/products/10/ HTTP/1.1" 200 390
+INFO 2024-12-12 16:32:03,547 basehttp 23675 6206992384 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:32:03,556 basehttp 23675 6173339648 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:32:03,559 basehttp 23675 6240645120 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:32:03,559 basehttp 23675 6156513280 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:32:03,561 basehttp 23675 6190166016 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:32:03,561 basehttp 23675 6223818752 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:32:03,564 analytics 23675 6206992384 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:32:03,564 analytics 23675 6206992384 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:32:03,564 analytics 23675 6206992384 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:32:03,564 analytics 23675 6206992384 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:32:03,566 analytics 23675 6206992384 Material Costs: 80
+INFO 2024-12-12 16:32:03,566 analytics 23675 6206992384 Material Costs: 80
+ERROR 2024-12-12 16:32:03,569 analytics 23675 6206992384 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:32:03,569 analytics 23675 6206992384 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+INFO 2024-12-12 16:32:03,576 analytics 23675 6206992384 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:32:03,576 analytics 23675 6206992384 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:32:03,576 analytics 23675 6206992384 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:32:03,576 analytics 23675 6206992384 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:32:03,578 analytics 23675 6156513280 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:32:03,578 analytics 23675 6156513280 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:32:03,578 analytics 23675 6206992384 Material Costs: 100
+INFO 2024-12-12 16:32:03,580 analytics 23675 6156513280 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:32:03,578 analytics 23675 6206992384 Material Costs: 100
+INFO 2024-12-12 16:32:03,580 analytics 23675 6156513280 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:32:03,587 analytics 23675 6156513280 Material Costs: 80
+INFO 2024-12-12 16:32:03,587 analytics 23675 6156513280 Material Costs: 80
+ERROR 2024-12-12 16:32:03,590 analytics 23675 6206992384 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:32:03,590 analytics 23675 6206992384 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+INFO 2024-12-12 16:32:03,594 basehttp 23675 6190166016 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:32:03,594 basehttp 23675 6223818752 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+WARNING 2024-12-12 16:32:03,596 analytics 23675 6206992384 No products could be processed for profitability
+WARNING 2024-12-12 16:32:03,596 analytics 23675 6206992384 No products could be processed for profitability
+INFO 2024-12-12 16:32:03,601 basehttp 23675 6206992384 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+ERROR 2024-12-12 16:32:03,601 analytics 23675 6156513280 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:32:03,601 analytics 23675 6156513280 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+INFO 2024-12-12 16:32:03,605 analytics 23675 6156513280 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:32:03,605 analytics 23675 6156513280 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:32:03,607 analytics 23675 6156513280 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:32:03,607 analytics 23675 6156513280 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:32:03,610 analytics 23675 6156513280 Material Costs: 100
+INFO 2024-12-12 16:32:03,610 analytics 23675 6156513280 Material Costs: 100
+ERROR 2024-12-12 16:32:03,615 analytics 23675 6156513280 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:32:03,615 analytics 23675 6156513280 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 16:32:03,619 analytics 23675 6156513280 No products could be processed for profitability
+WARNING 2024-12-12 16:32:03,619 analytics 23675 6156513280 No products could be processed for profitability
+INFO 2024-12-12 16:32:03,621 basehttp 23675 6257471488 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:32:03,621 basehttp 23675 6240645120 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:32:03,621 basehttp 23675 6274297856 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:32:03,625 basehttp 23675 6156513280 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:32:03,625 basehttp 23675 6173339648 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:38:12,475 analytics 24175 8320923712 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:38:12,475 analytics 24175 8320923712 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:38:12,475 analytics 24175 8320923712 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:38:12,475 analytics 24175 8320923712 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:38:12,476 analytics 24175 8320923712 Material Costs: 80
+INFO 2024-12-12 16:38:12,476 analytics 24175 8320923712 Material Costs: 80
+ERROR 2024-12-12 16:38:12,478 analytics 24175 8320923712 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:38:12,478 analytics 24175 8320923712 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+INFO 2024-12-12 16:38:12,481 analytics 24175 8320923712 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:38:12,481 analytics 24175 8320923712 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:38:12,481 analytics 24175 8320923712 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:38:12,481 analytics 24175 8320923712 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:38:12,481 analytics 24175 8320923712 Material Costs: 100
+INFO 2024-12-12 16:38:12,481 analytics 24175 8320923712 Material Costs: 100
+ERROR 2024-12-12 16:38:12,482 analytics 24175 8320923712 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:38:12,482 analytics 24175 8320923712 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+INFO 2024-12-12 16:38:31,962 autoreload 23675 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/models.py changed, reloading.
+INFO 2024-12-12 16:38:32,301 autoreload 24238 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:38:38,376 views 24238 6128070656 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:38:38,376 views 24238 6144897024 Fetching workstations: Total 6 workstations
+ERROR 2024-12-12 16:38:38,377 views 24238 6128070656 Error fetching workstations: no such column: manufacturing_workstation.hourly_operating_cost
+ERROR 2024-12-12 16:38:38,377 views 24238 6144897024 Error fetching workstations: no such column: manufacturing_workstation.hourly_operating_cost
+ERROR 2024-12-12 16:38:38,377 log 24238 6128070656 Internal Server Error: /api/workstations/
+ERROR 2024-12-12 16:38:38,377 log 24238 6144897024 Internal Server Error: /api/workstations/
+ERROR 2024-12-12 16:38:38,378 basehttp 24238 6128070656 "GET /api/workstations/ HTTP/1.1" 500 40
+ERROR 2024-12-12 16:38:38,378 basehttp 24238 6144897024 "GET /api/workstations/ HTTP/1.1" 500 40
+INFO 2024-12-12 16:39:16,315 views 24238 6128070656 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:39:16,316 views 24238 6144897024 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:39:16,316 views 24238 6128070656 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:39:16,317 views 24238 6128070656 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:39:16,317 views 24238 6128070656 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:39:16,317 views 24238 6144897024 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:39:16,317 views 24238 6128070656 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:39:16,317 views 24238 6144897024 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:39:16,317 views 24238 6128070656 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:39:16,317 views 24238 6144897024 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:39:16,317 views 24238 6128070656 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:39:16,317 views 24238 6144897024 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:39:16,318 views 24238 6144897024 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:39:16,318 views 24238 6144897024 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:39:16,319 basehttp 24238 6144897024 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:39:16,320 basehttp 24238 6128070656 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:39:17,726 analytics 24238 6212202496 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:39:17,726 analytics 24238 6212202496 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:39:17,727 analytics 24238 6212202496 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:39:17,727 analytics 24238 6212202496 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:39:17,729 analytics 24238 6195376128 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:39:17,729 analytics 24238 6195376128 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:39:17,729 analytics 24238 6195376128 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:39:17,729 analytics 24238 6195376128 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:39:17,730 analytics 24238 6212202496 Material Costs: 80
+INFO 2024-12-12 16:39:17,730 analytics 24238 6212202496 Material Costs: 80
+INFO 2024-12-12 16:39:17,736 analytics 24238 6195376128 Material Costs: 80
+INFO 2024-12-12 16:39:17,736 analytics 24238 6195376128 Material Costs: 80
+ERROR 2024-12-12 16:39:17,738 analytics 24238 6212202496 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:39:17,738 analytics 24238 6212202496 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO 2024-12-12 16:39:17,740 analytics 24238 6212202496 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:39:17,740 analytics 24238 6212202496 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:39:17,741 analytics 24238 6212202496 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:39:17,741 analytics 24238 6212202496 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+ERROR 2024-12-12 16:39:17,746 analytics 24238 6195376128 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO 2024-12-12 16:39:17,746 basehttp 24238 6178549760 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+ERROR 2024-12-12 16:39:17,746 analytics 24238 6195376128 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO 2024-12-12 16:39:17,749 analytics 24238 6195376128 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:39:17,749 basehttp 24238 6161723392 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:39:17,749 analytics 24238 6195376128 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:39:17,752 analytics 24238 6212202496 Material Costs: 100
+INFO 2024-12-12 16:39:17,754 basehttp 24238 6128070656 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:39:17,754 analytics 24238 6195376128 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:39:17,754 analytics 24238 6195376128 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:39:17,752 analytics 24238 6212202496 Material Costs: 100
+INFO 2024-12-12 16:39:17,762 basehttp 24238 6144897024 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:39:17,763 analytics 24238 6195376128 Material Costs: 100
+INFO 2024-12-12 16:39:17,763 analytics 24238 6195376128 Material Costs: 100
+ERROR 2024-12-12 16:39:17,765 analytics 24238 6212202496 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:39:17,765 analytics 24238 6195376128 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:39:17,765 analytics 24238 6212202496 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:39:17,765 analytics 24238 6195376128 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+WARNING 2024-12-12 16:39:17,769 analytics 24238 6212202496 No products could be processed for profitability
+WARNING 2024-12-12 16:39:17,771 analytics 24238 6195376128 No products could be processed for profitability
+WARNING 2024-12-12 16:39:17,769 analytics 24238 6212202496 No products could be processed for profitability
+INFO 2024-12-12 16:39:17,772 basehttp 24238 6178549760 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+WARNING 2024-12-12 16:39:17,771 analytics 24238 6195376128 No products could be processed for profitability
+INFO 2024-12-12 16:39:17,773 basehttp 24238 6212202496 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:39:17,778 basehttp 24238 6195376128 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:39:17,778 basehttp 24238 6229028864 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:39:17,795 basehttp 24238 6144897024 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:39:17,799 basehttp 24238 6229028864 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:39:17,800 basehttp 24238 6245855232 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:39:17,800 basehttp 24238 6178549760 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:39:17,803 basehttp 24238 6128070656 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:39:17,805 basehttp 24238 6161723392 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:39:19,885 views 24238 6128070656 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:39:19,886 views 24238 6144897024 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:39:19,886 views 24238 6128070656 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:39:19,887 views 24238 6128070656 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:39:19,887 views 24238 6144897024 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:39:19,887 views 24238 6128070656 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:39:19,887 views 24238 6144897024 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:39:19,887 views 24238 6128070656 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:39:19,887 views 24238 6144897024 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:39:19,887 views 24238 6128070656 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:39:19,887 views 24238 6144897024 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:39:19,887 views 24238 6128070656 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:39:19,887 views 24238 6144897024 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:39:19,888 views 24238 6144897024 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:39:19,889 basehttp 24238 6144897024 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:39:19,889 basehttp 24238 6128070656 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:40:31,262 views 24238 6128070656 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:40:31,263 views 24238 6128070656 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:40:31,263 views 24238 6128070656 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:40:31,263 views 24238 6128070656 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:40:31,263 views 24238 6128070656 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:40:31,263 views 24238 6128070656 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:40:31,263 views 24238 6128070656 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:40:31,264 basehttp 24238 6128070656 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:40:51,256 views 24238 6128070656 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:40:51,256 views 24238 6128070656 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:40:51,256 views 24238 6128070656 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:40:51,256 views 24238 6128070656 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:40:51,256 views 24238 6128070656 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:40:51,256 views 24238 6128070656 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:40:51,256 views 24238 6128070656 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:40:51,257 basehttp 24238 6128070656 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:41:11,628 basehttp 24238 6128070656 "PUT /api/workstations/26/ HTTP/1.1" 200 309
+INFO 2024-12-12 16:41:11,634 views 24238 6128070656 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:41:11,634 views 24238 6128070656 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:41:11,634 views 24238 6128070656 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:41:11,634 views 24238 6128070656 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:41:11,634 views 24238 6128070656 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:41:11,634 views 24238 6128070656 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:41:11,634 views 24238 6128070656 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:41:11,635 basehttp 24238 6128070656 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:41:16,280 autoreload 24238 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-12 16:41:16,616 autoreload 24458 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:41:29,628 basehttp 24458 6166818816 "PUT /api/workstations/26/ HTTP/1.1" 200 342
+INFO 2024-12-12 16:41:29,634 views 24458 6166818816 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:41:29,634 views 24458 6166818816 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:41:29,634 views 24458 6166818816 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:41:29,634 views 24458 6166818816 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:41:29,634 views 24458 6166818816 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:41:29,635 views 24458 6166818816 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:41:29,635 views 24458 6166818816 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:41:29,636 basehttp 24458 6166818816 "GET /api/workstations/ HTTP/1.1" 200 2026
+INFO 2024-12-12 16:41:36,680 basehttp 24458 6166818816 "PUT /api/workstations/26/ HTTP/1.1" 200 342
+INFO 2024-12-12 16:41:36,687 views 24458 6166818816 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:41:36,687 views 24458 6166818816 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:41:36,687 views 24458 6166818816 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:41:36,687 views 24458 6166818816 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:41:36,687 views 24458 6166818816 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:41:36,687 views 24458 6166818816 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:41:36,687 views 24458 6166818816 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:41:36,688 basehttp 24458 6166818816 "GET /api/workstations/ HTTP/1.1" 200 2026
+INFO 2024-12-12 16:41:44,103 basehttp 24458 6166818816 "PUT /api/workstations/25/ HTTP/1.1" 200 342
+INFO 2024-12-12 16:41:44,109 views 24458 6166818816 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:41:44,109 views 24458 6166818816 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:41:44,109 views 24458 6166818816 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:41:44,109 views 24458 6166818816 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:41:44,109 views 24458 6166818816 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:41:44,109 views 24458 6166818816 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:41:44,109 views 24458 6166818816 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:41:44,111 basehttp 24458 6166818816 "GET /api/workstations/ HTTP/1.1" 200 2026
+INFO 2024-12-12 16:41:54,361 basehttp 24458 6250950656 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:41:54,368 basehttp 24458 6217297920 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:41:54,368 basehttp 24458 6200471552 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:41:54,368 basehttp 24458 6166818816 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:41:54,372 basehttp 24458 6234124288 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:41:54,377 basehttp 24458 6183645184 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:41:54,380 analytics 24458 6250950656 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:41:54,380 analytics 24458 6250950656 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:41:54,381 analytics 24458 6250950656 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:41:54,381 analytics 24458 6250950656 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:41:54,385 analytics 24458 6166818816 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:41:54,385 analytics 24458 6250950656 Material Costs: 80
+INFO 2024-12-12 16:41:54,385 analytics 24458 6166818816 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:41:54,385 analytics 24458 6250950656 Material Costs: 80
+INFO 2024-12-12 16:41:54,389 analytics 24458 6166818816 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:41:54,389 analytics 24458 6166818816 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:41:54,394 analytics 24458 6166818816 Material Costs: 80
+INFO 2024-12-12 16:41:54,394 analytics 24458 6166818816 Material Costs: 80
+ERROR 2024-12-12 16:41:54,395 analytics 24458 6250950656 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO 2024-12-12 16:41:54,395 basehttp 24458 6234124288 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:41:54,397 basehttp 24458 6200471552 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:41:54,397 basehttp 24458 6217297920 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+ERROR 2024-12-12 16:41:54,398 analytics 24458 6166818816 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO 2024-12-12 16:41:54,400 basehttp 24458 6183645184 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+ERROR 2024-12-12 16:41:54,395 analytics 24458 6250950656 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:41:54,398 analytics 24458 6166818816 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO 2024-12-12 16:41:54,404 analytics 24458 6250950656 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:41:54,404 analytics 24458 6166818816 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:41:54,404 analytics 24458 6250950656 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:41:54,404 analytics 24458 6166818816 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:41:54,404 analytics 24458 6250950656 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:41:54,405 analytics 24458 6166818816 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:41:54,404 analytics 24458 6250950656 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:41:54,405 analytics 24458 6166818816 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:41:54,407 analytics 24458 6250950656 Material Costs: 100
+INFO 2024-12-12 16:41:54,407 analytics 24458 6250950656 Material Costs: 100
+INFO 2024-12-12 16:41:54,407 analytics 24458 6166818816 Material Costs: 100
+INFO 2024-12-12 16:41:54,407 analytics 24458 6166818816 Material Costs: 100
+ERROR 2024-12-12 16:41:54,409 analytics 24458 6250950656 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:41:54,409 analytics 24458 6250950656 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:41:54,410 analytics 24458 6166818816 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+WARNING 2024-12-12 16:41:54,410 analytics 24458 6250950656 No products could be processed for profitability
+ERROR 2024-12-12 16:41:54,410 analytics 24458 6166818816 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+WARNING 2024-12-12 16:41:54,410 analytics 24458 6250950656 No products could be processed for profitability
+WARNING 2024-12-12 16:41:54,413 analytics 24458 6166818816 No products could be processed for profitability
+WARNING 2024-12-12 16:41:54,413 analytics 24458 6166818816 No products could be processed for profitability
+INFO 2024-12-12 16:41:54,415 basehttp 24458 6250950656 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:41:54,418 basehttp 24458 6166818816 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:41:54,420 basehttp 24458 6284603392 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:41:54,422 basehttp 24458 6267777024 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940

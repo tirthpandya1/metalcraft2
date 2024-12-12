@@ -42,6 +42,16 @@ class WorkStation(models.Model):
         help_text='Date and time of last maintenance'
     )
     
+    # Add hourly operating cost to track workstation expenses
+    hourly_operating_cost = models.DecimalField(
+        max_digits=10, 
+        decimal_places=2, 
+        default=0.00, 
+        null=False, 
+        blank=False,
+        help_text='Hourly operating cost for this workstation'
+    )
+    
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
