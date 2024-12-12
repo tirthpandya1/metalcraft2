@@ -27003,3 +27003,379 @@ INFO 2024-12-12 16:41:54,415 basehttp 24458 6250950656 "GET /api/manufacturing/p
 INFO 2024-12-12 16:41:54,418 basehttp 24458 6166818816 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
 INFO 2024-12-12 16:41:54,420 basehttp 24458 6284603392 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
 INFO 2024-12-12 16:41:54,422 basehttp 24458 6267777024 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:43:52,714 autoreload 24458 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py changed, reloading.
+INFO 2024-12-12 16:43:53,080 autoreload 24694 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:44:52,894 basehttp 24694 6219427840 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:44:52,899 basehttp 24694 6168948736 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:44:52,899 basehttp 24694 6185775104 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:44:52,907 basehttp 24694 6253080576 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:44:52,907 basehttp 24694 6202601472 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:44:52,907 basehttp 24694 6236254208 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:44:52,947 analytics 24694 6185775104 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:44:52,947 analytics 24694 6185775104 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:44:52,948 analytics 24694 6168948736 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:44:52,948 analytics 24694 6185775104 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:44:52,948 analytics 24694 6168948736 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:44:52,948 analytics 24694 6185775104 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:44:52,949 basehttp 24694 6202601472 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:44:52,950 analytics 24694 6168948736 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:44:52,950 basehttp 24694 6253080576 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:44:52,950 analytics 24694 6168948736 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:44:52,957 basehttp 24694 6219427840 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:44:52,961 analytics 24694 6185775104 Material Costs: 80
+INFO 2024-12-12 16:44:52,961 analytics 24694 6185775104 Material Costs: 80
+INFO 2024-12-12 16:44:52,962 analytics 24694 6168948736 Material Costs: 80
+INFO 2024-12-12 16:44:52,962 analytics 24694 6168948736 Material Costs: 80
+ERROR 2024-12-12 16:44:52,967 analytics 24694 6185775104 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:44:52,969 analytics 24694 6168948736 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:44:52,967 analytics 24694 6185775104 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO 2024-12-12 16:44:52,970 basehttp 24694 6286733312 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+ERROR 2024-12-12 16:44:52,969 analytics 24694 6168948736 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO 2024-12-12 16:44:52,970 analytics 24694 6185775104 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:44:52,971 basehttp 24694 6236254208 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:44:52,971 basehttp 24694 6269906944 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:44:52,971 analytics 24694 6168948736 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:44:52,970 analytics 24694 6185775104 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:44:52,971 analytics 24694 6168948736 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:44:52,973 analytics 24694 6185775104 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:44:52,973 analytics 24694 6168948736 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:44:52,973 analytics 24694 6185775104 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:44:52,973 analytics 24694 6168948736 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:44:52,976 analytics 24694 6168948736 Material Costs: 100
+INFO 2024-12-12 16:44:52,976 analytics 24694 6185775104 Material Costs: 100
+INFO 2024-12-12 16:44:52,976 analytics 24694 6168948736 Material Costs: 100
+INFO 2024-12-12 16:44:52,976 analytics 24694 6185775104 Material Costs: 100
+ERROR 2024-12-12 16:44:52,977 analytics 24694 6168948736 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:44:52,978 analytics 24694 6185775104 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:44:52,977 analytics 24694 6168948736 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:44:52,978 analytics 24694 6185775104 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+WARNING 2024-12-12 16:44:52,978 analytics 24694 6168948736 No products could be processed for profitability
+WARNING 2024-12-12 16:44:52,978 analytics 24694 6185775104 No products could be processed for profitability
+WARNING 2024-12-12 16:44:52,978 analytics 24694 6168948736 No products could be processed for profitability
+WARNING 2024-12-12 16:44:52,978 analytics 24694 6185775104 No products could be processed for profitability
+INFO 2024-12-12 16:44:52,979 basehttp 24694 6168948736 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:44:52,979 basehttp 24694 6185775104 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:45:24,484 basehttp 24694 6202601472 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:45:24,490 basehttp 24694 6236254208 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:45:24,496 basehttp 24694 6185775104 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:45:24,496 basehttp 24694 6168948736 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:45:24,503 basehttp 24694 6253080576 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:45:24,504 basehttp 24694 6219427840 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:45:24,512 analytics 24694 6202601472 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:45:24,512 analytics 24694 6202601472 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:45:24,513 analytics 24694 6202601472 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:45:24,513 analytics 24694 6202601472 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:45:24,522 analytics 24694 6202601472 Material Costs: 80
+INFO 2024-12-12 16:45:24,522 analytics 24694 6202601472 Material Costs: 80
+INFO 2024-12-12 16:45:24,523 analytics 24694 6185775104 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:45:24,523 basehttp 24694 6168948736 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:45:24,523 analytics 24694 6185775104 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:45:24,529 analytics 24694 6185775104 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+ERROR 2024-12-12 16:45:24,533 analytics 24694 6202601472 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:45:24,533 analytics 24694 6202601472 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO 2024-12-12 16:45:24,529 analytics 24694 6185775104 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:45:24,535 basehttp 24694 6236254208 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:45:24,537 basehttp 24694 6253080576 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:45:24,537 basehttp 24694 6219427840 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:45:24,537 analytics 24694 6202601472 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:45:24,537 analytics 24694 6202601472 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:45:24,542 analytics 24694 6185775104 Material Costs: 80
+INFO 2024-12-12 16:45:24,542 analytics 24694 6185775104 Material Costs: 80
+INFO 2024-12-12 16:45:24,546 analytics 24694 6202601472 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:45:24,546 analytics 24694 6202601472 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:45:24,544 basehttp 24694 6286733312 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:45:24,550 analytics 24694 6202601472 Material Costs: 100
+INFO 2024-12-12 16:45:24,550 analytics 24694 6202601472 Material Costs: 100
+INFO 2024-12-12 16:45:24,551 basehttp 24694 6269906944 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+ERROR 2024-12-12 16:45:24,553 analytics 24694 6202601472 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:45:24,553 analytics 24694 6202601472 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:45:24,551 analytics 24694 6185775104 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:45:24,551 analytics 24694 6185775104 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+WARNING 2024-12-12 16:45:24,554 analytics 24694 6202601472 No products could be processed for profitability
+WARNING 2024-12-12 16:45:24,554 analytics 24694 6202601472 No products could be processed for profitability
+INFO 2024-12-12 16:45:24,555 analytics 24694 6185775104 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:45:24,555 analytics 24694 6185775104 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:45:24,556 basehttp 24694 6202601472 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:45:24,556 analytics 24694 6185775104 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:45:24,556 analytics 24694 6185775104 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:45:24,559 analytics 24694 6185775104 Material Costs: 100
+INFO 2024-12-12 16:45:24,559 analytics 24694 6185775104 Material Costs: 100
+ERROR 2024-12-12 16:45:24,561 analytics 24694 6185775104 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:45:24,561 analytics 24694 6185775104 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+WARNING 2024-12-12 16:45:24,562 analytics 24694 6185775104 No products could be processed for profitability
+WARNING 2024-12-12 16:45:24,562 analytics 24694 6185775104 No products could be processed for profitability
+INFO 2024-12-12 16:45:24,562 basehttp 24694 6185775104 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:47:00,616 basehttp 24694 6185775104 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:47:00,619 basehttp 24694 6202601472 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+WARNING 2024-12-12 16:47:00,622 log 24694 6219427840 Not Found: /api/manufacturing/analytics/profitability/
+WARNING 2024-12-12 16:47:00,627 basehttp 24694 6219427840 "GET /api/manufacturing/analytics/profitability/ HTTP/1.1" 404 44142
+INFO 2024-12-12 16:47:00,627 basehttp 24694 6168948736 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:47:00,638 basehttp 24694 6185775104 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:47:00,642 basehttp 24694 6168948736 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:47:00,642 basehttp 24694 6202601472 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:47:06,018 autoreload 24694 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/urls.py changed, reloading.
+INFO 2024-12-12 16:47:06,310 autoreload 24936 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:47:14,851 basehttp 24936 6133149696 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:47:14,858 basehttp 24936 6200455168 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:47:14,858 basehttp 24936 6217281536 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:47:14,876 basehttp 24936 6166802432 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:47:14,876 basehttp 24936 6149976064 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:47:14,876 basehttp 24936 6183628800 "GET /api/analytics/cost HTTP/1.1" 301 0
+WARNING 2024-12-12 16:47:14,889 log 24936 6133149696 Not Found: /api/manufacturing/analytics/profitability/
+WARNING 2024-12-12 16:47:14,893 log 24936 6200455168 Not Found: /api/manufacturing/analytics/profitability/
+WARNING 2024-12-12 16:47:14,893 basehttp 24936 6133149696 "GET /api/manufacturing/analytics/profitability/ HTTP/1.1" 404 44166
+WARNING 2024-12-12 16:47:14,893 basehttp 24936 6200455168 "GET /api/manufacturing/analytics/profitability/ HTTP/1.1" 404 44166
+INFO 2024-12-12 16:47:14,927 basehttp 24936 6166802432 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:47:14,928 basehttp 24936 6183628800 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:47:14,930 basehttp 24936 6217281536 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:47:14,930 basehttp 24936 6200455168 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:47:14,939 basehttp 24936 6149976064 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:47:14,939 basehttp 24936 6133149696 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:47:58,905 autoreload 24936 8320923712 /Users/T/Documents/GitHub/metalcraft2/metalcraft/urls.py changed, reloading.
+INFO 2024-12-12 16:47:59,222 autoreload 25027 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:48:11,681 autoreload 25027 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/urls.py changed, reloading.
+INFO 2024-12-12 16:48:11,971 autoreload 25092 8320923712 Watching for file changes with StatReloader
+WARNING 2024-12-12 16:48:27,535 log 25092 6254637056 Not Found: /api/manufacturing/analytics/profitability
+INFO 2024-12-12 16:48:27,539 basehttp 25092 6237810688 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:48:27,539 basehttp 25092 6204157952 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+WARNING 2024-12-12 16:48:27,539 basehttp 25092 6254637056 "GET /api/manufacturing/analytics/profitability HTTP/1.1" 404 42882
+INFO 2024-12-12 16:48:27,546 basehttp 25092 6220984320 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:48:27,575 basehttp 25092 6204157952 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:48:27,576 basehttp 25092 6220984320 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:48:27,578 basehttp 25092 6237810688 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:49:09,220 basehttp 25092 6220984320 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:49:09,225 basehttp 25092 6204157952 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:49:09,237 basehttp 25092 6237810688 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:49:09,239 basehttp 25092 6271463424 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:49:09,244 basehttp 25092 6254637056 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:49:09,252 basehttp 25092 6288289792 "GET /api/analytics/cost HTTP/1.1" 301 0
+WARNING 2024-12-12 16:49:09,265 log 25092 6204157952 Not Found: /api/manufacturing/analytics/profitability
+WARNING 2024-12-12 16:49:09,272 log 25092 6220984320 Not Found: /api/manufacturing/analytics/profitability
+WARNING 2024-12-12 16:49:09,274 basehttp 25092 6204157952 "GET /api/manufacturing/analytics/profitability HTTP/1.1" 404 42882
+WARNING 2024-12-12 16:49:09,274 basehttp 25092 6220984320 "GET /api/manufacturing/analytics/profitability HTTP/1.1" 404 42882
+INFO 2024-12-12 16:49:09,280 basehttp 25092 6271463424 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:49:09,285 basehttp 25092 6288289792 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:49:09,290 basehttp 25092 6254637056 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:49:09,293 basehttp 25092 6237810688 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:49:09,294 basehttp 25092 6220984320 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:49:09,294 basehttp 25092 6204157952 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:49:58,517 analytics 25092 6254637056 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:49:58,517 analytics 25092 6254637056 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:49:58,522 analytics 25092 6254637056 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:49:58,522 analytics 25092 6254637056 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:49:58,523 basehttp 25092 6220984320 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:49:58,527 basehttp 25092 6237810688 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:49:58,535 basehttp 25092 6204157952 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:49:58,536 analytics 25092 6254637056 Material Costs: 80
+INFO 2024-12-12 16:49:58,536 analytics 25092 6254637056 Material Costs: 80
+INFO 2024-12-12 16:49:58,540 basehttp 25092 6271463424 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+ERROR 2024-12-12 16:49:58,543 analytics 25092 6254637056 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:49:58,543 analytics 25092 6254637056 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO 2024-12-12 16:49:58,547 analytics 25092 6254637056 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:49:58,547 analytics 25092 6254637056 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:49:58,547 basehttp 25092 6220984320 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:49:58,548 analytics 25092 6254637056 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:49:58,548 analytics 25092 6254637056 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:49:58,551 analytics 25092 6254637056 Material Costs: 100
+INFO 2024-12-12 16:49:58,551 analytics 25092 6254637056 Material Costs: 100
+ERROR 2024-12-12 16:49:58,552 analytics 25092 6254637056 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:49:58,552 analytics 25092 6254637056 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+WARNING 2024-12-12 16:49:58,553 analytics 25092 6254637056 No products could be processed for profitability
+WARNING 2024-12-12 16:49:58,553 analytics 25092 6254637056 No products could be processed for profitability
+INFO 2024-12-12 16:49:58,554 basehttp 25092 6254637056 "GET /api/analytics/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:49:58,555 basehttp 25092 6204157952 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:50:12,033 autoreload 25092 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/urls.py changed, reloading.
+INFO 2024-12-12 16:50:12,317 autoreload 25236 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:50:28,929 autoreload 25236 8320923712 /Users/T/Documents/GitHub/metalcraft2/metalcraft/urls.py changed, reloading.
+INFO 2024-12-12 16:50:29,210 autoreload 25258 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:50:42,714 basehttp 25258 6222065664 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:50:42,718 basehttp 25258 6171586560 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:50:42,724 basehttp 25258 6205239296 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:50:42,728 basehttp 25258 6238892032 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:50:42,729 basehttp 25258 6188412928 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:50:42,734 basehttp 25258 6255718400 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:50:42,763 analytics 25258 6171586560 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:50:42,763 analytics 25258 6171586560 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:50:42,766 analytics 25258 6171586560 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:50:42,766 analytics 25258 6171586560 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:50:42,770 basehttp 25258 6238892032 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:50:42,771 analytics 25258 6272544768 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:50:42,771 analytics 25258 6272544768 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:50:42,772 analytics 25258 6272544768 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:50:42,772 analytics 25258 6272544768 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:50:42,773 basehttp 25258 6205239296 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:50:42,773 analytics 25258 6171586560 Material Costs: 80
+INFO 2024-12-12 16:50:42,773 analytics 25258 6171586560 Material Costs: 80
+INFO 2024-12-12 16:50:42,777 basehttp 25258 6222065664 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:50:42,778 analytics 25258 6272544768 Material Costs: 80
+INFO 2024-12-12 16:50:42,778 analytics 25258 6272544768 Material Costs: 80
+ERROR 2024-12-12 16:50:42,784 analytics 25258 6171586560 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:50:42,786 analytics 25258 6272544768 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:50:42,784 analytics 25258 6171586560 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:50:42,786 analytics 25258 6272544768 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO 2024-12-12 16:50:42,789 analytics 25258 6171586560 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:50:42,791 analytics 25258 6272544768 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:50:42,789 analytics 25258 6171586560 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:50:42,791 analytics 25258 6272544768 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:50:42,793 analytics 25258 6171586560 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:50:42,793 analytics 25258 6272544768 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:50:42,793 basehttp 25258 6188412928 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:50:42,793 analytics 25258 6171586560 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:50:42,795 basehttp 25258 6238892032 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:50:42,793 analytics 25258 6272544768 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:50:42,799 analytics 25258 6272544768 Material Costs: 100
+INFO 2024-12-12 16:50:42,799 analytics 25258 6272544768 Material Costs: 100
+INFO 2024-12-12 16:50:42,801 basehttp 25258 6255718400 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:50:42,801 analytics 25258 6171586560 Material Costs: 100
+ERROR 2024-12-12 16:50:42,802 analytics 25258 6272544768 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO 2024-12-12 16:50:42,801 analytics 25258 6171586560 Material Costs: 100
+ERROR 2024-12-12 16:50:42,802 analytics 25258 6272544768 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+WARNING 2024-12-12 16:50:42,803 analytics 25258 6272544768 No products could be processed for profitability
+ERROR 2024-12-12 16:50:42,805 analytics 25258 6171586560 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+WARNING 2024-12-12 16:50:42,803 analytics 25258 6272544768 No products could be processed for profitability
+ERROR 2024-12-12 16:50:42,805 analytics 25258 6171586560 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 182, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+WARNING 2024-12-12 16:50:42,807 analytics 25258 6171586560 No products could be processed for profitability
+INFO 2024-12-12 16:50:42,807 basehttp 25258 6272544768 "GET /api/analytics/profitability/ HTTP/1.1" 200 112
+WARNING 2024-12-12 16:50:42,807 analytics 25258 6171586560 No products could be processed for profitability
+INFO 2024-12-12 16:50:42,808 basehttp 25258 6171586560 "GET /api/analytics/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:51:38,013 autoreload 25258 8320923712 /Users/T/Documents/GitHub/metalcraft2/metalcraft/settings.py changed, reloading.

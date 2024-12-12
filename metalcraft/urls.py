@@ -25,7 +25,8 @@ from manufacturing.views import (
 from manufacturing.analytics import (
     DashboardAnalyticsView, 
     EfficiencyTrendView, 
-    CostAnalyticsView
+    CostAnalyticsView,
+    ProfitabilityAnalyticsView
 )
 
 router = DefaultRouter()
@@ -44,23 +45,25 @@ router.register(r'production-events', ProductionEventViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    path('api/auth/', include('accounts.urls')),
-    
+    # JWT Token Authentication
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
     
-    path('api/manufacturing/', include('manufacturing.urls')),
+    # Manufacturing API
+    path('api/', include('manufacturing.urls')),
+    
+    # Analytics Views
+    path('api/analytics/dashboard/', DashboardAnalyticsView.as_view(), name='dashboard-analytics'),
+    path('api/analytics/efficiency/', EfficiencyTrendView.as_view(), name='efficiency-analytics'),
+    path('api/analytics/cost/', CostAnalyticsView.as_view(), name='cost-analytics'),
+    path('api/analytics/profitability/', ProfitabilityAnalyticsView.as_view(), name='profitability-analytics'),
     
     path('api/', include(router.urls)),
     
     path('api/login/', LoginView.as_view(), name='login'),
     path('api/register/', RegisterView.as_view(), name='register'),
     path('api/logout/', LogoutView.as_view(), name='logout'),
-    
-    path('api/analytics/dashboard/', DashboardAnalyticsView.as_view(), name='dashboard_analytics'),
-    path('api/analytics/efficiency/', EfficiencyTrendView.as_view(), name='efficiency_trend'),
-    path('api/analytics/cost/', CostAnalyticsView.as_view(), name='cost_analytics'),
     
     path('api-auth/', include('rest_framework.urls')),
 ]

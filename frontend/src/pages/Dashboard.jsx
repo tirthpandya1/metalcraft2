@@ -17,7 +17,8 @@ import {
   TableRow,
   TableCell,
   TableBody,
-  Button
+  Button,
+  Chip
 } from '@mui/material';
 import { 
   PieChart, 
@@ -95,7 +96,7 @@ function Dashboard() {
 
     const fetchProfitabilityData = async () => {
       try {
-        const response = await axios.get('/api/manufacturing/profitability/');
+        const response = await axios.get('/api/analytics/profitability/');
         console.log('Profitability API Response:', response.data);
         setProfitabilityData(response.data);
       } catch (error) {
@@ -135,6 +136,16 @@ function Dashboard() {
   if (loading) return <CircularProgress />;
   if (!dashboardData) return null;
 
+  const getProfitabilityColor = (category) => {
+    switch(category) {
+      case 'Highly Profitable': return 'success';
+      case 'Profitable': return 'primary';
+      case 'Low Margin': return 'warning';
+      case 'Loss-Making': return 'error';
+      default: return 'default';
+    }
+  };
+
   const ProfitabilityCard = ({ profitabilityData }) => {
     // Add console log to debug
     console.log('Profitability Data:', profitabilityData);
@@ -151,7 +162,24 @@ function Dashboard() {
 
     return (
       <Card>
-        <CardHeader title="Profitability Overview" />
+        <CardHeader 
+          title="Profitability Overview" 
+          action={
+            <Tooltip title={profitabilityData.total_products > 0 ? 'Overall Profitability Status' : 'No Products'}>
+              <Chip 
+                label={profitabilityData.total_products > 0 
+                  ? (profitabilityData.products[0]?.profitability_category || 'N/A') 
+                  : 'No Data'
+                } 
+                color={profitabilityData.total_products > 0 
+                  ? (getProfitabilityColor(profitabilityData.products[0]?.profitability_category) || 'default') 
+                  : 'default'
+                }
+                variant="outlined"
+              />
+            </Tooltip>
+          }
+        />
         <CardContent>
           <Grid container spacing={2}>
             <Grid item xs={6} md={3}>
@@ -189,6 +217,7 @@ function Dashboard() {
                   <TableCell align="right">Total Cost</TableCell>
                   <TableCell align="right">Profit</TableCell>
                   <TableCell align="right">Profit Margin</TableCell>
+                  <TableCell align="right">Status</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -197,17 +226,76 @@ function Dashboard() {
                     <TableCell>{product.product_name}</TableCell>
                     <TableCell align="right">{formatCurrency(product.sell_cost)}</TableCell>
                     <TableCell align="right">{formatCurrency(product.total_cost)}</TableCell>
-                    <TableCell align="right" style={{ color: product.profit > 0 ? 'green' : 'red' }}>
+                    <TableCell 
+                      align="right" 
+                      style={{ color: product.profit > 0 ? 'green' : 'red' }}
+                    >
                       {formatCurrency(product.profit)}
                     </TableCell>
-                    <TableCell align="right" style={{ color: product.profit_margin > 0 ? 'green' : 'red' }}>
+                    <TableCell 
+                      align="right" 
+                      style={{ color: product.profit_margin > 0 ? 'green' : 'red' }}
+                    >
                       {product.profit_margin.toFixed(2)}%
+                    </TableCell>
+                    <TableCell align="right">
+                      <Chip 
+                        label={product.profitability_category} 
+                        size="small" 
+                        color={getProfitabilityColor(product.profitability_category)}
+                        variant="outlined"
+                      />
                     </TableCell>
                   </TableRow>
                 ))}
               </TableBody>
             </Table>
           </TableContainer>
+          <Divider sx={{ my: 2 }} />
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={6}>
+              <Typography variant="subtitle1">Material Cost Breakdown</Typography>
+              <Table size="small">
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Material</TableCell>
+                    <TableCell align="right">Cost</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {profitabilityData.products && profitabilityData.products[0]?.material_breakdown?.map((material, index) => (
+                    <TableRow key={index}>
+                      <TableCell>{material.material__name}</TableCell>
+                      <TableCell align="right">{formatCurrency(material.material_total_cost)}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Typography variant="subtitle1">Workstation Cost Breakdown</Typography>
+              <Table size="small">
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Workstation</TableCell>
+                    <TableCell align="right">Hourly Rate</TableCell>
+                    <TableCell align="right">Est. Time</TableCell>
+                    <TableCell align="right">Cost</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {profitabilityData.products && profitabilityData.products[0]?.workstation_breakdown?.map((ws, index) => (
+                    <TableRow key={index}>
+                      <TableCell>{ws.workstation_name}</TableCell>
+                      <TableCell align="right">{formatCurrency(ws.hourly_rate)}/hr</TableCell>
+                      <TableCell align="right">{ws.estimated_time_hours.toFixed(2)} hrs</TableCell>
+                      <TableCell align="right">{formatCurrency(ws.cost)}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </Grid>
+          </Grid>
         </CardContent>
       </Card>
     );

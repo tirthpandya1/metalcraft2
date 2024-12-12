@@ -66,7 +66,3 @@ urlpatterns = [
          ProductionEventViewSet.as_view({'get': 'event_timeline'}), 
          name='production-event-timeline'),
 ]
-
-urlpatterns += [
-    path('profitability/', ProfitabilityAnalyticsView.as_view(), name='profitability-analytics'),
-]

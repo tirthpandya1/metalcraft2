@@ -88,3 +88,234 @@ Internal Server Error: /api/analytics/dashboard/
 Internal Server Error: /api/analytics/dashboard/
 "GET /api/analytics/dashboard/ HTTP/1.1" 500 193
 "GET /api/analytics/dashboard/ HTTP/1.1" 500 193
+INFO 2024-12-12 16:51:38,311 autoreload 25383 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:52:29,617 autoreload 25383 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py changed, reloading.
+INFO 2024-12-12 16:52:29,887 autoreload 25427 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:52:53,885 basehttp 25427 6223097856 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:52:53,889 basehttp 25427 6256750592 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:52:53,889 basehttp 25427 6189445120 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:52:53,894 basehttp 25427 6273576960 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:52:53,899 basehttp 25427 6206271488 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:52:53,899 basehttp 25427 6239924224 "GET /api/analytics/cost HTTP/1.1" 301 0
+DEBUG 2024-12-12 16:52:53,926 analytics 25427 6189445120 Total number of products: 2
+ERROR 2024-12-12 16:52:53,927 analytics 25427 6189445120 Unexpected error in profitability analytics: Invalid field name(s) given in select_related: 'material'. Choices are: (none)
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 271, in get
+    for product in products:
+                   ^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1549, in execute_sql
+    sql, params = self.as_sql()
+                  ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 736, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 84, in pre_sql_setup
+    self.setup_query(with_col_aliases=with_col_aliases)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 73, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select(
+                                                            ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 279, in get_select
+    related_klass_infos = self.get_related_selections(select, select_mask)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1367, in get_related_selections
+    raise FieldError(
+django.core.exceptions.FieldError: Invalid field name(s) given in select_related: 'material'. Choices are: (none)
+DEBUG 2024-12-12 16:52:53,929 analytics 25427 6223097856 Total number of products: 2
+ERROR 2024-12-12 16:52:53,930 log 25427 6189445120 Internal Server Error: /api/analytics/profitability/
+ERROR 2024-12-12 16:52:53,934 basehttp 25427 6189445120 "GET /api/analytics/profitability/ HTTP/1.1" 500 90
+ERROR 2024-12-12 16:52:53,934 analytics 25427 6223097856 Unexpected error in profitability analytics: Invalid field name(s) given in select_related: 'material'. Choices are: (none)
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 271, in get
+    for product in products:
+                   ^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1549, in execute_sql
+    sql, params = self.as_sql()
+                  ^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 736, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 84, in pre_sql_setup
+    self.setup_query(with_col_aliases=with_col_aliases)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 73, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select(
+                                                            ^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 279, in get_select
+    related_klass_infos = self.get_related_selections(select, select_mask)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1367, in get_related_selections
+    raise FieldError(
+django.core.exceptions.FieldError: Invalid field name(s) given in select_related: 'material'. Choices are: (none)
+ERROR 2024-12-12 16:52:53,938 log 25427 6223097856 Internal Server Error: /api/analytics/profitability/
+ERROR 2024-12-12 16:52:53,943 basehttp 25427 6223097856 "GET /api/analytics/profitability/ HTTP/1.1" 500 90
+INFO 2024-12-12 16:52:53,944 basehttp 25427 6273576960 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:52:53,953 basehttp 25427 6206271488 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:52:53,954 basehttp 25427 6239924224 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:52:53,962 basehttp 25427 6256750592 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:52:53,963 basehttp 25427 6307229696 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:52:53,964 basehttp 25427 6290403328 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:53:26,415 autoreload 25427 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py changed, reloading.
+INFO 2024-12-12 16:53:26,701 autoreload 25491 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:53:55,588 autoreload 25491 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py changed, reloading.
+INFO 2024-12-12 16:53:55,854 autoreload 25518 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:54:08,919 basehttp 25518 6230896640 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:54:08,923 basehttp 25518 6214070272 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:54:08,924 basehttp 25518 6197243904 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:54:08,924 basehttp 25518 6264549376 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:54:08,932 basehttp 25518 6281375744 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:54:08,933 basehttp 25518 6247723008 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+DEBUG 2024-12-12 16:54:08,963 analytics 25518 6214070272 Total number of products: 2
+INFO 2024-12-12 16:54:08,964 basehttp 25518 6230896640 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+DEBUG 2024-12-12 16:54:08,964 analytics 25518 6197243904 Total number of products: 2
+ERROR 2024-12-12 16:54:08,981 analytics 25518 6214070272 Unexpected error in profitability analytics: Cannot find 'productworkstationsequence_set' on Product object, 'productworkstationsequence_set' is an invalid parameter to prefetch_related()
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 280, in get
+    for product in products:
+                   ^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1883, in _fetch_all
+    self._prefetch_related_objects()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1273, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 2296, in prefetch_related_objects
+    raise AttributeError(
+AttributeError: Cannot find 'productworkstationsequence_set' on Product object, 'productworkstationsequence_set' is an invalid parameter to prefetch_related()
+ERROR 2024-12-12 16:54:08,982 analytics 25518 6197243904 Unexpected error in profitability analytics: Cannot find 'productworkstationsequence_set' on Product object, 'productworkstationsequence_set' is an invalid parameter to prefetch_related()
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 280, in get
+    for product in products:
+                   ^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1883, in _fetch_all
+    self._prefetch_related_objects()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1273, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/django/db/models/query.py", line 2296, in prefetch_related_objects
+    raise AttributeError(
+AttributeError: Cannot find 'productworkstationsequence_set' on Product object, 'productworkstationsequence_set' is an invalid parameter to prefetch_related()
+INFO 2024-12-12 16:54:08,982 basehttp 25518 6281375744 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:54:08,985 basehttp 25518 6298202112 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+ERROR 2024-12-12 16:54:08,987 log 25518 6214070272 Internal Server Error: /api/analytics/profitability/
+ERROR 2024-12-12 16:54:08,988 log 25518 6197243904 Internal Server Error: /api/analytics/profitability/
+INFO 2024-12-12 16:54:08,989 basehttp 25518 6264549376 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:54:08,991 basehttp 25518 6247723008 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+ERROR 2024-12-12 16:54:08,991 basehttp 25518 6197243904 "GET /api/analytics/profitability/ HTTP/1.1" 500 154
+INFO 2024-12-12 16:54:08,991 basehttp 25518 6230896640 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+ERROR 2024-12-12 16:54:08,991 basehttp 25518 6214070272 "GET /api/analytics/profitability/ HTTP/1.1" 500 154
+INFO 2024-12-12 16:54:54,408 autoreload 25518 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py changed, reloading.
+INFO 2024-12-12 16:54:54,721 autoreload 25632 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:55:47,217 basehttp 25632 6262501376 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:55:47,223 basehttp 25632 6228848640 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:55:47,242 basehttp 25632 6245675008 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:55:47,247 basehttp 25632 6212022272 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:55:47,251 basehttp 25632 6279327744 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:55:47,252 basehttp 25632 6195195904 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+DEBUG 2024-12-12 16:55:47,274 analytics 25632 6262501376 Total number of products: 2
+DEBUG 2024-12-12 16:55:47,276 analytics 25632 6228848640 Total number of products: 2
+INFO 2024-12-12 16:55:47,286 basehttp 25632 6212022272 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:55:47,286 basehttp 25632 6245675008 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:55:47,293 basehttp 25632 6195195904 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+DEBUG 2024-12-12 16:55:47,302 analytics 25632 6228848640 Processing product: Aluminium Flex Box
+DEBUG 2024-12-12 16:55:47,303 analytics 25632 6228848640 Product ID: 10
+DEBUG 2024-12-12 16:55:47,303 analytics 25632 6228848640 Sell Cost: 50001.02
+DEBUG 2024-12-12 16:55:47,304 analytics 25632 6262501376 Processing product: Aluminium Flex Box
+DEBUG 2024-12-12 16:55:47,305 analytics 25632 6228848640 Labor Cost: 5000.00
+INFO 2024-12-12 16:55:47,307 basehttp 25632 6279327744 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+DEBUG 2024-12-12 16:55:47,307 analytics 25632 6262501376 Product ID: 10
+INFO 2024-12-12 16:55:47,307 basehttp 25632 6296154112 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+DEBUG 2024-12-12 16:55:47,308 analytics 25632 6228848640 Number of materials: 1
+DEBUG 2024-12-12 16:55:47,309 analytics 25632 6262501376 Sell Cost: 50001.02
+DEBUG 2024-12-12 16:55:47,309 analytics 25632 6228848640 Material: Aluminium Sheet, Quantity: 2.00
+DEBUG 2024-12-12 16:55:47,309 analytics 25632 6262501376 Labor Cost: 5000.00
+DEBUG 2024-12-12 16:55:47,310 analytics 25632 6228848640 Number of workstation sequences: 3
+DEBUG 2024-12-12 16:55:47,310 analytics 25632 6262501376 Number of materials: 1
+DEBUG 2024-12-12 16:55:47,310 analytics 25632 6228848640 Workstation: AMADA Laser Cutting Station, Estimated Time: 1:00:00
+DEBUG 2024-12-12 16:55:47,310 analytics 25632 6262501376 Material: Aluminium Sheet, Quantity: 2.00
+DEBUG 2024-12-12 16:55:47,310 analytics 25632 6228848640 Workstation: AMADA Metal Forming Station, Estimated Time: 1:00:00
+DEBUG 2024-12-12 16:55:47,310 analytics 25632 6262501376 Number of workstation sequences: 3
+DEBUG 2024-12-12 16:55:47,311 analytics 25632 6228848640 Workstation: Drilling Station, Estimated Time: 1:00:00
+DEBUG 2024-12-12 16:55:47,311 analytics 25632 6262501376 Workstation: AMADA Laser Cutting Station, Estimated Time: 1:00:00
+INFO 2024-12-12 16:55:47,311 analytics 25632 6228848640 Calculating profitability for product: Aluminium Flex Box
+DEBUG 2024-12-12 16:55:47,311 analytics 25632 6262501376 Workstation: AMADA Metal Forming Station, Estimated Time: 1:00:00
+INFO 2024-12-12 16:55:47,311 analytics 25632 6228848640 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+DEBUG 2024-12-12 16:55:47,312 analytics 25632 6262501376 Workstation: Drilling Station, Estimated Time: 1:00:00
+INFO 2024-12-12 16:55:47,312 basehttp 25632 6312980480 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:55:47,312 analytics 25632 6262501376 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:55:47,313 analytics 25632 6262501376 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 16:55:47,315 analytics 25632 6228848640 Material Costs: 80
+INFO 2024-12-12 16:55:47,315 analytics 25632 6262501376 Material Costs: 80
+INFO 2024-12-12 16:55:47,315 analytics 25632 6228848640 Material Breakdown: [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}]
+INFO 2024-12-12 16:55:47,315 analytics 25632 6262501376 Material Breakdown: [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}]
+ERROR 2024-12-12 16:55:47,317 analytics 25632 6228848640 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 188, in calculate_product_profitability
+    ws_cost = hourly_rate * estimated_hours
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+ERROR 2024-12-12 16:55:47,318 analytics 25632 6262501376 Error calculating profitability for product Aluminium Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 188, in calculate_product_profitability
+    ws_cost = hourly_rate * estimated_hours
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+DEBUG 2024-12-12 16:55:47,318 analytics 25632 6228848640 Processing product: SS Flex Box
+DEBUG 2024-12-12 16:55:47,318 analytics 25632 6262501376 Processing product: SS Flex Box
+DEBUG 2024-12-12 16:55:47,318 analytics 25632 6228848640 Product ID: 11
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6262501376 Product ID: 11
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6228848640 Sell Cost: 60000.00
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6262501376 Sell Cost: 60000.00
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6228848640 Labor Cost: 5000.00
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6262501376 Labor Cost: 5000.00
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6228848640 Number of materials: 1
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6262501376 Number of materials: 1
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6228848640 Material: SS Sheet, Quantity: 2.00
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6262501376 Material: SS Sheet, Quantity: 2.00
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6228848640 Number of workstation sequences: 3
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6262501376 Number of workstation sequences: 3
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6228848640 Workstation: AMADA Laser Cutting Station, Estimated Time: 1:00:00
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6262501376 Workstation: AMADA Laser Cutting Station, Estimated Time: 1:00:00
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6228848640 Workstation: VNC Cutting Station 1, Estimated Time: 1:00:00
+DEBUG 2024-12-12 16:55:47,319 analytics 25632 6262501376 Workstation: VNC Cutting Station 1, Estimated Time: 1:00:00
+DEBUG 2024-12-12 16:55:47,320 analytics 25632 6228848640 Workstation: AMADA Metal Forming Station, Estimated Time: 1:00:00
+DEBUG 2024-12-12 16:55:47,320 analytics 25632 6262501376 Workstation: AMADA Metal Forming Station, Estimated Time: 1:00:00
+INFO 2024-12-12 16:55:47,320 analytics 25632 6228848640 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:55:47,320 analytics 25632 6262501376 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:55:47,320 analytics 25632 6228848640 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:55:47,320 analytics 25632 6262501376 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 16:55:47,322 analytics 25632 6262501376 Material Costs: 100
+INFO 2024-12-12 16:55:47,322 analytics 25632 6262501376 Material Breakdown: [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}]
+ERROR 2024-12-12 16:55:47,323 analytics 25632 6262501376 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 188, in calculate_product_profitability
+    ws_cost = hourly_rate * estimated_hours
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+INFO 2024-12-12 16:55:47,324 analytics 25632 6228848640 Material Costs: 100
+WARNING 2024-12-12 16:55:47,324 analytics 25632 6262501376 No products could be processed for profitability
+INFO 2024-12-12 16:55:47,324 analytics 25632 6228848640 Material Breakdown: [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}]
+INFO 2024-12-12 16:55:47,325 basehttp 25632 6262501376 "GET /api/analytics/profitability/ HTTP/1.1" 200 112
+ERROR 2024-12-12 16:55:47,325 analytics 25632 6228848640 Error calculating profitability for product SS Flex Box: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 188, in calculate_product_profitability
+    ws_cost = hourly_rate * estimated_hours
+              ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+WARNING 2024-12-12 16:55:47,326 analytics 25632 6228848640 No products could be processed for profitability
+INFO 2024-12-12 16:55:47,326 basehttp 25632 6228848640 "GET /api/analytics/profitability/ HTTP/1.1" 200 112
