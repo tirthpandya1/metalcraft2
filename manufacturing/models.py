@@ -93,6 +93,15 @@ class Product(models.Model):
     description = models.TextField(blank=True)
     materials = models.ManyToManyField(Material, through='ProductMaterial')
     
+    # Add sell_cost with a default value
+    sell_cost = models.DecimalField(
+        max_digits=10, 
+        decimal_places=2, 
+        default=0.00, 
+        null=False, 
+        blank=False
+    )
+    
     # New stock-related fields
     current_quantity = models.IntegerField(default=0)
     restock_level = models.IntegerField(default=10)

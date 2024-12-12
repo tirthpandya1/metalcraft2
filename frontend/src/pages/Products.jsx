@@ -1,19 +1,49 @@
-import React, { useState } from 'react';
-import { Chip, MenuItem, TextField, Button, List, ListItem, ListItemText, IconButton, Dialog } from '@mui/material';
-import { productService } from '../services/api';
+import React, { useState, useEffect } from 'react';
+import { Chip, MenuItem, TextField, Button, List, ListItem, ListItemText, IconButton, Dialog, Typography } from '@mui/material';
+import { productService, materialService } from '../services/api';
 import { withCrudList } from '../components/CrudListPage';
 import { handleApiError, withErrorHandling } from '../utils/errorHandler';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { Grid, Card, CardContent, CardActions, Typography, Box, Tooltip } from '@mui/material';
+import { Grid, Card, CardContent, CardActions, Box, Tooltip } from '@mui/material';
 import WorkstationSequenceComponent from '../components/WorkstationSequenceComponent';
 import MaterialSelectionModal from '../components/MaterialSelectionModal';
 
 // Product Form Component
-function ProductForm({ item, onItemChange, materials = [] }) {
+function ProductForm({ item, onItemChange }) {
   const [localMaterials, setLocalMaterials] = useState(item.materials || []);
   const [showMaterialModal, setShowMaterialModal] = useState(false);
+  const [availableMaterials, setAvailableMaterials] = useState([]);
+
+  // Ensure sell_cost is always set
+  useEffect(() => {
+    // If sell_cost is not set, default to 0
+    if (item.sell_cost === undefined || item.sell_cost === null) {
+      onItemChange(prev => ({
+        ...prev,
+        sell_cost: 0,
+        materials: localMaterials // Preserve materials when updating sell cost
+      }));
+    }
+  }, [item, localMaterials]);
+
+  // Fetch materials when component mounts
+  useEffect(() => {
+    const fetchMaterials = async () => {
+      try {
+        const response = await materialService.getAll();
+        // Normalize the response to ensure we have an array
+        const materials = response.results || response.data || response || [];
+        setAvailableMaterials(materials);
+      } catch (error) {
+        console.error('Error fetching materials:', error);
+        handleApiError(error);
+      }
+    };
+
+    fetchMaterials();
+  }, []);
 
   const handleAddMaterial = (material, quantity) => {
     const newMaterial = {
@@ -25,6 +55,10 @@ function ProductForm({ item, onItemChange, materials = [] }) {
     setLocalMaterials(updatedMaterials);
     onItemChange(prev => ({
       ...prev,
+      productmaterial_set: updatedMaterials.map(m => ({
+        material_id: m.material_id,
+        quantity: m.quantity
+      })),
       materials: updatedMaterials
     }));
     setShowMaterialModal(false);
@@ -35,6 +69,10 @@ function ProductForm({ item, onItemChange, materials = [] }) {
     setLocalMaterials(updatedMaterials);
     onItemChange(prev => ({
       ...prev,
+      productmaterial_set: updatedMaterials.map(m => ({
+        material_id: m.material_id,
+        quantity: m.quantity
+      })),
       materials: updatedMaterials
     }));
   };
@@ -88,13 +126,19 @@ function ProductForm({ item, onItemChange, materials = [] }) {
       <TextField
         fullWidth
         margin="normal"
-        label="Unit Price"
+        label="Sell Cost"
         type="number"
-        value={item.unit_price || ''}
-        onChange={(e) => onItemChange(prev => ({
-          ...prev,
-          unit_price: e.target.value
-        }))}
+        value={item.sell_cost !== undefined ? item.sell_cost : 0}
+        onChange={(e) => {
+          const sellCost = parseFloat(e.target.value) || 0;
+          onItemChange(prev => ({
+            ...prev,
+            sell_cost: sellCost,
+            materials: localMaterials // Preserve materials when updating sell cost
+          }));
+        }}
+        required
+        inputProps={{ min: 0, step: 0.01 }}
       />
       <TextField
         fullWidth
@@ -104,7 +148,7 @@ function ProductForm({ item, onItemChange, materials = [] }) {
         value={item.current_quantity || ''}
         onChange={(e) => onItemChange(prev => ({
           ...prev,
-          current_quantity: e.target.value
+          current_quantity: parseFloat(e.target.value) || ''
         }))}
       />
       <TextField
@@ -115,7 +159,7 @@ function ProductForm({ item, onItemChange, materials = [] }) {
         value={item.max_stock_level || ''}
         onChange={(e) => onItemChange(prev => ({
           ...prev,
-          max_stock_level: e.target.value
+          max_stock_level: parseFloat(e.target.value) || ''
         }))}
       />
       <TextField
@@ -184,7 +228,7 @@ function ProductForm({ item, onItemChange, materials = [] }) {
 
       <MaterialSelectionModal 
         open={showMaterialModal}
-        materials={materials}
+        materials={availableMaterials}
         onClose={() => setShowMaterialModal(false)}
         onAddMaterial={handleAddMaterial}
       />

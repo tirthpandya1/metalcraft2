@@ -148,7 +148,8 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'name', 'description', 'current_quantity', 
             'restock_level', 'max_stock_level', 'stock_status', 
-            'created_at', 'updated_at', 'materials', 'productmaterial_set'
+            'created_at', 'updated_at', 'materials', 'productmaterial_set',
+            'sell_cost'
         ]
         read_only_fields = ['stock_status', 'created_at', 'updated_at']
 
@@ -210,6 +211,9 @@ class ProductSerializer(serializers.ModelSerializer):
         """
         materials_data = validated_data.pop('productmaterial_set', [])
         
+        # Ensure sell_cost is set, defaulting to 0 if not provided
+        validated_data.setdefault('sell_cost', 0.00)
+        
         # Create the product
         product = Product.objects.create(**validated_data)
         
@@ -230,7 +234,8 @@ class ProductSerializer(serializers.ModelSerializer):
         """
         Update product with material requirements
         """
-        materials_data = validated_data.pop('productmaterial_set', [])
+        # Extract materials data if provided
+        materials_data = validated_data.pop('productmaterial_set', None)
         
         # Update product fields
         instance.name = validated_data.get('name', instance.name)
@@ -238,22 +243,22 @@ class ProductSerializer(serializers.ModelSerializer):
         instance.current_quantity = validated_data.get('current_quantity', instance.current_quantity)
         instance.restock_level = validated_data.get('restock_level', instance.restock_level)
         instance.max_stock_level = validated_data.get('max_stock_level', instance.max_stock_level)
+        instance.sell_cost = validated_data.get('sell_cost', instance.sell_cost)
         
         instance.save()
         
-        # Remove existing product materials
-        instance.productmaterial_set.all().delete()
-        
-        # Create new product materials
-        for material_data in materials_data:
-            ProductMaterial.objects.create(
-                product=instance,
-                material_id=material_data['material_id'],
-                quantity=material_data['quantity']
-            )
-        
-        # Update stock status
-        instance.update_stock_status()
+        # Only update materials if they are explicitly provided
+        if materials_data is not None:
+            # Remove existing product materials
+            instance.productmaterial_set.all().delete()
+            
+            # Create new product materials
+            for material_data in materials_data:
+                ProductMaterial.objects.create(
+                    product=instance,
+                    material_id=material_data['material_id'],
+                    quantity=material_data['quantity']
+                )
         
         return instance
 
@@ -290,7 +295,7 @@ class MaterialReservationSerializer(serializers.ModelSerializer):
         ]
 
 class WorkOrderSerializer(serializers.ModelSerializer):
-    product_name = serializers.SerializerMethodField(read_only=True)
+    product_name = serializers.SerializerMethodField()
     workstation_name = serializers.CharField(source='workstation.name', read_only=True, allow_null=True)
     assigned_to_username = serializers.CharField(source='assigned_to.username', read_only=True, allow_null=True)
     

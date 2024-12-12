@@ -402,21 +402,42 @@ export const productService = {
   },
   async create(data) {
     try {
-      const response = await apiService.create('products', data);
+      // Ensure sell_cost is always set
+      const processedData = {
+        ...data,
+        sell_cost: data.sell_cost !== undefined ? data.sell_cost : 0,
+        // Ensure productmaterial_set is in the correct format
+        productmaterial_set: data.productmaterial_set || []
+      };
+
+      const response = await apiService.create('products', processedData);
       return response;
     } catch (error) {
       console.error('Error creating product:', error);
-      handleApiError(error);
       throw error;
     }
   },
   async update(id, data) {
     try {
-      const response = await apiService.update('products', id, data);
+      // Retrieve existing product to preserve materials if not provided
+      const existingProduct = await apiService.getById('products', id);
+      
+      // Ensure sell_cost is always set
+      const processedData = {
+        ...data,
+        sell_cost: data.sell_cost !== undefined ? data.sell_cost : existingProduct.sell_cost,
+        // Preserve existing materials if not provided
+        productmaterial_set: data.productmaterial_set || 
+          (existingProduct.materials || []).map(m => ({
+            material_id: m.material_id,
+            quantity: m.quantity
+          }))
+      };
+
+      const response = await apiService.update('products', id, processedData);
       return response;
     } catch (error) {
       console.error('Error updating product:', error);
-      handleApiError(error);
       throw error;
     }
   },

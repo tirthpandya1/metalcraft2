@@ -202,119 +202,67 @@ export const withCrudList = (
       fetchMaterials();
     }, []);
 
-    // Handle add/edit item
     const handleSaveItem = async () => {
       try {
-        // Validate required and custom fields
-        const validationErrors = fullConfig.dialogFields
-          .filter(field => field.required || field.validate)
-          .reduce((errors, field) => {
-            const value = currentItem[field.key];
-            
-            // Check required fields
-            if (field.required && (value === undefined || value === null || value === '')) {
-              errors.push(`${field.label} is required`);
-            }
-            
-            // Run custom validation if exists
-            if (field.validate) {
-              const validationResult = field.validate(value);
-              if (validationResult) {
-                errors.push(validationResult);
-              }
-            }
-            
-            return errors;
-          }, []);
+        console.group('Save Item Debug');
+        console.log('Current Item:', currentItem);
+        
+        // Validate required fields
+        const requiredFields = fullConfig.dialogFields?.filter(field => field.required) || [];
+        const missingFields = requiredFields.filter(field => 
+          !currentItem[field.key] && currentItem[field.key] !== 0
+        );
 
-        if (validationErrors.length > 0) {
-          setError(validationErrors.join(', '));
+        if (missingFields.length > 0) {
+          console.error('Missing required fields:', missingFields);
+          alert(`Please fill in the following required fields: ${missingFields.map(f => f.label).join(', ')}`);
           return;
         }
 
-        // Prepare data by converting to appropriate types and removing undefined/null values
-        const cleanData = fullConfig.dialogFields.reduce((data, field) => {
-          const value = currentItem[field.key];
-          
-          // Always include required fields, even if null/undefined
-          if (field.required) {
-            if (value === undefined || value === null) {
-              // If a required field is missing, throw an error
-              throw new Error(`${field.label} is required`);
-            }
-            data[field.key] = value;
-            return data;
-          }
-          
-          // Skip undefined or null values for optional fields
-          if (value === undefined || value === null) {
-            return data;
-          }
+        // Prepare data for saving
+        const dataToSave = { ...currentItem };
 
-          // Perform custom validation if exists
-          if (field.validate) {
-            const validationError = field.validate(value);
-            if (validationError) {
-              throw new Error(validationError);
-            }
+        // Convert numeric fields to numbers
+        const numericFields = fullConfig.dialogFields?.filter(field => field.type === 'number') || [];
+        numericFields.forEach(field => {
+          if (dataToSave[field.key] !== undefined && dataToSave[field.key] !== '') {
+            dataToSave[field.key] = parseFloat(dataToSave[field.key]);
           }
+        });
 
-          // Convert to appropriate type
-          switch (field.type) {
-            case 'number':
-              const numValue = parseFloat(value);
-              if (!isNaN(numValue)) {
-                data[field.key] = numValue;
-              }
-              break;
-            case 'select':
-              // Validate against options if it's a select field
-              if (field.options && field.options.length > 0) {
-                const validOption = field.options.some(option => 
-                  option.value === value || option.label === value
-                );
-                if (!validOption) {
-                  throw new Error(`Invalid option for ${field.label}`);
-                }
-                data[field.key] = value;
-              }
-              break;
-            case 'text':
-            default:
-              data[field.key] = value;
-          }
-          
-          return data;
-        }, {});
+        console.log('Data to Save:', dataToSave);
 
-        console.log('Clean data for save:', cleanData);
-
-        if (currentItem.id) {
+        // Determine if this is a create or update operation
+        let savedItem;
+        if (dataToSave.id) {
           // Update existing item
-          await service.update(currentItem.id, cleanData);
+          savedItem = await service.update(dataToSave.id, dataToSave);
+          console.log('Updated Item:', savedItem);
         } else {
           // Create new item
-          await service.create(cleanData);
+          savedItem = await service.create(dataToSave);
+          console.log('Created Item:', savedItem);
         }
-        fetchItems();
+
+        // Update the list of items
+        const updatedItems = dataToSave.id 
+          ? sortedFilteredItems.map(item => item.id === dataToSave.id ? savedItem : item)
+          : [...sortedFilteredItems, savedItem];
+
+        // Update state
+        setItems(updatedItems);
         setOpenDialog(false);
-        setCurrentItem(null);
-        setError(null);
+        console.groupEnd();
       } catch (error) {
-        console.error(`Failed to save ${fullConfig.entityName}`, error);
+        console.error('Error saving item:', error);
+        console.groupEnd();
         
-        // Extract error message from backend response
-        const errorMessage = error.response?.data?.detail || 
-                             error.response?.data?.error || 
-                             error.message || 
-                             `Failed to save ${fullConfig.entityName}`;
+        // Display user-friendly error message
+        const errorMessage = error.response?.data?.detail 
+          || error.response?.data?.message 
+          || 'An error occurred while saving the item. Please try again.';
         
-        // Use handleApiError for consistent error handling
-        handleApiError(error);
-        
-        // Optionally, you can still set a local error state if needed
-        // But don't block the UI
-        setError(null);
+        alert(errorMessage);
       }
     };
 
