@@ -231,9 +231,6 @@ class ProductSerializer(serializers.ModelSerializer):
         return product
 
     def update(self, instance, validated_data):
-        """
-        Update product with material requirements
-        """
         # Extract materials data if provided
         materials_data = validated_data.pop('productmaterial_set', None)
         
@@ -561,10 +558,10 @@ class WorkstationEfficiencyMetricSerializer(serializers.ModelSerializer):
     workstation_name = serializers.CharField(source='workstation.name', read_only=True)
     
     # Computed efficiency percentage
-    efficiency_percentage = serializers.SerializerMethodField(read_only=True)
+    efficiency_percentage = serializers.SerializerMethodField()
     
     # Performance category based on efficiency
-    performance_category = serializers.SerializerMethodField(read_only=True)
+    performance_category = serializers.SerializerMethodField()
     
     class Meta:
         model = WorkstationEfficiencyMetric

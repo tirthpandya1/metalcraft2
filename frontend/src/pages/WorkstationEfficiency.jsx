@@ -4,6 +4,14 @@ import { workstationEfficiencyService, workstationService } from '../services/ap
 import { withCrudList } from '../components/CrudListPage';
 import { handleApiError, withErrorHandling } from '../utils/errorHandler';
 
+// Performance Category options
+const PERFORMANCE_CATEGORY_OPTIONS = [
+  { value: 'STANDARD', label: 'Standard Performance' },
+  { value: 'HIGH', label: 'High Performance' },
+  { value: 'LOW', label: 'Low Performance' },
+  { value: 'CRITICAL', label: 'Critical Performance' }
+];
+
 // Workstation Efficiency Form Component
 function WorkstationEfficiencyForm({ item, onItemChange, workstations = [] }) {
   // If workstations is empty, fetch workstations
@@ -56,9 +64,10 @@ function WorkstationEfficiencyForm({ item, onItemChange, workstations = [] }) {
         label="Efficiency Percentage"
         type="number"
         value={item.efficiency_percentage || ''}
-        InputProps={{
-          readOnly: true
-        }}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          efficiency_percentage: parseFloat(e.target.value) || 0
+        }))}
         required
       />
       <TextField
@@ -67,16 +76,12 @@ function WorkstationEfficiencyForm({ item, onItemChange, workstations = [] }) {
         label="Performance Category"
         select
         value={item.performance_category || 'STANDARD'}
-        InputProps={{
-          readOnly: true
-        }}
+        onChange={(e) => onItemChange(prev => ({
+          ...prev,
+          performance_category: e.target.value
+        }))}
       >
-        {[
-          { value: 'STANDARD', label: 'Standard Performance' },
-          { value: 'HIGH', label: 'High Performance' },
-          { value: 'LOW', label: 'Low Performance' },
-          { value: 'CRITICAL', label: 'Critical Performance' }
-        ].map((option) => (
+        {PERFORMANCE_CATEGORY_OPTIONS.map((option) => (
           <MenuItem key={option.value} value={option.value}>
             {option.label}
           </MenuItem>
@@ -205,13 +210,7 @@ const workstationEfficiencyConfig = {
       key: 'performance_category', 
       label: 'Performance Category',
       type: 'select',
-      readOnly: true,  // Computed on backend
-      options: [
-        { value: 'STANDARD', label: 'Standard Performance' },
-        { value: 'HIGH', label: 'High Performance' },
-        { value: 'LOW', label: 'Low Performance' },
-        { value: 'CRITICAL', label: 'Critical Performance' }
-      ]
+      options: PERFORMANCE_CATEGORY_OPTIONS
     },
     {
       key: 'total_working_time',
@@ -263,18 +262,42 @@ const workstationEfficiencyConfig = {
     { 
       key: 'performance_category', 
       label: 'Performance',
-      render: (item) => (
-        <Chip 
-          label={item.performance_category} 
-          color={
-            item.performance_category === 'HIGH' ? 'success' : 
-            item.performance_category === 'CRITICAL' ? 'error' : 
-            item.performance_category === 'LOW' ? 'warning' : 
-            'default'
+      render: (item) => {
+        // Log the entire item to see its structure
+        console.log('Full Workstation Efficiency Item:', JSON.stringify(item, null, 2));
+        
+        // Check the specific performance category
+        console.log('Performance Category:', item.performance_category);
+        
+        // Determine chip color based on performance category
+        const getPerformanceColor = (category) => {
+          console.log('Determining color for category:', category);
+          switch (category) {
+            case 'HIGH': return 'success';
+            case 'STANDARD': return 'primary';
+            case 'LOW': return 'warning';
+            case 'CRITICAL': return 'error';
+            default: 
+              console.warn('Unknown performance category:', category);
+              return 'default';
           }
-          size="small"
-        />
-      )
+        };
+
+        // Fallback to a default if performance_category is undefined
+        const performanceCategory = item.performance_category || 'STANDARD';
+        const chipColor = getPerformanceColor(performanceCategory);
+
+        console.log('Chip Color:', chipColor);
+        console.log('Chip Label:', performanceCategory);
+
+        return (
+          <Chip 
+            label={performanceCategory} 
+            color={chipColor}
+            size="small"
+          />
+        );
+      }
     },
     {
       key: 'total_items_processed',
