@@ -54,3 +54,6 @@ django_errors.log
 django_errors.log
 debug.log
 debug.log
+
+# Remove db.sqlite3 from gitignore
+!db.sqlite3
