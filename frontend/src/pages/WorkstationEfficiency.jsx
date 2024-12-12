@@ -1,11 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Chip, MenuItem, TextField } from '@mui/material';
 import { workstationEfficiencyService, workstationService } from '../services/api';
 import { withCrudList } from '../components/CrudListPage';
 import { handleApiError, withErrorHandling } from '../utils/errorHandler';
 
 // Workstation Efficiency Form Component
-function WorkstationEfficiencyForm({ item, onItemChange, workstations }) {
+function WorkstationEfficiencyForm({ item, onItemChange, workstations = [] }) {
+  // If workstations is empty, fetch workstations
+  const [availableWorkstations, setAvailableWorkstations] = useState(workstations);
+
+  useEffect(() => {
+    const fetchWorkstations = async () => {
+      try {
+        const response = await workstationService.getAll();
+        
+        // Normalize the response to ensure we have an array
+        const fetchedWorkstations = response.results || response.data || response || [];
+        
+        setAvailableWorkstations(fetchedWorkstations);
+      } catch (error) {
+        console.error('Error fetching workstations:', error);
+        handleApiError(error);
+      }
+    };
+
+    // Only fetch if no workstations are provided
+    if (workstations.length === 0) {
+      fetchWorkstations();
+    }
+  }, [workstations]);
+
   return (
     <>
       <TextField
@@ -16,11 +40,11 @@ function WorkstationEfficiencyForm({ item, onItemChange, workstations }) {
         value={item.workstation?.id || ''}
         onChange={(e) => onItemChange(prev => ({
           ...prev,
-          workstation: workstations.find(ws => ws.id === e.target.value)
+          workstation: availableWorkstations.find(ws => ws.id === e.target.value)
         }))}
         required
       >
-        {workstations.map((workstation) => (
+        {availableWorkstations.map((workstation) => (
           <MenuItem key={workstation.id} value={workstation.id}>
             {workstation.name}
           </MenuItem>
@@ -268,6 +292,12 @@ export default withErrorHandling(
   withCrudList(
     WorkstationEfficiencyForm, 
     workstationEfficiencyService, 
-    workstationEfficiencyConfig
+    {
+      ...workstationEfficiencyConfig,
+      // Add a method to pass additional props
+      additionalProps: (state) => ({
+        workstations: state.dynamicOptions.workstations || []
+      })
+    }
   )
 );

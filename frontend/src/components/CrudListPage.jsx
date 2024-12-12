@@ -32,6 +32,7 @@ import {
 } from '@mui/icons-material';
 import { productService } from '../services/api';  
 import { materialService } from '../services/api';
+import { workstationService } from '../services/api'; // Import workstationService
 import { handleApiError } from '../utils/errorHandler';
 
 export const withCrudList = (
@@ -49,7 +50,8 @@ export const withCrudList = (
     
     // New state for dynamic options with initial state
     const [dynamicOptions, setDynamicOptions] = useState({
-      products: []
+      products: [],
+      workstations: [] // Initialize workstations state
     });
 
     // Add state for materials
@@ -81,6 +83,15 @@ export const withCrudList = (
               options: dynamicOptions.products
             };
           }
+          // Special handling for workstation field
+          if (field.key === 'workstation') {
+            console.log('Configuring workstation field with options:', dynamicOptions.workstationOptions);
+            return {
+              ...field,
+              type: 'select',
+              options: dynamicOptions.workstationOptions
+            };
+          }
           return field;
         }),
         columns: config.columns || Object.keys(config.defaultItem || {}).map(key => ({
@@ -93,7 +104,7 @@ export const withCrudList = (
       };
 
       return baseConfig;
-    }, [config, dynamicOptions.products]);
+    }, [config, dynamicOptions.products, dynamicOptions.workstationOptions]);
 
     // Fetch dynamic options (like products)
     const fetchDynamicOptions = async () => {
@@ -130,6 +141,45 @@ export const withCrudList = (
         }));
       } catch (error) {
         console.error('Failed to fetch dynamic options', error);
+      }
+    };
+
+    // Fetch workstations
+    const fetchWorkstations = async () => {
+      try {
+        console.log('Attempting to fetch workstations...');
+        
+        // Fetch workstations
+        const workstationsResponse = await workstationService.getAll();
+        
+        console.log('Raw workstations response:', workstationsResponse);
+        
+        // Determine the actual workstation data
+        let workstationData = workstationsResponse;
+        if (workstationsResponse.data) {
+          workstationData = workstationsResponse.data;
+        }
+        
+        // Ensure workstationData is an array
+        const workstations = Array.isArray(workstationData) ? workstationData : [];
+        
+        console.log('Processed workstations:', workstations);
+        
+        const workstationOptions = workstations.map(workstation => ({
+          value: workstation.id,
+          label: workstation.name
+        }));
+
+        console.log('Workstation options:', workstationOptions);
+
+        // Directly update the state
+        setDynamicOptions(prev => ({
+          ...prev,
+          workstations: workstations,
+          workstationOptions: workstationOptions
+        }));
+      } catch (error) {
+        console.error('Failed to fetch workstations', error);
       }
     };
 
@@ -286,6 +336,7 @@ export const withCrudList = (
     useEffect(() => {
       console.log('Fetching dynamic options and items...');
       fetchDynamicOptions();
+      fetchWorkstations(); // Call fetchWorkstations
       fetchItems();
     }, []);
 
