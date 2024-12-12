@@ -192,6 +192,25 @@ function ProductionLogs() {
             type="date"
             value={formatDateForInput(dateFilter)}
             onChange={handleDateFilterChange}
+            InputLabelProps={{
+              shrink: true
+            }}
+            inputProps={{
+              style: { 
+                paddingTop: '16px',  // Create space for the label
+              }
+            }}
+            sx={{
+              '& .MuiInputLabel-root': {
+                transform: 'translate(14px, -9px) scale(0.75)',
+                paddingX: '4px',
+                zIndex: 1,
+                backgroundColor: 'transparent'
+              },
+              '& .MuiOutlinedInput-root': {
+                paddingTop: '8px'
+              }
+            }}
           />
         </Grid>
       </Grid>

@@ -55,6 +55,21 @@ const theme = createTheme({
         },
       },
     },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: 'rgba(0, 0, 0, 0.23)', // Default border color
+          },
+          '&:hover .MuiOutlinedInput-notchedOutline': {
+            borderColor: 'rgba(0, 0, 0, 0.87)', // Slightly darker on hover
+          }
+        },
+        notchedOutline: {
+          borderColor: 'rgba(0, 0, 0, 0.23)',
+        }
+      }
+    }
   },
 });
 
