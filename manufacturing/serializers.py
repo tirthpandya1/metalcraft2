@@ -218,55 +218,93 @@ class ProductSerializer(serializers.ModelSerializer):
         """
         Create product with material requirements
         """
-        materials_data = validated_data.pop('productmaterial_set', [])
+        import logging
+        import json
+        logger = logging.getLogger('manufacturing')
         
-        # Ensure sell_cost is set, defaulting to 0 if not provided
-        validated_data.setdefault('sell_cost', 0.00)
+        logger.debug('Product Creation - Raw Validated Data: %s', 
+            json.dumps(validated_data, default=str))
         
-        # Create the product
-        product = Product.objects.create(**validated_data)
+        productmaterial_set = validated_data.pop('productmaterial_set', [])
         
-        # Create product materials
-        for material_data in materials_data:
-            ProductMaterial.objects.create(
-                product=product,
-                material_id=material_data['material_id'],
-                quantity=material_data['quantity']
-            )
+        validated_data.setdefault('labor_cost', 0.00)
         
-        # Update stock status
-        product.update_stock_status()
-        
-        return product
+        try:
+            product = Product.objects.create(**validated_data)
+            
+            logger.info('Product Created - ID: %s, Name: %s, Labor Cost: %s', 
+                product.id, product.name, product.labor_cost)
+            
+            for material_data in productmaterial_set:
+                ProductMaterial.objects.create(
+                    product=product, 
+                    material_id=material_data.get('material_id'),
+                    quantity=material_data.get('quantity', 0)
+                )
+            
+            return product
+        except Exception as e:
+            logger.error('Error Creating Product: %s', str(e), exc_info=True)
+            raise
 
     def update(self, instance, validated_data):
-        # Extract materials data if provided
-        materials_data = validated_data.pop('productmaterial_set', None)
+        """
+        Update product with material requirements
+        """
+        import logging
+        import json
+        logger = logging.getLogger('manufacturing')
         
-        # Update product fields
-        instance.name = validated_data.get('name', instance.name)
-        instance.description = validated_data.get('description', instance.description)
-        instance.current_quantity = validated_data.get('current_quantity', instance.current_quantity)
-        instance.restock_level = validated_data.get('restock_level', instance.restock_level)
-        instance.max_stock_level = validated_data.get('max_stock_level', instance.max_stock_level)
-        instance.sell_cost = validated_data.get('sell_cost', instance.sell_cost)
+        logger.debug('Product Update - Raw Validated Data: %s', 
+            json.dumps(validated_data, default=str))
+        logger.debug('Existing Product - ID: %s, Current Labor Cost: %s', 
+            instance.id, instance.labor_cost)
         
-        instance.save()
+        productmaterial_set = validated_data.pop('productmaterial_set', [])
         
-        # Only update materials if they are explicitly provided
-        if materials_data is not None:
-            # Remove existing product materials
+        try:
+            for attr, value in validated_data.items():
+                setattr(instance, attr, value)
+            
+            if 'labor_cost' not in validated_data:
+                validated_data['labor_cost'] = instance.labor_cost or 0.00
+            
+            instance.save()
+            
+            logger.info('Product Updated - ID: %s, Name: %s, Labor Cost: %s', 
+                instance.id, instance.name, instance.labor_cost)
+            
             instance.productmaterial_set.all().delete()
             
-            # Create new product materials
-            for material_data in materials_data:
+            for material_data in productmaterial_set:
                 ProductMaterial.objects.create(
-                    product=instance,
-                    material_id=material_data['material_id'],
-                    quantity=material_data['quantity']
+                    product=instance, 
+                    material_id=material_data.get('material_id'),
+                    quantity=material_data.get('quantity', 0)
                 )
+            
+            return instance
+        except Exception as e:
+            logger.error('Error Updating Product: %s', str(e), exc_info=True)
+            raise
+
+    def to_internal_value(self, data):
+        """
+        Custom validation to ensure labor_cost is handled correctly
+        """
+        # Ensure labor_cost is converted to a decimal
+        if 'labor_cost' in data:
+            try:
+                data['labor_cost'] = float(data['labor_cost'])
+            except (TypeError, ValueError):
+                data['labor_cost'] = 0.00
         
-        return instance
+        # Log the processed data for debugging
+        import logging
+        logger = logging.getLogger('manufacturing')
+        logger.debug('Product Serializer - Processed Data: %s', data)
+        
+        return super().to_internal_value(data)
 
 class ProductWorkstationSequenceSerializer(serializers.ModelSerializer):
     """

@@ -28,6 +28,18 @@ function ProductForm({ item, onItemChange }) {
     }
   }, [item, localMaterials]);
 
+  // Ensure labor_cost is always set
+  useEffect(() => {
+    // If labor_cost is not set, default to 0
+    if (item.labor_cost === undefined || item.labor_cost === null) {
+      onItemChange(prev => ({
+        ...prev,
+        labor_cost: 0,
+        materials: localMaterials // Preserve materials when updating labor cost
+      }));
+    }
+  }, [item, localMaterials]);
+
   // Fetch materials when component mounts
   useEffect(() => {
     const fetchMaterials = async () => {
@@ -143,6 +155,32 @@ function ProductForm({ item, onItemChange }) {
       <TextField
         fullWidth
         margin="normal"
+        label="Labor Cost"
+        type="number"
+        value={item.labor_cost !== undefined ? item.labor_cost : 0}
+        onChange={(e) => {
+          const laborCost = parseFloat(e.target.value) || 0;
+          console.log('Labor Cost Changed:', {
+            inputValue: e.target.value,
+            parsedValue: laborCost,
+            previousItem: item
+          });
+          onItemChange(prev => {
+            const updatedItem = {
+              ...prev,
+              labor_cost: laborCost,
+              materials: localMaterials // Preserve materials when updating labor cost
+            };
+            console.log('Updated Item with Labor Cost:', updatedItem);
+            return updatedItem;
+          });
+        }}
+        required
+        inputProps={{ min: 0, step: 0.01 }}
+      />
+      <TextField
+        fullWidth
+        margin="normal"
         label="Current Quantity"
         type="number"
         value={item.current_quantity || ''}
@@ -247,7 +285,8 @@ const productsConfig = {
     name: '',
     description: '',
     category: 'STANDARD',
-    unit_price: 0,
+    sell_cost: 0,
+    labor_cost: 0,
     current_quantity: '',
     max_stock_level: '',
     stock_status: 'IN_STOCK'
@@ -380,24 +419,20 @@ const productsConfig = {
     { key: 'name', label: 'Name' },
     { key: 'description', label: 'Description' },
     { key: 'category', label: 'Category' },
-    { key: 'unit_price', label: 'Unit Price' },
+    { key: 'sell_cost', label: 'Sell Cost' },
+    { key: 'labor_cost', label: 'Labor Cost' },
     { key: 'current_quantity', label: 'Current Quantity' },
-    { key: 'max_stock_level', label: 'Max Stock Level' },
-    { 
-      key: 'stock_status', 
-      label: 'Status',
-      render: (item) => (
-        <Chip 
-          label={item.stock_status_display || item.stock_status} 
-          color={
-            item.stock_status === 'OUT_OF_STOCK' ? 'error' : 
-            item.stock_status === 'LOW_STOCK' ? 'warning' : 
-            'success'
-          }
-          size="small"
-        />
-      )
-    }
+    { key: 'stock_status', label: 'Stock Status', render: (item) => (
+      <Chip 
+        label={item.stock_status_display || item.stock_status} 
+        color={
+          item.stock_status === 'OUT_OF_STOCK' ? 'error' : 
+          item.stock_status === 'LOW_STOCK' ? 'warning' : 
+          'success'
+        }
+        size="small"
+      />
+    )}
   ]
 };
 

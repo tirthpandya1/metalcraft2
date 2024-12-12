@@ -113,6 +113,58 @@ class ProductViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSerializer
     permission_classes = [permissions.AllowAny]  # Change to AllowAny for development
 
+    def create(self, request, *args, **kwargs):
+        """
+        Override create method to add detailed logging
+        """
+        import logging
+        import json
+        logger = logging.getLogger('manufacturing')
+        
+        # Log the raw incoming data
+        logger.debug('Product Create Request - Raw Data: %s', 
+            json.dumps(request.data, default=str))
+        
+        try:
+            # Use the parent class's create method
+            response = super().create(request, *args, **kwargs)
+            
+            # Log the created product details
+            logger.info('Product Created Successfully - Response: %s', 
+                json.dumps(response.data, default=str))
+            
+            return response
+        except Exception as e:
+            # Log any errors during product creation
+            logger.error('Error in Product Creation: %s', str(e), exc_info=True)
+            raise
+
+    def update(self, request, *args, **kwargs):
+        """
+        Override update method to add detailed logging
+        """
+        import logging
+        import json
+        logger = logging.getLogger('manufacturing')
+        
+        # Log the raw incoming data
+        logger.debug('Product Update Request - Raw Data: %s', 
+            json.dumps(request.data, default=str))
+        
+        try:
+            # Use the parent class's update method
+            response = super().update(request, *args, **kwargs)
+            
+            # Log the updated product details
+            logger.info('Product Updated Successfully - Response: %s', 
+                json.dumps(response.data, default=str))
+            
+            return response
+        except Exception as e:
+            # Log any errors during product update
+            logger.error('Error in Product Update: %s', str(e), exc_info=True)
+            raise
+
     def list(self, request):
         # Log the incoming request
         logger.info("Product list request received")

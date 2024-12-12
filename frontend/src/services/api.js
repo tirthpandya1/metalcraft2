@@ -402,30 +402,53 @@ export const productService = {
   },
   async create(data) {
     try {
-      // Ensure sell_cost is always set
+      // Ensure sell_cost and labor_cost are always set
       const processedData = {
         ...data,
         sell_cost: data.sell_cost !== undefined ? data.sell_cost : 0,
+        labor_cost: data.labor_cost !== undefined ? data.labor_cost : 0,
         // Ensure productmaterial_set is in the correct format
         productmaterial_set: data.productmaterial_set || []
       };
 
+      console.log('Creating Product - Processed Data:', {
+        originalData: data,
+        processedData: processedData
+      });
+
       const response = await apiService.create('products', processedData);
+      
+      console.log('Product Creation Response:', response);
+      
       return response;
     } catch (error) {
       console.error('Error creating product:', error);
+      
+      // Log more details about the error
+      if (error.response) {
+        console.error('Response error details:', {
+          status: error.response.status,
+          data: error.response.data,
+          headers: error.response.headers
+        });
+      }
+      
       throw error;
     }
   },
   async update(id, data) {
     try {
-      // Retrieve existing product to preserve materials if not provided
+      // Retrieve existing product to preserve materials and labor_cost if not provided
       const existingProduct = await apiService.getById('products', id);
       
-      // Ensure sell_cost is always set
+      console.log('Updating Product - Existing Product:', existingProduct);
+      console.log('Updating Product - Incoming Data:', data);
+      
+      // Ensure sell_cost and labor_cost are always set
       const processedData = {
         ...data,
         sell_cost: data.sell_cost !== undefined ? data.sell_cost : existingProduct.sell_cost,
+        labor_cost: data.labor_cost !== undefined ? data.labor_cost : (existingProduct.labor_cost || 0),
         // Preserve existing materials if not provided
         productmaterial_set: data.productmaterial_set || 
           (existingProduct.materials || []).map(m => ({
@@ -434,10 +457,25 @@ export const productService = {
           }))
       };
 
+      console.log('Updating Product - Processed Data:', processedData);
+
       const response = await apiService.update('products', id, processedData);
+      
+      console.log('Product Update Response:', response);
+      
       return response;
     } catch (error) {
       console.error('Error updating product:', error);
+      
+      // Log more details about the error
+      if (error.response) {
+        console.error('Response error details:', {
+          status: error.response.status,
+          data: error.response.data,
+          headers: error.response.headers
+        });
+      }
+      
       throw error;
     }
   },

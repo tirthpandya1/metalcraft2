@@ -25916,3 +25916,660 @@ WARNING 2024-12-12 16:11:54,406 analytics 21877 6124007424 No products could be 
 WARNING 2024-12-12 16:11:54,406 analytics 21877 6124007424 No products could be processed for profitability
 INFO 2024-12-12 16:11:54,407 basehttp 21877 6140833792 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
 INFO 2024-12-12 16:11:54,407 basehttp 21877 6124007424 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+WARNING 2024-12-12 16:16:02,293 log 21877 6124007424 Not Found: /
+WARNING 2024-12-12 16:16:02,294 basehttp 21877 6124007424 "GET / HTTP/1.1" 404 3994
+WARNING 2024-12-12 16:16:02,394 log 21877 6124007424 Not Found: /favicon.ico
+WARNING 2024-12-12 16:16:02,394 basehttp 21877 6124007424 "GET /favicon.ico HTTP/1.1" 404 4045
+INFO 2024-12-12 16:16:05,223 basehttp 21877 6124007424 "GET /admin/ HTTP/1.1" 200 8397
+INFO 2024-12-12 16:16:05,232 basehttp 21877 6140833792 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-12-12 16:16:05,233 basehttp 21877 6124007424 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-12-12 16:16:05,234 basehttp 21877 6157660160 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-12-12 16:16:05,265 basehttp 21877 6140833792 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-12-12 16:16:05,265 basehttp 21877 6157660160 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-12-12 16:16:05,266 basehttp 21877 6157660160 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-12-12 16:16:13,015 basehttp 21877 6157660160 "GET /admin/manufacturing/product/ HTTP/1.1" 200 11351
+INFO 2024-12-12 16:16:13,033 basehttp 21877 6157660160 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-12-12 16:16:14,452 basehttp 21877 6157660160 "GET /admin/manufacturing/product/11/change/ HTTP/1.1" 200 23298
+INFO 2024-12-12 16:16:14,470 basehttp 21877 6174486528 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2024-12-12 16:16:14,471 basehttp 21877 6191312896 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2024-12-12 16:16:14,472 basehttp 21877 6124007424 "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO 2024-12-12 16:16:14,472 basehttp 21877 6157660160 "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+INFO 2024-12-12 16:16:14,473 basehttp 21877 6140833792 "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+INFO 2024-12-12 16:16:14,474 basehttp 21877 6124007424 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+INFO 2024-12-12 16:16:14,476 basehttp 21877 6124007424 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2024-12-12 16:16:14,496 basehttp 21877 6124007424 "GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 560
+INFO 2024-12-12 16:21:04,246 basehttp 21877 6241792000 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:21:04,246 basehttp 21877 6208139264 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:21:04,250 basehttp 21877 6258618368 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:21:04,257 basehttp 21877 6224965632 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:21:04,260 basehttp 21877 6275444736 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:21:04,263 basehttp 21877 6292271104 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:21:04,264 analytics 21877 6208139264 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:21:04,264 analytics 21877 6208139264 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:21:04,265 analytics 21877 6208139264 Product details - Sell Cost: 50001.02, Labor Cost: 0.00
+INFO 2024-12-12 16:21:04,265 analytics 21877 6208139264 Product details - Sell Cost: 50001.02, Labor Cost: 0.00
+INFO 2024-12-12 16:21:04,268 analytics 21877 6241792000 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:21:04,268 analytics 21877 6241792000 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:21:04,269 analytics 21877 6241792000 Product details - Sell Cost: 50001.02, Labor Cost: 0.00
+INFO 2024-12-12 16:21:04,269 analytics 21877 6241792000 Product details - Sell Cost: 50001.02, Labor Cost: 0.00
+INFO 2024-12-12 16:21:04,272 analytics 21877 6241792000 Material Costs: 80
+INFO 2024-12-12 16:21:04,272 analytics 21877 6208139264 Material Costs: 80
+INFO 2024-12-12 16:21:04,272 analytics 21877 6241792000 Material Costs: 80
+INFO 2024-12-12 16:21:04,272 analytics 21877 6208139264 Material Costs: 80
+INFO 2024-12-12 16:21:04,280 basehttp 21877 6292271104 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+ERROR 2024-12-12 16:21:04,280 analytics 21877 6208139264 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:21:04,281 analytics 21877 6241792000 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:21:04,280 analytics 21877 6208139264 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:21:04,281 analytics 21877 6241792000 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+INFO 2024-12-12 16:21:04,292 basehttp 21877 6224965632 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:21:04,293 analytics 21877 6208139264 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:21:04,294 analytics 21877 6241792000 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:21:04,293 analytics 21877 6208139264 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:21:04,294 analytics 21877 6241792000 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:21:04,298 analytics 21877 6208139264 Product details - Sell Cost: 60000.00, Labor Cost: 0.00
+INFO 2024-12-12 16:21:04,299 analytics 21877 6241792000 Product details - Sell Cost: 60000.00, Labor Cost: 0.00
+INFO 2024-12-12 16:21:04,298 analytics 21877 6208139264 Product details - Sell Cost: 60000.00, Labor Cost: 0.00
+INFO 2024-12-12 16:21:04,299 analytics 21877 6241792000 Product details - Sell Cost: 60000.00, Labor Cost: 0.00
+INFO 2024-12-12 16:21:04,302 analytics 21877 6208139264 Material Costs: 100
+INFO 2024-12-12 16:21:04,302 analytics 21877 6208139264 Material Costs: 100
+INFO 2024-12-12 16:21:04,306 analytics 21877 6241792000 Material Costs: 100
+INFO 2024-12-12 16:21:04,306 analytics 21877 6241792000 Material Costs: 100
+INFO 2024-12-12 16:21:04,308 basehttp 21877 6258618368 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+ERROR 2024-12-12 16:21:04,308 analytics 21877 6208139264 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+INFO 2024-12-12 16:21:04,309 basehttp 21877 6309097472 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+ERROR 2024-12-12 16:21:04,308 analytics 21877 6208139264 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:21:04,313 analytics 21877 6241792000 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 16:21:04,315 analytics 21877 6208139264 No products could be processed for profitability
+INFO 2024-12-12 16:21:04,315 basehttp 21877 6292271104 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:21:04,315 basehttp 21877 6275444736 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+ERROR 2024-12-12 16:21:04,313 analytics 21877 6241792000 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 16:21:04,315 analytics 21877 6208139264 No products could be processed for profitability
+WARNING 2024-12-12 16:21:04,320 analytics 21877 6241792000 No products could be processed for profitability
+WARNING 2024-12-12 16:21:04,320 analytics 21877 6241792000 No products could be processed for profitability
+INFO 2024-12-12 16:21:04,321 basehttp 21877 6208139264 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:21:04,322 basehttp 21877 6241792000 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:21:06,698 basehttp 21877 6208139264 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:06,700 basehttp 21877 6208139264 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:06,702 basehttp 21877 6258618368 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:06,702 basehttp 21877 6241792000 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:06,702 basehttp 21877 6208139264 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:06,702 basehttp 21877 6224965632 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:06,705 basehttp 21877 6275444736 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:06,709 basehttp 21877 6292271104 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:06,712 views 21877 6208139264 Product list request received
+INFO 2024-12-12 16:21:06,712 views 21877 6258618368 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:21:06,713 views 21877 6208139264 Total number of products: 2
+INFO 2024-12-12 16:21:06,713 views 21877 6258618368 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:21:06,714 views 21877 6258618368 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:21:06,714 views 21877 6258618368 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:21:06,714 views 21877 6258618368 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:21:06,714 views 21877 6258618368 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:21:06,715 views 21877 6258618368 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:21:06,718 basehttp 21877 6258618368 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:21:06,718 views 21877 6275444736 Product list request received
+INFO 2024-12-12 16:21:06,718 views 21877 6292271104 Product list request received
+INFO 2024-12-12 16:21:06,719 views 21877 6224965632 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:21:06,721 views 21877 6275444736 Total number of products: 2
+INFO 2024-12-12 16:21:06,725 views 21877 6208139264 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:21:06,725 basehttp 21877 6241792000 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:21:06,727 basehttp 21877 6258618368 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:21:06,729 views 21877 6292271104 Total number of products: 2
+INFO 2024-12-12 16:21:06,729 basehttp 21877 6208139264 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:21:06,732 views 21877 6224965632 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:21:06,733 views 21877 6224965632 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:21:06,733 views 21877 6224965632 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:21:06,733 views 21877 6224965632 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:21:06,734 views 21877 6224965632 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:21:06,738 views 21877 6275444736 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:21:06,739 views 21877 6224965632 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:21:06,739 views 21877 6292271104 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:21:06,741 basehttp 21877 6275444736 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:21:06,741 views 21877 6241792000 Product list request received
+INFO 2024-12-12 16:21:06,741 basehttp 21877 6224965632 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:21:06,743 basehttp 21877 6292271104 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:21:06,747 views 21877 6241792000 Total number of products: 2
+INFO 2024-12-12 16:21:06,751 views 21877 6241792000 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:21:06,752 basehttp 21877 6241792000 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:21:09,579 basehttp 21877 6241792000 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:09,579 basehttp 21877 6292271104 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:09,588 basehttp 21877 6292271104 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:21:09,590 basehttp 21877 6241792000 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:21:52,800 basehttp 21877 6224965632 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:52,801 basehttp 21877 6292271104 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:52,803 basehttp 21877 6275444736 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:52,803 basehttp 21877 6241792000 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:52,803 basehttp 21877 6258618368 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:52,803 basehttp 21877 6224965632 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:52,804 basehttp 21877 6208139264 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:52,805 basehttp 21877 6292271104 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:21:52,811 views 21877 6275444736 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:21:52,812 views 21877 6275444736 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:21:52,812 views 21877 6275444736 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:21:52,812 views 21877 6275444736 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:21:52,812 views 21877 6275444736 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:21:52,812 views 21877 6275444736 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:21:52,812 views 21877 6275444736 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:21:52,813 basehttp 21877 6275444736 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:21:52,813 views 21877 6241792000 Product list request received
+INFO 2024-12-12 16:21:52,814 views 21877 6208139264 Product list request received
+INFO 2024-12-12 16:21:52,816 views 21877 6208139264 Total number of products: 2
+INFO 2024-12-12 16:21:52,816 views 21877 6241792000 Total number of products: 2
+INFO 2024-12-12 16:21:52,817 views 21877 6224965632 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:21:52,820 views 21877 6258618368 Product list request received
+INFO 2024-12-12 16:21:52,821 views 21877 6258618368 Total number of products: 2
+INFO 2024-12-12 16:21:52,823 basehttp 21877 6292271104 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:21:52,824 views 21877 6224965632 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:21:52,826 views 21877 6224965632 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:21:52,826 views 21877 6224965632 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:21:52,826 views 21877 6224965632 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:21:52,828 views 21877 6224965632 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:21:52,828 views 21877 6224965632 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:21:52,830 basehttp 21877 6275444736 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:21:52,831 views 21877 6208139264 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:21:52,833 basehttp 21877 6208139264 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:21:52,833 basehttp 21877 6224965632 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:21:52,835 views 21877 6241792000 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:21:52,835 views 21877 6258618368 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:21:52,836 basehttp 21877 6258618368 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:21:52,836 basehttp 21877 6241792000 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:21:52,839 views 21877 6292271104 Product list request received
+INFO 2024-12-12 16:21:52,840 views 21877 6292271104 Total number of products: 2
+INFO 2024-12-12 16:21:52,842 views 21877 6292271104 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:21:52,842 basehttp 21877 6292271104 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:22:05,773 basehttp 21877 6241792000 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:05,773 basehttp 21877 6292271104 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:05,773 basehttp 21877 6224965632 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:05,774 basehttp 21877 6208139264 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:05,775 basehttp 21877 6258618368 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:05,775 basehttp 21877 6275444736 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:05,775 basehttp 21877 6241792000 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:05,777 basehttp 21877 6224965632 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:05,785 views 21877 6292271104 Product list request received
+INFO 2024-12-12 16:22:05,786 views 21877 6292271104 Total number of products: 2
+INFO 2024-12-12 16:22:05,787 views 21877 6241792000 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:22:05,789 views 21877 6241792000 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:22:05,789 views 21877 6224965632 Product list request received
+INFO 2024-12-12 16:22:05,789 views 21877 6241792000 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:22:05,790 views 21877 6258618368 Product list request received
+INFO 2024-12-12 16:22:05,790 views 21877 6224965632 Total number of products: 2
+INFO 2024-12-12 16:22:05,791 views 21877 6241792000 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:22:05,793 views 21877 6258618368 Total number of products: 2
+INFO 2024-12-12 16:22:05,794 basehttp 21877 6275444736 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:22:05,795 basehttp 21877 6208139264 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:22:05,796 views 21877 6241792000 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:22:05,797 views 21877 6292271104 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:22:05,798 views 21877 6241792000 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:22:05,800 views 21877 6241792000 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:22:05,801 basehttp 21877 6292271104 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:22:05,805 basehttp 21877 6241792000 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:22:05,808 views 21877 6224965632 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:22:05,808 views 21877 6258618368 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:22:05,809 basehttp 21877 6224965632 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:22:05,810 basehttp 21877 6258618368 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:22:05,810 views 21877 6208139264 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:22:05,811 views 21877 6275444736 Product list request received
+INFO 2024-12-12 16:22:05,812 views 21877 6275444736 Total number of products: 2
+INFO 2024-12-12 16:22:05,812 views 21877 6208139264 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:22:05,812 views 21877 6208139264 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:22:05,812 views 21877 6208139264 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:22:05,813 views 21877 6208139264 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:22:05,813 views 21877 6208139264 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:22:05,814 views 21877 6208139264 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:22:05,816 basehttp 21877 6208139264 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:22:05,816 views 21877 6275444736 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:22:05,817 basehttp 21877 6275444736 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:22:16,246 basehttp 21877 6258618368 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:16,246 basehttp 21877 6292271104 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:16,246 basehttp 21877 6208139264 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:16,248 basehttp 21877 6275444736 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:16,248 basehttp 21877 6241792000 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:16,248 basehttp 21877 6258618368 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:16,248 basehttp 21877 6224965632 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:16,252 basehttp 21877 6275444736 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:16,253 views 21877 6241792000 Product list request received
+INFO 2024-12-12 16:22:16,258 views 21877 6241792000 Total number of products: 2
+INFO 2024-12-12 16:22:16,260 views 21877 6275444736 Product list request received
+INFO 2024-12-12 16:22:16,261 basehttp 21877 6292271104 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:22:16,261 views 21877 6224965632 Product list request received
+INFO 2024-12-12 16:22:16,262 views 21877 6275444736 Total number of products: 2
+INFO 2024-12-12 16:22:16,263 views 21877 6224965632 Total number of products: 2
+INFO 2024-12-12 16:22:16,264 views 21877 6208139264 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:22:16,271 basehttp 21877 6258618368 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:22:16,272 views 21877 6208139264 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:22:16,273 views 21877 6208139264 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:22:16,274 views 21877 6241792000 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:22:16,274 views 21877 6208139264 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:22:16,275 views 21877 6208139264 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:22:16,275 views 21877 6208139264 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:22:16,275 views 21877 6208139264 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:22:16,277 views 21877 6292271104 Product list request received
+INFO 2024-12-12 16:22:16,278 basehttp 21877 6208139264 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:22:16,279 basehttp 21877 6241792000 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:22:16,279 views 21877 6224965632 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:22:16,280 views 21877 6275444736 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:22:16,282 basehttp 21877 6224965632 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:22:16,282 views 21877 6292271104 Total number of products: 2
+INFO 2024-12-12 16:22:16,284 basehttp 21877 6275444736 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:22:16,285 views 21877 6258618368 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:22:16,286 views 21877 6258618368 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:22:16,286 views 21877 6258618368 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:22:16,286 views 21877 6258618368 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:22:16,287 views 21877 6258618368 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:22:16,287 views 21877 6258618368 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:22:16,288 views 21877 6258618368 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:22:16,290 views 21877 6292271104 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T15:17:52.478817+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T15:23:29.549206+05:30'})]
+INFO 2024-12-12 16:22:16,290 basehttp 21877 6258618368 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:22:16,291 basehttp 21877 6292271104 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:22:16,944 basehttp 21877 6258618368 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:16,944 basehttp 21877 6292271104 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:16,953 basehttp 21877 6258618368 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:22:16,955 basehttp 21877 6292271104 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:22:50,709 basehttp 21877 6292271104 "OPTIONS /api/products/10/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:50,716 basehttp 21877 6292271104 "GET /api/products/10/ HTTP/1.1" 200 387
+INFO 2024-12-12 16:22:50,720 basehttp 21877 6292271104 "OPTIONS /api/products/10/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:50,730 basehttp 21877 6292271104 "PUT /api/products/10/ HTTP/1.1" 200 387
+INFO 2024-12-12 16:22:52,231 basehttp 21877 6258618368 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:52,231 basehttp 21877 6292271104 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:52,256 basehttp 21877 6292271104 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:22:52,261 basehttp 21877 6258618368 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:22:56,044 basehttp 21877 6258618368 "OPTIONS /api/products/11/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:56,049 basehttp 21877 6258618368 "GET /api/products/11/ HTTP/1.1" 200 351
+INFO 2024-12-12 16:22:56,052 basehttp 21877 6258618368 "OPTIONS /api/products/11/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:56,061 basehttp 21877 6258618368 "PUT /api/products/11/ HTTP/1.1" 200 351
+INFO 2024-12-12 16:22:57,013 basehttp 21877 6292271104 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:57,013 basehttp 21877 6258618368 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:22:57,023 basehttp 21877 6258618368 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:22:57,023 basehttp 21877 6292271104 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:04,387 basehttp 21877 6292271104 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,391 basehttp 21877 6292271104 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,390 basehttp 21877 6224965632 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,393 basehttp 21877 6241792000 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,400 basehttp 21877 6275444736 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,400 basehttp 21877 6208139264 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,402 basehttp 21877 6258618368 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,407 basehttp 21877 6224965632 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,407 basehttp 21877 6292271104 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:04,409 views 21877 6208139264 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:24:04,416 views 21877 6241792000 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:24:04,418 views 21877 6208139264 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:24:04,419 views 21877 6208139264 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:24:04,419 views 21877 6208139264 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:24:04,421 views 21877 6208139264 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:24:04,421 basehttp 21877 6224965632 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:04,422 views 21877 6208139264 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:24:04,423 views 21877 6275444736 Product list request received
+INFO 2024-12-12 16:24:04,424 views 21877 6241792000 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:24:04,424 views 21877 6208139264 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:24:04,424 views 21877 6258618368 Product list request received
+INFO 2024-12-12 16:24:04,425 views 21877 6241792000 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:24:04,425 views 21877 6275444736 Total number of products: 2
+INFO 2024-12-12 16:24:04,427 basehttp 21877 6208139264 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:24:04,427 views 21877 6292271104 Product list request received
+INFO 2024-12-12 16:24:04,428 views 21877 6241792000 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:24:04,428 views 21877 6224965632 Product list request received
+INFO 2024-12-12 16:24:04,432 views 21877 6258618368 Total number of products: 2
+INFO 2024-12-12 16:24:04,432 views 21877 6275444736 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:22:50.725318+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:04,433 views 21877 6241792000 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:24:04,434 views 21877 6292271104 Total number of products: 2
+INFO 2024-12-12 16:24:04,435 basehttp 21877 6208139264 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,435 views 21877 6224965632 Total number of products: 2
+INFO 2024-12-12 16:24:04,440 basehttp 21877 6275444736 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:04,442 views 21877 6241792000 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:24:04,449 views 21877 6241792000 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:24:04,442 views 21877 6258618368 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:22:50.725318+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:04,449 views 21877 6292271104 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:22:50.725318+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:04,460 basehttp 21877 6292271104 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:04,451 basehttp 21877 6275444736 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,465 basehttp 21877 6275444736 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,454 basehttp 21877 6241792000 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:24:04,463 basehttp 21877 6292271104 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,443 basehttp 21877 6208139264 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,464 views 21877 6224965632 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:22:50.725318+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:04,470 views 21877 6275444736 Product list request received
+INFO 2024-12-12 16:24:04,473 basehttp 21877 6241792000 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,457 basehttp 21877 6258618368 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:04,479 basehttp 21877 6224965632 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:04,481 basehttp 21877 6208139264 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,483 views 21877 6275444736 Total number of products: 2
+INFO 2024-12-12 16:24:04,487 basehttp 21877 6292271104 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:04,491 views 21877 6292271104 Product list request received
+INFO 2024-12-12 16:24:04,493 views 21877 6292271104 Total number of products: 2
+INFO 2024-12-12 16:24:04,493 views 21877 6241792000 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:24:04,496 basehttp 21877 6258618368 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:04,497 views 21877 6275444736 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:22:50.725318+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:04,499 views 21877 6241792000 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:24:04,499 views 21877 6241792000 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:24:04,499 views 21877 6241792000 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:24:04,499 views 21877 6241792000 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:24:04,500 views 21877 6241792000 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:24:04,500 views 21877 6241792000 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:24:04,501 basehttp 21877 6275444736 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:04,503 basehttp 21877 6241792000 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:24:04,506 views 21877 6258618368 Product list request received
+INFO 2024-12-12 16:24:04,508 basehttp 21877 6208139264 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:04,508 views 21877 6258618368 Total number of products: 2
+INFO 2024-12-12 16:24:04,509 views 21877 6224965632 Product list request received
+INFO 2024-12-12 16:24:04,510 views 21877 6292271104 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:22:50.725318+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:04,512 basehttp 21877 6292271104 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:04,513 views 21877 6275444736 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:24:04,514 views 21877 6224965632 Total number of products: 2
+INFO 2024-12-12 16:24:04,515 views 21877 6275444736 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:24:04,517 views 21877 6275444736 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:24:04,517 views 21877 6275444736 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:24:04,517 views 21877 6258618368 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:22:50.725318+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:04,517 views 21877 6275444736 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:24:04,518 views 21877 6275444736 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:24:04,518 views 21877 6275444736 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:24:04,519 basehttp 21877 6258618368 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:04,523 views 21877 6224965632 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:22:50.725318+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:04,523 basehttp 21877 6275444736 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:24:04,524 basehttp 21877 6224965632 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:06,890 basehttp 21877 6224965632 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:06,891 basehttp 21877 6275444736 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:06,901 basehttp 21877 6224965632 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:06,902 basehttp 21877 6275444736 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:17,875 basehttp 21877 6275444736 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:17,877 basehttp 21877 6208139264 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:17,877 basehttp 21877 6292271104 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:17,877 basehttp 21877 6275444736 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:17,877 basehttp 21877 6258618368 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:17,877 basehttp 21877 6241792000 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:17,879 basehttp 21877 6224965632 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:17,881 basehttp 21877 6275444736 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:17,902 views 21877 6258618368 Product list request received
+INFO 2024-12-12 16:24:17,904 views 21877 6258618368 Total number of products: 2
+INFO 2024-12-12 16:24:17,904 views 21877 6208139264 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:24:17,906 views 21877 6208139264 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:24:17,907 views 21877 6275444736 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:24:17,907 views 21877 6208139264 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:24:17,907 views 21877 6224965632 Product list request received
+INFO 2024-12-12 16:24:17,910 basehttp 21877 6241792000 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:17,910 basehttp 21877 6292271104 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:17,910 views 21877 6208139264 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:24:17,913 views 21877 6224965632 Total number of products: 2
+INFO 2024-12-12 16:24:17,913 views 21877 6275444736 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:24:17,914 views 21877 6208139264 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:24:17,915 views 21877 6258618368 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:22:50.725318+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:17,915 views 21877 6275444736 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:24:17,915 views 21877 6208139264 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:24:17,916 views 21877 6275444736 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:24:17,917 views 21877 6208139264 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:24:17,917 basehttp 21877 6258618368 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:17,918 views 21877 6275444736 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:24:17,920 views 21877 6275444736 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:24:17,920 views 21877 6275444736 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:24:17,920 basehttp 21877 6208139264 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:24:17,923 views 21877 6241792000 Product list request received
+INFO 2024-12-12 16:24:17,924 basehttp 21877 6275444736 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:24:17,925 views 21877 6241792000 Total number of products: 2
+INFO 2024-12-12 16:24:17,926 views 21877 6224965632 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:22:50.725318+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:17,926 views 21877 6292271104 Product list request received
+INFO 2024-12-12 16:24:17,927 views 21877 6292271104 Total number of products: 2
+INFO 2024-12-12 16:24:17,930 basehttp 21877 6224965632 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:17,933 views 21877 6241792000 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:22:50.725318+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:17,935 views 21877 6292271104 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:22:50.725318+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:17,935 basehttp 21877 6241792000 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:17,936 basehttp 21877 6292271104 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:22,505 basehttp 21877 6292271104 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:22,506 basehttp 21877 6241792000 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:22,534 basehttp 21877 6241792000 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:22,543 basehttp 21877 6292271104 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:28,257 basehttp 21877 6292271104 "OPTIONS /api/products/10/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:28,263 basehttp 21877 6292271104 "GET /api/products/10/ HTTP/1.1" 200 387
+INFO 2024-12-12 16:24:28,265 basehttp 21877 6292271104 "OPTIONS /api/products/10/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:28,291 basehttp 21877 6292271104 "PUT /api/products/10/ HTTP/1.1" 200 387
+INFO 2024-12-12 16:24:29,529 basehttp 21877 6241792000 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:29,530 basehttp 21877 6292271104 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:29,541 basehttp 21877 6292271104 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:29,550 basehttp 21877 6241792000 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:56,363 basehttp 21877 6292271104 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:56,365 basehttp 21877 6208139264 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:56,366 basehttp 21877 6224965632 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:56,369 basehttp 21877 6275444736 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:56,369 basehttp 21877 6258618368 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:56,372 basehttp 21877 6241792000 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:56,372 basehttp 21877 6292271104 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:56,376 basehttp 21877 6208139264 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:24:56,377 basehttp 21877 6224965632 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:56,381 views 21877 6275444736 Product list request received
+INFO 2024-12-12 16:24:56,382 views 21877 6241792000 Product list request received
+INFO 2024-12-12 16:24:56,382 views 21877 6292271104 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:24:56,382 views 21877 6275444736 Total number of products: 2
+INFO 2024-12-12 16:24:56,383 views 21877 6241792000 Total number of products: 2
+INFO 2024-12-12 16:24:56,383 views 21877 6208139264 Product list request received
+INFO 2024-12-12 16:24:56,387 views 21877 6208139264 Total number of products: 2
+INFO 2024-12-12 16:24:56,387 views 21877 6292271104 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:24:56,387 basehttp 21877 6258618368 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:24:56,390 views 21877 6292271104 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:24:56,391 views 21877 6224965632 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:24:56,391 views 21877 6292271104 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:24:56,392 views 21877 6292271104 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:24:56,392 views 21877 6292271104 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:24:56,394 views 21877 6292271104 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:24:56,397 views 21877 6275444736 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:24:28.287853+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:56,398 views 21877 6224965632 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:24:56,398 views 21877 6241792000 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:24:28.287853+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:56,399 basehttp 21877 6292271104 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:24:56,400 views 21877 6208139264 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:24:28.287853+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:56,400 views 21877 6224965632 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:24:56,400 basehttp 21877 6275444736 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:56,401 basehttp 21877 6241792000 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:56,401 views 21877 6258618368 Product list request received
+INFO 2024-12-12 16:24:56,402 views 21877 6224965632 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:24:56,406 views 21877 6224965632 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:24:56,406 views 21877 6224965632 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:24:56,406 views 21877 6224965632 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:24:56,403 basehttp 21877 6208139264 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:24:56,405 views 21877 6258618368 Total number of products: 2
+INFO 2024-12-12 16:24:56,408 basehttp 21877 6224965632 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:24:56,411 views 21877 6258618368 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:24:28.287853+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:24:56,412 basehttp 21877 6258618368 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:25:15,645 basehttp 21877 6275444736 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:25:15,646 basehttp 21877 6275444736 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:25:15,646 basehttp 21877 6224965632 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:25:15,647 basehttp 21877 6208139264 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:25:15,648 basehttp 21877 6241792000 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:25:15,648 basehttp 21877 6258618368 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:25:15,649 basehttp 21877 6275444736 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:25:15,651 basehttp 21877 6292271104 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:25:15,677 views 21877 6208139264 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:25:15,681 views 21877 6241792000 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:25:15,681 views 21877 6275444736 Product list request received
+INFO 2024-12-12 16:25:15,684 views 21877 6241792000 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:25:15,687 basehttp 21877 6224965632 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:25:15,688 views 21877 6258618368 Product list request received
+INFO 2024-12-12 16:25:15,688 views 21877 6208139264 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:25:15,689 views 21877 6292271104 Product list request received
+INFO 2024-12-12 16:25:15,690 views 21877 6241792000 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:25:15,690 views 21877 6275444736 Total number of products: 2
+INFO 2024-12-12 16:25:15,691 views 21877 6208139264 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:25:15,691 views 21877 6258618368 Total number of products: 2
+INFO 2024-12-12 16:25:15,691 views 21877 6241792000 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:25:15,692 views 21877 6292271104 Total number of products: 2
+INFO 2024-12-12 16:25:15,692 views 21877 6208139264 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:25:15,697 views 21877 6241792000 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:25:15,699 views 21877 6208139264 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:25:15,699 views 21877 6241792000 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:25:15,699 views 21877 6208139264 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:25:15,701 views 21877 6241792000 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:25:15,701 views 21877 6208139264 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:25:15,703 views 21877 6275444736 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:24:28.287853+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:25:15,703 basehttp 21877 6241792000 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:25:15,709 basehttp 21877 6275444736 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:25:15,717 views 21877 6292271104 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:24:28.287853+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:25:15,718 views 21877 6258618368 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:24:28.287853+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:25:15,719 basehttp 21877 6292271104 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:25:15,719 basehttp 21877 6208139264 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:25:15,721 basehttp 21877 6224965632 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:25:15,721 views 21877 6241792000 Product list request received
+INFO 2024-12-12 16:25:15,722 basehttp 21877 6258618368 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:25:15,723 views 21877 6241792000 Total number of products: 2
+INFO 2024-12-12 16:25:15,726 views 21877 6241792000 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:24:28.287853+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:25:15,727 basehttp 21877 6241792000 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:25:38,683 autoreload 21877 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-12 16:25:39,131 autoreload 23384 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:26:56,147 autoreload 23384 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-12 16:26:56,420 autoreload 23488 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:27:12,970 autoreload 23488 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/views.py changed, reloading.
+INFO 2024-12-12 16:27:13,238 autoreload 23515 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:28:12,839 basehttp 23515 6190084096 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:28:12,843 basehttp 23515 6206910464 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:28:12,912 basehttp 23515 6206910464 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:28:12,912 basehttp 23515 6190084096 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:28:18,463 basehttp 23515 6206910464 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:28:18,464 basehttp 23515 6190084096 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:28:18,510 basehttp 23515 6206910464 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:28:18,512 basehttp 23515 6190084096 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:28:19,463 basehttp 23515 6190084096 "OPTIONS /api/products/10/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:28:19,471 basehttp 23515 6190084096 "GET /api/products/10/ HTTP/1.1" 200 387
+INFO 2024-12-12 16:28:19,477 basehttp 23515 6190084096 "OPTIONS /api/products/10/ HTTP/1.1" 200 0
+DEBUG 2024-12-12 16:28:19,480 views 23515 6190084096 Product Update Request - Raw Data: {"id": 10, "name": "Aluminium Flex Box", "description": "Flexible Aluminium Box", "materials": [{"material_id": 10, "material_name": "Aluminium Sheet", "quantity": 2}], "sell_cost": "50001.02", "labor_cost": "0.00", "current_quantity": 425, "restock_level": 60, "max_stock_level": 600, "stock_status": "IN_STOCK", "created_at": "2024-12-12T02:06:42.758734+05:30", "updated_at": "2024-12-12T16:24:28.287853+05:30", "productmaterial_set": [{"material_id": 10, "quantity": 2}]}
+DEBUG 2024-12-12 16:28:19,482 serializers 23515 6190084096 Product Update - Raw Validated Data: {"name": "Aluminium Flex Box", "description": "Flexible Aluminium Box", "sell_cost": "50001.02", "labor_cost": "0.00", "current_quantity": 425, "restock_level": 60, "max_stock_level": 600, "productmaterial_set": [{"material_id": 10, "quantity": 2}]}
+DEBUG 2024-12-12 16:28:19,482 serializers 23515 6190084096 Existing Product - ID: 10, Current Labor Cost: 0.00
+INFO 2024-12-12 16:28:19,485 serializers 23515 6190084096 Product Updated - ID: 10, Name: Aluminium Flex Box, Labor Cost: 0.00
+INFO 2024-12-12 16:28:19,489 views 23515 6190084096 Product Updated Successfully - Response: {"id": 10, "name": "Aluminium Flex Box", "description": "Flexible Aluminium Box", "materials": [{"material_id": 10, "material_name": "Aluminium Sheet", "quantity": "2.00"}], "sell_cost": "50001.02", "labor_cost": "0.00", "current_quantity": 425, "restock_level": 60, "max_stock_level": 600, "stock_status": "IN_STOCK", "created_at": "2024-12-12T02:06:42.758734+05:30", "updated_at": "2024-12-12T16:28:19.482858+05:30"}
+INFO 2024-12-12 16:28:19,489 basehttp 23515 6190084096 "PUT /api/products/10/ HTTP/1.1" 200 387
+INFO 2024-12-12 16:28:45,056 basehttp 23515 6223736832 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:28:45,057 basehttp 23515 6190084096 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:28:45,057 basehttp 23515 6206910464 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:28:45,058 basehttp 23515 6223736832 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:28:45,059 basehttp 23515 6240563200 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:28:45,061 basehttp 23515 6257389568 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:28:45,062 basehttp 23515 6190084096 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:28:45,063 basehttp 23515 6274215936 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:28:45,070 views 23515 6223736832 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:28:45,070 views 23515 6223736832 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:28:45,070 views 23515 6223736832 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:28:45,072 views 23515 6240563200 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:28:45,072 views 23515 6223736832 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:28:45,072 basehttp 23515 6206910464 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:28:45,074 views 23515 6190084096 Product list request received
+INFO 2024-12-12 16:28:45,074 views 23515 6223736832 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:28:45,075 views 23515 6274215936 Product list request received
+INFO 2024-12-12 16:28:45,075 views 23515 6240563200 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:28:45,076 views 23515 6223736832 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:28:45,076 views 23515 6190084096 Total number of products: 2
+INFO 2024-12-12 16:28:45,076 views 23515 6257389568 Product list request received
+INFO 2024-12-12 16:28:45,077 views 23515 6240563200 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:28:45,077 views 23515 6223736832 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:28:45,077 views 23515 6274215936 Total number of products: 2
+INFO 2024-12-12 16:28:45,078 views 23515 6257389568 Total number of products: 2
+INFO 2024-12-12 16:28:45,079 views 23515 6240563200 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:28:45,083 basehttp 23515 6223736832 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:28:45,084 views 23515 6240563200 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:28:45,084 views 23515 6240563200 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:28:45,085 views 23515 6240563200 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:28:45,088 views 23515 6190084096 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:28:19.482858+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:28:45,088 basehttp 23515 6240563200 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:28:45,089 basehttp 23515 6206910464 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:28:45,090 basehttp 23515 6190084096 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:28:45,094 views 23515 6257389568 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:28:19.482858+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:28:45,096 views 23515 6274215936 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:28:19.482858+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:28:45,096 views 23515 6223736832 Product list request received
+INFO 2024-12-12 16:28:45,096 basehttp 23515 6257389568 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:28:45,097 basehttp 23515 6274215936 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:28:45,098 views 23515 6223736832 Total number of products: 2
+INFO 2024-12-12 16:28:45,101 views 23515 6223736832 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:28:19.482858+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:28:45,102 basehttp 23515 6223736832 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:29:00,838 basehttp 23515 6274215936 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:29:00,839 basehttp 23515 6223736832 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:29:00,839 basehttp 23515 6190084096 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:29:00,839 basehttp 23515 6240563200 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:29:00,839 basehttp 23515 6206910464 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:29:00,840 basehttp 23515 6274215936 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:29:00,840 basehttp 23515 6257389568 "OPTIONS /api/workstations/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:29:00,844 basehttp 23515 6190084096 "OPTIONS /api/products/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:29:00,849 views 23515 6223736832 Product list request received
+INFO 2024-12-12 16:29:00,851 views 23515 6240563200 Product list request received
+INFO 2024-12-12 16:29:00,851 views 23515 6206910464 Product list request received
+INFO 2024-12-12 16:29:00,851 views 23515 6223736832 Total number of products: 2
+INFO 2024-12-12 16:29:00,852 views 23515 6240563200 Total number of products: 2
+INFO 2024-12-12 16:29:00,853 views 23515 6206910464 Total number of products: 2
+INFO 2024-12-12 16:29:00,853 views 23515 6190084096 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:29:00,855 basehttp 23515 6257389568 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:29:00,861 basehttp 23515 6274215936 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:29:00,866 views 23515 6223736832 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:28:19.482858+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:29:00,868 views 23515 6190084096 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:29:00,869 views 23515 6190084096 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:29:00,871 views 23515 6257389568 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 16:29:00,886 views 23515 6190084096 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:29:00,903 views 23515 6190084096 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:29:00,903 views 23515 6190084096 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:29:00,903 views 23515 6190084096 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:29:00,903 basehttp 23515 6223736832 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:29:00,903 views 23515 6206910464 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:28:19.482858+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:29:00,904 views 23515 6240563200 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:28:19.482858+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:29:00,901 views 23515 6257389568 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 16:29:00,903 views 23515 6274215936 Product list request received
+INFO 2024-12-12 16:29:00,905 basehttp 23515 6190084096 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:29:00,907 basehttp 23515 6206910464 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:29:00,909 basehttp 23515 6240563200 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:29:00,909 views 23515 6257389568 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 16:29:00,911 views 23515 6274215936 Total number of products: 2
+INFO 2024-12-12 16:29:00,911 views 23515 6257389568 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 16:29:00,919 views 23515 6257389568 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 16:29:00,919 views 23515 6257389568 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 16:29:00,919 views 23515 6257389568 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 16:29:00,915 views 23515 6274215936 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '0.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:28:19.482858+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '0.00', 'current_quantity': 250, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:22:56.057633+05:30'})]
+INFO 2024-12-12 16:29:00,920 basehttp 23515 6257389568 "GET /api/workstations/ HTTP/1.1" 200 1828
+INFO 2024-12-12 16:29:00,922 basehttp 23515 6274215936 "GET /api/products/ HTTP/1.1" 200 741
+INFO 2024-12-12 16:29:12,457 autoreload 23515 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-12 16:29:12,751 autoreload 23675 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:29:38,186 basehttp 23675 6139686912 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:29:38,187 basehttp 23675 6122860544 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:29:38,234 basehttp 23675 6139686912 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:29:38,234 basehttp 23675 6122860544 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:29:42,591 basehttp 23675 6139686912 "OPTIONS /api/products/10/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:29:42,601 basehttp 23675 6139686912 "GET /api/products/10/ HTTP/1.1" 200 387
+INFO 2024-12-12 16:29:42,606 basehttp 23675 6139686912 "OPTIONS /api/products/10/ HTTP/1.1" 200 0
+DEBUG 2024-12-12 16:29:42,611 views 23675 6139686912 Product Update Request - Raw Data: {"id": 10, "name": "Aluminium Flex Box", "description": "Flexible Aluminium Box", "materials": [{"material_id": 10, "material_name": "Aluminium Sheet", "quantity": 2}], "sell_cost": "50001.02", "labor_cost": 60000, "current_quantity": 425, "restock_level": 60, "max_stock_level": 600, "stock_status": "IN_STOCK", "created_at": "2024-12-12T02:06:42.758734+05:30", "updated_at": "2024-12-12T16:28:19.482858+05:30", "productmaterial_set": [{"material_id": 10, "quantity": 2}]}
+DEBUG 2024-12-12 16:29:42,611 serializers 23675 6139686912 Product Serializer - Processed Data: {'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': 2}], 'sell_cost': '50001.02', 'labor_cost': 60000.0, 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:28:19.482858+05:30', 'productmaterial_set': [{'material_id': 10, 'quantity': 2}]}
+DEBUG 2024-12-12 16:29:42,612 serializers 23675 6139686912 Product Update - Raw Validated Data: {"name": "Aluminium Flex Box", "description": "Flexible Aluminium Box", "sell_cost": "50001.02", "labor_cost": "60000.00", "current_quantity": 425, "restock_level": 60, "max_stock_level": 600, "productmaterial_set": [{"material_id": 10, "quantity": 2}]}
+DEBUG 2024-12-12 16:29:42,612 serializers 23675 6139686912 Existing Product - ID: 10, Current Labor Cost: 0.00
+INFO 2024-12-12 16:29:42,613 serializers 23675 6139686912 Product Updated - ID: 10, Name: Aluminium Flex Box, Labor Cost: 60000.00
+INFO 2024-12-12 16:29:42,617 views 23675 6139686912 Product Updated Successfully - Response: {"id": 10, "name": "Aluminium Flex Box", "description": "Flexible Aluminium Box", "materials": [{"material_id": 10, "material_name": "Aluminium Sheet", "quantity": "2.00"}], "sell_cost": "50001.02", "labor_cost": "60000.00", "current_quantity": 425, "restock_level": 60, "max_stock_level": 600, "stock_status": "IN_STOCK", "created_at": "2024-12-12T02:06:42.758734+05:30", "updated_at": "2024-12-12T16:29:42.612823+05:30"}
+INFO 2024-12-12 16:29:42,617 basehttp 23675 6139686912 "PUT /api/products/10/ HTTP/1.1" 200 391
+INFO 2024-12-12 16:29:43,786 basehttp 23675 6122860544 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:29:43,786 basehttp 23675 6139686912 "OPTIONS /api/materials/ HTTP/1.1" 200 0
+INFO 2024-12-12 16:29:43,796 basehttp 23675 6139686912 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 16:29:43,796 basehttp 23675 6122860544 "GET /api/materials/ HTTP/1.1" 200 524
