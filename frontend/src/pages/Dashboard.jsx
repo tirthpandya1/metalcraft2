@@ -9,7 +9,15 @@ import {
   Divider,
   CircularProgress,
   Tooltip,
-  TextField
+  TextField,
+  CardHeader,
+  TableContainer,
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+  Button
 } from '@mui/material';
 import { 
   PieChart, 
@@ -37,11 +45,13 @@ import {
 import axios from '../services/axiosConfig';
 import { formatLocalDateTime, formatRelativeTime } from '../utils/timeUtils';
 import { handleApiError, withErrorHandling } from '../utils/errorHandler';
+import { formatCurrency } from '../utils/formatters';
 
 function Dashboard() {
   const [dashboardData, setDashboardData] = useState(null);
   const [efficiencyData, setEfficiencyData] = useState(null);
   const [costData, setCostData] = useState(null);
+  const [profitabilityData, setProfitabilityData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -83,11 +93,125 @@ function Dashboard() {
       }
     };
 
+    const fetchProfitabilityData = async () => {
+      try {
+        const response = await axios.get('/api/manufacturing/profitability/');
+        console.log('Profitability API Response:', response.data);
+        setProfitabilityData(response.data);
+      } catch (error) {
+        console.error('Failed to fetch profitability data', error.response ? error.response.data : error.message);
+        
+        // More detailed error handling
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.error('Error response data:', error.response.data);
+          console.error('Error response status:', error.response.status);
+          console.error('Error response headers:', error.response.headers);
+        } else if (error.request) {
+          // The request was made but no response was received
+          console.error('No response received:', error.request);
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.error('Error setting up request:', error.message);
+        }
+
+        // Set a default empty state to prevent rendering issues
+        setProfitabilityData({
+          total_products: 0,
+          total_sell_cost: 0,
+          total_cost: 0,
+          total_profit: 0,
+          average_profit_margin: 0,
+          products: []
+        });
+      }
+    };
+
     fetchAnalytics();
+    fetchProfitabilityData();
   }, []);
 
   if (loading) return <CircularProgress />;
   if (!dashboardData) return null;
+
+  const ProfitabilityCard = ({ profitabilityData }) => {
+    // Add console log to debug
+    console.log('Profitability Data:', profitabilityData);
+
+    if (!profitabilityData) {
+      return (
+        <Card>
+          <CardContent>
+            <Typography variant="body1">No profitability data available</Typography>
+          </CardContent>
+        </Card>
+      );
+    }
+
+    return (
+      <Card>
+        <CardHeader title="Profitability Overview" />
+        <CardContent>
+          <Grid container spacing={2}>
+            <Grid item xs={6} md={3}>
+              <Typography variant="subtitle1">Total Products</Typography>
+              <Typography variant="h6">{profitabilityData.total_products || 0}</Typography>
+            </Grid>
+            <Grid item xs={6} md={3}>
+              <Typography variant="subtitle1">Total Sell Cost</Typography>
+              <Typography variant="h6">{formatCurrency(profitabilityData.total_sell_cost || 0)}</Typography>
+            </Grid>
+            <Grid item xs={6} md={3}>
+              <Typography variant="subtitle1">Total Cost</Typography>
+              <Typography variant="h6">{formatCurrency(profitabilityData.total_cost || 0)}</Typography>
+            </Grid>
+            <Grid item xs={6} md={3}>
+              <Typography variant="subtitle1">Total Profit</Typography>
+              <Typography variant="h6" color={profitabilityData.total_profit > 0 ? 'success.main' : 'error.main'}>
+                {formatCurrency(profitabilityData.total_profit || 0)}
+              </Typography>
+            </Grid>
+            <Grid item xs={12}>
+              <Typography variant="subtitle1">Average Profit Margin</Typography>
+              <Typography variant="h6" color={profitabilityData.average_profit_margin > 0 ? 'success.main' : 'error.main'}>
+                {(profitabilityData.average_profit_margin || 0).toFixed(2)}%
+              </Typography>
+            </Grid>
+          </Grid>
+          <Divider sx={{ my: 2 }} />
+          <TableContainer>
+            <Table size="small">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Product</TableCell>
+                  <TableCell align="right">Sell Cost</TableCell>
+                  <TableCell align="right">Total Cost</TableCell>
+                  <TableCell align="right">Profit</TableCell>
+                  <TableCell align="right">Profit Margin</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {(profitabilityData.products || []).map((product) => (
+                  <TableRow key={product.product_id}>
+                    <TableCell>{product.product_name}</TableCell>
+                    <TableCell align="right">{formatCurrency(product.sell_cost)}</TableCell>
+                    <TableCell align="right">{formatCurrency(product.total_cost)}</TableCell>
+                    <TableCell align="right" style={{ color: product.profit > 0 ? 'green' : 'red' }}>
+                      {formatCurrency(product.profit)}
+                    </TableCell>
+                    <TableCell align="right" style={{ color: product.profit_margin > 0 ? 'green' : 'red' }}>
+                      {product.profit_margin.toFixed(2)}%
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </CardContent>
+      </Card>
+    );
+  };
 
   return (
     <Box sx={{ p: 3 }}>
@@ -119,20 +243,25 @@ function Dashboard() {
                     fill="#8884d8"
                     dataKey="value"
                   >
-                    {['#0088FE', '#00C49F', '#FFBB28'].map((color, index) => (
-                      <Cell key={`cell-${index}`} fill={color} />
+                    {[
+                      { name: 'Completed', color: '#00C49F' },
+                      { name: 'In Progress', color: '#FFBB28' },
+                      { name: 'Pending', color: '#FF8042' }
+                    ].map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={entry.color} />
                     ))}
                   </Pie>
                   <ChartTooltip />
-                  <Legend 
-                    layout="horizontal" 
-                    verticalAlign="bottom" 
-                    align="center"
-                  />
+                  <Legend />
                 </PieChart>
               </ResponsiveContainer>
             </CardContent>
           </Card>
+        </Grid>
+
+        {/* Profitability Card */}
+        <Grid item xs={12}>
+          <ProfitabilityCard profitabilityData={profitabilityData} />
         </Grid>
 
         {/* Production Performance */}

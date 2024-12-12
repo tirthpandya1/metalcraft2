@@ -15272,3 +15272,27 @@ Traceback (most recent call last):
 AssertionError: The field 'productmaterial_set' was declared on serializer ProductSerializer, but has not been included in the 'fields' option.
 ERROR 2024-12-12 15:22:54,318 log 20062 6157791232 Internal Server Error: /api/products/
 ERROR 2024-12-12 15:22:54,319 basehttp 20062 6157791232 "POST /api/products/ HTTP/1.1" 500 224
+ERROR 2024-12-12 15:30:38,695 analytics 20892 6220443648 Profitability Analytics Error: name 'models' is not defined
+ERROR 2024-12-12 15:30:38,695 log 20892 6220443648 Internal Server Error: /api/manufacturing/profitability/
+ERROR 2024-12-12 15:30:38,696 basehttp 20892 6220443648 "GET /api/manufacturing/profitability/ HTTP/1.1" 500 40
+ERROR 2024-12-12 15:31:09,222 analytics 20892 6186790912 Profitability Analytics Error: name 'models' is not defined
+ERROR 2024-12-12 15:31:09,223 log 20892 6186790912 Internal Server Error: /api/manufacturing/profitability/
+ERROR 2024-12-12 15:31:09,227 basehttp 20892 6186790912 "GET /api/manufacturing/profitability/ HTTP/1.1" 500 40
+ERROR 2024-12-12 15:31:09,232 analytics 20892 6237270016 Profitability Analytics Error: name 'models' is not defined
+ERROR 2024-12-12 15:31:09,233 log 20892 6237270016 Internal Server Error: /api/manufacturing/profitability/
+ERROR 2024-12-12 15:31:09,238 basehttp 20892 6237270016 "GET /api/manufacturing/profitability/ HTTP/1.1" 500 40
+ERROR 2024-12-12 15:31:29,693 analytics 20892 6203617280 Profitability Analytics Error: name 'models' is not defined
+ERROR 2024-12-12 15:31:29,694 log 20892 6203617280 Internal Server Error: /api/manufacturing/profitability/
+ERROR 2024-12-12 15:31:29,698 basehttp 20892 6203617280 "GET /api/manufacturing/profitability/ HTTP/1.1" 500 40
+ERROR 2024-12-12 15:32:10,499 analytics 20892 6203617280 Profitability Analytics Error: name 'models' is not defined
+ERROR 2024-12-12 15:32:10,500 log 20892 6203617280 Internal Server Error: /api/manufacturing/profitability/
+ERROR 2024-12-12 15:32:10,500 basehttp 20892 6203617280 "GET /api/manufacturing/profitability/ HTTP/1.1" 500 40
+ERROR 2024-12-12 15:32:23,240 analytics 20892 6203617280 Profitability Analytics Error: name 'models' is not defined
+ERROR 2024-12-12 15:32:23,241 log 20892 6203617280 Internal Server Error: /api/manufacturing/profitability/
+ERROR 2024-12-12 15:32:23,241 basehttp 20892 6203617280 "GET /api/manufacturing/profitability/ HTTP/1.1" 500 40
+ERROR 2024-12-12 15:32:38,994 analytics 20892 6186790912 Profitability Analytics Error: name 'models' is not defined
+ERROR 2024-12-12 15:32:38,996 log 20892 6186790912 Internal Server Error: /api/manufacturing/profitability/
+ERROR 2024-12-12 15:32:38,996 basehttp 20892 6186790912 "GET /api/manufacturing/profitability/ HTTP/1.1" 500 40
+ERROR 2024-12-12 15:32:38,999 analytics 20892 6169964544 Profitability Analytics Error: name 'models' is not defined
+ERROR 2024-12-12 15:32:38,999 log 20892 6169964544 Internal Server Error: /api/manufacturing/profitability/
+ERROR 2024-12-12 15:32:38,999 basehttp 20892 6169964544 "GET /api/manufacturing/profitability/ HTTP/1.1" 500 40

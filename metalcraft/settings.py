@@ -243,9 +243,9 @@ LOGGING = {
             'formatter': 'verbose'
         },
         'file': {
-            'level': 'ERROR',
+            'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'django_errors.log',
+            'filename': os.path.join(BASE_DIR, 'debug.log'),
             'formatter': 'verbose'
         },
     },
@@ -253,17 +253,16 @@ LOGGING = {
         'django': {
             'handlers': ['console', 'file'],
             'level': 'INFO',
-            'propagate': True,
         },
         'manufacturing': {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
             'propagate': True,
         },
-        'manufacturing.exceptions': {
+        'manufacturing.analytics': {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
             'propagate': True,
-        }
-    }
+        },
+    },
 }

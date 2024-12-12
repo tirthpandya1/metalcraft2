@@ -20,6 +20,7 @@ import logging
 from django.db.models import Q
 from rest_framework.pagination import PageNumberPagination
 from datetime import datetime
+from .analytics import ProfitabilityAnalyticsView
 
 logger = logging.getLogger(__name__)
 

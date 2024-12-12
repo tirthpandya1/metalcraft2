@@ -25600,3 +25600,319 @@ ERROR 2024-12-10 06:28:23,254 basehttp 8482 6224261120 "POST /api/work-orders/ H
 ERROR 2024-12-10 06:28:23,254 basehttp 8482 6224261120 "POST /api/work-orders/ HTTP/1.1" 500 117350
 INFO 2024-12-10 06:28:34,190 autoreload 8482 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
 INFO 2024-12-10 06:28:34,190 autoreload 8482 8278161472 /Users/T/Documents/GitHub/metalcraft2/manufacturing/serializers.py changed, reloading.
+INFO 2024-12-12 15:34:37,822 autoreload 21217 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 15:34:53,380 autoreload 21217 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py changed, reloading.
+INFO 2024-12-12 15:34:53,633 autoreload 21264 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 15:36:41,302 basehttp 21264 6187577344 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 15:36:41,305 basehttp 21264 6170750976 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 15:36:41,308 basehttp 21264 6204403712 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 15:36:41,340 basehttp 21264 6204403712 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 15:36:41,341 basehttp 21264 6170750976 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+ERROR 2024-12-12 15:36:41,342 analytics 21264 6221230080 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 15:36:41,342 analytics 21264 6221230080 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 15:36:41,344 analytics 21264 6221230080 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 15:36:41,344 analytics 21264 6221230080 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 15:36:41,345 analytics 21264 6221230080 No products could be processed for profitability
+WARNING 2024-12-12 15:36:41,345 analytics 21264 6221230080 No products could be processed for profitability
+INFO 2024-12-12 15:36:41,345 basehttp 21264 6221230080 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 15:36:41,346 basehttp 21264 6187577344 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 15:37:04,833 basehttp 21264 6170750976 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 15:37:04,836 basehttp 21264 6204403712 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 15:37:04,843 basehttp 21264 6254882816 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 15:37:04,843 basehttp 21264 6187577344 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 15:37:04,848 basehttp 21264 6238056448 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 15:37:04,851 basehttp 21264 6221230080 "GET /api/analytics/cost HTTP/1.1" 301 0
+ERROR 2024-12-12 15:37:04,864 analytics 21264 6187577344 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 15:37:04,864 analytics 21264 6187577344 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 15:37:04,867 analytics 21264 6170750976 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 15:37:04,867 analytics 21264 6170750976 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+INFO 2024-12-12 15:37:04,870 basehttp 21264 6238056448 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+ERROR 2024-12-12 15:37:04,876 analytics 21264 6187577344 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+INFO 2024-12-12 15:37:04,877 basehttp 21264 6221230080 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+ERROR 2024-12-12 15:37:04,876 analytics 21264 6187577344 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 15:37:04,881 analytics 21264 6170750976 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 15:37:04,881 analytics 21264 6187577344 No products could be processed for profitability
+ERROR 2024-12-12 15:37:04,881 analytics 21264 6170750976 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 15:37:04,881 analytics 21264 6187577344 No products could be processed for profitability
+WARNING 2024-12-12 15:37:04,882 analytics 21264 6170750976 No products could be processed for profitability
+WARNING 2024-12-12 15:37:04,882 analytics 21264 6170750976 No products could be processed for profitability
+INFO 2024-12-12 15:37:04,886 basehttp 21264 6187577344 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 15:37:04,889 basehttp 21264 6170750976 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 15:37:04,889 basehttp 21264 6271709184 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 15:37:04,891 basehttp 21264 6204403712 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 15:37:04,892 basehttp 21264 6288535552 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 15:37:04,896 basehttp 21264 6254882816 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 15:48:40,118 basehttp 21264 6204403712 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 15:48:40,118 basehttp 21264 6187577344 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 15:48:40,121 basehttp 21264 6221230080 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 15:48:40,130 basehttp 21264 6254882816 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 15:48:40,130 basehttp 21264 6238056448 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 15:48:40,131 basehttp 21264 6170750976 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+ERROR 2024-12-12 15:48:40,144 analytics 21264 6187577344 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 15:48:40,144 analytics 21264 6187577344 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 15:48:40,150 analytics 21264 6187577344 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 15:48:40,150 analytics 21264 6204403712 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 15:48:40,150 analytics 21264 6187577344 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 15:48:40,150 analytics 21264 6204403712 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 15:48:40,154 analytics 21264 6187577344 No products could be processed for profitability
+WARNING 2024-12-12 15:48:40,154 analytics 21264 6187577344 No products could be processed for profitability
+INFO 2024-12-12 15:48:40,155 basehttp 21264 6254882816 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 15:48:40,159 basehttp 21264 6187577344 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 15:48:40,160 basehttp 21264 6238056448 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+ERROR 2024-12-12 15:48:40,161 analytics 21264 6204403712 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 15:48:40,161 analytics 21264 6204403712 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 15:48:40,164 analytics 21264 6204403712 No products could be processed for profitability
+WARNING 2024-12-12 15:48:40,164 analytics 21264 6204403712 No products could be processed for profitability
+INFO 2024-12-12 15:48:40,167 basehttp 21264 6204403712 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 15:48:40,168 basehttp 21264 6221230080 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 15:48:40,171 basehttp 21264 6271709184 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 15:48:40,173 basehttp 21264 6288535552 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 15:48:40,175 basehttp 21264 6170750976 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:05:19,947 basehttp 21264 6170750976 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:05:19,967 basehttp 21264 6254882816 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:05:19,970 basehttp 21264 6187577344 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:05:19,970 basehttp 21264 6238056448 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:05:19,974 basehttp 21264 6204403712 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:05:19,974 basehttp 21264 6221230080 "GET /api/analytics/cost HTTP/1.1" 301 0
+ERROR 2024-12-12 16:05:19,978 analytics 21264 6170750976 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:05:19,978 analytics 21264 6170750976 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:05:19,984 analytics 21264 6170750976 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:05:19,984 analytics 21264 6170750976 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 16:05:19,986 analytics 21264 6170750976 No products could be processed for profitability
+WARNING 2024-12-12 16:05:19,986 analytics 21264 6170750976 No products could be processed for profitability
+INFO 2024-12-12 16:05:19,988 basehttp 21264 6170750976 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:05:19,997 basehttp 21264 6204403712 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:05:19,998 basehttp 21264 6254882816 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+ERROR 2024-12-12 16:05:20,000 analytics 21264 6238056448 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:05:20,000 analytics 21264 6238056448 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+INFO 2024-12-12 16:05:20,006 basehttp 21264 6271709184 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+ERROR 2024-12-12 16:05:20,007 analytics 21264 6238056448 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:05:20,007 analytics 21264 6238056448 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 16:05:20,009 analytics 21264 6238056448 No products could be processed for profitability
+WARNING 2024-12-12 16:05:20,009 analytics 21264 6238056448 No products could be processed for profitability
+INFO 2024-12-12 16:05:20,010 basehttp 21264 6238056448 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:05:20,010 basehttp 21264 6187577344 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:05:20,013 basehttp 21264 6288535552 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:05:20,013 basehttp 21264 6221230080 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+ERROR 2024-12-12 16:07:21,650 exceptions 21264 6221230080 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+INFO 2024-12-12 16:07:21,659 basehttp 21264 6170750976 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:07:21,659 basehttp 21264 6187577344 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:07:21,661 basehttp 21264 6204403712 "GET /api/analytics/cost HTTP/1.1" 301 0
+WARNING 2024-12-12 16:07:21,662 log 21264 6221230080 Unauthorized: /api/manufacturing/profitability/
+WARNING 2024-12-12 16:07:21,662 basehttp 21264 6221230080 "GET /api/manufacturing/profitability/ HTTP/1.1" 401 102
+ERROR 2024-12-12 16:07:21,666 exceptions 21264 6187577344 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+ERROR 2024-12-12 16:07:21,667 exceptions 21264 6170750976 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+ERROR 2024-12-12 16:07:21,668 exceptions 21264 6204403712 Unhandled Exception: InvalidToken
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 414, in initial
+    self.perform_authentication(request)
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/views.py", line 324, in perform_authentication
+    request.user
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 227, in user
+    self._authenticate()
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework/request.py", line 380, in _authenticate
+    user_auth_tuple = authenticator.authenticate(self)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 49, in authenticate
+    validated_token = self.get_validated_token(raw_token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/T/Documents/GitHub/metalcraft2/venv/lib/python3.12/site-packages/rest_framework_simplejwt/authentication.py", line 113, in get_validated_token
+    raise InvalidToken(
+rest_framework_simplejwt.exceptions.InvalidToken: {'detail': ErrorDetail(string='Given token not valid for any token type', code='token_not_valid'), 'code': ErrorDetail(string='token_not_valid', code='token_not_valid'), 'messages': [{'token_class': ErrorDetail(string='AccessToken', code='token_not_valid'), 'token_type': ErrorDetail(string='access', code='token_not_valid'), 'message': ErrorDetail(string='Token is invalid or expired', code='token_not_valid')}]}
+WARNING 2024-12-12 16:07:21,669 log 21264 6187577344 Unauthorized: /api/analytics/efficiency/
+WARNING 2024-12-12 16:07:21,670 log 21264 6170750976 Unauthorized: /api/analytics/dashboard/
+WARNING 2024-12-12 16:07:21,671 log 21264 6204403712 Unauthorized: /api/analytics/cost/
+INFO 2024-12-12 16:07:21,671 basehttp 21264 6221230080 "POST /api/token/refresh/ HTTP/1.1" 200 483
+WARNING 2024-12-12 16:07:21,672 basehttp 21264 6204403712 "GET /api/analytics/cost/ HTTP/1.1" 401 102
+WARNING 2024-12-12 16:07:21,672 basehttp 21264 6187577344 "GET /api/analytics/efficiency/ HTTP/1.1" 401 102
+WARNING 2024-12-12 16:07:21,672 basehttp 21264 6170750976 "GET /api/analytics/dashboard/ HTTP/1.1" 401 102
+INFO 2024-12-12 16:07:21,681 basehttp 21264 6187577344 "POST /api/token/refresh/ HTTP/1.1" 200 483
+INFO 2024-12-12 16:07:21,683 basehttp 21264 6204403712 "POST /api/token/refresh/ HTTP/1.1" 200 483
+INFO 2024-12-12 16:07:21,684 basehttp 21264 6221230080 "POST /api/token/refresh/ HTTP/1.1" 200 483
+ERROR 2024-12-12 16:07:21,702 analytics 21264 6170750976 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:07:21,702 analytics 21264 6170750976 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:07:21,707 analytics 21264 6170750976 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:07:21,707 analytics 21264 6170750976 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 16:07:21,707 analytics 21264 6170750976 No products could be processed for profitability
+WARNING 2024-12-12 16:07:21,707 analytics 21264 6170750976 No products could be processed for profitability
+INFO 2024-12-12 16:07:21,709 basehttp 21264 6170750976 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:07:21,714 basehttp 21264 6204403712 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:07:21,716 basehttp 21264 6187577344 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:07:21,720 basehttp 21264 6221230080 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:07:21,726 basehttp 21264 6170750976 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:07:21,726 basehttp 21264 6187577344 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:07:21,731 basehttp 21264 6204403712 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:07:47,097 basehttp 21264 6204403712 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:07:47,103 basehttp 21264 6170750976 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:07:47,103 basehttp 21264 6221230080 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:07:47,111 basehttp 21264 6187577344 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:07:47,112 basehttp 21264 6238056448 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:07:47,119 basehttp 21264 6254882816 "GET /api/analytics/cost HTTP/1.1" 301 0
+ERROR 2024-12-12 16:07:47,142 analytics 21264 6204403712 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:07:47,143 analytics 21264 6170750976 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:07:47,142 analytics 21264 6204403712 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:07:47,143 analytics 21264 6170750976 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+INFO 2024-12-12 16:07:47,146 basehttp 21264 6187577344 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:07:47,146 basehttp 21264 6238056448 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+ERROR 2024-12-12 16:07:47,156 analytics 21264 6204403712 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:07:47,156 analytics 21264 6204403712 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 16:07:47,156 analytics 21264 6204403712 No products could be processed for profitability
+WARNING 2024-12-12 16:07:47,156 analytics 21264 6204403712 No products could be processed for profitability
+INFO 2024-12-12 16:07:47,158 basehttp 21264 6204403712 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+ERROR 2024-12-12 16:07:47,160 analytics 21264 6170750976 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:07:47,160 analytics 21264 6170750976 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 16:07:47,161 analytics 21264 6170750976 No products could be processed for profitability
+WARNING 2024-12-12 16:07:47,161 analytics 21264 6170750976 No products could be processed for profitability
+INFO 2024-12-12 16:07:47,163 basehttp 21264 6170750976 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:07:47,167 basehttp 21264 6271709184 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:07:47,170 basehttp 21264 6254882816 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:07:47,171 basehttp 21264 6288535552 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:07:47,173 basehttp 21264 6221230080 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+INFO 2024-12-12 16:07:54,326 autoreload 21264 8320923712 /Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py changed, reloading.
+INFO 2024-12-12 16:07:54,699 autoreload 21877 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 16:11:54,313 basehttp 21877 6191312896 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:11:54,319 basehttp 21877 6157660160 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 16:11:54,319 basehttp 21877 6124007424 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:11:54,319 basehttp 21877 6208139264 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:11:54,319 basehttp 21877 6140833792 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 16:11:54,319 basehttp 21877 6174486528 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 16:11:54,364 analytics 21877 6124007424 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:11:54,364 analytics 21877 6124007424 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:11:54,367 analytics 21877 6124007424 Product details - Sell Cost: 50001.02, Labor Cost: 0.00
+INFO 2024-12-12 16:11:54,367 analytics 21877 6140833792 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:11:54,367 analytics 21877 6124007424 Product details - Sell Cost: 50001.02, Labor Cost: 0.00
+INFO 2024-12-12 16:11:54,367 analytics 21877 6140833792 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 16:11:54,369 analytics 21877 6140833792 Product details - Sell Cost: 50001.02, Labor Cost: 0.00
+INFO 2024-12-12 16:11:54,369 basehttp 21877 6208139264 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:11:54,369 analytics 21877 6124007424 Material Costs: 80
+INFO 2024-12-12 16:11:54,369 analytics 21877 6140833792 Product details - Sell Cost: 50001.02, Labor Cost: 0.00
+INFO 2024-12-12 16:11:54,369 analytics 21877 6124007424 Material Costs: 80
+INFO 2024-12-12 16:11:54,374 basehttp 21877 6191312896 "GET /api/analytics/cost/ HTTP/1.1" 200 356
+INFO 2024-12-12 16:11:54,378 analytics 21877 6140833792 Material Costs: 80
+INFO 2024-12-12 16:11:54,378 analytics 21877 6140833792 Material Costs: 80
+INFO 2024-12-12 16:11:54,381 basehttp 21877 6157660160 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+ERROR 2024-12-12 16:11:54,383 analytics 21877 6124007424 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+INFO 2024-12-12 16:11:54,384 basehttp 21877 6174486528 "GET /api/analytics/dashboard/ HTTP/1.1" 200 940
+ERROR 2024-12-12 16:11:54,384 analytics 21877 6140833792 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+INFO 2024-12-12 16:11:54,385 basehttp 21877 6241792000 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+ERROR 2024-12-12 16:11:54,383 analytics 21877 6124007424 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:11:54,384 analytics 21877 6140833792 Error calculating profitability for product Aluminium Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+INFO 2024-12-12 16:11:54,393 basehttp 21877 6224965632 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 16:11:54,393 analytics 21877 6124007424 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:11:54,393 analytics 21877 6140833792 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:11:54,393 analytics 21877 6124007424 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:11:54,393 analytics 21877 6140833792 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 16:11:54,394 analytics 21877 6124007424 Product details - Sell Cost: 60000.00, Labor Cost: 0.00
+INFO 2024-12-12 16:11:54,394 analytics 21877 6140833792 Product details - Sell Cost: 60000.00, Labor Cost: 0.00
+INFO 2024-12-12 16:11:54,394 analytics 21877 6140833792 Product details - Sell Cost: 60000.00, Labor Cost: 0.00
+INFO 2024-12-12 16:11:54,394 analytics 21877 6124007424 Product details - Sell Cost: 60000.00, Labor Cost: 0.00
+INFO 2024-12-12 16:11:54,397 analytics 21877 6140833792 Material Costs: 100
+INFO 2024-12-12 16:11:54,397 analytics 21877 6140833792 Material Costs: 100
+INFO 2024-12-12 16:11:54,398 analytics 21877 6124007424 Material Costs: 100
+INFO 2024-12-12 16:11:54,398 analytics 21877 6124007424 Material Costs: 100
+ERROR 2024-12-12 16:11:54,398 analytics 21877 6140833792 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:11:54,398 analytics 21877 6140833792 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+ERROR 2024-12-12 16:11:54,402 analytics 21877 6124007424 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 16:11:54,402 analytics 21877 6140833792 No products could be processed for profitability
+ERROR 2024-12-12 16:11:54,402 analytics 21877 6124007424 Error calculating profitability for product SS Flex Box: 'WorkStation' object has no attribute 'hourly_operating_cost'
+Traceback (most recent call last):
+  File "/Users/T/Documents/GitHub/metalcraft2/manufacturing/analytics.py", line 178, in calculate_product_profitability
+    ws_cost = (ws.workstation.hourly_operating_cost or 0) * (ws.estimated_time.total_seconds() / 3600 if ws.estimated_time else 0)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'WorkStation' object has no attribute 'hourly_operating_cost'
+WARNING 2024-12-12 16:11:54,402 analytics 21877 6140833792 No products could be processed for profitability
+WARNING 2024-12-12 16:11:54,406 analytics 21877 6124007424 No products could be processed for profitability
+WARNING 2024-12-12 16:11:54,406 analytics 21877 6124007424 No products could be processed for profitability
+INFO 2024-12-12 16:11:54,407 basehttp 21877 6140833792 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112
+INFO 2024-12-12 16:11:54,407 basehttp 21877 6124007424 "GET /api/manufacturing/profitability/ HTTP/1.1" 200 112

@@ -9,6 +9,7 @@ from .views import (
     WorkstationProcessViewSet, WorkstationEfficiencyViewSet, 
     ProductionDesignViewSet, ProductionEventViewSet
 )
+from .analytics import ProfitabilityAnalyticsView
 
 # Create a router and register our ViewSets
 router = DefaultRouter()
@@ -64,4 +65,8 @@ urlpatterns = [
     path('production-events/event-timeline/', 
          ProductionEventViewSet.as_view({'get': 'event_timeline'}), 
          name='production-event-timeline'),
+]
+
+urlpatterns += [
+    path('profitability/', ProfitabilityAnalyticsView.as_view(), name='profitability-analytics'),
 ]
