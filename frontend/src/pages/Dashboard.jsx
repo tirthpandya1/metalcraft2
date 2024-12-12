@@ -347,11 +347,6 @@ function Dashboard() {
           </Card>
         </Grid>
 
-        {/* Profitability Card */}
-        <Grid item xs={12}>
-          <ProfitabilityCard profitabilityData={profitabilityData} />
-        </Grid>
-
         {/* Production Performance */}
         <Grid item xs={12} md={6}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
@@ -409,6 +404,11 @@ function Dashboard() {
               )}
             </CardContent>
           </Card>
+        </Grid>
+
+        {/* Profitability Card */}
+        <Grid item xs={12}>
+          <ProfitabilityCard profitabilityData={profitabilityData} />
         </Grid>
 
         {/* Material Usage */}

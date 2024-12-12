@@ -27806,3 +27806,300 @@ INFO 2024-12-12 17:17:41,113 analytics 28362 6129020928 Profit Margin: 88.333333
 INFO 2024-12-12 17:17:41,113 analytics 28362 6129020928 Profitability Category: Highly Profitable
 INFO 2024-12-12 17:17:41,113 analytics 28362 6129020928 Profitability Summary: {'total_products': 2, 'total_sell_cost': Decimal('110001.02'), 'total_cost': Decimal('13980.000'), 'total_profit': Decimal('96021.020'), 'average_profit_margin': Decimal('87.1868090557619291233125511'), 'products': [{'product_id': 10, 'product_name': 'Aluminium Flex Box', 'material_costs': Decimal('80'), 'material_breakdown': [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}, {'workstation_name': 'Drilling Station', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}], 'total_cost': Decimal('6980.000'), 'sell_cost': Decimal('50001.02'), 'profit': Decimal('43021.020'), 'profit_margin': Decimal('86.04028477819052491329176885'), 'profitability_category': 'Highly Profitable'}, {'product_id': 11, 'product_name': 'SS Flex Box', 'material_costs': Decimal('100'), 'material_breakdown': [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'VNC Cutting Station 1', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}], 'total_cost': Decimal('7000.000'), 'sell_cost': Decimal('60000.00'), 'profit': Decimal('53000.000'), 'profit_margin': Decimal('88.33333333333333333333333333'), 'profitability_category': 'Highly Profitable'}]}
 INFO 2024-12-12 17:17:41,114 basehttp 28362 6129020928 "GET /api/analytics/profitability/ HTTP/1.1" 200 1533
+INFO 2024-12-12 17:56:13,256 autoreload 30677 8320923712 Watching for file changes with StatReloader
+INFO 2024-12-12 17:56:20,190 basehttp 30677 6192771072 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 17:56:20,204 basehttp 30677 6209597440 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 17:56:20,204 basehttp 30677 6125465600 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 17:56:20,204 basehttp 30677 6159118336 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 17:56:20,212 basehttp 30677 6142291968 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 17:56:20,213 basehttp 30677 6175944704 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 17:56:20,247 basehttp 30677 6125465600 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 17:56:20,248 basehttp 30677 6159118336 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 17:56:20,259 basehttp 30677 6142291968 "GET /api/analytics/cost/ HTTP/1.1" 200 577
+INFO 2024-12-12 17:56:20,269 analytics 30677 6192771072 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 17:56:20,271 analytics 30677 6209597440 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 17:56:20,271 basehttp 30677 6175944704 "GET /api/analytics/dashboard/ HTTP/1.1" 200 941
+INFO 2024-12-12 17:56:20,271 analytics 30677 6192771072 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 17:56:20,272 basehttp 30677 6243250176 "GET /api/analytics/cost/ HTTP/1.1" 200 577
+INFO 2024-12-12 17:56:20,272 analytics 30677 6209597440 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 17:56:20,276 basehttp 30677 6226423808 "GET /api/analytics/dashboard/ HTTP/1.1" 200 941
+INFO 2024-12-12 17:56:20,276 analytics 30677 6192771072 Material Costs: 80
+INFO 2024-12-12 17:56:20,276 analytics 30677 6192771072 Material Breakdown: [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}]
+INFO 2024-12-12 17:56:20,278 analytics 30677 6209597440 Material Costs: 80
+INFO 2024-12-12 17:56:20,278 analytics 30677 6209597440 Material Breakdown: [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}]
+INFO 2024-12-12 17:56:20,280 analytics 30677 6192771072 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:56:20,280 analytics 30677 6209597440 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:56:20,280 analytics 30677 6192771072 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:56:20,280 analytics 30677 6209597440 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:56:20,280 analytics 30677 6192771072 Workstation Drilling Station: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:56:20,280 analytics 30677 6209597440 Workstation Drilling Station: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:56:20,280 analytics 30677 6192771072 Profitability Calculation for Aluminium Flex Box:
+INFO 2024-12-12 17:56:20,280 analytics 30677 6209597440 Profitability Calculation for Aluminium Flex Box:
+INFO 2024-12-12 17:56:20,280 analytics 30677 6192771072 Material Costs: 80
+INFO 2024-12-12 17:56:20,280 analytics 30677 6209597440 Material Costs: 80
+INFO 2024-12-12 17:56:20,280 analytics 30677 6192771072 Labor Costs: 5000.00
+INFO 2024-12-12 17:56:20,281 analytics 30677 6209597440 Labor Costs: 5000.00
+INFO 2024-12-12 17:56:20,281 analytics 30677 6192771072 Workstation Costs: 1900.000
+INFO 2024-12-12 17:56:20,281 analytics 30677 6209597440 Workstation Costs: 1900.000
+INFO 2024-12-12 17:56:20,281 analytics 30677 6209597440 Total Cost: 6980.000
+INFO 2024-12-12 17:56:20,281 analytics 30677 6209597440 Sell Cost: 50001.02
+INFO 2024-12-12 17:56:20,281 analytics 30677 6192771072 Total Cost: 6980.000
+INFO 2024-12-12 17:56:20,281 analytics 30677 6209597440 Profit: 43021.020
+INFO 2024-12-12 17:56:20,281 analytics 30677 6192771072 Sell Cost: 50001.02
+INFO 2024-12-12 17:56:20,281 analytics 30677 6209597440 Profit Margin: 86.04028477819052491329176885%
+INFO 2024-12-12 17:56:20,281 analytics 30677 6192771072 Profit: 43021.020
+INFO 2024-12-12 17:56:20,281 analytics 30677 6209597440 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:56:20,281 analytics 30677 6192771072 Profit Margin: 86.04028477819052491329176885%
+INFO 2024-12-12 17:56:20,281 analytics 30677 6192771072 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:56:20,281 analytics 30677 6209597440 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 17:56:20,282 analytics 30677 6192771072 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 17:56:20,282 analytics 30677 6209597440 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 17:56:20,282 analytics 30677 6192771072 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 17:56:20,284 analytics 30677 6192771072 Material Costs: 100
+INFO 2024-12-12 17:56:20,284 analytics 30677 6209597440 Material Costs: 100
+INFO 2024-12-12 17:56:20,284 analytics 30677 6192771072 Material Breakdown: [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}]
+INFO 2024-12-12 17:56:20,284 analytics 30677 6209597440 Material Breakdown: [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}]
+INFO 2024-12-12 17:56:20,285 analytics 30677 6209597440 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:56:20,285 analytics 30677 6209597440 Workstation VNC Cutting Station 1: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:56:20,285 analytics 30677 6209597440 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:56:20,286 analytics 30677 6192771072 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:56:20,286 analytics 30677 6209597440 Profitability Calculation for SS Flex Box:
+INFO 2024-12-12 17:56:20,286 analytics 30677 6209597440 Material Costs: 100
+INFO 2024-12-12 17:56:20,286 analytics 30677 6209597440 Labor Costs: 5000.00
+INFO 2024-12-12 17:56:20,287 analytics 30677 6209597440 Workstation Costs: 1900.000
+INFO 2024-12-12 17:56:20,287 analytics 30677 6209597440 Total Cost: 7000.000
+INFO 2024-12-12 17:56:20,286 analytics 30677 6192771072 Workstation VNC Cutting Station 1: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:56:20,287 analytics 30677 6209597440 Sell Cost: 60000.00
+INFO 2024-12-12 17:56:20,287 analytics 30677 6192771072 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:56:20,288 analytics 30677 6209597440 Profit: 53000.000
+INFO 2024-12-12 17:56:20,288 analytics 30677 6192771072 Profitability Calculation for SS Flex Box:
+INFO 2024-12-12 17:56:20,288 analytics 30677 6209597440 Profit Margin: 88.33333333333333333333333333%
+INFO 2024-12-12 17:56:20,288 analytics 30677 6192771072 Material Costs: 100
+INFO 2024-12-12 17:56:20,288 analytics 30677 6209597440 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:56:20,288 analytics 30677 6192771072 Labor Costs: 5000.00
+INFO 2024-12-12 17:56:20,288 analytics 30677 6209597440 Profitability Summary: {'total_products': 2, 'total_sell_cost': Decimal('110001.02'), 'total_cost': Decimal('13980.000'), 'total_profit': Decimal('96021.020'), 'average_profit_margin': Decimal('87.1868090557619291233125511'), 'products': [{'product_id': 10, 'product_name': 'Aluminium Flex Box', 'material_costs': Decimal('80'), 'material_breakdown': [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}, {'workstation_name': 'Drilling Station', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}], 'total_cost': Decimal('6980.000'), 'sell_cost': Decimal('50001.02'), 'profit': Decimal('43021.020'), 'profit_margin': Decimal('86.04028477819052491329176885'), 'profitability_category': 'Highly Profitable'}, {'product_id': 11, 'product_name': 'SS Flex Box', 'material_costs': Decimal('100'), 'material_breakdown': [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'VNC Cutting Station 1', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}], 'total_cost': Decimal('7000.000'), 'sell_cost': Decimal('60000.00'), 'profit': Decimal('53000.000'), 'profit_margin': Decimal('88.33333333333333333333333333'), 'profitability_category': 'Highly Profitable'}]}
+INFO 2024-12-12 17:56:20,288 analytics 30677 6192771072 Workstation Costs: 1900.000
+INFO 2024-12-12 17:56:20,289 analytics 30677 6192771072 Total Cost: 7000.000
+INFO 2024-12-12 17:56:20,289 basehttp 30677 6209597440 "GET /api/analytics/profitability/ HTTP/1.1" 200 1533
+INFO 2024-12-12 17:56:20,289 analytics 30677 6192771072 Sell Cost: 60000.00
+INFO 2024-12-12 17:56:20,289 analytics 30677 6192771072 Profit: 53000.000
+INFO 2024-12-12 17:56:20,289 analytics 30677 6192771072 Profit Margin: 88.33333333333333333333333333%
+INFO 2024-12-12 17:56:20,289 analytics 30677 6192771072 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:56:20,290 analytics 30677 6192771072 Profitability Summary: {'total_products': 2, 'total_sell_cost': Decimal('110001.02'), 'total_cost': Decimal('13980.000'), 'total_profit': Decimal('96021.020'), 'average_profit_margin': Decimal('87.1868090557619291233125511'), 'products': [{'product_id': 10, 'product_name': 'Aluminium Flex Box', 'material_costs': Decimal('80'), 'material_breakdown': [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}, {'workstation_name': 'Drilling Station', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}], 'total_cost': Decimal('6980.000'), 'sell_cost': Decimal('50001.02'), 'profit': Decimal('43021.020'), 'profit_margin': Decimal('86.04028477819052491329176885'), 'profitability_category': 'Highly Profitable'}, {'product_id': 11, 'product_name': 'SS Flex Box', 'material_costs': Decimal('100'), 'material_breakdown': [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'VNC Cutting Station 1', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}], 'total_cost': Decimal('7000.000'), 'sell_cost': Decimal('60000.00'), 'profit': Decimal('53000.000'), 'profit_margin': Decimal('88.33333333333333333333333333'), 'profitability_category': 'Highly Profitable'}]}
+INFO 2024-12-12 17:56:20,290 basehttp 30677 6192771072 "GET /api/analytics/profitability/ HTTP/1.1" 200 1533
+INFO 2024-12-12 17:58:05,112 basehttp 30677 6159118336 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 17:58:05,115 basehttp 30677 6175944704 "GET /api/analytics/cost/ HTTP/1.1" 200 577
+INFO 2024-12-12 17:58:05,117 basehttp 30677 6142291968 "GET /api/analytics/dashboard/ HTTP/1.1" 200 941
+INFO 2024-12-12 17:58:05,117 analytics 30677 6125465600 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 17:58:05,118 analytics 30677 6125465600 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 17:58:05,119 analytics 30677 6125465600 Material Costs: 80
+INFO 2024-12-12 17:58:05,119 analytics 30677 6125465600 Material Breakdown: [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}]
+INFO 2024-12-12 17:58:05,120 analytics 30677 6125465600 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:58:05,120 analytics 30677 6125465600 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:58:05,120 analytics 30677 6125465600 Workstation Drilling Station: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:58:05,120 analytics 30677 6125465600 Profitability Calculation for Aluminium Flex Box:
+INFO 2024-12-12 17:58:05,121 analytics 30677 6125465600 Material Costs: 80
+INFO 2024-12-12 17:58:05,121 analytics 30677 6125465600 Labor Costs: 5000.00
+INFO 2024-12-12 17:58:05,121 analytics 30677 6125465600 Workstation Costs: 1900.000
+INFO 2024-12-12 17:58:05,121 analytics 30677 6125465600 Total Cost: 6980.000
+INFO 2024-12-12 17:58:05,121 analytics 30677 6125465600 Sell Cost: 50001.02
+INFO 2024-12-12 17:58:05,121 analytics 30677 6125465600 Profit: 43021.020
+INFO 2024-12-12 17:58:05,121 analytics 30677 6125465600 Profit Margin: 86.04028477819052491329176885%
+INFO 2024-12-12 17:58:05,121 analytics 30677 6125465600 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:58:05,121 analytics 30677 6125465600 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 17:58:05,121 analytics 30677 6125465600 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 17:58:05,121 analytics 30677 6125465600 Material Costs: 100
+INFO 2024-12-12 17:58:05,121 analytics 30677 6125465600 Material Breakdown: [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}]
+INFO 2024-12-12 17:58:05,122 analytics 30677 6125465600 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:58:05,122 analytics 30677 6125465600 Workstation VNC Cutting Station 1: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:58:05,122 analytics 30677 6125465600 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:58:05,122 analytics 30677 6125465600 Profitability Calculation for SS Flex Box:
+INFO 2024-12-12 17:58:05,122 analytics 30677 6125465600 Material Costs: 100
+INFO 2024-12-12 17:58:05,122 analytics 30677 6125465600 Labor Costs: 5000.00
+INFO 2024-12-12 17:58:05,122 analytics 30677 6125465600 Workstation Costs: 1900.000
+INFO 2024-12-12 17:58:05,122 analytics 30677 6125465600 Total Cost: 7000.000
+INFO 2024-12-12 17:58:05,122 analytics 30677 6125465600 Sell Cost: 60000.00
+INFO 2024-12-12 17:58:05,122 analytics 30677 6125465600 Profit: 53000.000
+INFO 2024-12-12 17:58:05,122 analytics 30677 6125465600 Profit Margin: 88.33333333333333333333333333%
+INFO 2024-12-12 17:58:05,122 analytics 30677 6125465600 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:58:05,123 analytics 30677 6125465600 Profitability Summary: {'total_products': 2, 'total_sell_cost': Decimal('110001.02'), 'total_cost': Decimal('13980.000'), 'total_profit': Decimal('96021.020'), 'average_profit_margin': Decimal('87.1868090557619291233125511'), 'products': [{'product_id': 10, 'product_name': 'Aluminium Flex Box', 'material_costs': Decimal('80'), 'material_breakdown': [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}, {'workstation_name': 'Drilling Station', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}], 'total_cost': Decimal('6980.000'), 'sell_cost': Decimal('50001.02'), 'profit': Decimal('43021.020'), 'profit_margin': Decimal('86.04028477819052491329176885'), 'profitability_category': 'Highly Profitable'}, {'product_id': 11, 'product_name': 'SS Flex Box', 'material_costs': Decimal('100'), 'material_breakdown': [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'VNC Cutting Station 1', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}], 'total_cost': Decimal('7000.000'), 'sell_cost': Decimal('60000.00'), 'profit': Decimal('53000.000'), 'profit_margin': Decimal('88.33333333333333333333333333'), 'profitability_category': 'Highly Profitable'}]}
+INFO 2024-12-12 17:58:05,123 basehttp 30677 6125465600 "GET /api/analytics/profitability/ HTTP/1.1" 200 1533
+INFO 2024-12-12 17:58:26,995 views 30677 6159118336 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 17:58:26,996 views 30677 6159118336 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 17:58:26,997 views 30677 6159118336 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 17:58:26,997 views 30677 6159118336 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 17:58:26,998 views 30677 6159118336 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 17:58:26,998 views 30677 6142291968 Product list request received
+INFO 2024-12-12 17:58:26,998 views 30677 6159118336 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 17:58:27,000 views 30677 6159118336 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 17:58:27,000 basehttp 30677 6125465600 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 17:58:27,001 views 30677 6142291968 Total number of products: 2
+INFO 2024-12-12 17:58:27,004 basehttp 30677 6159118336 "GET /api/workstations/ HTTP/1.1" 200 2026
+INFO 2024-12-12 17:58:27,012 views 30677 6142291968 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '5000.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:31:11.288216+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '5000.00', 'current_quantity': 265, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:58:57.328599+05:30'})]
+INFO 2024-12-12 17:58:27,012 views 30677 6192771072 Fetching workstations: Total 6 workstations
+INFO 2024-12-12 17:58:27,015 views 30677 6192771072 Workstation: 25, Name: AMADA Laser Cutting Station, Status: ACTIVE
+INFO 2024-12-12 17:58:27,015 views 30677 6192771072 Workstation: 26, Name: AMADA Metal Forming Station, Status: ACTIVE
+INFO 2024-12-12 17:58:27,016 views 30677 6192771072 Workstation: 27, Name: VNC Cutting Station 1, Status: ACTIVE
+INFO 2024-12-12 17:58:27,016 basehttp 30677 6142291968 "GET /api/products/ HTTP/1.1" 200 747
+INFO 2024-12-12 17:58:27,017 views 30677 6192771072 Workstation: 28, Name: VNC Cutting Station 2, Status: MAINTENANCE
+INFO 2024-12-12 17:58:27,019 views 30677 6192771072 Workstation: 29, Name: Drilling Station, Status: ACTIVE
+INFO 2024-12-12 17:58:27,019 views 30677 6192771072 Workstation: 30, Name: Grafting Station, Status: INACTIVE
+INFO 2024-12-12 17:58:27,022 basehttp 30677 6125465600 "GET /api/materials/ HTTP/1.1" 200 524
+INFO 2024-12-12 17:58:27,022 basehttp 30677 6192771072 "GET /api/workstations/ HTTP/1.1" 200 2026
+INFO 2024-12-12 17:58:27,026 views 30677 6142291968 Product list request received
+INFO 2024-12-12 17:58:27,029 views 30677 6142291968 Total number of products: 2
+INFO 2024-12-12 17:58:27,034 views 30677 6142291968 Serialized product data: [OrderedDict({'id': 10, 'name': 'Aluminium Flex Box', 'description': 'Flexible Aluminium Box', 'materials': [{'material_id': 10, 'material_name': 'Aluminium Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '50001.02', 'labor_cost': '5000.00', 'current_quantity': 425, 'restock_level': 60, 'max_stock_level': 600, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T02:06:42.758734+05:30', 'updated_at': '2024-12-12T16:31:11.288216+05:30'}), OrderedDict({'id': 11, 'name': 'SS Flex Box', 'description': '', 'materials': [{'material_id': 9, 'material_name': 'SS Sheet', 'quantity': Decimal('2.00')}], 'sell_cost': '60000.00', 'labor_cost': '5000.00', 'current_quantity': 265, 'restock_level': 10, 'max_stock_level': 1000, 'stock_status': 'IN_STOCK', 'created_at': '2024-12-12T15:23:29.549191+05:30', 'updated_at': '2024-12-12T16:58:57.328599+05:30'})]
+INFO 2024-12-12 17:58:27,035 basehttp 30677 6175944704 "GET /api/work-orders/ HTTP/1.1" 200 2689
+INFO 2024-12-12 17:58:27,035 basehttp 30677 6142291968 "GET /api/products/ HTTP/1.1" 200 747
+INFO 2024-12-12 17:58:27,051 basehttp 30677 6142291968 "GET /api/work-orders/ HTTP/1.1" 200 2689
+INFO 2024-12-12 17:58:27,703 basehttp 30677 6243250176 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 17:58:27,721 basehttp 30677 6260076544 "GET /api/analytics/cost/ HTTP/1.1" 200 577
+INFO 2024-12-12 17:58:27,726 basehttp 30677 6276902912 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 17:58:27,728 basehttp 30677 6226423808 "GET /api/analytics/dashboard/ HTTP/1.1" 200 941
+INFO 2024-12-12 17:58:27,728 analytics 30677 6209597440 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 17:58:27,729 analytics 30677 6209597440 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 17:58:27,733 analytics 30677 6209597440 Material Costs: 80
+INFO 2024-12-12 17:58:27,733 analytics 30677 6209597440 Material Breakdown: [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}]
+INFO 2024-12-12 17:58:27,735 basehttp 30677 6243250176 "GET /api/analytics/cost/ HTTP/1.1" 200 577
+INFO 2024-12-12 17:58:27,736 analytics 30677 6209597440 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:58:27,736 analytics 30677 6209597440 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:58:27,736 analytics 30677 6209597440 Workstation Drilling Station: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:58:27,737 analytics 30677 6209597440 Profitability Calculation for Aluminium Flex Box:
+INFO 2024-12-12 17:58:27,737 analytics 30677 6209597440 Material Costs: 80
+INFO 2024-12-12 17:58:27,737 analytics 30677 6209597440 Labor Costs: 5000.00
+INFO 2024-12-12 17:58:27,737 analytics 30677 6209597440 Workstation Costs: 1900.000
+INFO 2024-12-12 17:58:27,737 analytics 30677 6209597440 Total Cost: 6980.000
+INFO 2024-12-12 17:58:27,737 analytics 30677 6209597440 Sell Cost: 50001.02
+INFO 2024-12-12 17:58:27,737 analytics 30677 6209597440 Profit: 43021.020
+INFO 2024-12-12 17:58:27,739 analytics 30677 6209597440 Profit Margin: 86.04028477819052491329176885%
+INFO 2024-12-12 17:58:27,739 analytics 30677 6209597440 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:58:27,739 analytics 30677 6209597440 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 17:58:27,739 analytics 30677 6209597440 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 17:58:27,741 analytics 30677 6209597440 Material Costs: 100
+INFO 2024-12-12 17:58:27,741 analytics 30677 6209597440 Material Breakdown: [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}]
+INFO 2024-12-12 17:58:27,741 analytics 30677 6209597440 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:58:27,742 analytics 30677 6209597440 Workstation VNC Cutting Station 1: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:58:27,742 analytics 30677 6209597440 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:58:27,742 analytics 30677 6209597440 Profitability Calculation for SS Flex Box:
+INFO 2024-12-12 17:58:27,742 analytics 30677 6209597440 Material Costs: 100
+INFO 2024-12-12 17:58:27,742 analytics 30677 6209597440 Labor Costs: 5000.00
+INFO 2024-12-12 17:58:27,742 analytics 30677 6209597440 Workstation Costs: 1900.000
+INFO 2024-12-12 17:58:27,742 analytics 30677 6209597440 Total Cost: 7000.000
+INFO 2024-12-12 17:58:27,743 basehttp 30677 6260076544 "GET /api/analytics/dashboard/ HTTP/1.1" 200 941
+INFO 2024-12-12 17:58:27,743 analytics 30677 6209597440 Sell Cost: 60000.00
+INFO 2024-12-12 17:58:27,743 analytics 30677 6209597440 Profit: 53000.000
+INFO 2024-12-12 17:58:27,743 analytics 30677 6209597440 Profit Margin: 88.33333333333333333333333333%
+INFO 2024-12-12 17:58:27,743 analytics 30677 6209597440 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:58:27,743 analytics 30677 6209597440 Profitability Summary: {'total_products': 2, 'total_sell_cost': Decimal('110001.02'), 'total_cost': Decimal('13980.000'), 'total_profit': Decimal('96021.020'), 'average_profit_margin': Decimal('87.1868090557619291233125511'), 'products': [{'product_id': 10, 'product_name': 'Aluminium Flex Box', 'material_costs': Decimal('80'), 'material_breakdown': [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}, {'workstation_name': 'Drilling Station', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}], 'total_cost': Decimal('6980.000'), 'sell_cost': Decimal('50001.02'), 'profit': Decimal('43021.020'), 'profit_margin': Decimal('86.04028477819052491329176885'), 'profitability_category': 'Highly Profitable'}, {'product_id': 11, 'product_name': 'SS Flex Box', 'material_costs': Decimal('100'), 'material_breakdown': [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'VNC Cutting Station 1', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}], 'total_cost': Decimal('7000.000'), 'sell_cost': Decimal('60000.00'), 'profit': Decimal('53000.000'), 'profit_margin': Decimal('88.33333333333333333333333333'), 'profitability_category': 'Highly Profitable'}]}
+INFO 2024-12-12 17:58:27,744 basehttp 30677 6209597440 "GET /api/analytics/profitability/ HTTP/1.1" 200 1533
+INFO 2024-12-12 17:58:27,751 analytics 30677 6209597440 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 17:58:27,751 analytics 30677 6209597440 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 17:58:27,751 analytics 30677 6209597440 Material Costs: 80
+INFO 2024-12-12 17:58:27,752 analytics 30677 6209597440 Material Breakdown: [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}]
+INFO 2024-12-12 17:58:27,752 analytics 30677 6209597440 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:58:27,752 analytics 30677 6209597440 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:58:27,752 analytics 30677 6209597440 Workstation Drilling Station: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:58:27,753 analytics 30677 6209597440 Profitability Calculation for Aluminium Flex Box:
+INFO 2024-12-12 17:58:27,753 analytics 30677 6209597440 Material Costs: 80
+INFO 2024-12-12 17:58:27,753 analytics 30677 6209597440 Labor Costs: 5000.00
+INFO 2024-12-12 17:58:27,753 analytics 30677 6209597440 Workstation Costs: 1900.000
+INFO 2024-12-12 17:58:27,753 analytics 30677 6209597440 Total Cost: 6980.000
+INFO 2024-12-12 17:58:27,753 analytics 30677 6209597440 Sell Cost: 50001.02
+INFO 2024-12-12 17:58:27,753 analytics 30677 6209597440 Profit: 43021.020
+INFO 2024-12-12 17:58:27,753 analytics 30677 6209597440 Profit Margin: 86.04028477819052491329176885%
+INFO 2024-12-12 17:58:27,753 analytics 30677 6209597440 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:58:27,753 analytics 30677 6209597440 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 17:58:27,753 analytics 30677 6209597440 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 17:58:27,754 analytics 30677 6209597440 Material Costs: 100
+INFO 2024-12-12 17:58:27,754 analytics 30677 6209597440 Material Breakdown: [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}]
+INFO 2024-12-12 17:58:27,754 analytics 30677 6209597440 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:58:27,754 analytics 30677 6209597440 Workstation VNC Cutting Station 1: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:58:27,754 analytics 30677 6209597440 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:58:27,754 analytics 30677 6209597440 Profitability Calculation for SS Flex Box:
+INFO 2024-12-12 17:58:27,754 analytics 30677 6209597440 Material Costs: 100
+INFO 2024-12-12 17:58:27,754 analytics 30677 6209597440 Labor Costs: 5000.00
+INFO 2024-12-12 17:58:27,754 analytics 30677 6209597440 Workstation Costs: 1900.000
+INFO 2024-12-12 17:58:27,755 analytics 30677 6209597440 Total Cost: 7000.000
+INFO 2024-12-12 17:58:27,755 analytics 30677 6209597440 Sell Cost: 60000.00
+INFO 2024-12-12 17:58:27,755 analytics 30677 6209597440 Profit: 53000.000
+INFO 2024-12-12 17:58:27,755 analytics 30677 6209597440 Profit Margin: 88.33333333333333333333333333%
+INFO 2024-12-12 17:58:27,755 analytics 30677 6209597440 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:58:27,755 analytics 30677 6209597440 Profitability Summary: {'total_products': 2, 'total_sell_cost': Decimal('110001.02'), 'total_cost': Decimal('13980.000'), 'total_profit': Decimal('96021.020'), 'average_profit_margin': Decimal('87.1868090557619291233125511'), 'products': [{'product_id': 10, 'product_name': 'Aluminium Flex Box', 'material_costs': Decimal('80'), 'material_breakdown': [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}, {'workstation_name': 'Drilling Station', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}], 'total_cost': Decimal('6980.000'), 'sell_cost': Decimal('50001.02'), 'profit': Decimal('43021.020'), 'profit_margin': Decimal('86.04028477819052491329176885'), 'profitability_category': 'Highly Profitable'}, {'product_id': 11, 'product_name': 'SS Flex Box', 'material_costs': Decimal('100'), 'material_breakdown': [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'VNC Cutting Station 1', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}], 'total_cost': Decimal('7000.000'), 'sell_cost': Decimal('60000.00'), 'profit': Decimal('53000.000'), 'profit_margin': Decimal('88.33333333333333333333333333'), 'profitability_category': 'Highly Profitable'}]}
+INFO 2024-12-12 17:58:27,755 basehttp 30677 6209597440 "GET /api/analytics/profitability/ HTTP/1.1" 200 1533
+INFO 2024-12-12 17:58:33,228 basehttp 30677 6243250176 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 17:58:33,229 basehttp 30677 6260076544 "GET /api/analytics/cost/ HTTP/1.1" 200 577
+INFO 2024-12-12 17:58:33,232 analytics 30677 6209597440 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 17:58:33,232 analytics 30677 6209597440 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 17:58:33,233 basehttp 30677 6226423808 "GET /api/analytics/dashboard/ HTTP/1.1" 200 941
+INFO 2024-12-12 17:58:33,234 analytics 30677 6209597440 Material Costs: 80
+INFO 2024-12-12 17:58:33,234 analytics 30677 6209597440 Material Breakdown: [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}]
+INFO 2024-12-12 17:58:33,235 analytics 30677 6209597440 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:58:33,235 analytics 30677 6209597440 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:58:33,235 analytics 30677 6209597440 Workstation Drilling Station: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:58:33,235 analytics 30677 6209597440 Profitability Calculation for Aluminium Flex Box:
+INFO 2024-12-12 17:58:33,235 analytics 30677 6209597440 Material Costs: 80
+INFO 2024-12-12 17:58:33,235 analytics 30677 6209597440 Labor Costs: 5000.00
+INFO 2024-12-12 17:58:33,235 analytics 30677 6209597440 Workstation Costs: 1900.000
+INFO 2024-12-12 17:58:33,235 analytics 30677 6209597440 Total Cost: 6980.000
+INFO 2024-12-12 17:58:33,235 analytics 30677 6209597440 Sell Cost: 50001.02
+INFO 2024-12-12 17:58:33,235 analytics 30677 6209597440 Profit: 43021.020
+INFO 2024-12-12 17:58:33,235 analytics 30677 6209597440 Profit Margin: 86.04028477819052491329176885%
+INFO 2024-12-12 17:58:33,235 analytics 30677 6209597440 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:58:33,235 analytics 30677 6209597440 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 17:58:33,235 analytics 30677 6209597440 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 17:58:33,236 analytics 30677 6209597440 Material Costs: 100
+INFO 2024-12-12 17:58:33,236 analytics 30677 6209597440 Material Breakdown: [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}]
+INFO 2024-12-12 17:58:33,236 analytics 30677 6209597440 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:58:33,236 analytics 30677 6209597440 Workstation VNC Cutting Station 1: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:58:33,236 analytics 30677 6209597440 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:58:33,236 analytics 30677 6209597440 Profitability Calculation for SS Flex Box:
+INFO 2024-12-12 17:58:33,237 analytics 30677 6209597440 Material Costs: 100
+INFO 2024-12-12 17:58:33,237 analytics 30677 6209597440 Labor Costs: 5000.00
+INFO 2024-12-12 17:58:33,237 analytics 30677 6209597440 Workstation Costs: 1900.000
+INFO 2024-12-12 17:58:33,237 analytics 30677 6209597440 Total Cost: 7000.000
+INFO 2024-12-12 17:58:33,237 analytics 30677 6209597440 Sell Cost: 60000.00
+INFO 2024-12-12 17:58:33,237 analytics 30677 6209597440 Profit: 53000.000
+INFO 2024-12-12 17:58:33,237 analytics 30677 6209597440 Profit Margin: 88.33333333333333333333333333%
+INFO 2024-12-12 17:58:33,237 analytics 30677 6209597440 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:58:33,237 analytics 30677 6209597440 Profitability Summary: {'total_products': 2, 'total_sell_cost': Decimal('110001.02'), 'total_cost': Decimal('13980.000'), 'total_profit': Decimal('96021.020'), 'average_profit_margin': Decimal('87.1868090557619291233125511'), 'products': [{'product_id': 10, 'product_name': 'Aluminium Flex Box', 'material_costs': Decimal('80'), 'material_breakdown': [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}, {'workstation_name': 'Drilling Station', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}], 'total_cost': Decimal('6980.000'), 'sell_cost': Decimal('50001.02'), 'profit': Decimal('43021.020'), 'profit_margin': Decimal('86.04028477819052491329176885'), 'profitability_category': 'Highly Profitable'}, {'product_id': 11, 'product_name': 'SS Flex Box', 'material_costs': Decimal('100'), 'material_breakdown': [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'VNC Cutting Station 1', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}], 'total_cost': Decimal('7000.000'), 'sell_cost': Decimal('60000.00'), 'profit': Decimal('53000.000'), 'profit_margin': Decimal('88.33333333333333333333333333'), 'profitability_category': 'Highly Profitable'}]}
+INFO 2024-12-12 17:58:33,237 basehttp 30677 6209597440 "GET /api/analytics/profitability/ HTTP/1.1" 200 1533
+INFO 2024-12-12 17:59:55,496 basehttp 30677 6226423808 "GET /api/analytics/efficiency HTTP/1.1" 301 0
+INFO 2024-12-12 17:59:55,500 basehttp 30677 6260076544 "GET /api/analytics/cost HTTP/1.1" 301 0
+INFO 2024-12-12 17:59:55,500 basehttp 30677 6209597440 "GET /api/analytics/dashboard HTTP/1.1" 301 0
+INFO 2024-12-12 17:59:55,509 analytics 30677 6243250176 Calculating profitability for product: Aluminium Flex Box
+INFO 2024-12-12 17:59:55,509 analytics 30677 6243250176 Product details - Sell Cost: 50001.02, Labor Cost: 5000.00
+INFO 2024-12-12 17:59:55,512 analytics 30677 6243250176 Material Costs: 80
+INFO 2024-12-12 17:59:55,512 analytics 30677 6243250176 Material Breakdown: [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}]
+INFO 2024-12-12 17:59:55,516 analytics 30677 6243250176 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:59:55,516 analytics 30677 6243250176 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:59:55,516 analytics 30677 6243250176 Workstation Drilling Station: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:59:55,516 analytics 30677 6243250176 Profitability Calculation for Aluminium Flex Box:
+INFO 2024-12-12 17:59:55,516 analytics 30677 6243250176 Material Costs: 80
+INFO 2024-12-12 17:59:55,516 analytics 30677 6243250176 Labor Costs: 5000.00
+INFO 2024-12-12 17:59:55,516 analytics 30677 6243250176 Workstation Costs: 1900.000
+INFO 2024-12-12 17:59:55,516 analytics 30677 6243250176 Total Cost: 6980.000
+INFO 2024-12-12 17:59:55,516 analytics 30677 6243250176 Sell Cost: 50001.02
+INFO 2024-12-12 17:59:55,516 analytics 30677 6243250176 Profit: 43021.020
+INFO 2024-12-12 17:59:55,516 analytics 30677 6243250176 Profit Margin: 86.04028477819052491329176885%
+INFO 2024-12-12 17:59:55,516 analytics 30677 6243250176 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:59:55,516 analytics 30677 6243250176 Calculating profitability for product: SS Flex Box
+INFO 2024-12-12 17:59:55,516 analytics 30677 6243250176 Product details - Sell Cost: 60000.00, Labor Cost: 5000.00
+INFO 2024-12-12 17:59:55,517 analytics 30677 6243250176 Material Costs: 100
+INFO 2024-12-12 17:59:55,517 analytics 30677 6243250176 Material Breakdown: [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}]
+INFO 2024-12-12 17:59:55,519 analytics 30677 6243250176 Workstation AMADA Laser Cutting Station: Hourly Rate = 800.00, Estimated Hours = 1.0, Cost = 800.000
+INFO 2024-12-12 17:59:55,521 analytics 30677 6243250176 Workstation VNC Cutting Station 1: Hourly Rate = 500.00, Estimated Hours = 1.0, Cost = 500.000
+INFO 2024-12-12 17:59:55,521 analytics 30677 6243250176 Workstation AMADA Metal Forming Station: Hourly Rate = 600.00, Estimated Hours = 1.0, Cost = 600.000
+INFO 2024-12-12 17:59:55,521 analytics 30677 6243250176 Profitability Calculation for SS Flex Box:
+INFO 2024-12-12 17:59:55,522 basehttp 30677 6209597440 "GET /api/analytics/efficiency/ HTTP/1.1" 200 84
+INFO 2024-12-12 17:59:55,524 analytics 30677 6243250176 Material Costs: 100
+INFO 2024-12-12 17:59:55,524 analytics 30677 6243250176 Labor Costs: 5000.00
+INFO 2024-12-12 17:59:55,524 analytics 30677 6243250176 Workstation Costs: 1900.000
+INFO 2024-12-12 17:59:55,524 analytics 30677 6243250176 Total Cost: 7000.000
+INFO 2024-12-12 17:59:55,525 analytics 30677 6243250176 Sell Cost: 60000.00
+INFO 2024-12-12 17:59:55,525 analytics 30677 6243250176 Profit: 53000.000
+INFO 2024-12-12 17:59:55,525 analytics 30677 6243250176 Profit Margin: 88.33333333333333333333333333%
+INFO 2024-12-12 17:59:55,526 analytics 30677 6243250176 Profitability Category: Highly Profitable
+INFO 2024-12-12 17:59:55,526 analytics 30677 6243250176 Profitability Summary: {'total_products': 2, 'total_sell_cost': Decimal('110001.02'), 'total_cost': Decimal('13980.000'), 'total_profit': Decimal('96021.020'), 'average_profit_margin': Decimal('87.1868090557619291233125511'), 'products': [{'product_id': 10, 'product_name': 'Aluminium Flex Box', 'material_costs': Decimal('80'), 'material_breakdown': [{'material__name': 'Aluminium Sheet', 'material_total_cost': Decimal('80')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}, {'workstation_name': 'Drilling Station', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}], 'total_cost': Decimal('6980.000'), 'sell_cost': Decimal('50001.02'), 'profit': Decimal('43021.020'), 'profit_margin': Decimal('86.04028477819052491329176885'), 'profitability_category': 'Highly Profitable'}, {'product_id': 11, 'product_name': 'SS Flex Box', 'material_costs': Decimal('100'), 'material_breakdown': [{'material__name': 'SS Sheet', 'material_total_cost': Decimal('100')}], 'labor_costs': Decimal('5000.00'), 'workstation_costs': Decimal('1900.000'), 'workstation_breakdown': [{'workstation_name': 'AMADA Laser Cutting Station', 'hourly_rate': 800.0, 'estimated_time_hours': 1.0, 'cost': 800.0}, {'workstation_name': 'VNC Cutting Station 1', 'hourly_rate': 500.0, 'estimated_time_hours': 1.0, 'cost': 500.0}, {'workstation_name': 'AMADA Metal Forming Station', 'hourly_rate': 600.0, 'estimated_time_hours': 1.0, 'cost': 600.0}], 'total_cost': Decimal('7000.000'), 'sell_cost': Decimal('60000.00'), 'profit': Decimal('53000.000'), 'profit_margin': Decimal('88.33333333333333333333333333'), 'profitability_category': 'Highly Profitable'}]}
+INFO 2024-12-12 17:59:55,529 basehttp 30677 6243250176 "GET /api/analytics/profitability/ HTTP/1.1" 200 1533
+INFO 2024-12-12 17:59:55,529 basehttp 30677 6226423808 "GET /api/analytics/cost/ HTTP/1.1" 200 577
+INFO 2024-12-12 17:59:55,532 basehttp 30677 6260076544 "GET /api/analytics/dashboard/ HTTP/1.1" 200 941
