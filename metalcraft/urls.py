@@ -20,7 +20,8 @@ from manufacturing.views import (
     WorkOrderViewSet, ProductionLogViewSet, 
     LoginView, RegisterView, LogoutView,
     WorkstationProcessViewSet, WorkstationEfficiencyViewSet, 
-    ProductionDesignViewSet, ProductionEventViewSet
+    ProductionDesignViewSet, ProductionEventViewSet,
+    SupplierViewSet
 )
 from manufacturing.analytics import (
     DashboardAnalyticsView, 
@@ -41,6 +42,7 @@ router.register(r'workstation-processes', WorkstationProcessViewSet)
 router.register(r'workstation-efficiency', WorkstationEfficiencyViewSet)
 router.register(r'production-designs', ProductionDesignViewSet)
 router.register(r'production-events', ProductionEventViewSet)
+router.register(r'suppliers', SupplierViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -20,6 +20,7 @@ import WorkOrders from './pages/WorkOrders';
 import Materials from './pages/Materials';
 import Products from './pages/Products';
 import Workstations from './pages/Workstations';
+import Suppliers from './pages/Suppliers';
 
 // Import new Production Line Management pages
 // import WorkstationProcesses from './pages/WorkstationProcesses';
@@ -151,6 +152,14 @@ function App() {
           element={
             <ProtectedRoute>
               <Workstations />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/suppliers" 
+          element={
+            <ProtectedRoute>
+              <Suppliers />
             </ProtectedRoute>
           } 
         />

@@ -7,14 +7,16 @@ from django.utils import timezone
 from .models import (
     WorkStation, Material, Product, WorkOrder, ProductionLog, 
     WorkstationProcess, WorkstationEfficiencyMetric, 
-    ProductionDesign, ProductionEvent, ProductWorkstationSequence
+    ProductionDesign, ProductionEvent, ProductWorkstationSequence,
+    Supplier
 )
 from .serializers import (
     WorkStationSerializer, MaterialSerializer, ProductSerializer,
     WorkOrderSerializer, ProductionLogSerializer, 
     WorkstationProcessSerializer, WorkstationEfficiencyMetricSerializer,
     ProductionDesignSerializer, ProductionEventSerializer,
-    ProductWorkstationSequenceSerializer
+    ProductWorkstationSequenceSerializer,
+    SupplierSerializer
 )
 import logging
 from django.db.models import Q
@@ -820,6 +822,29 @@ class ProductionEventViewSet(viewsets.ModelViewSet):
             'total_events': events.count(),
             'events': serializer.data
         })
+
+class SupplierViewSet(viewsets.ModelViewSet):
+    """
+    A viewset for viewing and editing Supplier instances.
+    """
+    queryset = Supplier.objects.all()
+    serializer_class = SupplierSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def get_queryset(self):
+        """
+        Optionally filter suppliers by name or email
+        """
+        queryset = Supplier.objects.all()
+        name = self.request.query_params.get('name')
+        email = self.request.query_params.get('email')
+        
+        if name:
+            queryset = queryset.filter(name__icontains=name)
+        if email:
+            queryset = queryset.filter(email__icontains=email)
+        
+        return queryset
 
 from rest_framework.views import APIView
 from rest_framework.response import Response

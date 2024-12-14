@@ -3,7 +3,12 @@ from rest_framework import serializers
 from rest_framework.exceptions import APIException
 import logging
 from django.utils import timezone
-from .models import WorkOrder, ProductMaterial
+from .models import (
+    WorkStation, Material, Product, ProductMaterial, WorkOrder, 
+    ProductionLog, MaterialReservation, WorkstationProcess, 
+    WorkstationEfficiencyMetric, ProductionDesign, ProductionEvent, 
+    ProductWorkstationSequence, Supplier
+)
 from .exceptions import MaterialShortageError, WorkOrderStatusTransitionError
 
 # Configure logging
@@ -56,7 +61,7 @@ from .models import (
     WorkStation, Material, Product, ProductMaterial, WorkOrder, 
     ProductionLog, MaterialReservation, WorkstationProcess, 
     WorkstationEfficiencyMetric, ProductionDesign, ProductionEvent, 
-    ProductWorkstationSequence
+    ProductWorkstationSequence, Supplier
 )
 from django.utils import timezone
 from .exceptions import MaterialShortageError, WorkOrderStatusTransitionError
@@ -725,3 +730,18 @@ class ProductionEventSerializer(serializers.ModelSerializer):
             ])
         
         return representation
+
+class SupplierSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Supplier
+        fields = [
+            'id', 
+            'name', 
+            'contact_person', 
+            'email', 
+            'phone', 
+            'address', 
+            'created_at', 
+            'updated_at'
+        ]
+        read_only_fields = ['id', 'created_at', 'updated_at']

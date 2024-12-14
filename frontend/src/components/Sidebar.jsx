@@ -25,7 +25,8 @@ import {
   ExpandMore,
   Logout as LogoutIcon,
   Work as WorkOrderIcon,
-  Analytics as EfficiencyIcon
+  Analytics as EfficiencyIcon,
+  LocalShipping as SuppliersIcon
 } from '@mui/icons-material';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { authService } from '../services/api';
@@ -127,7 +128,12 @@ function Sidebar() {
           path: '/production-events' 
         }
       ]
-    }
+    },
+    { 
+      text: 'Suppliers', 
+      icon: <SuppliersIcon />, 
+      path: '/suppliers' 
+    },
   ];
 
   const renderMenuItem = (item) => {
