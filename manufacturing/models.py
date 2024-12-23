@@ -736,6 +736,11 @@ class Supplier(models.Model):
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=20, blank=True, null=True)
     address = models.TextField(blank=True, null=True)
+    materials = models.ManyToManyField(
+        'Material', 
+        through='SupplierMaterial', 
+        related_name='suppliers'
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -745,3 +750,23 @@ class Supplier(models.Model):
     class Meta:
         verbose_name_plural = "Suppliers"
         ordering = ['-created_at']
+
+class SupplierMaterial(models.Model):
+    supplier = models.ForeignKey(Supplier, on_delete=models.CASCADE)
+    material = models.ForeignKey('Material', on_delete=models.CASCADE)
+    typical_lead_time = models.IntegerField(help_text="Typical lead time in days", null=True, blank=True)
+    typical_price_per_unit = models.DecimalField(
+        max_digits=10, 
+        decimal_places=2, 
+        null=True, 
+        blank=True, 
+        help_text="Typical price per unit of material"
+    )
+    is_preferred_supplier = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.supplier.name} - {self.material.name}"
+
+    class Meta:
+        unique_together = ['supplier', 'material']
+        verbose_name_plural = "Supplier Materials"

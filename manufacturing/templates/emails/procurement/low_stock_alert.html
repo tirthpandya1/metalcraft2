@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Low Stock Alert - {{ company_name }}</title>
+</head>
+<body>
+    <div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif;">
+        <h1>Low Stock Alert</h1>
+        
+        <p>The following materials have reached their reorder level:</p>
+        
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #f2f2f2;">
+                    <th style="border: 1px solid #ddd; padding: 8px;">Material</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Current Quantity</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Reorder Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for material in low_stock_materials %}
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ material.name }}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ material.quantity }}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ material.reorder_level }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <p>Action Required: Please review and place purchase orders for these materials.</p>
+        
+        <footer style="margin-top: 20px; font-size: 0.8em; color: #666;">
+            <p>This is an automated notification from {{ company_name }} Procurement System</p>
+        </footer>
+    </div>
+</body>
+</html>

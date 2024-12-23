@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overdue Invoices Alert - {{ company_name }}</title>
+</head>
+<body>
+    <div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif;">
+        <h1>Overdue Invoices Alert</h1>
+        
+        <p>The following invoices are currently overdue:</p>
+        
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #f2f2f2;">
+                    <th style="border: 1px solid #ddd; padding: 8px;">Invoice Number</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Order Number</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Customer</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Amount</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Due Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for invoice in overdue_invoices %}
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ invoice.invoice_number }}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ invoice.product_order.order_number }}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ invoice.product_order.customer.name }}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">${{ invoice.total_amount }}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ invoice.payment_due_date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <p><strong>Action Required:</strong></p>
+        <ul>
+            <li>Review overdue invoices</li>
+            <li>Contact customers for payment</li>
+            <li>Update payment status</li>
+        </ul>
+        
+        <footer style="margin-top: 20px; font-size: 0.8em; color: #666;">
+            <p>This is an automated notification from {{ company_name }} Finance Team</p>
+        </footer>
+    </div>
+</body>
+</html>

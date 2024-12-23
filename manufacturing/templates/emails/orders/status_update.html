@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Status Update - {{ company_name }}</title>
+</head>
+<body>
+    <div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif;">
+        <h1>Order Status Update</h1>
+        
+        <p>Dear {{ order.customer.name }},</p>
+        
+        <p>We wanted to inform you about the latest status of your order:</p>
+        
+        <table style="width: 100%; border-collapse: collapse;">
+            <tbody>
+                <tr>
+                    <th style="text-align: left; border: 1px solid #ddd; padding: 8px;">Order Number:</th>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ order.order_number }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; border: 1px solid #ddd; padding: 8px;">Current Status:</th>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ order.get_status_display }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; border: 1px solid #ddd; padding: 8px;">Expected Delivery:</th>
+                    <td style="border: 1px solid #ddd; padding: 8px;">
+                        {{ order.expected_delivery_date|default:"Not yet determined" }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>Order Items</h2>
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #f2f2f2;">
+                    <th style="border: 1px solid #ddd; padding: 8px;">Product</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Quantity</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in order.items.all %}
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ item.product.name }}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ item.quantity }}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ item.get_production_status_display }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <p>If you have any questions about your order, please don't hesitate to contact our customer support.</p>
+        
+        <footer style="margin-top: 20px; font-size: 0.8em; color: #666;">
+            <p>This is an automated notification from {{ company_name }}</p>
+        </footer>
+    </div>
+</body>
+</html>

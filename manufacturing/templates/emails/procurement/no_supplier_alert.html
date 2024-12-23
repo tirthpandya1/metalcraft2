@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>No Supplier Found - {{ company_name }}</title>
+</head>
+<body>
+    <div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif;">
+        <h1>Urgent: No Supplier Found for Low Stock Material</h1>
+        
+        <p>We were unable to create an automatic purchase order for the following material due to lack of suppliers:</p>
+        
+        <table style="width: 100%; border-collapse: collapse;">
+            <tbody>
+                <tr>
+                    <th style="text-align: left; border: 1px solid #ddd; padding: 8px;">Material Name:</th>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ material.name }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; border: 1px solid #ddd; padding: 8px;">Current Quantity:</th>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ material.quantity }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; border: 1px solid #ddd; padding: 8px;">Reorder Level:</th>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ material.reorder_level }}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p><strong>Action Required:</strong></p>
+        <ul>
+            <li>Add suppliers for this material immediately</li>
+            <li>Manually create a purchase order</li>
+            <li>Review procurement strategy</li>
+        </ul>
+        
+        <footer style="margin-top: 20px; font-size: 0.8em; color: #666;">
+            <p>This is an urgent automated notification from {{ company_name }} Procurement System</p>
+        </footer>
+    </div>
+</body>
+</html>

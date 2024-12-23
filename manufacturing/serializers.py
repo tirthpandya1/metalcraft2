@@ -7,7 +7,7 @@ from .models import (
     WorkStation, Material, Product, ProductMaterial, WorkOrder, 
     ProductionLog, MaterialReservation, WorkstationProcess, 
     WorkstationEfficiencyMetric, ProductionDesign, ProductionEvent, 
-    ProductWorkstationSequence, Supplier
+    ProductWorkstationSequence, Supplier, SupplierMaterial
 )
 from .exceptions import MaterialShortageError, WorkOrderStatusTransitionError
 
@@ -55,25 +55,122 @@ class UserSerializer(serializers.ModelSerializer):
             'first_name': {'required': False},
             'last_name': {'required': False}
         }
-from rest_framework import serializers
-from django.contrib.auth.models import User
-from .models import (
-    WorkStation, Material, Product, ProductMaterial, WorkOrder, 
-    ProductionLog, MaterialReservation, WorkstationProcess, 
-    WorkstationEfficiencyMetric, ProductionDesign, ProductionEvent, 
-    ProductWorkstationSequence, Supplier
-)
-from django.utils import timezone
-from .exceptions import MaterialShortageError, WorkOrderStatusTransitionError
-import logging
 
-# Configure logging
-logger = logging.getLogger(__name__)
+class SupplierMaterialSerializer(serializers.ModelSerializer):
+    material_name = serializers.CharField(source='material.name', read_only=True)
+    material_unit = serializers.CharField(source='material.unit', read_only=True)
+    material_id = serializers.PrimaryKeyRelatedField(
+        queryset=Material.objects.all(),
+        source='material'
+    )
 
-class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
-        fields = ['id', 'username', 'email', 'first_name', 'last_name']
+        model = SupplierMaterial
+        fields = [
+            'material_id', 
+            'material_name', 
+            'material_unit', 
+            'typical_lead_time', 
+            'typical_price_per_unit', 
+            'is_preferred_supplier'
+        ]
+
+class SupplierSerializer(serializers.ModelSerializer):
+    materials = SupplierMaterialSerializer(
+        source='suppliermaterial_set', 
+        many=True, 
+        read_only=True
+    )
+    add_materials = serializers.ListField(
+        child=serializers.DictField(
+            child=serializers.IntegerField(),
+            required=False
+        ),
+        write_only=True,
+        required=False
+    )
+
+    class Meta:
+        model = Supplier
+        fields = [
+            'id', 
+            'name', 
+            'contact_person', 
+            'email', 
+            'phone', 
+            'address', 
+            'materials',
+            'add_materials',
+            'created_at', 
+            'updated_at'
+        ]
+        read_only_fields = ['id', 'created_at', 'updated_at']
+
+    def create(self, validated_data):
+        # Extract materials data if provided
+        materials_data = validated_data.pop('add_materials', None)
+        
+        # Create supplier
+        supplier = Supplier.objects.create(**validated_data)
+        
+        # Add materials if provided
+        if materials_data:
+            for material_info in materials_data:
+                material_id = material_info.get('material_id')
+                lead_time = material_info.get('typical_lead_time')
+                price = material_info.get('typical_price_per_unit')
+                is_preferred = material_info.get('is_preferred_supplier', False)
+                
+                try:
+                    material = Material.objects.get(id=material_id)
+                    SupplierMaterial.objects.create(
+                        supplier=supplier,
+                        material=material,
+                        typical_lead_time=lead_time,
+                        typical_price_per_unit=price,
+                        is_preferred_supplier=is_preferred
+                    )
+                except Material.DoesNotExist:
+                    # Optionally handle invalid material ID
+                    pass
+        
+        return supplier
+
+    def update(self, instance, validated_data):
+        # Extract materials data if provided
+        materials_data = validated_data.pop('add_materials', None)
+        
+        # Update supplier details
+        for attr, value in validated_data.items():
+            setattr(instance, attr, value)
+        instance.save()
+        
+        # Update materials if provided
+        if materials_data:
+            # Remove existing supplier-material relationships
+            instance.suppliermaterial_set.all().delete()
+            
+            # Add new materials
+            for material_info in materials_data:
+                material_id = material_info.get('material_id')
+                lead_time = material_info.get('typical_lead_time')
+                price = material_info.get('typical_price_per_unit')
+                is_preferred = material_info.get('is_preferred_supplier', False)
+                
+                try:
+                    material = Material.objects.get(id=material_id)
+                    SupplierMaterial.objects.create(
+                        supplier=instance,
+                        material=material,
+                        typical_lead_time=lead_time,
+                        typical_price_per_unit=price,
+                        is_preferred_supplier=is_preferred
+                    )
+                except Material.DoesNotExist:
+                    # Optionally handle invalid material ID
+                    pass
+        
+        return instance
 
 class WorkStationSerializer(serializers.ModelSerializer):
     last_maintenance_display = serializers.SerializerMethodField()
@@ -730,18 +827,3 @@ class ProductionEventSerializer(serializers.ModelSerializer):
             ])
         
         return representation
-
-class SupplierSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Supplier
-        fields = [
-            'id', 
-            'name', 
-            'contact_person', 
-            'email', 
-            'phone', 
-            'address', 
-            'created_at', 
-            'updated_at'
-        ]
-        read_only_fields = ['id', 'created_at', 'updated_at']

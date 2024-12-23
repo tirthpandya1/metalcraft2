@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Automatic Purchase Order Created - {{ company_name }}</title>
+</head>
+<body>
+    <div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif;">
+        <h1>Automatic Purchase Order Created</h1>
+        
+        <p>An automatic purchase order has been generated for low stock materials:</p>
+        
+        <table style="width: 100%; border-collapse: collapse;">
+            <tbody>
+                <tr>
+                    <th style="text-align: left; border: 1px solid #ddd; padding: 8px;">Order Number:</th>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ material_order.order_number }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; border: 1px solid #ddd; padding: 8px;">Supplier:</th>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ material_order.supplier.name }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; border: 1px solid #ddd; padding: 8px;">Total Cost:</th>
+                    <td style="border: 1px solid #ddd; padding: 8px;">${{ material_order.total_cost }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; border: 1px solid #ddd; padding: 8px;">Expected Delivery:</th>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ material_order.expected_delivery_date }}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>Order Items</h2>
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #f2f2f2;">
+                    <th style="border: 1px solid #ddd; padding: 8px;">Material</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Quantity</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Unit Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in material_order.items.all %}
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ item.material.name }}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ item.quantity_ordered }}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">${{ item.unit_price }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <footer style="margin-top: 20px; font-size: 0.8em; color: #666;">
+            <p>This is an automated notification from {{ company_name }} Procurement System</p>
+        </footer>
+    </div>
+</body>
+</html>

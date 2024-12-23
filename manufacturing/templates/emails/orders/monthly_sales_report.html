@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monthly Sales Report - {{ company_name }}</title>
+</head>
+<body>
+    <div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif;">
+        <h1>Monthly Sales Report</h1>
+        
+        <p>Sales Report for the Period: {{ start_date }} to {{ end_date }}</p>
+        
+        <table style="width: 100%; border-collapse: collapse;">
+            <tbody>
+                <tr>
+                    <th style="text-align: left; border: 1px solid #ddd; padding: 8px;">Total Sales</th>
+                    <td style="border: 1px solid #ddd; padding: 8px;">${{ monthly_sales.total_sales|floatformat:2 }}</td>
+                </tr>
+                <tr>
+                    <th style="text-align: left; border: 1px solid #ddd; padding: 8px;">Total Orders</th>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ monthly_sales.total_orders }}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>Sales Breakdown by Status</h2>
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background-color: #f2f2f2;">
+                    <th style="border: 1px solid #ddd; padding: 8px;">Order Status</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Number of Orders</th>
+                    <th style="border: 1px solid #ddd; padding: 8px;">Total Sales</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for status_sale in status_sales %}
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ status_sale.status }}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">{{ status_sale.order_count }}</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">${{ status_sale.total_sales|floatformat:2 }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <footer style="margin-top: 20px; font-size: 0.8em; color: #666;">
+            <p>This is an automated monthly sales report from {{ company_name }}</p>
+        </footer>
+    </div>
+</body>
+</html>
